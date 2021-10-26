@@ -5,12 +5,9 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 
 @Mod(TestMod.MOD_ID)
@@ -22,10 +19,10 @@ public class TestMod {
 
     public TestMod() {
         // Register ourselves for server and other game events we are interested in
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        //IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         RegistryHandler.init();
-        ModFluids.register(eventBus);
+        ModFluids.register();
     }
 
     private void setup(final FMLCommonSetupEvent event) {

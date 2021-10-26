@@ -8,10 +8,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -29,7 +29,7 @@ public class ModFluids {
 
     public static final ForgeFlowingFluid.Properties OIL_PROPERTIES = new ForgeFlowingFluid.Properties(
             () -> OIL_FLUID.get(), () -> OIL_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
-            .density(6).luminosity(15).viscosity(2).overlay(WATER_OVERLAY_RL).color(80)).slopeFindDistance(9)
+            .density(15).luminosity(2).viscosity(2).overlay(WATER_OVERLAY_RL).color(0xbffed0d0)).slopeFindDistance(9)
             .levelDecreasePerBlock(1).block(() -> ModFluids.OIL_BLOCK.get()).bucket(() -> RegistryHandler.OIL_BUCKET.get());
 
     public static final RegistryObject<FlowingFluidBlock> OIL_BLOCK = RegistryHandler.BLOCKS.register("oil",
@@ -39,7 +39,7 @@ public class ModFluids {
 
 
 
-    public static void register(IEventBus eventBus) {
-        FLUIDS.register(eventBus);
+    public static void register() {
+        FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
