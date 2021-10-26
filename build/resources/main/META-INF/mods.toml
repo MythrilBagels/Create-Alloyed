@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+issueTrackerURL="http://my.issue.tracker/"
+[[mods]]
+modId="testmod"
+version="1.16.5"
+displayName="Test Mod"
+updateJSONURL="http://myurl.me/"
+displayURL="http://example.com/"
+logoFile="testmod.png"
+credits="Thanks for this example mod goes to Java"
+authors="Me, myself and I"
+description='''
+testing ground for learning modding'''
+[[dependencies.testmod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.testmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
