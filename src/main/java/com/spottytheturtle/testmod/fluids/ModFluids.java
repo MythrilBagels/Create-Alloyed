@@ -8,6 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.fml.RegistryObject;
@@ -39,7 +40,7 @@ public class ModFluids {
 
 
 
-    public static void register() {
-        FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    public static void register(IEventBus eventBus) {
+        FLUIDS.register(eventBus);
     }
 }

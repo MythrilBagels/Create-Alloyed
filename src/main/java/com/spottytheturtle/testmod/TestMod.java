@@ -5,9 +5,12 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 
 @Mod(TestMod.MOD_ID)
@@ -18,11 +21,15 @@ public class TestMod {
 
 
     public TestMod() {
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register ourselves for server and other game events we are interested in
         //IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         RegistryHandler.init();
-        ModFluids.register();
+        ModFluids.register(eventBus);
+
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -30,6 +37,7 @@ public class TestMod {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+        
         RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.getTranslucent());
