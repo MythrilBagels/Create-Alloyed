@@ -56,8 +56,9 @@ public class RegistryHandler {
     // register item
     public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item", () -> new Item(new Item.Properties().group(TestMod.TEST_GROUP)));
     public static final RegistryObject<Item> TEST_ITEM_2 = ITEMS.register("test_item_2", () -> new Item(new Item.Properties().group(TestMod.TEST_GROUP)));
-    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(),
-            new Item.Properties().maxStackSize(1).group(TestMod.TEST_GROUP)));
+    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
+            () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().maxStackSize(1).group(TestMod.TEST_GROUP)));
+
     //public static final RegistryObject<Item> TEST_ITEM_4 = ITEMS.register("test_item_4", () -> new Item(new Item.Properties().group(TestMod.TEST_GROUP)));
 
 }
