@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "testmod:test_block_2"
+    "item": "testmod:test_block"
   },
-  "result": "testmod:test_block",
+  "result": "testmod:test_item",
   "experience": 0.7,
   "cookingtime": 200
 }

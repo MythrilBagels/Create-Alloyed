@@ -7,11 +7,11 @@
   ],
   "key": {
     "x": {
-      "item": "testmod:test_block_2"
+      "item": "testmod:test_item_2"
     }
   },
   "result": {
-    "item": "testmod:test_block",
+    "item": "testmod:test_block_2",
     "count": 1
   }
 }
