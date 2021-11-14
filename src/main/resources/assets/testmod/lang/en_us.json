@@ -1,9 +1,19 @@
 {
+  "item.testmod.amethyst": "Amethyst",
+  "item.testmod.firestone": "Firestone",
+  "block.testmod.firestone_block": "Firestone block",
+  "tooltip.testmod.firestone_tooltip": "Hold \u00A7eSHIFT\u00A7r for more information",
+  "tooltip.testmod.firestone_shift": "Might set you on fire or might give you protection from it",
+  "block.testmod.amethyst_ore": "Amethyst ore",
+  "block.testmod.amethyst_block": "Amethyst block",
+  "block.testmod.amethyst_stairs": "Amethyst Stairs",
   "item.testmod.test_item": "Test item",
+  "item.testmod.test_item_2": "Test item 2",
   "block.testmod.test_block": "Test block",
   "block.testmod.test_block_2": "Test block 2",
-  "item.testmod.test_item_2": "Test item 2",
-  "itemGroup.testtab": "test items",
+  "itemGroup.testgroup": "Mod items",
   "item.testmod.oil_bucket": "Oil bucket",
-  "fluid.testmod.oil": "oil"
+  "fluid.testmod.oil": "oil",
+  "block.testmod.lightning_channeler": "Lightning channeler",
+  "screen.testmod.lightning_channeler": "Lightning channeler"
 }

@@ -1,12 +1,12 @@
 package com.spottytheturtle.testmod.world.gen;
 
-import com.spottytheturtle.testmod.RegistryHandler;
+import com.spottytheturtle.testmod.blocks.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
 
-    ORETYPE1(Lazy.of(RegistryHandler.TEST_BLOCK), 8, 25, 50);
+    ORETYPE1(Lazy.of(ModBlocks.AMETHYST_ORE), 8, 25, 50);
 
     private final Lazy<Block> block;
     private final int maxVeinSize;
