@@ -5,13 +5,14 @@ issueTrackerURL="http://my.issue.tracker/"
 [[mods]]
 modId="alloyed"
 version="1.16.5"
-displayName="Create: Composition"
+displayName="Create: Alloyed"
 updateJSONURL="http://myurl.me/"
 displayURL="http://example.com/"
 logoFile="alloyed.png"
 credits="yes"
 authors="yes"
-description='''yes
+description='''
+A Create addon adding Bronze and Steel, both items used for compatibility and decoration!
 '''
 [[dependencies.alloyed]]
     modId="forge"
