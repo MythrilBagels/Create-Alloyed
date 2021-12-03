@@ -8,7 +8,7 @@ public class ModItemGroup {
     public static final ItemGroup TEST_GROUP = new ItemGroup("testgroup")
     {
         @Override
-        public ItemStack createIcon()
+        public ItemStack makeIcon()
         {
             return new ItemStack(ModItems.BRONZE_INGOT.get());
         }

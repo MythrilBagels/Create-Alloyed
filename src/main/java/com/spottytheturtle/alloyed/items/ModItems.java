@@ -13,10 +13,10 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot",
-            () -> new Item(new Item.Properties().group(ModItemGroup.TEST_GROUP)));
+            () -> new Item(new Item.Properties().tab(ModItemGroup.TEST_GROUP)));
 
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
-            () -> new Item(new Item.Properties().group(ModItemGroup.TEST_GROUP)));
+            () -> new Item(new Item.Properties().tab(ModItemGroup.TEST_GROUP)));
 
 
 

@@ -15,15 +15,15 @@ public class ModOreGeneration {
     public static void generateOres(final BiomeLoadingEvent event) {
         for (OreType ore : OreType.values()) {
             OreFeatureConfig oreFeatureConfig = new OreFeatureConfig(
-                    OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                    ore.getBlock().get().getDefaultState(), ore.getMaxVeinSize());
+                    OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                    ore.getBlock().get().defaultBlockState(), ore.getMaxVeinSize());
 
-            ConfiguredPlacement<TopSolidRangeConfig> configuredPlacement = Placement.RANGE.configure(
+            ConfiguredPlacement<TopSolidRangeConfig> configuredPlacement = Placement.RANGE.configured(
                     new TopSolidRangeConfig(ore.getMinHeight(), ore.getMinHeight(), ore.getMaxHeight()));
 
             ConfiguredFeature<?, ?> oreFeature = registerOreFeature(ore, oreFeatureConfig, configuredPlacement);
 
-            event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreFeature);
+            event.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreFeature);
 
         }
     }
@@ -31,8 +31,8 @@ public class ModOreGeneration {
     private static ConfiguredFeature<?, ?> registerOreFeature(OreType ore, OreFeatureConfig oreFeatureConfig,
                                                               ConfiguredPlacement configuredPlacement) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, ore.getBlock().get().getRegistryName(),
-                Feature.ORE.withConfiguration(oreFeatureConfig).withPlacement(configuredPlacement)
-                        .square().count(ore.getMaxVeinSize()));
+                Feature.ORE.configured(oreFeatureConfig).decorated(configuredPlacement)
+                        .squared().count(ore.getMaxVeinSize()));
     }
 
 }

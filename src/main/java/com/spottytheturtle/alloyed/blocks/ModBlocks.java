@@ -23,12 +23,12 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.IRON).harvestLevel(3)
-                    .harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)));
+            () -> new Block(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3)
+                    .harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(5f)));
 
     public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.IRON).harvestLevel(4)
-                    .harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)));
+            () -> new Block(AbstractBlock.Properties.of(Material.METAL).harvestLevel(4)
+                    .harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(6f)));
 
 
 
@@ -46,7 +46,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().group(ModItemGroup.TEST_GROUP)));
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModItemGroup.TEST_GROUP)));
     }
 
 
