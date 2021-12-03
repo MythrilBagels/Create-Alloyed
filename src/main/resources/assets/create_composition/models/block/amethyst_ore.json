@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "create_composition:block/amethyst_ore"
+  }
+}

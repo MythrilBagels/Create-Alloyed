@@ -1,0 +1,10 @@
+{
+  "itemGroup.testgroup": "More Create Metals",
+  "block.create_composition.bronze_block": "Bronze block",
+  "block.create_composition.steel_block": "Steel block",
+  "item.create_composition.bronze_ingot": "Bronze ingot",
+  "item.create_composition.steel_ingot": "Steel ingot",
+  "block.create_composition.tin_block": "Tin block",
+  "item.create_composition.tin_ingot": "Tin ingot",
+  "block.create_composition.tin_ore": "Tin ore"
+}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "testmod:test_block"
-  },
-  "result": "testmod:test_item",
-  "experience": 0.7,
-  "cookingtime": 100
-}

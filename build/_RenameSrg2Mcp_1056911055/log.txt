@@ -1,0 +1,15 @@
+Java Launcher: C:\Program Files\Eclipse Adoptium\jdk-8.0.312.7-hotspot\bin\java.exe
+Arguments: '--task, SRG_TO_MCP, --input, C:\Users\Spotty\.gradle\caches\modules-2\files-2.1\curse.maven\flywheel-486392\3535459\30dbb119ce3d455bee065c0bef04a00827b3a5b3\flywheel-486392-3535459.jar, --output, C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\flywheel-486392\3535459_mapped_snapshot_20210309-1.16.5\flywheel-486392-3535459_mapped_snapshot_20210309-1.16.5.jar, --mcp, C:\Users\Spotty\.gradle\caches\forge_gradle\maven_downloader\de\oceanlabs\mcp\mcp_snapshot\20210309-1.16.5\mcp_snapshot-20210309-1.16.5.zip, --strip-signatures'
+Classpath:
+ - C:\Users\Spotty\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\installertools\1.2.8\installertools-1.2.8-fatjar.jar
+Working directory: C:\Users\Spotty\Desktop\Create Composition\build\_RenameSrg2Mcp_1056911055
+Main class: net.minecraftforge.installertools.ConsoleTool
+====================================
+Task: SRG_TO_MCP
+Input:  C:\Users\Spotty\.gradle\caches\modules-2\files-2.1\curse.maven\flywheel-486392\3535459\30dbb119ce3d455bee065c0bef04a00827b3a5b3\flywheel-486392-3535459.jar
+Output: C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\flywheel-486392\3535459_mapped_snapshot_20210309-1.16.5\flywheel-486392-3535459_mapped_snapshot_20210309-1.16.5.jar
+MCP:    C:\Users\Spotty\.gradle\caches\forge_gradle\maven_downloader\de\oceanlabs\mcp\mcp_snapshot\20210309-1.16.5\mcp_snapshot-20210309-1.16.5.zip
+Loading MCP Data
+Processing ZIP file
+Stripped Manifest of sha digests
+Process complete

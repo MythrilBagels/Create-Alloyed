@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "create_composition:block/amethyst_ore" }
+  }
+}

@@ -3,23 +3,23 @@ loaderVersion="[36,)"
 license="MIT"
 issueTrackerURL="http://my.issue.tracker/"
 [[mods]]
-modId="testmod"
+modId="create_composition"
 version="1.16.5"
-displayName="Test Mod"
+displayName="Create: Composition"
 updateJSONURL="http://myurl.me/"
 displayURL="http://example.com/"
-logoFile="testmod.png"
-credits="Thanks for this example mod goes to Java"
-authors="Me, myself and I"
-description='''
-testing ground for learning modding'''
-[[dependencies.testmod]]
+logoFile="create_composition.png"
+credits="yes"
+authors="yes"
+description='''yes
+'''
+[[dependencies.create_composition]]
     modId="forge"
     mandatory=true
     versionRange="[31,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.testmod]]
+[[dependencies.create_composition]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"
