@@ -1,13 +1,13 @@
-[03Dec2021 18:44:05.169] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.2.8, --assetIndex, 1.16, --assetsDir, C:\Users\Spotty\.gradle\caches\forge_gradle\assets, --version, MOD_DEV, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
-[03Dec2021 18:44:05.172] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.0.9+86+master.3cf110c starting: java version 1.8.0_302 by Temurin
-[03Dec2021 18:44:05.393] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[03Dec2021 18:44:05.427] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.4 Source=file:/C:/Users/Spotty/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.4/4ec7d77d9ab32596ca0b78bb123956734767e3a/mixin-0.8.4.jar Service=ModLauncher Env=CLIENT
-[03Dec2021 18:44:06.619] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Spotty\.gradle\caches\forge_gradle\assets, --assetIndex, 1.16, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
-[03Dec2021 18:44:06.805] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\Users\Spotty\Desktop\Create Composition/build/createSrgToMcp/output.srg
-[03Dec2021 18:44:06.807] [main/INFO] [mixin/]: Remapping refMap steampowered.refmap.json using C:\Users\Spotty\Desktop\Create Composition/build/createSrgToMcp/output.srg
-[03Dec2021 18:44:06.808] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\Users\Spotty\Desktop\Create Composition/build/createSrgToMcp/output.srg
-[03Dec2021 18:44:10.252] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[03Dec2021 18:44:11.093] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Failed to verify authentication
+[03Dec2021 19:55:23.455] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.2.8, --assetIndex, 1.16, --assetsDir, C:\Users\Spotty\.gradle\caches\forge_gradle\assets, --version, MOD_DEV, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[03Dec2021 19:55:23.457] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.0.9+86+master.3cf110c starting: java version 1.8.0_312 by Temurin
+[03Dec2021 19:55:23.684] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[03Dec2021 19:55:23.716] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.4 Source=file:/C:/Users/Spotty/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.4/4ec7d77d9ab32596ca0b78bb123956734767e3a/mixin-0.8.4.jar Service=ModLauncher Env=CLIENT
+[03Dec2021 19:55:24.973] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Spotty\.gradle\caches\forge_gradle\assets, --assetIndex, 1.16, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[03Dec2021 19:55:25.132] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\Users\Spotty\Desktop\Create Composition/build/createSrgToMcp/output.srg
+[03Dec2021 19:55:25.133] [main/INFO] [mixin/]: Remapping refMap steampowered.refmap.json using C:\Users\Spotty\Desktop\Create Composition/build/createSrgToMcp/output.srg
+[03Dec2021 19:55:25.135] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\Users\Spotty\Desktop\Create Composition/build/createSrgToMcp/output.srg
+[03Dec2021 19:55:28.799] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[03Dec2021 19:55:29.652] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Failed to verify authentication
 com.mojang.authlib.exceptions.AuthenticationUnavailableException: null
 	at com.mojang.authlib.yggdrasil.YggdrasilSocialInteractionsService.checkPrivileges(YggdrasilSocialInteractionsService.java:97) ~[authlib-2.1.28.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilSocialInteractionsService.<init>(YggdrasilSocialInteractionsService.java:40) ~[authlib-2.1.28.jar:?]
@@ -15,10 +15,10 @@ com.mojang.authlib.exceptions.AuthenticationUnavailableException: null
 	at net.minecraft.client.Minecraft.func_244735_a(Minecraft.java:556) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.<init>(Minecraft.java:388) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.main.Main.main(Main.java:149) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
 	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
@@ -26,87 +26,88 @@ com.mojang.authlib.exceptions.AuthenticationUnavailableException: null
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:11.103] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[03Dec2021 18:44:11.164] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
-[03Dec2021 18:44:11.823] [modloading-worker-11/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.8, for MC 1.16.5 with MCP 20210115.111550
-[03Dec2021 18:44:11.824] [modloading-worker-11/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v36.2.8 Initialized
-[03Dec2021 18:44:11.892] [modloading-worker-9/INFO] [com.simibubi.create.repack.registrate.AbstractRegistrate/]: Detected new forge version, registering events reflectively.
-[03Dec2021 18:44:11.932] [modloading-worker-2/INFO] [com.jozufozu.flywheel.backend.Backend/]: Optifine not detected.
-[03Dec2021 18:44:12.090] [modloading-worker-13/INFO] [com.simibubi.create.repack.registrate.AbstractRegistrate/]: Detected new forge version, registering events reflectively.
-[03Dec2021 18:44:14.716] [Render thread/INFO] [net.minecraftforge.registries.GameData/]: Potentially Dangerous alternative prefix `minecraft` for name `milk`, expected `forge`. This could be a intended override, but in most cases indicates a broken mod.
-[03Dec2021 18:44:14.716] [Render thread/INFO] [net.minecraftforge.registries.GameData/]: Potentially Dangerous alternative prefix `minecraft` for name `flowing_milk`, expected `forge`. This could be a intended override, but in most cases indicates a broken mod.
-[03Dec2021 18:44:15.500] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[03Dec2021 18:44:15.558] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[03Dec2021 18:44:15.839] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[03Dec2021 18:44:16.696] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 36.2.8 Target: 36.2.19
-[03Dec2021 18:44:18.514] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=up,lit=false,redstone_locked=false'
-[03Dec2021 18:44:18.514] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=down,lit=false,redstone_locked=true'
-[03Dec2021 18:44:18.514] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=down,lit=true,redstone_locked=true'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=down,lit=true,redstone_locked=false'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=up,lit=true,redstone_locked=true'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=up,lit=true,redstone_locked=false'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=up,lit=false,redstone_locked=true'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=down,lit=false,redstone_locked=false'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=down,lit=true,redstone_locked=false'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=up,lit=true,redstone_locked=true'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=down,lit=true,redstone_locked=true'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=down,lit=false,redstone_locked=true'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=up,lit=false,redstone_locked=false'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=down,lit=false,redstone_locked=false'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=up,lit=true,redstone_locked=false'
-[03Dec2021 18:44:18.515] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=up,lit=false,redstone_locked=true'
-[03Dec2021 18:44:18.516] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=down,lit=true,redstone_locked=false'
-[03Dec2021 18:44:18.516] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=up,lit=true,redstone_locked=true'
-[03Dec2021 18:44:18.516] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=down,lit=true,redstone_locked=true'
-[03Dec2021 18:44:18.516] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=up,lit=false,redstone_locked=true'
-[03Dec2021 18:44:18.516] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=down,lit=false,redstone_locked=false'
-[03Dec2021 18:44:18.516] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=up,lit=true,redstone_locked=false'
-[03Dec2021 18:44:18.516] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=down,lit=false,redstone_locked=true'
-[03Dec2021 18:44:18.516] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=up,lit=false,redstone_locked=false'
-[03Dec2021 18:44:18.904] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: create_composition:blockstates/bronze_block.json: java.io.FileNotFoundException: create_composition:blockstates/bronze_block.json
-[03Dec2021 18:44:18.905] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'create_composition:blockstates/bronze_block.json' missing model for variant: 'create_composition:bronze_block#'
-[03Dec2021 18:44:18.905] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: create_composition:blockstates/steel_block.json: java.io.FileNotFoundException: create_composition:blockstates/steel_block.json
-[03Dec2021 18:44:18.905] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'create_composition:blockstates/steel_block.json' missing model for variant: 'create_composition:steel_block#'
-[03Dec2021 18:44:18.905] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: create_composition:blockstates/tin_block.json: java.io.FileNotFoundException: create_composition:blockstates/tin_block.json
-[03Dec2021 18:44:18.905] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'create_composition:blockstates/tin_block.json' missing model for variant: 'create_composition:tin_block#'
-[03Dec2021 18:44:18.906] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: create_composition:blockstates/tin_ore.json: java.io.FileNotFoundException: create_composition:blockstates/tin_ore.json
-[03Dec2021 18:44:18.906] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'create_composition:blockstates/tin_ore.json' missing model for variant: 'create_composition:tin_ore#'
-[03Dec2021 18:44:19.492] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:bronze_ingot#inventory' referenced from: create_composition:bronze_ingot#inventory: java.io.FileNotFoundException: create_composition:models/item/bronze_ingot.json
-[03Dec2021 18:44:19.493] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:steel_ingot#inventory' referenced from: create_composition:steel_ingot#inventory: java.io.FileNotFoundException: create_composition:models/item/steel_ingot.json
-[03Dec2021 18:44:19.493] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:tin_ingot#inventory' referenced from: create_composition:tin_ingot#inventory: java.io.FileNotFoundException: create_composition:models/item/tin_ingot.json
-[03Dec2021 18:44:19.493] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:bronze_block#inventory' referenced from: create_composition:bronze_block#inventory: java.io.FileNotFoundException: create_composition:models/item/bronze_block.json
-[03Dec2021 18:44:19.494] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:steel_block#inventory' referenced from: create_composition:steel_block#inventory: java.io.FileNotFoundException: create_composition:models/item/steel_block.json
-[03Dec2021 18:44:19.494] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:tin_block#inventory' referenced from: create_composition:tin_block#inventory: java.io.FileNotFoundException: create_composition:models/item/tin_block.json
-[03Dec2021 18:44:19.494] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:tin_ore#inventory' referenced from: create_composition:tin_ore#inventory: java.io.FileNotFoundException: create_composition:models/item/tin_ore.json
-[03Dec2021 18:44:20.238] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loading context 'flywheel:context/crumbling'
-[03Dec2021 18:44:20.268] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loading context 'flywheel:context/world'
-[03Dec2021 18:44:20.291] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loading context 'create:context/contraption'
-[03Dec2021 18:44:20.311] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loading context 'create:context/contraption'
-[03Dec2021 18:44:20.313] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader programs.
-[03Dec2021 18:44:21.266] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[03Dec2021 18:44:21.267] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[03Dec2021 18:44:21.421] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
-[03Dec2021 18:44:21.421] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[03Dec2021 18:44:21.444] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[03Dec2021 18:44:21.445] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[03Dec2021 18:44:21.445] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[03Dec2021 18:44:21.445] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[03Dec2021 18:44:21.446] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[03Dec2021 18:44:21.446] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[03Dec2021 18:44:21.852] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[03Dec2021 18:44:21.853] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[03Dec2021 18:44:21.854] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[03Dec2021 18:44:29.312] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, cart1] and [c, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:29.312] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, carts] and [c, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:29.313] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, cart1] and [c, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:29.313] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, carts] and [c, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:29.316] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:29.317] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[03Dec2021 18:44:29.317] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[03Dec2021 18:44:29.318] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:29.318] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[03Dec2021 18:44:29.323] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar, jei-1.16.5-7.7.1.121_mapped_snapshot_20210309-1.16.5.jar, flywheel-486392-3535459_mapped_snapshot_20210309-1.16.5.jar, steampowered-534610-3536735_mapped_snapshot_20210309-1.16.5.jar, create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar, main
-[03Dec2021 18:44:30.417] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_boiler
+[03Dec2021 19:55:29.658] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[03Dec2021 19:55:29.731] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
+[03Dec2021 19:55:30.328] [modloading-worker-2/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.8, for MC 1.16.5 with MCP 20210115.111550
+[03Dec2021 19:55:30.328] [modloading-worker-2/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v36.2.8 Initialized
+[03Dec2021 19:55:30.404] [modloading-worker-11/INFO] [com.jozufozu.flywheel.backend.Backend/]: Optifine not detected.
+[03Dec2021 19:55:30.406] [modloading-worker-9/INFO] [com.simibubi.create.repack.registrate.AbstractRegistrate/]: Detected new forge version, registering events reflectively.
+[03Dec2021 19:55:30.450] [modloading-worker-13/INFO] [com.simibubi.create.repack.registrate.AbstractRegistrate/]: Detected new forge version, registering events reflectively.
+[03Dec2021 19:55:33.047] [Render thread/INFO] [net.minecraftforge.registries.GameData/]: Potentially Dangerous alternative prefix `minecraft` for name `milk`, expected `forge`. This could be a intended override, but in most cases indicates a broken mod.
+[03Dec2021 19:55:33.048] [Render thread/INFO] [net.minecraftforge.registries.GameData/]: Potentially Dangerous alternative prefix `minecraft` for name `flowing_milk`, expected `forge`. This could be a intended override, but in most cases indicates a broken mod.
+[03Dec2021 19:55:33.947] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[03Dec2021 19:55:34.001] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[03Dec2021 19:55:34.283] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[03Dec2021 19:55:35.541] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 36.2.8 Target: 36.2.19
+[03Dec2021 19:55:37.027] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=up,lit=false,redstone_locked=false'
+[03Dec2021 19:55:37.027] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=down,lit=false,redstone_locked=true'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=down,lit=true,redstone_locked=true'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=down,lit=true,redstone_locked=false'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=up,lit=true,redstone_locked=true'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=up,lit=true,redstone_locked=false'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=up,lit=false,redstone_locked=true'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/bronze_burner.json' missing model for variant: 'steampowered:bronze_burner#facing=down,lit=false,redstone_locked=false'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=down,lit=true,redstone_locked=false'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=up,lit=true,redstone_locked=true'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=down,lit=true,redstone_locked=true'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=down,lit=false,redstone_locked=true'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=up,lit=false,redstone_locked=false'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=down,lit=false,redstone_locked=false'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=up,lit=true,redstone_locked=false'
+[03Dec2021 19:55:37.028] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/cast_iron_burner.json' missing model for variant: 'steampowered:cast_iron_burner#facing=up,lit=false,redstone_locked=true'
+[03Dec2021 19:55:37.029] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=down,lit=true,redstone_locked=false'
+[03Dec2021 19:55:37.029] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=up,lit=true,redstone_locked=true'
+[03Dec2021 19:55:37.029] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=down,lit=true,redstone_locked=true'
+[03Dec2021 19:55:37.029] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=up,lit=false,redstone_locked=true'
+[03Dec2021 19:55:37.029] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=down,lit=false,redstone_locked=false'
+[03Dec2021 19:55:37.029] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=up,lit=true,redstone_locked=false'
+[03Dec2021 19:55:37.029] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=down,lit=false,redstone_locked=true'
+[03Dec2021 19:55:37.029] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'steampowered:blockstates/steel_burner.json' missing model for variant: 'steampowered:steel_burner#facing=up,lit=false,redstone_locked=false'
+[03Dec2021 19:55:37.451] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: create_composition:blockstates/bronze_block.json: java.io.FileNotFoundException: create_composition:blockstates/bronze_block.json
+[03Dec2021 19:55:37.452] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'create_composition:blockstates/bronze_block.json' missing model for variant: 'create_composition:bronze_block#'
+[03Dec2021 19:55:37.452] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: create_composition:blockstates/steel_block.json: java.io.FileNotFoundException: create_composition:blockstates/steel_block.json
+[03Dec2021 19:55:37.452] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'create_composition:blockstates/steel_block.json' missing model for variant: 'create_composition:steel_block#'
+[03Dec2021 19:55:37.452] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: create_composition:blockstates/tin_block.json: java.io.FileNotFoundException: create_composition:blockstates/tin_block.json
+[03Dec2021 19:55:37.453] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'create_composition:blockstates/tin_block.json' missing model for variant: 'create_composition:tin_block#'
+[03Dec2021 19:55:37.453] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: create_composition:blockstates/tin_ore.json: java.io.FileNotFoundException: create_composition:blockstates/tin_ore.json
+[03Dec2021 19:55:37.453] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'create_composition:blockstates/tin_ore.json' missing model for variant: 'create_composition:tin_ore#'
+[03Dec2021 19:55:37.996] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:bronze_ingot#inventory' referenced from: create_composition:bronze_ingot#inventory: java.io.FileNotFoundException: create_composition:models/item/bronze_ingot.json
+[03Dec2021 19:55:37.996] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:steel_ingot#inventory' referenced from: create_composition:steel_ingot#inventory: java.io.FileNotFoundException: create_composition:models/item/steel_ingot.json
+[03Dec2021 19:55:37.997] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:tin_ingot#inventory' referenced from: create_composition:tin_ingot#inventory: java.io.FileNotFoundException: create_composition:models/item/tin_ingot.json
+[03Dec2021 19:55:37.997] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:bronze_block#inventory' referenced from: create_composition:bronze_block#inventory: java.io.FileNotFoundException: create_composition:models/item/bronze_block.json
+[03Dec2021 19:55:37.997] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:steel_block#inventory' referenced from: create_composition:steel_block#inventory: java.io.FileNotFoundException: create_composition:models/item/steel_block.json
+[03Dec2021 19:55:37.998] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:tin_block#inventory' referenced from: create_composition:tin_block#inventory: java.io.FileNotFoundException: create_composition:models/item/tin_block.json
+[03Dec2021 19:55:37.998] [Worker-Main-8/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'create_composition:tin_ore#inventory' referenced from: create_composition:tin_ore#inventory: java.io.FileNotFoundException: create_composition:models/item/tin_ore.json
+[03Dec2021 19:55:38.714] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loading context 'flywheel:context/crumbling'
+[03Dec2021 19:55:38.746] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loading context 'flywheel:context/world'
+[03Dec2021 19:55:38.769] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loading context 'create:context/contraption'
+[03Dec2021 19:55:38.790] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loading context 'create:context/contraption'
+[03Dec2021 19:55:38.792] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader programs.
+[03Dec2021 19:55:39.762] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[03Dec2021 19:55:39.763] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[03Dec2021 19:55:39.939] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
+[03Dec2021 19:55:39.939] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[03Dec2021 19:55:39.962] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[03Dec2021 19:55:39.962] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[03Dec2021 19:55:39.963] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[03Dec2021 19:55:39.963] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[03Dec2021 19:55:39.963] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[03Dec2021 19:55:39.964] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[03Dec2021 19:55:40.394] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[03Dec2021 19:55:40.395] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[03Dec2021 19:55:40.395] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[03Dec2021 19:55:41.312] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[03Dec2021 19:55:44.549] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, cart1] and [c, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:44.550] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, carts] and [c, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:44.550] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, cart1] and [c, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:44.550] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, carts] and [c, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:44.554] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:44.554] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[03Dec2021 19:55:44.554] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[03Dec2021 19:55:44.555] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:44.555] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[03Dec2021 19:55:44.559] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar, jei-1.16.5-7.7.1.121_mapped_snapshot_20210309-1.16.5.jar, flywheel-486392-3535459_mapped_snapshot_20210309-1.16.5.jar, steampowered-534610-3536735_mapped_snapshot_20210309-1.16.5.jar, create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar, main
+[03Dec2021 19:55:45.660] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_boiler
 com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -120,9 +121,9 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
 	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -149,10 +150,10 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
 	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
@@ -160,7 +161,7 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:30.427] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_cogwheel
+[03Dec2021 19:55:45.671] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_cogwheel
 com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -174,9 +175,9 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
 	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -203,10 +204,10 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
 	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
@@ -214,7 +215,7 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:30.431] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_large_cogwheel
+[03Dec2021 19:55:45.675] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_large_cogwheel
 com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -228,9 +229,9 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
 	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -257,10 +258,10 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
 	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
@@ -268,346 +269,7 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:30.438] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_flywheel
-com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
-	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at com.simibubi.create.content.contraptions.components.crafter.MechanicalCraftingRecipe$Serializer.read(MechanicalCraftingRecipe.java:90) ~[create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar:mc1.16.5_v0.3.2g]
-	at com.simibubi.create.content.contraptions.components.crafter.MechanicalCraftingRecipe$Serializer.read(MechanicalCraftingRecipe.java:86) ~[create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar:mc1.16.5_v0.3.2g]
-	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
-	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1759) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
-	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
-	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:30.442] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_steam_engine
-com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
-	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at com.simibubi.create.content.contraptions.components.crafter.MechanicalCraftingRecipe$Serializer.read(MechanicalCraftingRecipe.java:90) ~[create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar:mc1.16.5_v0.3.2g]
-	at com.simibubi.create.content.contraptions.components.crafter.MechanicalCraftingRecipe$Serializer.read(MechanicalCraftingRecipe.java:86) ~[create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar:mc1.16.5_v0.3.2g]
-	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
-	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1759) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
-	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
-	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:30.443] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_burner
-com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
-	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:294) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
-	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1759) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
-	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
-	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:30.445] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 19 recipes
-[03Dec2021 18:44:31.228] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1663 advancements
-[03Dec2021 18:44:31.474] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[03Dec2021 18:44:32.094] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, cart1] and [c, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:32.094] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, carts] and [c, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:32.094] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, cart1] and [c, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:32.094] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, carts] and [c, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:32.095] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:32.096] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[03Dec2021 18:44:32.096] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[03Dec2021 18:44:32.096] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[03Dec2021 18:44:32.097] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[03Dec2021 18:44:32.097] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar, jei-1.16.5-7.7.1.121_mapped_snapshot_20210309-1.16.5.jar, flywheel-486392-3535459_mapped_snapshot_20210309-1.16.5.jar, steampowered-534610-3536735_mapped_snapshot_20210309-1.16.5.jar, create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar, main
-[03Dec2021 18:44:33.176] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_boiler
-com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
-	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:294) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
-	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
-	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
-	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:33.177] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_cogwheel
-com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
-	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:294) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
-	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
-	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
-	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:33.179] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_large_cogwheel
-com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
-	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:294) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
-	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
-	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
-	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:33.184] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_flywheel
+[03Dec2021 19:55:45.686] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_flywheel
 com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -622,16 +284,16 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
 	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1759) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -651,10 +313,10 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
 	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
@@ -662,7 +324,7 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:33.187] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_steam_engine
+[03Dec2021 19:55:45.692] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_steam_engine
 com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -677,16 +339,16 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
 	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1759) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -706,10 +368,10 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
 	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
@@ -717,7 +379,7 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:33.189] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_burner
+[03Dec2021 19:55:45.696] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_burner
 com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -731,9 +393,76 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_302]
-	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_302]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
+	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1759) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+[03Dec2021 19:55:45.698] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 19 recipes
+[03Dec2021 19:55:46.536] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1663 advancements
+[03Dec2021 19:55:46.765] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[03Dec2021 19:55:47.393] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, cart1] and [c, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:47.393] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, carts] and [c, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:47.393] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, cart1] and [c, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:47.394] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [c, coupling, add, carts] and [c, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:47.395] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:47.395] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[03Dec2021 19:55:47.396] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[03Dec2021 19:55:47.396] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[03Dec2021 19:55:47.397] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[03Dec2021 19:55:47.397] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar, jei-1.16.5-7.7.1.121_mapped_snapshot_20210309-1.16.5.jar, flywheel-486392-3535459_mapped_snapshot_20210309-1.16.5.jar, steampowered-534610-3536735_mapped_snapshot_20210309-1.16.5.jar, create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar, main
+[03Dec2021 19:55:48.453] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_boiler
+com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
+	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:294) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
 	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
@@ -760,10 +489,10 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
 	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
@@ -771,53 +500,333 @@ com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
-[03Dec2021 18:44:33.191] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 19 recipes
-[03Dec2021 18:44:33.915] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1663 advancements
-[03Dec2021 18:44:34.109] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[03Dec2021 18:44:35.196] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[03Dec2021 18:44:35.263] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.16.5
-[03Dec2021 18:44:35.263] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[03Dec2021 18:44:35.399] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[03Dec2021 18:44:35.763] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[03Dec2021 18:44:35.933] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 30%
-[03Dec2021 18:44:36.937] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[03Dec2021 18:44:36.937] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[03Dec2021 18:44:37.091] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 1689 ms
-[03Dec2021 18:44:37.152] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
-[03Dec2021 18:44:38.582] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
-[03Dec2021 18:44:38.619] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@f6b7727
-[03Dec2021 18:44:38.629] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:01b039f1] logged in with entity id 29 at (-29.97664424806511, 67.0, 435.9273146947699)
-[03Dec2021 18:44:38.649] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[03Dec2021 18:44:38.883] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[03Dec2021 18:44:38.894] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[03Dec2021 18:44:38.916] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Starting JEI...
-[03Dec2021 18:44:39.076] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient list...
-[03Dec2021 18:44:39.079] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient list took 2.965 ms
-[03Dec2021 18:44:39.079] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient filter...
-[03Dec2021 18:44:39.203] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient filter took 123.5 ms
-[03Dec2021 18:44:39.203] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building bookmarks...
-[03Dec2021 18:44:39.204] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building bookmarks took 1.194 ms
-[03Dec2021 18:44:39.204] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building recipe registry...
-[03Dec2021 18:44:39.235] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[03Dec2021 18:44:39.236] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[03Dec2021 18:44:39.250] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building recipe registry took 45.83 ms
-[03Dec2021 18:44:39.256] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building runtime...
-[03Dec2021 18:44:39.287] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building runtime took 30.77 ms
-[03Dec2021 18:44:39.306] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Starting JEI took 389.6 ms
-[03Dec2021 18:44:39.348] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 9 advancements
-[03Dec2021 18:45:03.965] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
-[03Dec2021 18:45:03.983] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
-[03Dec2021 18:45:03.983] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[03Dec2021 18:45:03.992] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
-[03Dec2021 18:45:04.042] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[03Dec2021 18:45:04.042] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[03Dec2021 18:45:04.042] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[03Dec2021 18:45:04.042] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[03Dec2021 18:45:04.333] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[03Dec2021 18:45:04.333] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[03Dec2021 18:45:04.334] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[03Dec2021 18:45:04.334] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[03Dec2021 18:45:04.335] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[03Dec2021 18:45:04.367] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[03Dec2021 18:45:04.400] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[03Dec2021 18:45:04.400] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[03Dec2021 19:55:48.455] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_cogwheel
+com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
+	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:294) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
+	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+[03Dec2021 19:55:48.457] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_large_cogwheel
+com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
+	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:294) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
+	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+[03Dec2021 19:55:48.461] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_flywheel
+com.google.gson.JsonSyntaxException: Unknown item tag 'forge:ingots/steel'
+	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at com.simibubi.create.content.contraptions.components.crafter.MechanicalCraftingRecipe$Serializer.read(MechanicalCraftingRecipe.java:90) ~[create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar:mc1.16.5_v0.3.2g]
+	at com.simibubi.create.content.contraptions.components.crafter.MechanicalCraftingRecipe$Serializer.read(MechanicalCraftingRecipe.java:86) ~[create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar:mc1.16.5_v0.3.2g]
+	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
+	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+[03Dec2021 19:55:48.463] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_steam_engine
+com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
+	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at com.simibubi.create.content.contraptions.components.crafter.MechanicalCraftingRecipe$Serializer.read(MechanicalCraftingRecipe.java:90) ~[create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar:mc1.16.5_v0.3.2g]
+	at com.simibubi.create.content.contraptions.components.crafter.MechanicalCraftingRecipe$Serializer.read(MechanicalCraftingRecipe.java:86) ~[create-328085-3536025_mapped_snapshot_20210309-1.16.5.jar:mc1.16.5_v0.3.2g]
+	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
+	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+[03Dec2021 19:55:48.466] [Render thread/ERROR] [net.minecraft.item.crafting.RecipeManager/]: Parsing error loading recipe steampowered:steel_burner
+com.google.gson.JsonSyntaxException: Unknown item tag 'forge:plates/steel'
+	at net.minecraft.item.crafting.Ingredient.deserializeItemList(Ingredient.java:223) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:41) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:155) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.Ingredient.deserialize(Ingredient.java:189) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.deserializeKey(ShapedRecipe.java:274) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe.access$000(ShapedRecipe.java:24) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:298) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.ShapedRecipe$Serializer.read(ShapedRecipe.java:294) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.deserializeRecipe(RecipeManager.java:144) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:61) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.item.crafting.RecipeManager.apply(RecipeManager.java:38) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:14) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_312]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_312]
+	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:66) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:139) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:109) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveUntil(ThreadTaskExecutor.java:122) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.reloadDatapacks(Minecraft.java:1910) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1762) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.loadWorld(Minecraft.java:1728) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:364) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:273) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.mouseClicked(WorldSelectionList.java:225) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.widget.list.AbstractList.mouseClicked(AbstractList.java:309) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:427) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:191) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:190) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar:build 10]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:112) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1025) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.8_mapped_snapshot_20210309-1.16.5-recomp.jar:?]
+[03Dec2021 19:55:48.468] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 19 recipes
+[03Dec2021 19:55:49.204] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1663 advancements
+[03Dec2021 19:55:49.394] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[03Dec2021 19:55:50.499] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[03Dec2021 19:55:50.572] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.16.5
+[03Dec2021 19:55:50.572] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[03Dec2021 19:55:50.748] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[03Dec2021 19:55:51.117] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[03Dec2021 19:55:51.272] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 57%
+[03Dec2021 19:55:52.318] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
+[03Dec2021 19:55:52.318] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
+[03Dec2021 19:55:52.463] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 1699 ms
+[03Dec2021 19:55:52.559] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
+[03Dec2021 19:55:53.465] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[03Dec2021 19:55:53.498] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@a043962
+[03Dec2021 19:55:53.512] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:9115af1c] logged in with entity id 29 at (-29.97664424806511, 67.0, 435.9273146947699)
+[03Dec2021 19:55:53.532] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[03Dec2021 19:55:53.716] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[03Dec2021 19:55:53.724] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[03Dec2021 19:55:53.763] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Starting JEI...
+[03Dec2021 19:55:54.791] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient list...
+[03Dec2021 19:55:54.795] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient list took 3.059 ms
+[03Dec2021 19:55:54.795] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient filter...
+[03Dec2021 19:55:54.802] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[03Dec2021 19:55:54.803] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[03Dec2021 19:55:54.919] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient filter took 124.5 ms
+[03Dec2021 19:55:54.919] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building bookmarks...
+[03Dec2021 19:55:54.921] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building bookmarks took 1.389 ms
+[03Dec2021 19:55:54.921] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building recipe registry...
+[03Dec2021 19:55:54.968] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building recipe registry took 46.91 ms
+[03Dec2021 19:55:54.973] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building runtime...
+[03Dec2021 19:55:55.002] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building runtime took 28.48 ms
+[03Dec2021 19:55:55.022] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Starting JEI took 1.259 s
+[03Dec2021 19:55:55.059] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 9 advancements
+[03Dec2021 19:55:56.013] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[03Dec2021 19:55:56.023] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[03Dec2021 19:55:56.112] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[03Dec2021 19:55:56.113] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[03Dec2021 19:56:05.764] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[03Dec2021 19:56:05.768] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[03Dec2021 19:56:05.792] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[03Dec2021 19:56:05.793] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[03Dec2021 19:56:07.225] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[03Dec2021 19:56:07.265] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
+[03Dec2021 19:56:07.265] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[03Dec2021 19:56:07.270] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[03Dec2021 19:56:07.319] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[03Dec2021 19:56:07.319] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[03Dec2021 19:56:07.320] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[03Dec2021 19:56:07.320] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[03Dec2021 19:56:07.471] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[03Dec2021 19:56:07.471] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[03Dec2021 19:56:07.472] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[03Dec2021 19:56:07.472] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[03Dec2021 19:56:07.472] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[03Dec2021 19:56:07.498] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[03Dec2021 19:56:07.530] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[03Dec2021 19:56:07.530] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
