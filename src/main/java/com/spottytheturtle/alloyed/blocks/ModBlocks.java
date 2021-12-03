@@ -1,6 +1,6 @@
 package com.spottytheturtle.alloyed.blocks;
 
-import com.spottytheturtle.alloyed.alloyed;
+import com.spottytheturtle.alloyed.Alloyed;
 import com.spottytheturtle.alloyed.items.ModItemGroup;
 import com.spottytheturtle.alloyed.items.ModItems;
 import net.minecraft.block.AbstractBlock;
@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, alloyed.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Alloyed.MOD_ID);
 
 
 
