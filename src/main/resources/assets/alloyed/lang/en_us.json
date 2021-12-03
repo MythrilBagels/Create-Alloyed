@@ -1,7 +1,7 @@
 {
-  "itemGroup.testgroup": "More Create Metals",
-  "block.alloyed.bronze_block": "Bronze block",
-  "block.alloyed.steel_block": "Steel block",
-  "item.alloyed.bronze_ingot": "Bronze ingot",
-  "item.alloyed.steel_ingot": "Steel ingot"
+  "itemGroup.testgroup": "Create: Alloyed",
+  "block.alloyed.bronze_block": "Block of Bronze",
+  "block.alloyed.steel_block": "Block of Steel",
+  "item.alloyed.bronze_ingot": "Bronze Ingot",
+  "item.alloyed.steel_ingot": "Steel Ingot"
 }
