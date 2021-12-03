@@ -3,23 +3,23 @@ loaderVersion="[36,)"
 license="MIT"
 issueTrackerURL="http://my.issue.tracker/"
 [[mods]]
-modId="create_composition"
+modId="alloyed"
 version="1.16.5"
 displayName="Create: Composition"
 updateJSONURL="http://myurl.me/"
 displayURL="http://example.com/"
-logoFile="create_composition.png"
+logoFile="alloyed.png"
 credits="yes"
 authors="yes"
 description='''yes
 '''
-[[dependencies.create_composition]]
+[[dependencies.alloyed]]
     modId="forge"
     mandatory=true
     versionRange="[31,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.create_composition]]
+[[dependencies.alloyed]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"

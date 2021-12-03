@@ -15,7 +15,7 @@
       "item": "create:shaft"
     },
     "A": {
-      "item": "create_composition:bronze_ingot"
+      "item": "alloyed:bronze_ingot"
     },
     "C": {
       "item": "steampowered:bronze_cogwheel"
