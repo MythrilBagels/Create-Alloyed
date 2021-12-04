@@ -14,6 +14,9 @@ public class ModTags {
         public static final Tags.IOptionalNamedTag<Item> BRONZE_INGOT = createForgeTag("ingots/bronze");
         public static final Tags.IOptionalNamedTag<Item> STEEL_INGOT = createForgeTag("ingots/steel");
 
+        // Compat for other mods' sheets/plates
+        public static final Tags.IOptionalNamedTag<Item> STEEL_SHEET = createForgeTag("plates/steel");
+
         private static Tags.IOptionalNamedTag<Item> createTag(String name) {
             return ItemTags.createOptional(new ResourceLocation(Alloyed.MOD_ID, name));
         }
