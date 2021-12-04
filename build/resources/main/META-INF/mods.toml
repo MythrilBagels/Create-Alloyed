@@ -14,12 +14,7 @@ authors="yes"
 description='''
 A Create addon adding Bronze and Steel, both items used for compatibility and decoration!
 '''
-[[dependencies.alloyed]]
-    modId="steampowered"
-    mandatory=false
-    versionRange="[1.16.5-1.1.8,)"
-    ordering="BEFORE"
-    side="BOTH"
+
 [[dependencies.alloyed]]
     modId="forge"
     mandatory=true
@@ -31,4 +26,10 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
     mandatory=true
     versionRange="[1.16.5]"
     ordering="NONE"
+    side="BOTH"
+[[dependencies.alloyed]]
+    modId="steampowered"
+    mandatory=false
+    versionRange="[1.16.5-1.1.8,)"
+    ordering="BEFORE"
     side="BOTH"
