@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "alloyed:steel_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "alloyed_steel_sheet"
+    }
+  ]
+}
