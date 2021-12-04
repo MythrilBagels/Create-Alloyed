@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SDS",
+    "DCD",
+    "SDS"
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:ingots/brass"
+    },
+    "C": {
+      "item": "create:andesite_alloy"
+    },
+    "D": {
+      "tag": "forge:plates/brass"
+    }
+  },
+  "result": {
+    "item": "steampowered:bronze_large_cogwheel",
+    "count": 8
+  }
+}

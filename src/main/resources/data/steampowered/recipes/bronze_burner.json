@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "S S",
+    "CCC"
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:plates/brass"
+    },
+    "C": {
+      "item": "minecraft:bricks"
+    }
+  },
+  "result": {
+    "item": "steampowered:bronze_burner",
+    "count": 1
+  }
+}
