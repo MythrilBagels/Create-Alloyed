@@ -11,14 +11,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 
-@Mod(alloyed.MOD_ID)
-public class alloyed {
+@Mod(Alloyed.MOD_ID)
+public class Alloyed {
 
     public static final String MOD_ID = "alloyed";
 
 
 
-    public alloyed() {
+    public Alloyed() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 

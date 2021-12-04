@@ -1,6 +1,6 @@
 package com.spottytheturtle.alloyed.items;
 
-import com.spottytheturtle.alloyed.alloyed;
+import com.spottytheturtle.alloyed.Alloyed;
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModItems {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, alloyed.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Alloyed.MOD_ID);
 
 
     public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot",

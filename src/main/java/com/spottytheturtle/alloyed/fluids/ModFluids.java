@@ -1,6 +1,6 @@
 package com.spottytheturtle.alloyed.fluids;
 
-import com.spottytheturtle.alloyed.alloyed;
+import com.spottytheturtle.alloyed.Alloyed;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,7 +14,7 @@ public class ModFluids {
 
 
 
-    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, alloyed.MOD_ID);
+    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, Alloyed.MOD_ID);
 
     /*
     public static final RegistryObject<FlowingFluid> OIL_FLUID = FLUIDS.register("oil_fluid", () -> new ForgeFlowingFluid.Source(ModFluids.OIL_PROPERTIES));
