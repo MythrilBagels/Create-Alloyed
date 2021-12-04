@@ -5,10 +5,10 @@
     <option name="VM_PARAMETERS" value="-Dforge.logging.console.level=debug -Dforge.logging.markers=REGISTRIES -XX:+IgnoreUnrecognizedVMOptions --add-exports=java.base/sun.security.util=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=java.naming --add-opens=java.base/java.util.jar=ALL-UNNAMED"/>
     <option name="PROGRAM_PARAMETERS" value=""/>
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$\run"/>
-    <module name="Create_Alloyed.main"/>
+    <module name="Create-Alloyed.main"/>
     <envs>
       <env name="MOD_CLASSES" value="examplemod%%$PROJECT_DIR$\build\resources\main;examplemod%%$PROJECT_DIR$\build\classes\java\main"/>
-      <env name="MCP_MAPPINGS" value="snapshot_20210309-1.16.5"/>
+      <env name="MCP_MAPPINGS" value="official_1.16.5"/>
       <env name="MCP_VERSION" value="20210115.111550"/>
       <env name="FORGE_VERSION" value="36.2.8"/>
       <env name="FORGE_GROUP" value="net.minecraftforge"/>

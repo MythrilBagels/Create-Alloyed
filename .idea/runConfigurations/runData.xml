@@ -3,12 +3,12 @@
   <configuration default="false" factoryName="Application" name="runData" singleton="false" type="Application">
     <option name="MAIN_CLASS_NAME" value="net.minecraftforge.userdev.LaunchTesting"/>
     <option name="VM_PARAMETERS" value="-Dforge.logging.console.level=debug -Dforge.logging.markers=REGISTRIES -XX:+IgnoreUnrecognizedVMOptions --add-exports=java.base/sun.security.util=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=java.naming --add-opens=java.base/java.util.jar=ALL-UNNAMED"/>
-    <option name="PROGRAM_PARAMETERS" value="--mod examplemod --all --output &quot;C:\Users\Spotty\Desktop\Create Alloyed\src\generated\resources&quot; --existing &quot;C:\Users\Spotty\Desktop\Create Alloyed\src\main\resources&quot;"/>
+    <option name="PROGRAM_PARAMETERS" value="--mod examplemod --all --output C:\Users\Spotty\Desktop\Create-Alloyed\src\generated\resources --existing C:\Users\Spotty\Desktop\Create-Alloyed\src\main\resources"/>
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$\run"/>
-    <module name="Create_Alloyed.main"/>
+    <module name="Create-Alloyed.main"/>
     <envs>
       <env name="MOD_CLASSES" value="examplemod%%$PROJECT_DIR$\build\resources\main;examplemod%%$PROJECT_DIR$\build\classes\java\main"/>
-      <env name="MCP_MAPPINGS" value="snapshot_20210309-1.16.5"/>
+      <env name="MCP_MAPPINGS" value="official_1.16.5"/>
       <env name="MCP_VERSION" value="20210115.111550"/>
       <env name="FORGE_VERSION" value="36.2.8"/>
       <env name="assetIndex" value="1.16"/>
