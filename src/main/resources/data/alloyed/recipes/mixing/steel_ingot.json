@@ -35,8 +35,8 @@
   "results": [
     {
       "item": "alloyed:steel_ingot",
-      "count": 1
+      "count": 9
     }
   ],
-  "heatRequirement": "heated"
+  "heatRequirement": "superheated"
 }
