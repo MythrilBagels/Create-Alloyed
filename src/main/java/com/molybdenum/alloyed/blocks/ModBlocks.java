@@ -21,11 +21,12 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Alloyed.MOD_ID);
 
 
-
+    // Bronze
     public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block",
             () -> new Block(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3)
                     .harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(5f)));
 
+    // Steel
     public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
             () -> new Block(AbstractBlock.Properties.of(Material.METAL).harvestLevel(4)
                     .harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(6f)));
