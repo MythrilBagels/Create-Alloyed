@@ -1,0 +1,30 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/copper"
+    },
+    {
+      "tag": "forge:nuggets/zinc"
+    },
+    {
+      "tag": "forge:nuggets/zinc"
+    },
+    {
+      "tag": "forge:nuggets/zinc"
+    },
+    {
+      "item": "create:cinder_flour"
+    },
+    {
+      "item": "create:cinder_flour"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:brass_ingot",
+      "count": 2
+    }
+  ],
+  "heatRequirement": "heated"
+}
