@@ -1,7 +1,11 @@
 {
   "itemGroup.testgroup": "Create: Alloyed",
+
   "block.alloyed.bronze_block": "Block of Bronze",
   "block.alloyed.steel_block": "Block of Steel",
+
   "item.alloyed.bronze_ingot": "Bronze Ingot",
-  "item.alloyed.steel_ingot": "Steel Ingot"
+  "item.alloyed.steel_ingot": "Steel Ingot",
+
+  "item.alloyed.steel_sheet": "Steel Sheet"
 }
