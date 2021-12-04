@@ -22,8 +22,8 @@
   ],
   "results": [
     {
-      "item": "create:brass_ingot",
-      "count": 2
+      "item": "alloyed:bronze_ingot",
+      "count": 1
     }
   ],
   "heatRequirement": "heated"
