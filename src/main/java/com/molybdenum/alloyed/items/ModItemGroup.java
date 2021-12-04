@@ -1,4 +1,4 @@
-package com.spottytheturtle.alloyed.items;
+package com.molybdenum.alloyed.items;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

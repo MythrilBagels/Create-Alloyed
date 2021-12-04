@@ -1,6 +1,6 @@
-package com.spottytheturtle.alloyed.fluids;
+package com.molybdenum.alloyed.fluids;
 
-import com.spottytheturtle.alloyed.Alloyed;
+import com.molybdenum.alloyed.Alloyed;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;

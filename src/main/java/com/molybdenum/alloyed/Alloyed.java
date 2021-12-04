@@ -1,8 +1,8 @@
-package com.spottytheturtle.alloyed;
+package com.molybdenum.alloyed;
 
-import com.spottytheturtle.alloyed.blocks.ModBlocks;
-import com.spottytheturtle.alloyed.fluids.ModFluids;
-import com.spottytheturtle.alloyed.items.ModItems;
+import com.molybdenum.alloyed.blocks.ModBlocks;
+import com.molybdenum.alloyed.fluids.ModFluids;
+import com.molybdenum.alloyed.items.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

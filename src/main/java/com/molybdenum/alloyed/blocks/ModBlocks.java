@@ -1,8 +1,8 @@
-package com.spottytheturtle.alloyed.blocks;
+package com.molybdenum.alloyed.blocks;
 
-import com.spottytheturtle.alloyed.Alloyed;
-import com.spottytheturtle.alloyed.items.ModItemGroup;
-import com.spottytheturtle.alloyed.items.ModItems;
+import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.items.ModItemGroup;
+import com.molybdenum.alloyed.items.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
