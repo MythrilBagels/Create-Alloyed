@@ -30,6 +30,6 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
 [[dependencies.alloyed]]
     modId="steampowered"
     mandatory=false
-    versionRange="[1.16.5-1.1.8,)"
+    versionRange="[1.16.5-1.1.9,)"
     ordering="AFTER"
     side="BOTH"

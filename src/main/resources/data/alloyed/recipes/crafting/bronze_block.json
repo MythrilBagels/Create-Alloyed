@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/bronze"
+      "item": "alloyed:bronze_ingot"
     }
   },
   "result": {
