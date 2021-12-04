@@ -104,7 +104,7 @@ key_create.keyinfo.toolmenu:key.keyboard.left.alt
 key_create.keyinfo.toolbelt:key.keyboard.left.alt
 key_key.jei.toggleOverlay:key.keyboard.o:CONTROL
 key_key.jei.focusSearch:key.keyboard.f:CONTROL
-key_key.jei.toggleCheatMode:key.keyboard.unknown
+key_key.jei.toggleCheatMode:key.keyboard.world.2
 key_key.jei.toggleEditMode:key.keyboard.unknown
 key_key.jei.showRecipe:key.keyboard.r
 key_key.jei.showUses:key.keyboard.u
