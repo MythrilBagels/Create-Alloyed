@@ -25,7 +25,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block",
             () -> new Block(AbstractBlock.Properties
                     .of(Material.METAL)
-                    .harvestLevel(3)
+                    .harvestLevel(2)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(5f)));
@@ -34,7 +34,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
             () -> new Block(AbstractBlock.Properties
                     .of(Material.METAL)
-                    .harvestLevel(4)
+                    .harvestLevel(2)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(6f)));
