@@ -26,13 +26,6 @@ public class ModItems {
     public static final RegistryObject<Item> STEEL_SHEET = ITEMS.register("steel_sheet",
             () -> new Item(new Item.Properties().tab(ModItemGroup.TEST_GROUP)));
 
-    // Chrome
-    public static final RegistryObject<Item> CHROME_INGOT = ITEMS.register("chrome_ingot",
-            () -> new Item(new Item.Properties().tab(ModItemGroup.TEST_GROUP)));
-
-
-
-
     //public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
     //        () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().maxStackSize(1).group(ModItemGroup.TEST_GROUP)));
 

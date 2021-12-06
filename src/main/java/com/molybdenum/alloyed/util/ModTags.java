@@ -13,7 +13,6 @@ public class ModTags {
         // Compat for other mods' ingots
         public static final Tags.IOptionalNamedTag<Item> BRONZE_INGOT = createForgeTag("ingots/bronze");
         public static final Tags.IOptionalNamedTag<Item> STEEL_INGOT = createForgeTag("ingots/steel");
-        public static final Tags.IOptionalNamedTag<Item> CHROME_INGOT = createForgeTag("ingots/chrome");
 
         // Compat for other mods' sheets/plates
         public static final Tags.IOptionalNamedTag<Item> BRONZE_SHEET = createForgeTag("plates/bronze");
