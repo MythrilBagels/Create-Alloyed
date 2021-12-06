@@ -1,4 +1,10 @@
 {
+  "create:root": {
+    "criteria": {
+      "0": "2021-12-06 17:01:45 +0000"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:plains": "2021-12-04 17:57:16 +0000"
