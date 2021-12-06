@@ -5,6 +5,7 @@ import com.molybdenum.alloyed.items.ModItemGroup;
 import com.molybdenum.alloyed.items.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -37,6 +38,7 @@ public class ModBlocks {
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(3f)
+                    .sound(SoundType.ANVIL)
                     .noOcclusion()));
 
     // Steel
