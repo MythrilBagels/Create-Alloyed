@@ -5,9 +5,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/stripped_oak_wood": {
+  "create:recipes/create.base/crafting/kinetics/mechanical_piston": {
     "criteria": {
-      "has_log": "2021-12-06 18:45:08 +0000"
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_harvester": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_plough": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
     },
     "done": true
   },
@@ -17,9 +29,45 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/composter": {
+    "criteria": {
+      "has_wood_slab": "2021-12-06 19:10:57 +0000"
+    },
+    "done": true
+  },
   "create:root": {
     "criteria": {
       "0": "2021-12-06 17:01:45 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_bearing": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_drill": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.palettes/ornate_iron_window_pane": {
+    "criteria": {
+      "has_ingredient": "2021-12-06 19:10:37 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/encased_chain_drive": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_wood_slab": "2021-12-06 19:10:57 +0000"
     },
     "done": true
   },
@@ -29,11 +77,53 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/stripped_oak_wood": {
+    "criteria": {
+      "has_log": "2021-12-06 18:45:08 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/weighted_ejector": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/gantry_carriage": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/depot": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_press": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_saw": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:plains": "2021-12-04 17:57:16 +0000"
     },
     "done": false
+  },
+  "create:andesite_casing": {
+    "criteria": {
+      "0": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
   },
   "DataVersion": 2586
 }
