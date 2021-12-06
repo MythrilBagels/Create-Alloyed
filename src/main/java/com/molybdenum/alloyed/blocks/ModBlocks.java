@@ -36,7 +36,8 @@ public class ModBlocks {
                     .harvestLevel(1)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
-                    .strength(3f)));
+                    .strength(3f)
+                    .noOcclusion()));
 
     // Steel
     public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
