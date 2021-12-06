@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "alloyed:block/bronze_bell_top",
+    "bottom": "alloyed:block/bronze_bell_bottom",
+    "side": "alloyed:block/bronze_bell_side"
+  }
+}

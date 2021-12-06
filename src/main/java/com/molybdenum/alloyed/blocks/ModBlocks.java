@@ -30,6 +30,14 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(5f)));
 
+    public static final RegistryObject<Block> BRONZE_BELL = registerBlock("bronze_bell",
+            () -> new Block(AbstractBlock.Properties
+                    .of(Material.METAL)
+                    .harvestLevel(1)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3f)));
+
     // Steel
     public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
             () -> new Block(AbstractBlock.Properties
