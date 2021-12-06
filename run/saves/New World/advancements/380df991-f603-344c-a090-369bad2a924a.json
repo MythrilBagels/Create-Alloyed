@@ -1,19 +1,7 @@
 {
-  "minecraft:recipes/misc/charcoal": {
+  "create:its_alive": {
     "criteria": {
-      "has_log": "2021-12-06 18:45:07 +0000"
-    },
-    "done": true
-  },
-  "create:recipes/create.base/crafting/kinetics/mechanical_piston": {
-    "criteria": {
-      "has_item": "2021-12-06 19:10:00 +0000"
-    },
-    "done": true
-  },
-  "create:recipes/create.base/crafting/kinetics/mechanical_harvester": {
-    "criteria": {
-      "has_item": "2021-12-06 19:10:00 +0000"
+      "0": "2021-12-06 20:34:12 +0000"
     },
     "done": true
   },
@@ -29,15 +17,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/composter": {
+  "minecraft:recipes/tools/clock": {
     "criteria": {
-      "has_wood_slab": "2021-12-06 19:10:57 +0000"
+      "has_redstone": "2021-12-06 20:33:21 +0000"
     },
     "done": true
   },
-  "create:root": {
+  "create:recipes/create.base/crafting/logistics/adjustable_pulse_repeater": {
     "criteria": {
-      "0": "2021-12-06 17:01:45 +0000"
+      "has_item": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "create:deployer": {
+    "criteria": {
+      "0": "2021-12-06 20:34:01 +0000"
     },
     "done": true
   },
@@ -59,21 +53,9 @@
     },
     "done": true
   },
-  "create:recipes/create.base/crafting/kinetics/encased_chain_drive": {
+  "minecraft:recipes/tools/compass": {
     "criteria": {
-      "has_item": "2021-12-06 19:10:00 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/barrel": {
-    "criteria": {
-      "has_wood_slab": "2021-12-06 19:10:57 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/oak_wood": {
-    "criteria": {
-      "has_log": "2021-12-06 18:45:07 +0000"
+      "has_redstone": "2021-12-06 20:33:21 +0000"
     },
     "done": true
   },
@@ -83,9 +65,15 @@
     },
     "done": true
   },
-  "create:recipes/create.base/crafting/kinetics/weighted_ejector": {
+  "minecraft:recipes/redstone/redstone_block": {
     "criteria": {
-      "has_item": "2021-12-06 19:10:00 +0000"
+      "has_redstone": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/powered_latch": {
+    "criteria": {
+      "has_item": "2021-12-06 20:33:21 +0000"
     },
     "done": true
   },
@@ -101,13 +89,25 @@
     },
     "done": true
   },
-  "create:recipes/create.base/crafting/kinetics/mechanical_press": {
+  "minecraft:recipes/redstone/piston": {
     "criteria": {
-      "has_item": "2021-12-06 19:10:00 +0000"
+      "has_redstone": "2021-12-06 20:33:21 +0000"
     },
     "done": true
   },
-  "create:recipes/create.base/crafting/kinetics/mechanical_saw": {
+  "minecraft:recipes/redstone/target": {
+    "criteria": {
+      "has_redstone": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/pulse_repeater": {
+    "criteria": {
+      "has_item": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_press": {
     "criteria": {
       "has_item": "2021-12-06 19:10:00 +0000"
     },
@@ -122,6 +122,108 @@
   "create:andesite_casing": {
     "criteria": {
       "0": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2021-12-06 18:45:07 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_piston": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_harvester": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/materials/rose_quartz": {
+    "criteria": {
+      "has_item": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/composter": {
+    "criteria": {
+      "has_wood_slab": "2021-12-06 19:10:57 +0000"
+    },
+    "done": true
+  },
+  "create:root": {
+    "criteria": {
+      "0": "2021-12-06 17:01:45 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/powered_toggle_latch": {
+    "criteria": {
+      "has_item": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_torch": {
+    "criteria": {
+      "has_redstone": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2021-12-06 20:19:30 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/encased_chain_drive": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/note_block": {
+    "criteria": {
+      "has_redstone": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_wood_slab": "2021-12-06 19:10:57 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2021-12-06 18:45:07 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/dropper": {
+    "criteria": {
+      "has_redstone": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/weighted_ejector": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/adjustable_repeater": {
+    "criteria": {
+      "has_item": "2021-12-06 20:33:21 +0000"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_saw": {
+    "criteria": {
+      "has_item": "2021-12-06 19:10:00 +0000"
     },
     "done": true
   },
