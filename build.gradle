@@ -61,7 +61,7 @@ minecraft {
     mappings channel: 'official', version: '1.16.5'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -69,7 +69,7 @@ minecraft {
         client {
             workingDirectory project.file('run')
             property 'mixin.env.remapRefMap', 'true'
-            arg "-mixin.config=modid.mixins.json"
+            arg "-mixin.config=alloyed.mixins.json"
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             // Recommended logging data for a userdev environment
