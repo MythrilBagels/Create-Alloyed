@@ -160,7 +160,7 @@ dependencies {
     implementation fg.deobf("curse.maven:flywheel-486392:3535459") //flywheel
     implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
 
-    annotationProcessor 'org.spongepowered:mixin:0.8.2:processor' // mixin
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor' // mixin
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..

@@ -5,43 +5,64 @@ import com.molybdenum.alloyed.sounds.ModSounds;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.properties.NoteBlockInstrument;
 import net.minecraft.util.SoundEvent;
-import org.spongepowered.asm.mixin.*;
-import org.spongepowered.asm.mixin.gen.Invoker;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import sun.reflect.ConstructorAccessor;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 @Mixin(NoteBlockInstrument.class)
 @Unique
 public abstract class NoteblockInstrumentMixin {
-
-    @Shadow
-    @Final
-    @Mutable
-    private static NoteBlockInstrument[] $VALUES;
-
-    private static final NoteBlockInstrument BRONZE_BELL = alloyed$addVariant("BRONZE_BELL", "bronze_bell", ModSounds.BRONZE_BELL.get());
-
-    @Invoker("<init>")
-    public static NoteBlockInstrument alloyed$invokeInit(String internalName, int internalId, String name, SoundEvent sound) {
-        throw new AssertionError();
+    static {
+        try {
+            ModSounds.BRONZE_BELL_NOTEBLOCK = addToEnum(createNoteBlockInstrument("BRONZE_BELL", "bronze_bell"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    private static NoteBlockInstrument alloyed$addVariant(String internalName, String name, SoundEvent sound) {
-        ArrayList<NoteBlockInstrument> variants = new ArrayList<NoteBlockInstrument>(Arrays.asList(NoteblockInstrumentMixin.$VALUES));
-        NoteBlockInstrument instrument = alloyed$invokeInit(internalName, variants.get(variants.size() - 1).ordinal() + 1, name, sound);
-        variants.add(instrument);
-        NoteblockInstrumentMixin.$VALUES = variants.toArray(new NoteBlockInstrument[0]);
+    @Inject(method = "byState", at = @At("HEAD"), cancellable = true)
+    private static void alloyed$byState(BlockState state, CallbackInfoReturnable<NoteBlockInstrument> ci) {
+        if (state.is(ModBlocks.BRONZE_BELL.get())) {
+            ci.setReturnValue(ModSounds.BRONZE_BELL_NOTEBLOCK);
+        }
+    }
+
+    private static NoteBlockInstrument createNoteBlockInstrument(String internalName, String soundName) throws Exception {
+        Constructor<?> constructor = NoteBlockInstrument.class.getDeclaredConstructor(String.class, int.class, String.class, SoundEvent.class);
+        constructor.setAccessible(true);
+        Field constructorAccessorField = Constructor.class.getDeclaredField("constructorAccessor");
+        constructorAccessorField.setAccessible(true);
+        ConstructorAccessor ca = (ConstructorAccessor) constructorAccessorField.get(constructor);
+        if (ca == null) {
+            Method acquireConstructorAccessorMethod = Constructor.class.getDeclaredMethod("acquireConstructorAccessor");
+            acquireConstructorAccessorMethod.setAccessible(true);
+            ca = (ConstructorAccessor) acquireConstructorAccessorMethod.invoke(constructor);
+        }
+        // note that real constructor contains 2 additional parameters, name and ordinal
+        NoteBlockInstrument enumValue = (NoteBlockInstrument) ca.newInstance(new Object[]{internalName, NoteBlockInstrument.values().length + 1, soundName, null});
+        return enumValue;
+    }
+
+    private static NoteBlockInstrument addToEnum(NoteBlockInstrument instrument) throws Exception {
+        Field values = NoteBlockInstrument.class.getDeclaredField("$VALUES");
+        values.setAccessible(true);
+        Field modifiersField = Field.class.getDeclaredField("modifiers");
+        modifiersField.setAccessible(true);
+        modifiersField.setInt(values, values.getModifiers() & ~Modifier.FINAL);
+        NoteBlockInstrument[] oldValues = (NoteBlockInstrument[]) values.get(null);
+        NoteBlockInstrument[] newValues = new NoteBlockInstrument[oldValues.length + 1];
+        System.arraycopy(oldValues, 0, newValues, 0, oldValues.length);
+        newValues[oldValues.length] = instrument;
+        values.set(null, newValues);
         return instrument;
     }
 
-    @Inject(method = "byState", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void alloyed$byState(BlockState state, CallbackInfoReturnable<NoteBlockInstrument> ci) {
-        if (state.is(ModBlocks.BRONZE_BELL.get())) {
-            ci.setReturnValue(BRONZE_BELL);
-        }
-    }
 }
