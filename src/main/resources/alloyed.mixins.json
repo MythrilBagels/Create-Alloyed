@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.molybdenum.alloyed.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "alloyed.refmap.json",
+  "mixins": [
+    "NoteblockInstrumentMixin"
+  ],
+  "minVersion": "0.8",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

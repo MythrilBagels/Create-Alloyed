@@ -3,6 +3,7 @@ package com.molybdenum.alloyed;
 import com.molybdenum.alloyed.blocks.ModBlocks;
 import com.molybdenum.alloyed.fluids.ModFluids;
 import com.molybdenum.alloyed.items.ModItems;
+import com.molybdenum.alloyed.sounds.ModSounds;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -25,6 +26,7 @@ public class Alloyed {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModFluids.register(eventBus);
+        ModSounds.register(eventBus);
         //ModTileEntities.register(eventBus);
         //ModContainers.register(eventBus);
 
