@@ -26,5 +26,9 @@
   },
   "result": {
     "item": "steampowered:bronze_steam_engine"
-  }
+  },
+  "conditions": [ {
+    "type": "forge:mod_loaded",
+    "modid": "steampowered"
+  } ]
 }

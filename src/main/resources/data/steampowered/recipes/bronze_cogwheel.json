@@ -16,5 +16,9 @@
   "result": {
     "item": "steampowered:bronze_cogwheel",
     "count": 8
-  }
+  },
+  "conditions": [ {
+    "type": "forge:mod_loaded",
+    "modid": "steampowered"
+  } ]
 }

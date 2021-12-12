@@ -16,5 +16,9 @@
   "result": {
     "item": "steampowered:bronze_boiler",
     "count": 1
-  }
+  },
+  "conditions": [ {
+    "type": "forge:mod_loaded",
+    "modid": "steampowered"
+  } ]
 }
