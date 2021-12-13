@@ -24,5 +24,9 @@
   "result": {
     "item": "steampowered:bronze_flywheel",
     "count": 1
-  }
+  },
+  "conditions": [ {
+    "type": "forge:mod_loaded",
+    "modid": "steampowered"
+  } ]
 }
