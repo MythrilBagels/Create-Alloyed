@@ -14,7 +14,7 @@ out/
 atlassian-ide-plugin.xml
 
 # Compiled class file
-#*.class
+*.class
 
 # Log file
 *.log
