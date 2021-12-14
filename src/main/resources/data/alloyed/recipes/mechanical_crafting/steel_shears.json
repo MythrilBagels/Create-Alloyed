@@ -1,0 +1,15 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    " #",
+    "# "
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:ingots/steel"
+    }
+  },
+  "result": {
+    "item": "alloyed:steel_shears"
+  }
+}
