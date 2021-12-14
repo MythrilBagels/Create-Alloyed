@@ -9,5 +9,13 @@
   "item.alloyed.steel_ingot": "Steel Ingot",
 
   "item.alloyed.steel_sheet": "Steel Sheet",
-  "item.alloyed.bronze_sheet": "Bronze Sheet"
+  "item.alloyed.bronze_sheet": "Bronze Sheet",
+
+  "item.alloyed.steel_sword": "Steel Sword",
+  "item.alloyed.steel_pickaxe": "Steel Pickaxe",
+  "item.alloyed.steel_axe": "Steel Axe",
+  "item.alloyed.steel_shovel": "Steel Shovel",
+  "item.alloyed.steel_hoe": "Steel Hoe",
+  "item.alloyed.steel_shears": "Steel Shears",
+  "item.alloyed.steel_fishing_rod": "Steel Fishing Rod"
 }
