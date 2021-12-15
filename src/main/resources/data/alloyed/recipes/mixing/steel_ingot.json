@@ -25,17 +25,19 @@
     {
       "tag": "forge:ingots/iron"
     },
-    {
-      "tag": "forge:ingots/iron"
-    },
-    {
-      "item": "minecraft:coal"
-    }
+    [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ]
   ],
   "results": [
     {
       "item": "alloyed:steel_ingot",
-      "count": 9
+      "count": 8
     }
   ],
   "heatRequirement": "superheated"

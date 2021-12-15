@@ -10,7 +10,7 @@
       "tag": "forge:ingots/steel"
     },
     "I": {
-      "tag": "minecraft:string"
+      "item": "minecraft:string"
     }
   },
   "result": {
