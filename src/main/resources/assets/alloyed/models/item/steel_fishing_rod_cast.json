@@ -1,5 +1,5 @@
 {
-    "parent": "alloyed:item/steel_fishing_rod",
+    "parent": "minecraft:item/handheld_rod",
     "textures": {
         "layer0": "alloyed:item/steel_fishing_rod_cast"
     }
