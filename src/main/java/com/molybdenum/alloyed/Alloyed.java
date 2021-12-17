@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.blocks.ModBlocks;
+import com.molybdenum.alloyed.config.Config;
 import com.molybdenum.alloyed.fluids.ModFluids;
 import com.molybdenum.alloyed.items.ModItems;
 import com.molybdenum.alloyed.sounds.ModSounds;
@@ -10,7 +11,9 @@ import net.minecraft.item.ItemModelsProperties;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -34,7 +37,10 @@ public class Alloyed {
         //ModTileEntities.register(eventBus);
         //ModContainers.register(eventBus);
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupClient);
+        // Register server config file
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_CONF, "alloyed-server.toml");
+
+        eventBus.addListener(this::setupClient);
         MinecraftForge.EVENT_BUS.register(this);
     }
     private void setup(final FMLCommonSetupEvent event) {

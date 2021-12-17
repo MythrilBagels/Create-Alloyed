@@ -2,7 +2,8 @@ package com.molybdenum.alloyed.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
-public final class ModConfig {
+public final class Config {
+    // Was renamed from ModConfig to Config since Forge already has a class called ModConfig
 
     public static final ForgeConfigSpec.Builder SERVER = new ForgeConfigSpec.Builder();
     public static final ForgeConfigSpec SERVER_CONF;
