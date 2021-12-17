@@ -2,15 +2,22 @@ package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.blocks.ModBlocks;
 import com.molybdenum.alloyed.config.Config;
+import com.molybdenum.alloyed.config.conditions.OverrideSteamPoweredCondition;
 import com.molybdenum.alloyed.fluids.ModFluids;
 import com.molybdenum.alloyed.items.ModItems;
 import com.molybdenum.alloyed.sounds.ModSounds;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FishingRodItem;
 import net.minecraft.item.ItemModelsProperties;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.crafting.*;
+import net.minecraftforge.common.crafting.conditions.*;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -43,8 +50,11 @@ public class Alloyed {
         eventBus.addListener(this::setupClient);
         MinecraftForge.EVENT_BUS.register(this);
     }
-    private void setup(final FMLCommonSetupEvent event) {
 
+    // Condition setup
+    @SubscribeEvent
+    public void registerRecipeSerialziers(RegistryEvent.Register<IRecipeSerializer<?>> event) {
+        CraftingHelper.register(OverrideSteamPoweredCondition.Serializer.INSTANCE);
     }
 
     private void setupClient(final FMLClientSetupEvent event) {

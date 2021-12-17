@@ -25,8 +25,14 @@
     "item": "steampowered:bronze_flywheel",
     "count": 1
   },
-  "conditions": [ {
+  "conditions": [
+    {
     "type": "forge:mod_loaded",
     "modid": "steampowered"
-  } ]
+    },
+    {
+      "type": "alloyed:override_steampowered_recipes",
+      "value": true
+    }
+  ]
 }
