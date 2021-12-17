@@ -29,10 +29,6 @@
     {
     "type": "forge:mod_loaded",
     "modid": "steampowered"
-    },
-    {
-      "type": "alloyed:override_steampowered_recipes",
-      "value": true
     }
   ]
 }
