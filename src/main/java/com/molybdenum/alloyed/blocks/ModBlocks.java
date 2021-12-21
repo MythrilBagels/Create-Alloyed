@@ -3,17 +3,15 @@ package com.molybdenum.alloyed.blocks;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.items.ModItemGroup;
 import com.molybdenum.alloyed.items.ModItems;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraftforge.common.ToolType;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
@@ -24,18 +22,17 @@ public class ModBlocks {
 
     // Bronze
     public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block",
-            () -> new Block(AbstractBlock.Properties
+            () -> new Block(Block.Properties
                     .of(Material.METAL)
-                    .harvestLevel(2)
-                    .harvestTool(ToolType.PICKAXE)
+                    //.harvestLevel(2)
                     .requiresCorrectToolForDrops()
                     .strength(5f)));
 
     public static final RegistryObject<Block> BRONZE_BELL = registerBlock("bronze_bell",
-            () -> new Block(AbstractBlock.Properties
+            () -> new Block(Block.Properties
                     .of(Material.METAL)
-                    .harvestLevel(1)
-                    .harvestTool(ToolType.PICKAXE)
+                    //.harvestLevel(1)
+                    //.harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(3f)
                     .sound(SoundType.ANVIL)
@@ -43,10 +40,9 @@ public class ModBlocks {
 
     // Steel
     public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
-            () -> new Block(AbstractBlock.Properties
+            () -> new Block(Block.Properties
                     .of(Material.METAL)
-                    .harvestLevel(2)
-                    .harvestTool(ToolType.PICKAXE)
+                    //.harvestLevel(2)
                     .requiresCorrectToolForDrops()
                     .strength(6f)));
 

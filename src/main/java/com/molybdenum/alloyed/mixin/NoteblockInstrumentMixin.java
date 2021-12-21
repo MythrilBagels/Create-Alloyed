@@ -2,15 +2,14 @@ package com.molybdenum.alloyed.mixin;
 
 import com.molybdenum.alloyed.blocks.ModBlocks;
 import com.molybdenum.alloyed.sounds.ModSounds;
-import net.minecraft.block.BlockState;
-import net.minecraft.state.properties.NoteBlockInstrument;
-import net.minecraft.util.SoundEvent;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import sun.reflect.ConstructorAccessor;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -38,16 +37,21 @@ public abstract class NoteblockInstrumentMixin {
     private static NoteBlockInstrument createNoteBlockInstrument(String internalName, String soundName) throws Exception {
         Constructor<?> constructor = NoteBlockInstrument.class.getDeclaredConstructor(String.class, int.class, String.class, SoundEvent.class);
         constructor.setAccessible(true);
+
         Field constructorAccessorField = Constructor.class.getDeclaredField("constructorAccessor");
         constructorAccessorField.setAccessible(true);
-        ConstructorAccessor ca = (ConstructorAccessor) constructorAccessorField.get(constructor);
-        if (ca == null) {
+        Class<?> caClass = Class.forName("jdk.internal.ConstructorAccessor");
+        Object ca = constructorAccessorField.get(constructor);
+        if (!caClass.isInstance(ca)) {
             Method acquireConstructorAccessorMethod = Constructor.class.getDeclaredMethod("acquireConstructorAccessor");
             acquireConstructorAccessorMethod.setAccessible(true);
-            ca = (ConstructorAccessor) acquireConstructorAccessorMethod.invoke(constructor);
+            ca = acquireConstructorAccessorMethod.invoke(constructor);
         }
         // note that real constructor contains 2 additional parameters, name and ordinal
-        NoteBlockInstrument enumValue = (NoteBlockInstrument) ca.newInstance(new Object[]{internalName, NoteBlockInstrument.values().length + 1, soundName, null});
+        Method instanceCreationInvoker = caClass.getDeclaredMethod("newInstance", Object[].class);
+        instanceCreationInvoker.setAccessible(true);
+        NoteBlockInstrument enumValue = (NoteBlockInstrument) instanceCreationInvoker.invoke(ca, new Object[]{internalName, NoteBlockInstrument.values().length + 1, soundName, null});
+        // NoteBlockInstrument enumValue = (NoteBlockInstrument) ca.newInstance(new Object[]{internalName, NoteBlockInstrument.values().length + 1, soundName, null});
         return enumValue;
     }
 

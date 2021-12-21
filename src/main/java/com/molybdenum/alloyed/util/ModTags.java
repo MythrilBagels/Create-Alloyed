@@ -1,9 +1,9 @@
 package com.molybdenum.alloyed.util;
 
 import com.molybdenum.alloyed.Alloyed;
-import net.minecraft.item.Item;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.Tags;
 
 public class ModTags {

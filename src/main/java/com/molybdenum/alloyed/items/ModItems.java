@@ -1,11 +1,11 @@
 package com.molybdenum.alloyed.items;
 
 import com.molybdenum.alloyed.Alloyed;
-import net.minecraft.item.*;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
 

@@ -1,15 +1,14 @@
 package com.molybdenum.alloyed.items;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
 public class ModItemGroup {
 
-    public static final ItemGroup MAIN_GROUP = new ItemGroup("main_group")
+    public static final CreativeModeTab MAIN_GROUP = new CreativeModeTab("main_group")
     {
         @Override
-        public ItemStack makeIcon()
-        {
+        public ItemStack makeIcon() {
             return new ItemStack(ModItems.BRONZE_INGOT.get());
         }
     };
