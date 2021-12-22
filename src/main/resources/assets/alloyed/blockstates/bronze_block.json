@@ -1,12 +1,12 @@
 {
   "variants": {
-    "oxidization=0": {
+    "oxidization_2=0": {
       "model": "alloyed:block/bronze_block_0"
     },
-    "oxidization=1": {
+    "oxidization_2=1": {
       "model": "alloyed:block/bronze_block_1"
     },
-    "oxidization=2": {
+    "oxidization_2=2": {
       "model": "alloyed:block/bronze_block_2"
     }
   }

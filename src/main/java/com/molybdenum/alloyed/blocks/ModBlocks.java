@@ -136,15 +136,14 @@ public class ModBlocks {
                 .register();*/
 
         BRONZE_BLOCK = ((BlockBuilder)((BlockBuilder)((ItemBuilder)REGISTRATE
-                .object("bronze_block")
-                .block( (p) -> {
-                    return new BronzeBlock(p, 0.3125F);
-                }).initialProperties(Material.METAL)
+                .block("bronze_block", (p) -> new BronzeBlock(p, 0.3125F))
+                .initialProperties(Material.METAL)
                 .item())
                 .transform(ModelGen.oxidizedItemModel()))
                 .transform(BlockStateGen.oxidizedBlockstate()))
                 .lang("Block of Bronze")
                 .register();
+
 
 
         STEEL_BLOCK = REGISTRATE
