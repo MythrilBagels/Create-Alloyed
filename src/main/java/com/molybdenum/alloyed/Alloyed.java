@@ -29,7 +29,7 @@ public class Alloyed {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 
-        ModItems.register(eventBus);
+        ModItems.register();
         ModBlocks.register();
         ModFluids.register(eventBus);
         ModSounds.register(eventBus);
@@ -49,7 +49,7 @@ public class Alloyed {
         RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.getTranslucent());
         ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(), LightningChannelerScreen::new);
         */
-        ItemModelsProperties.register(ModItems.STEEL_FISHING_ROD.get(), new ResourceLocation("cast"), (heldStack, world, livingEntity) -> {
+        /*ItemModelsProperties.register(ModItems.STEEL_FISHING_ROD.get(), new ResourceLocation("cast"), (heldStack, world, livingEntity) -> {
             if (livingEntity == null) {
                 return 0.0F;
             } else {
@@ -60,7 +60,7 @@ public class Alloyed {
                 }
                 return (isMainhand || isOffHand) && livingEntity instanceof PlayerEntity && ((PlayerEntity) livingEntity).fishing != null ? 1.0F : 0.0F;
             }
-        });
+        });*/
     }
 
     // Registrate getter
