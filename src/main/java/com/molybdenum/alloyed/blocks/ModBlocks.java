@@ -136,7 +136,7 @@ public class ModBlocks {
                 .register();*/
 
         BRONZE_BLOCK = ((BlockBuilder)((BlockBuilder)((ItemBuilder)REGISTRATE
-                .block("bronze_block", (p) -> new BronzeBlock(p, 0.3125F))
+                .block("bronze_block", (p) -> new BronzeBlock(p, 0.03125F))
                 .initialProperties(Material.METAL)
                 .item())
                 .transform(ModelGen.oxidizedItemModel()))
