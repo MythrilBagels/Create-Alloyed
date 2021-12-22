@@ -148,22 +148,20 @@ public class ModBlocks {
 
 
         STEEL_BLOCK = REGISTRATE
-                .object("steel_block")
-                .block(Block::new)
-                .simpleItem()
+                .block("steel_block", Block::new)
                 .initialProperties(Material.METAL)
                 .properties((p) -> p
                         .harvestLevel(2)
                         .harvestTool(ToolType.PICKAXE)
                         .requiresCorrectToolForDrops()
                         .strength(6f))
+                .item()
+                .transform(ModelGen.customItemModel())
                 .lang("Block of Steel")
                 .register();
 
         BRONZE_BELL = REGISTRATE
-                .object("bronze_bell")
-                .block(Block::new)
-                .simpleItem()
+                .block("bronze_bell", Block::new)
                 .initialProperties(Material.METAL)
                 .properties((p) -> p
                         .harvestLevel(1)
@@ -172,6 +170,8 @@ public class ModBlocks {
                         .strength(3f)
                         .sound(SoundType.ANVIL)
                         .noOcclusion())
+                .item()
+                .transform(ModelGen.customItemModel())
                 .lang("Bronze Bell")
                 .register();
     }
