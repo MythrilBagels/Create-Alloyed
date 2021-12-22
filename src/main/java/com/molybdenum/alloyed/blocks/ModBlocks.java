@@ -99,6 +99,7 @@ public class ModBlocks {
 
     // Block Entries
     public static final BlockEntry<Block> BRONZE_BLOCK;
+    public static final BlockEntry<Block> STEEL_BLOCK;
     public static final BlockEntry<Block> BRONZE_BELL;
     // End Block Entries
 
@@ -106,6 +107,7 @@ public class ModBlocks {
 
     public static void register() {
         Create.registrate().addToSection(BRONZE_BLOCK,AllSections.MATERIALS);
+        Create.registrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
         Create.registrate().addToSection(BRONZE_BELL, AllSections.CURIOSITIES);
     }
 
@@ -127,6 +129,19 @@ public class ModBlocks {
                         .requiresCorrectToolForDrops()
                         .strength(5f))
                 .lang("Block of Bronze")
+                .register();
+
+        STEEL_BLOCK = REGISTRATE
+                .object("steel_block")
+                .block(Block::new)
+                .simpleItem()
+                .initialProperties(Material.METAL)
+                .properties((p) -> p
+                        .harvestLevel(2)
+                        .harvestTool(ToolType.PICKAXE)
+                        .requiresCorrectToolForDrops()
+                        .strength(6f))
+                .lang("Block of Steel")
                 .register();
 
         BRONZE_BELL = REGISTRATE
