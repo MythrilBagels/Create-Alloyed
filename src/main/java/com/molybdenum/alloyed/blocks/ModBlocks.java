@@ -3,6 +3,7 @@ package com.molybdenum.alloyed.blocks;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.items.ModItemGroup;
 import com.molybdenum.alloyed.items.ModItems;
+import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
@@ -98,12 +99,14 @@ public class ModBlocks {
 
     // Block Entries
     public static final BlockEntry<Block> BRONZE_BLOCK;
+    public static final BlockEntry<Block> BRONZE_BELL;
     // End Block Entries
 
     public ModBlocks() {}
 
     public static void register() {
         Create.registrate().addToSection(BRONZE_BLOCK,AllSections.MATERIALS);
+        Create.registrate().addToSection(BRONZE_BELL, AllSections.CURIOSITIES);
     }
 
     @Nonnull
@@ -124,6 +127,21 @@ public class ModBlocks {
                         .requiresCorrectToolForDrops()
                         .strength(5f))
                 .lang("Block of Bronze")
+                .register();
+
+        BRONZE_BELL = REGISTRATE
+                .object("bronze_bell")
+                .block(Block::new)
+                .simpleItem()
+                .initialProperties(Material.METAL)
+                .properties((p) -> p
+                        .harvestLevel(1)
+                        .harvestTool(ToolType.PICKAXE)
+                        .requiresCorrectToolForDrops()
+                        .strength(3f)
+                        .sound(SoundType.ANVIL)
+                        .noOcclusion())
+                .lang("Bronze Bell")
                 .register();
     }
 }
