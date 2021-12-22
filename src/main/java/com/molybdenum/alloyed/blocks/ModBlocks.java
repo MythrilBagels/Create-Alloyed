@@ -8,9 +8,11 @@ import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
+import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.ModelGen;
 import com.simibubi.create.foundation.data.SharedProperties;
+import com.simibubi.create.foundation.worldgen.OxidizingBlock;
 import com.simibubi.create.repack.registrate.builders.BlockBuilder;
 import com.simibubi.create.repack.registrate.builders.ItemBuilder;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
@@ -21,6 +23,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.ToolType;
@@ -119,7 +122,7 @@ public class ModBlocks {
 
     static {
         // Initialize the blocks
-        BRONZE_BLOCK = REGISTRATE
+        /*BRONZE_BLOCK = REGISTRATE
                 .object("bronze_block")
                 .block((p) -> new BronzeBlock(p, 0.0625F))
                 .simpleItem()
@@ -130,7 +133,19 @@ public class ModBlocks {
                         .requiresCorrectToolForDrops()
                         .strength(5f))
                 .lang("Block of Bronze")
+                .register();*/
+
+        BRONZE_BLOCK = ((BlockBuilder)((BlockBuilder)((ItemBuilder)REGISTRATE
+                .object("bronze_block")
+                .block( (p) -> {
+                    return new BronzeBlock(p, 0.3125F);
+                }).initialProperties(Material.METAL)
+                .item())
+                .transform(ModelGen.oxidizedItemModel()))
+                .transform(BlockStateGen.oxidizedBlockstate()))
+                .lang("Block of Bronze")
                 .register();
+
 
         STEEL_BLOCK = REGISTRATE
                 .object("steel_block")
