@@ -3,8 +3,11 @@ package com.molybdenum.alloyed.blocks.custom;
 import com.simibubi.create.foundation.utility.BlockHelper;
 import com.simibubi.create.foundation.utility.Iterate;
 import com.simibubi.create.foundation.worldgen.OxidizingBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.IntegerProperty;
+import net.minecraft.state.Property;
+import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.server.ServerWorld;
@@ -19,6 +22,12 @@ public class BronzeBlock extends OxidizingBlock {
 
     public BronzeBlock(Properties properties, float chance) {
         super(properties, chance);
+        this.registerDefaultState((BlockState)this.defaultBlockState().setValue(OXIDIZATION_2, 0));;
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
+        super.createBlockStateDefinition(builder.add(new Property[]{OXIDIZATION_2}));
     }
 
     @Override
