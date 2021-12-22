@@ -82,6 +82,9 @@ public class ModItems {
     // Item Entries
     public static final ItemEntry<Item> BRONZE_INGOT;
     public static final ItemEntry<Item> STEEL_INGOT;
+
+    public static final ItemEntry<Item> BRONZE_SHEET;
+    public static final ItemEntry<Item> STEEL_SHEET;
     // End Item Entries
 
     public ModItems() {}
@@ -89,6 +92,9 @@ public class ModItems {
     public static void register() {
         Create.registrate().addToSection(BRONZE_INGOT, AllSections.MATERIALS);
         Create.registrate().addToSection(STEEL_INGOT, AllSections.MATERIALS);
+
+        Create.registrate().addToSection(BRONZE_SHEET, AllSections.MATERIALS);
+        Create.registrate().addToSection(STEEL_SHEET, AllSections.MATERIALS);
     }
 
     // Functions from Create's item registrate. Found them useful, so copied them over.
@@ -104,5 +110,8 @@ public class ModItems {
     static {
         BRONZE_INGOT = taggedIngredient("bronze_ingot", ModTags.Items.BRONZE_INGOT);
         STEEL_INGOT = taggedIngredient("steel_ingot", ModTags.Items.STEEL_INGOT);
+
+        BRONZE_SHEET = taggedIngredient("bronze_sheet", ModTags.Items.BRONZE_SHEET);
+        STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
     }
 }
