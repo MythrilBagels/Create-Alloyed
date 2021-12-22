@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed.blocks;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.blocks.custom.BronzeBlock;
 import com.molybdenum.alloyed.items.ModItemGroup;
 import com.molybdenum.alloyed.items.ModItems;
 import com.simibubi.create.AllBlocks;
@@ -98,7 +99,7 @@ public class ModBlocks {
     });
 
     // Block Entries
-    public static final BlockEntry<Block> BRONZE_BLOCK;
+    public static final BlockEntry<BronzeBlock> BRONZE_BLOCK;
     public static final BlockEntry<Block> STEEL_BLOCK;
     public static final BlockEntry<Block> BRONZE_BELL;
     // End Block Entries
@@ -120,7 +121,7 @@ public class ModBlocks {
         // Initialize the blocks
         BRONZE_BLOCK = REGISTRATE
                 .object("bronze_block")
-                .block(Block::new)
+                .block((p) -> new BronzeBlock(p, 0.0625F))
                 .simpleItem()
                 .initialProperties(Material.METAL)
                 .properties((p) -> p
