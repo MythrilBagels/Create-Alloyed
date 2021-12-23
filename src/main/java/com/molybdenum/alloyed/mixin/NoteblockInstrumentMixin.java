@@ -1,5 +1,6 @@
 package com.molybdenum.alloyed.mixin;
 
+import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.blocks.ModBlocks;
 import com.molybdenum.alloyed.sounds.ModSounds;
 import net.minecraft.block.BlockState;
@@ -24,6 +25,7 @@ public abstract class NoteblockInstrumentMixin {
         try {
             ModSounds.BRONZE_BELL_NOTEBLOCK = addToEnum(createNoteBlockInstrument("BRONZE_BELL", "bronze_bell"));
         } catch (Exception e) {
+            Alloyed.LOGGER.error("FAILED TO LOAD BRONZE BELL");
             e.printStackTrace();
         }
     }
