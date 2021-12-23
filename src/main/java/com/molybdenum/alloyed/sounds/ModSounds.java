@@ -15,6 +15,7 @@ import java.util.function.Consumer;
 public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Alloyed.MOD_ID);
+
     @Nullable
     public static NoteBlockInstrument BRONZE_BELL_NOTEBLOCK;
 
