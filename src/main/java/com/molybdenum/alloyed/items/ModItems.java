@@ -80,19 +80,47 @@ public class ModItems {
     });
 
     // Item Entries
-    public static final ItemEntry<Item> BRONZE_INGOT;
-    public static final ItemEntry<Item> STEEL_INGOT;
+    public static final ItemEntry<Item> BRONZE_INGOT = taggedIngredient("bronze_ingot", ModTags.Items.BRONZE_INGOT);
+    public static final ItemEntry<Item> STEEL_INGOT = taggedIngredient("steel_ingot", ModTags.Items.STEEL_INGOT);
 
-    public static final ItemEntry<Item> BRONZE_SHEET;
-    public static final ItemEntry<Item> STEEL_SHEET;
+    public static final ItemEntry<Item> BRONZE_SHEET = taggedIngredient("bronze_sheet", ModTags.Items.BRONZE_SHEET);
+    public static final ItemEntry<Item> STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
 
-    public static final ItemEntry<SwordItem> STEEL_SWORD;
-    public static final ItemEntry<PickaxeItem> STEEL_PICKAXE;
-    public static final ItemEntry<AxeItem> STEEL_AXE;
-    public static final ItemEntry<ShovelItem> STEEL_SHOVEL;
-    public static final ItemEntry<HoeItem> STEEL_HOE;
-    public static final ItemEntry<ShearsItem> STEEL_SHEARS;
-    public static final ItemEntry<FishingRodItem> STEEL_FISHING_ROD;
+    public static final ItemEntry<SwordItem> STEEL_SWORD = REGISTRATE
+            .object("steel_sword")
+            .item((p) -> new SwordItem(ModItemTiers.STEEL, 3, -2.4F, p))
+            .register();
+
+    public static final ItemEntry<PickaxeItem> STEEL_PICKAXE = REGISTRATE
+            .object("steel_pickaxe")
+            .item((p) -> new PickaxeItem(ModItemTiers.STEEL, 1, -2.8F,p))
+            .register();
+
+    public static final ItemEntry<AxeItem> STEEL_AXE = REGISTRATE
+            .object("steel_axe")
+            .item((p) -> new AxeItem(ModItemTiers.STEEL, 5.0F, -3.0F,p))
+            .register();
+
+    public static final ItemEntry<ShovelItem> STEEL_SHOVEL = REGISTRATE
+            .object("steel_shovel")
+            .item((p) -> new ShovelItem(ModItemTiers.STEEL, 1.5F, -3.0F, p))
+            .register();
+
+    public static final ItemEntry<HoeItem> STEEL_HOE = REGISTRATE
+            .object("steel_hoe")
+            .item((p) -> new HoeItem(ModItemTiers.STEEL, -3, 0.0F, p))
+            .register();
+
+    public static final ItemEntry<ShearsItem> STEEL_SHEARS = REGISTRATE
+            .object("steel_shears")
+            .item((p) -> new ShearsItem(p.durability(476)))
+            .register();
+
+    public static final ItemEntry<FishingRodItem> STEEL_FISHING_ROD = REGISTRATE
+            .object("steel_fishing_rod")
+            .item((p) -> new FishingRodItem(p.durability(128)))
+            .register();
+
     // End Item Entries
 
     public ModItems() {}
@@ -121,48 +149,5 @@ public class ModItems {
     @SafeVarargs
     private static ItemEntry<Item> taggedIngredient(String name, ITag.INamedTag<Item>... tags) {
         return REGISTRATE.item(name, Item::new).tag(tags).register();
-    }
-
-    static {
-        BRONZE_INGOT = taggedIngredient("bronze_ingot", ModTags.Items.BRONZE_INGOT);
-        STEEL_INGOT = taggedIngredient("steel_ingot", ModTags.Items.STEEL_INGOT);
-
-        BRONZE_SHEET = taggedIngredient("bronze_sheet", ModTags.Items.BRONZE_SHEET);
-        STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
-
-        STEEL_SWORD = REGISTRATE
-                .object("steel_sword")
-                .item((p) -> new SwordItem(ModItemTiers.STEEL, 3, -2.4F, p))
-                .register();
-
-        STEEL_PICKAXE = REGISTRATE
-                .object("steel_pickaxe")
-                .item((p) -> new PickaxeItem(ModItemTiers.STEEL, 1, -2.8F,p))
-                .register();
-
-        STEEL_AXE = REGISTRATE
-                .object("steel_axe")
-                .item((p) -> new AxeItem(ModItemTiers.STEEL, 5.0F, -3.0F,p))
-                .register();
-
-        STEEL_SHOVEL = REGISTRATE
-                .object("steel_shovel")
-                .item((p) -> new ShovelItem(ModItemTiers.STEEL, 1.5F, -3.0F, p))
-                .register();
-
-        STEEL_HOE = REGISTRATE
-                .object("steel_hoe")
-                .item((p) -> new HoeItem(ModItemTiers.STEEL, -3, 0.0F, p))
-                .register();
-
-        STEEL_SHEARS = REGISTRATE
-                .object("steel_shears")
-                .item((p) -> new ShearsItem(p.durability(476)))
-                .register();
-
-        STEEL_FISHING_ROD = REGISTRATE
-                .object("steel_fishing_rod")
-                .item((p) -> new FishingRodItem(p.durability(128)))
-                .register();
     }
 }
