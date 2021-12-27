@@ -93,7 +93,7 @@ public class ModBlocks {
 
     public static final BlockEntry<OxidizingBlock> BRONZE_BLOCK = REGISTRATE
             .block("bronze_block", p -> new OxidizingBlock(p, 1 / 16f))
-            .initialProperties(ModBlocks::hardMetal)
+            .initialProperties(Material.METAL)
             .item()
             .transform(ModelGen.oxidizedItemModel())
             .transform(BlockStateGen.oxidizedBlockstate())
@@ -102,14 +102,14 @@ public class ModBlocks {
 
     public static final BlockEntry<Block> STEEL_BLOCK = REGISTRATE
             .block("steel_block", p -> new Block(p))
-            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .initialProperties(Material.METAL)
 		    .simpleItem()
             .lang("Block of Steel")
 		    .register();
 
     public static final BlockEntry<Block> BRONZE_BELL = REGISTRATE
             .block("bronze_bell", p -> new Block(p))
-            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .initialProperties(Material.METAL)
             .properties(properties -> properties
                     .noOcclusion()
                     .sound(SoundType.ANVIL))
@@ -126,9 +126,4 @@ public class ModBlocks {
         Create.registrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
         Create.registrate().addToSection(BRONZE_BELL, AllSections.CURIOSITIES);
     }
-
-    @Nonnull
-    public static Block hardMetal() {
-        return Blocks.IRON_BLOCK;
-    } // Neatness' sake
 }
