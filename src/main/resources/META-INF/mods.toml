@@ -24,7 +24,7 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
 [[dependencies.alloyed]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5]"
+    versionRange="[1.18.1]"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]

@@ -1,198 +1,378 @@
-[30Dec2021 14:30:47.895] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\Spotty\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 39.0.7, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407, -mixin.config=alloyed.mixins.json]
-[30Dec2021 14:30:47.897] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.8+9.0.8+main.9943aea3 starting: java version 17.0.1 by Oracle Corporation
-[30Dec2021 14:30:47.904] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [fmlclientdev,forgeclient,minecraft,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness]
-[30Dec2021 14:30:47.912] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
-[30Dec2021 14:30:47.918] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
-[30Dec2021 14:30:47.925] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
-[30Dec2021 14:30:47.927] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: java.util.stream.ReferencePipeline$3@4566d049
-[30Dec2021 14:30:47.933] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
-[30Dec2021 14:30:47.933] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
-[30Dec2021 14:30:47.933] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
-[30Dec2021 14:30:47.934] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
-[30Dec2021 14:30:47.934] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
-[30Dec2021 14:30:47.935] [main/DEBUG] [net.minecraftforge.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 1.0
-[30Dec2021 14:30:47.935] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML 1.0 loading
-[30Dec2021 14:30:47.935] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 9.0.8+9.0.8+main.9943aea3
-[30Dec2021 14:30:47.936] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
-[30Dec2021 14:30:47.936] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found EventBus version : 5.0.7+5.0.7+master.6d3407cc
-[30Dec2021 14:30:47.936] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
-[30Dec2021 14:30:47.937] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 5.0.2+5.0.2+master.303343f8
-[30Dec2021 14:30:47.937] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 4.0.11+4.0.11+master.ce88bbba
-[30Dec2021 14:30:47.938] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 4
-[30Dec2021 14:30:47.939] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
-[30Dec2021 14:30:47.939] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
-[30Dec2021 14:30:47.943] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
-[30Dec2021 14:30:47.943] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
-[30Dec2021 14:30:47.953] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@4516af24
-[30Dec2021 14:30:47.963] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Spotty/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327! Service=ModLauncher Env=CLIENT
-[30Dec2021 14:30:47.966] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
-[30Dec2021 14:30:47.966] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Dec2021 14:30:47.966] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Dec2021 14:30:47.966] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Dec2021 14:30:47.967] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Dec2021 14:30:47.967] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Dec2021 14:30:47.968] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
-[30Dec2021 14:30:47.968] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
-[30Dec2021 14:30:47.969] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
-[30Dec2021 14:30:47.969] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing GAMEDIR directory : C:\Users\Spotty\Downloads\Create-Alloyed-master\run
-[30Dec2021 14:30:47.970] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\Spotty\Downloads\Create-Alloyed-master\run
-[30Dec2021 14:30:47.970] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing MODSDIR directory : C:\Users\Spotty\Downloads\Create-Alloyed-master\run\mods
-[30Dec2021 14:30:47.970] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\Spotty\Downloads\Create-Alloyed-master\run\mods
-[30Dec2021 14:30:47.970] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing CONFIGDIR directory : C:\Users\Spotty\Downloads\Create-Alloyed-master\run\config
-[30Dec2021 14:30:47.970] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\Spotty\Downloads\Create-Alloyed-master\run\config
-[30Dec2021 14:30:47.970] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\Spotty\Downloads\Create-Alloyed-master\run\config\fml.toml
-[30Dec2021 14:30:47.970] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading configuration
-[30Dec2021 14:30:47.993] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing default config directory directory : C:\Users\Spotty\Downloads\Create-Alloyed-master\run\defaultconfigs
-[30Dec2021 14:30:47.994] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
-[30Dec2021 14:30:47.995] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
-[30Dec2021 14:30:47.996] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Using forgeclientuserdev as launch service
-[30Dec2021 14:30:48.006] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[forgeVersion=39.0.7, mcVersion=1.18.1, mcpVersion=20211210.034407, forgeGroup=net.minecraftforge]
-[30Dec2021 14:30:48.007] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
-[30Dec2021 14:30:48.008] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
-[30Dec2021 14:30:48.008] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
-[30Dec2021 14:30:48.008] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
-[30Dec2021 14:30:48.009] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
-[30Dec2021 14:30:48.009] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
-[30Dec2021 14:30:48.009] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
-[30Dec2021 14:30:48.009] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
-[30Dec2021 14:30:48.014] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
-[30Dec2021 14:30:48.015] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null)
-[30Dec2021 14:30:48.018] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates alloyed%%C:\Users\Spotty\Downloads\Create-Alloyed-master\build\resources\main;alloyed%%C:\Users\Spotty\Downloads\Create-Alloyed-master\build\classes\java\main from env
-[30Dec2021 14:30:48.019] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{alloyed=[C:\Users\Spotty\Downloads\Create-Alloyed-master\build\resources\main, C:\Users\Spotty\Downloads\Create-Alloyed-master\build\classes\java\main]}]
-[30Dec2021 14:30:48.206] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar with {minecraft} mods - versions {1.18.1}
-[30Dec2021 14:30:48.208] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7_mapped_official_1.18.1\forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
-[30Dec2021 14:30:48.209] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Spotty\Downloads\Create-Alloyed-master\build\resources\main
-[30Dec2021 14:30:48.214] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {alloyed} mods - versions {1.16.5}
-[30Dec2021 14:30:48.214] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Spotty\Downloads\Create-Alloyed-master\build\resources\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[36,)]]
-[30Dec2021 14:30:48.215] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
-[30Dec2021 14:30:48.216] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {39.0.7}
-[30Dec2021 14:30:48.216] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file  with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
-[30Dec2021 14:30:48.234] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
-[30Dec2021 14:30:48.234] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
-[30Dec2021 14:30:48.234] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
-[30Dec2021 14:30:48.235] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_method.js
-[30Dec2021 14:30:48.235] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_instanceof.js
-[30Dec2021 14:30:48.235] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/add_bouncer_method.js
-[30Dec2021 14:30:48.235] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\create-328085\3583784_mapped_official_1.18.1\create-328085-3583784_mapped_official_1.18.1.jar
-[30Dec2021 14:30:48.236] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file create-328085-3583784_mapped_official_1.18.1.jar with {create} mods - versions {0.4b}
-[30Dec2021 14:30:48.236] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\create-328085\3583784_mapped_official_1.18.1\create-328085-3583784_mapped_official_1.18.1.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[38,)]]
-[30Dec2021 14:30:48.236] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\flywheel-486392\3584224_mapped_official_1.18.1\flywheel-486392-3584224_mapped_official_1.18.1.jar
-[30Dec2021 14:30:48.238] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file flywheel-486392-3584224_mapped_official_1.18.1.jar with {flywheel} mods - versions {1.18-0.5.0a}
-[30Dec2021 14:30:48.238] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\flywheel-486392\3584224_mapped_official_1.18.1\flywheel-486392-3584224_mapped_official_1.18.1.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[38,)]]
-[30Dec2021 14:30:48.238] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\create-328085\3583784_mapped_official_1.18.1\create-328085-3583784_mapped_official_1.18.1.jar
-[30Dec2021 14:30:48.239] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file create-328085-3583784_mapped_official_1.18.1.jar with {create} mods - versions {0.4b}
-[30Dec2021 14:30:48.239] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\create-328085\3583784_mapped_official_1.18.1\create-328085-3583784_mapped_official_1.18.1.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[38,)]]
-[30Dec2021 14:30:48.239] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\flywheel-486392\3584224_mapped_official_1.18.1\flywheel-486392-3584224_mapped_official_1.18.1.jar
-[30Dec2021 14:30:48.240] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file flywheel-486392-3584224_mapped_official_1.18.1.jar with {flywheel} mods - versions {1.18-0.5.0a}
-[30Dec2021 14:30:48.240] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Spotty\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\flywheel-486392\3584224_mapped_official_1.18.1\flywheel-486392-3584224_mapped_official_1.18.1.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[38,)]]
-[30Dec2021 14:30:48.241] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
-[30Dec2021 14:30:48.356] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 2 language providers
-[30Dec2021 14:30:48.357] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
-[30Dec2021 14:30:48.358] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 39
-[30Dec2021 14:30:48.360] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found 2 mods for first modid flywheel, selecting most recent based on version data
-[30Dec2021 14:30:48.360] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Selected file flywheel-486392-3584224_mapped_official_1.18.1.jar for modid flywheel with version 1.18-0.5.0a
-[30Dec2021 14:30:48.360] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found 2 mods for first modid create, selecting most recent based on version data
-[30Dec2021 14:30:48.360] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Selected file create-328085-3583784_mapped_official_1.18.1.jar for modid create with version 0.4b
-[30Dec2021 14:30:48.363] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 8 mod requirements (7 mandatory, 1 optional)
-[30Dec2021 14:30:48.363] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 1 mod requirements missing (1 mandatory, 0 optional)
-[30Dec2021 14:30:48.364] [main/ERROR] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Missing mandatory dependencies: minecraft
-[30Dec2021 14:30:48.586] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 27879 method mappings from methods.csv
-[30Dec2021 14:30:48.600] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 26641 field mappings from fields.csv
-[30Dec2021 14:30:48.628] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
-[30Dec2021 14:30:48.629] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
-[30Dec2021 14:30:48.629] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
-[30Dec2021 14:30:48.629] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
-[30Dec2021 14:30:48.629] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading coremod transformers
-[30Dec2021 14:30:48.630] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_method.js
-[30Dec2021 14:30:48.708] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[30Dec2021 14:30:48.708] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_instanceof.js
-[30Dec2021 14:30:48.751] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[30Dec2021 14:30:48.751] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/add_bouncer_method.js
-[30Dec2021 14:30:48.770] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[30Dec2021 14:30:48.775] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@aa4d8cc to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
-[30Dec2021 14:30:48.775] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@381d7219 to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
-[30Dec2021 14:30:48.776] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@49fe3142 to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
-[30Dec2021 14:30:48.776] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@13fed1ec to Target : CLASS {Lnet/minecraft/world/level/block/StairBlock;} {} {V}
-[30Dec2021 14:30:48.776] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@61c42416 to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
-[30Dec2021 14:30:48.776] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@329a1f8d to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
-[30Dec2021 14:30:48.776] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@a565cbd to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
-[30Dec2021 14:30:48.776] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
-[30Dec2021 14:30:49.353] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[30Dec2021 14:30:49.353] [main/DEBUG] [mixin/]: Registering mixin config: alloyed.mixins.json
-[30Dec2021 14:30:49.361] [main/DEBUG] [mixin/]: Compatibility level JAVA_17 specified by alloyed.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
-[30Dec2021 14:30:49.363] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(alloyed)
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(alloyed)
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(alloyed)
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(alloyed)
-[30Dec2021 14:30:49.364] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(alloyed)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(alloyed)]
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(create)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(create)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(create)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(create)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(create)
-[30Dec2021 14:30:49.365] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(create)]
-[30Dec2021 14:30:49.366] [main/DEBUG] [mixin/]: Registering mixin config: create.mixins.json
-[30Dec2021 14:30:49.367] [main/DEBUG] [mixin/]: Compatibility level JAVA_16 specified by create.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
-[30Dec2021 14:30:49.367] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(flywheel)
-[30Dec2021 14:30:49.367] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(flywheel)
-[30Dec2021 14:30:49.367] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(flywheel)
-[30Dec2021 14:30:49.367] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(flywheel)
-[30Dec2021 14:30:49.367] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(flywheel)
-[30Dec2021 14:30:49.367] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(flywheel)]
-[30Dec2021 14:30:49.367] [main/DEBUG] [mixin/]: Registering mixin config: flywheel.mixins.json
-[30Dec2021 14:30:49.368] [main/DEBUG] [mixin/]: inject() running with 6 agents
-[30Dec2021 14:30:49.368] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[30Dec2021 14:30:49.368] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
-[30Dec2021 14:30:49.369] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(alloyed)]
-[30Dec2021 14:30:49.369] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
-[30Dec2021 14:30:49.369] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(create)]
-[30Dec2021 14:30:49.369] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(flywheel)]
-[30Dec2021 14:30:49.369] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Spotty\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
-[30Dec2021 14:30:49.406] [main/DEBUG] [mixin/]: Error cleaning class output directory: .mixin.out
-[30Dec2021 14:30:49.409] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
-[30Dec2021 14:30:49.409] [main/DEBUG] [mixin/]: Selecting config alloyed.mixins.json
-[30Dec2021 14:30:49.411] [main/WARN] [mixin/]: Reference map 'alloyed.refmap.json' for alloyed.mixins.json could not be read. If this is a development environment you can ignore this message
-[30Dec2021 14:30:49.411] [main/DEBUG] [mixin/]: Selecting config create.mixins.json
-[30Dec2021 14:30:49.534] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\Users\Spotty\Downloads\Create-Alloyed-master/build/createSrgToMcp/output.srg
-[30Dec2021 14:30:49.534] [main/DEBUG] [mixin/]: Selecting config flywheel.mixins.json
-[30Dec2021 14:30:49.535] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\Users\Spotty\Downloads\Create-Alloyed-master/build/createSrgToMcp/output.srg
-[30Dec2021 14:30:49.535] [main/DEBUG] [mixin/]: Preparing alloyed.mixins.json (1)
-[30Dec2021 14:30:49.553] [main/DEBUG] [mixin/]: Preparing flywheel.mixins.json (20)
-[30Dec2021 14:30:49.613] [main/DEBUG] [mixin/]: Preparing create.mixins.json (7)
-[30Dec2021 14:30:49.640] [main/DEBUG] [mixin/]: Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
-[30Dec2021 14:30:49.641] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
-[30Dec2021 14:30:49.642] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
-[30Dec2021 14:30:49.643] [main/DEBUG] [mixin/]: Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
-[30Dec2021 14:30:49.643] [main/DEBUG] [mixin/]: Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
-[30Dec2021 14:30:49.644] [main/DEBUG] [mixin/]: Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
-[30Dec2021 14:30:49.727] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using Log4J2 as the default logging framework
-[30Dec2021 14:30:49.728] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
-[30Dec2021 14:30:49.728] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
-[30Dec2021 14:30:49.772] [main/DEBUG] [mixin/]: Mixing CustomItemUseEffectsMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[30Dec2021 14:30:49.774] [main/DEBUG] [mixin/]: create.mixins.json:CustomItemUseEffectsMixin: Class version 61 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[30Dec2021 14:30:49.780] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
-[30Dec2021 14:30:49.884] [main/DEBUG] [mixin/]: Mixing EntityContraptionInteractionMixin from create.mixins.json into net.minecraft.world.entity.Entity
-[30Dec2021 14:30:49.885] [main/DEBUG] [mixin/]: create.mixins.json:EntityContraptionInteractionMixin: Class version 61 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[30Dec2021 14:30:49.886] [main/DEBUG] [mixin/]: Renaming synthetic method lambda$createRunningParticlesMixin$3(Lnet/minecraft/core/BlockPos;Lcom/simibubi/create/content/contraptions/components/structureMovement/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to mdd63bb6$lambda$createRunningParticlesMixin$3$0 in create.mixins.json:EntityContraptionInteractionMixin
-[30Dec2021 14:30:49.886] [main/DEBUG] [mixin/]: Renaming synthetic method lambda$movementMixin$2(Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/simibubi/create/content/contraptions/components/structureMovement/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to mdd63bb6$lambda$movementMixin$2$1 in create.mixins.json:EntityContraptionInteractionMixin
-[30Dec2021 14:30:49.886] [main/DEBUG] [mixin/]: Renaming synthetic method lambda$forCollision$1(Lnet/minecraft/world/phys/Vec3;Lorg/apache/logging/log4j/util/TriConsumer;Lcom/simibubi/create/content/contraptions/components/structureMovement/AbstractContraptionEntity;)V to mdd63bb6$lambda$forCollision$1$2 in create.mixins.json:EntityContraptionInteractionMixin
-[30Dec2021 14:30:49.886] [main/DEBUG] [mixin/]: Renaming synthetic method lambda$getIntersectingContraptions$0(Lcom/simibubi/create/content/contraptions/components/structureMovement/AbstractContraptionEntity;)Z to mdd63bb6$lambda$getIntersectingContraptions$0$3 in create.mixins.json:EntityContraptionInteractionMixin
-[30Dec2021 14:30:50.441] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
-[30Dec2021 14:30:50.461] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/StairBlock
-[30Dec2021 14:30:50.494] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
-[30Dec2021 14:30:50.626] [pool-3-thread-1/DEBUG] [mixin/]: Mixing NoteblockInstrumentMixin from alloyed.mixins.json into net.minecraft.world.level.block.state.properties.NoteBlockInstrument
+[30Dec2021 17:01:48.552] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\Spotty\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 39.0.9, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407, -mixin.config=alloyed.mixins.json]
+[30Dec2021 17:01:48.555] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.8+9.0.8+main.9943aea3 starting: java version 17.0.1 by Oracle Corporation
+[30Dec2021 17:01:48.568] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [fmlclientdev,forgeclient,minecraft,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness]
+[30Dec2021 17:01:48.576] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
+[30Dec2021 17:01:48.586] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
+[30Dec2021 17:01:48.593] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[30Dec2021 17:01:48.596] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: java.util.stream.ReferencePipeline$3@37052337
+[30Dec2021 17:01:48.603] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
+[30Dec2021 17:01:48.603] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[30Dec2021 17:01:48.603] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
+[30Dec2021 17:01:48.604] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
+[30Dec2021 17:01:48.604] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[30Dec2021 17:01:48.605] [main/DEBUG] [net.minecraftforge.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 1.0
+[30Dec2021 17:01:48.605] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML 1.0 loading
+[30Dec2021 17:01:48.605] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 9.0.8+9.0.8+main.9943aea3
+[30Dec2021 17:01:48.605] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
+[30Dec2021 17:01:48.606] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found EventBus version : 5.0.7+5.0.7+master.6d3407cc
+[30Dec2021 17:01:48.606] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
+[30Dec2021 17:01:48.607] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 5.0.2+5.0.2+master.303343f8
+[30Dec2021 17:01:48.607] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 4.0.11+4.0.11+master.ce88bbba
+[30Dec2021 17:01:48.607] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 4
+[30Dec2021 17:01:48.609] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[30Dec2021 17:01:48.610] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[30Dec2021 17:01:48.614] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[30Dec2021 17:01:48.614] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
+[30Dec2021 17:01:48.627] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@35a50a4c
+[30Dec2021 17:01:48.637] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Spotty/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327! Service=ModLauncher Env=CLIENT
+[30Dec2021 17:01:48.639] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[30Dec2021 17:01:48.640] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[30Dec2021 17:01:48.640] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[30Dec2021 17:01:48.640] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[30Dec2021 17:01:48.641] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[30Dec2021 17:01:48.641] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[30Dec2021 17:01:48.642] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
+[30Dec2021 17:01:48.642] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[30Dec2021 17:01:48.642] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[30Dec2021 17:01:48.643] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing GAMEDIR directory : C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run
+[30Dec2021 17:01:48.644] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run
+[30Dec2021 17:01:48.644] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Making MODSDIR directory : C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\mods
+[30Dec2021 17:01:48.644] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Created MODSDIR directory : C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\mods
+[30Dec2021 17:01:48.645] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\mods
+[30Dec2021 17:01:48.645] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Making CONFIGDIR directory : C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config
+[30Dec2021 17:01:48.645] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Created CONFIGDIR directory : C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config
+[30Dec2021 17:01:48.645] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config
+[30Dec2021 17:01:48.645] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config\fml.toml
+[30Dec2021 17:01:48.646] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading configuration
+[30Dec2021 17:01:48.669] [main/WARN] [net.minecraftforge.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config\fml.toml is not correct. Correcting
+[30Dec2021 17:01:48.673] [main/WARN] [net.minecraftforge.fml.loading.FMLConfig/CORE]: Incorrect key [defaultConfigPath] was corrected from null to defaultconfigs
+[30Dec2021 17:01:48.676] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Making default config directory directory : C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\defaultconfigs
+[30Dec2021 17:01:48.676] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Created default config directory directory : C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\defaultconfigs
+[30Dec2021 17:01:48.677] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
+[30Dec2021 17:01:48.678] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
+[30Dec2021 17:01:48.679] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Using forgeclientuserdev as launch service
+[30Dec2021 17:01:48.691] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[forgeVersion=39.0.9, mcVersion=1.18.1, mcpVersion=20211210.034407, forgeGroup=net.minecraftforge]
+[30Dec2021 17:01:48.693] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[30Dec2021 17:01:48.693] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
+[30Dec2021 17:01:48.693] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
+[30Dec2021 17:01:48.693] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[30Dec2021 17:01:48.694] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
+[30Dec2021 17:01:48.694] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
+[30Dec2021 17:01:48.694] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[30Dec2021 17:01:48.694] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
+[30Dec2021 17:01:48.701] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
+[30Dec2021 17:01:48.702] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null)
+[30Dec2021 17:01:48.705] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates alloyed%%C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\resources\main;alloyed%%C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\classes\java\main from env
+[30Dec2021 17:01:48.706] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{alloyed=[C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\resources\main, C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\classes\java\main]}]
+[30Dec2021 17:01:48.859] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar with {minecraft} mods - versions {1.18.1}
+[30Dec2021 17:01:48.862] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.9_mapped_official_1.18.1\forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[30Dec2021 17:01:48.863] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\resources\main
+[30Dec2021 17:01:48.868] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {alloyed} mods - versions {1.16.5}
+[30Dec2021 17:01:48.868] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\resources\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[36,)]]
+[30Dec2021 17:01:48.868] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
+[30Dec2021 17:01:48.869] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {39.0.9}
+[30Dec2021 17:01:48.870] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file  with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
+[30Dec2021 17:01:48.891] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
+[30Dec2021 17:01:48.891] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
+[30Dec2021 17:01:48.891] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
+[30Dec2021 17:01:48.891] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_method.js
+[30Dec2021 17:01:48.891] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_instanceof.js
+[30Dec2021 17:01:48.891] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/add_bouncer_method.js
+[30Dec2021 17:01:48.892] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[30Dec2021 17:01:49.007] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 2 language providers
+[30Dec2021 17:01:49.007] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
+[30Dec2021 17:01:49.008] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 39
+[30Dec2021 17:01:49.012] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 3 mod requirements (2 mandatory, 1 optional)
+[30Dec2021 17:01:49.013] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
+[30Dec2021 17:01:49.280] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 27879 method mappings from methods.csv
+[30Dec2021 17:01:49.294] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 26641 field mappings from fields.csv
+[30Dec2021 17:01:49.331] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
+[30Dec2021 17:01:49.331] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
+[30Dec2021 17:01:49.331] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
+[30Dec2021 17:01:49.332] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
+[30Dec2021 17:01:49.332] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading coremod transformers
+[30Dec2021 17:01:49.332] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_method.js
+[30Dec2021 17:01:49.434] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[30Dec2021 17:01:49.434] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_instanceof.js
+[30Dec2021 17:01:49.470] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[30Dec2021 17:01:49.471] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/add_bouncer_method.js
+[30Dec2021 17:01:49.491] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[30Dec2021 17:01:49.495] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@5f117b3d to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
+[30Dec2021 17:01:49.496] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@a7ad6e5 to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
+[30Dec2021 17:01:49.496] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@3b1ed14b to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
+[30Dec2021 17:01:49.497] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@690bc15e to Target : CLASS {Lnet/minecraft/world/level/block/StairBlock;} {} {V}
+[30Dec2021 17:01:49.497] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@1bc776b7 to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
+[30Dec2021 17:01:49.497] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@475646d4 to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
+[30Dec2021 17:01:49.497] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@a0f53fc to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
+[30Dec2021 17:01:49.497] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
+[30Dec2021 17:01:49.709] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[30Dec2021 17:01:49.709] [main/DEBUG] [mixin/]: Registering mixin config: alloyed.mixins.json
+[30Dec2021 17:01:49.720] [main/DEBUG] [mixin/]: Compatibility level JAVA_17 specified by alloyed.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[30Dec2021 17:01:49.723] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[30Dec2021 17:01:49.723] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[30Dec2021 17:01:49.723] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
+[30Dec2021 17:01:49.723] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
+[30Dec2021 17:01:49.724] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
+[30Dec2021 17:01:49.724] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
+[30Dec2021 17:01:49.724] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
+[30Dec2021 17:01:49.724] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[30Dec2021 17:01:49.724] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(alloyed)
+[30Dec2021 17:01:49.724] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(alloyed)
+[30Dec2021 17:01:49.724] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(alloyed)
+[30Dec2021 17:01:49.724] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(alloyed)
+[30Dec2021 17:01:49.725] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(alloyed)
+[30Dec2021 17:01:49.725] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(alloyed)]
+[30Dec2021 17:01:49.725] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
+[30Dec2021 17:01:49.725] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
+[30Dec2021 17:01:49.725] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
+[30Dec2021 17:01:49.725] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
+[30Dec2021 17:01:49.725] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
+[30Dec2021 17:01:49.726] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[30Dec2021 17:01:49.726] [main/DEBUG] [mixin/]: inject() running with 4 agents
+[30Dec2021 17:01:49.726] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[30Dec2021 17:01:49.726] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[30Dec2021 17:01:49.726] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(alloyed)]
+[30Dec2021 17:01:49.726] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[30Dec2021 17:01:49.726] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Spotty\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
+[30Dec2021 17:01:49.777] [main/DEBUG] [mixin/]: Error cleaning class output directory: .mixin.out
+[30Dec2021 17:01:49.780] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[30Dec2021 17:01:49.781] [main/DEBUG] [mixin/]: Selecting config alloyed.mixins.json
+[30Dec2021 17:01:49.783] [main/WARN] [mixin/]: Reference map 'alloyed.refmap.json' for alloyed.mixins.json could not be read. If this is a development environment you can ignore this message
+[30Dec2021 17:01:49.784] [main/DEBUG] [mixin/]: Preparing alloyed.mixins.json (1)
+[30Dec2021 17:01:49.817] [main/DEBUG] [mixin/]: Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
+[30Dec2021 17:01:49.818] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
+[30Dec2021 17:01:49.819] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
+[30Dec2021 17:01:49.820] [main/DEBUG] [mixin/]: Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
+[30Dec2021 17:01:49.821] [main/DEBUG] [mixin/]: Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
+[30Dec2021 17:01:49.821] [main/DEBUG] [mixin/]: Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
+[30Dec2021 17:01:49.902] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using Log4J2 as the default logging framework
+[30Dec2021 17:01:49.903] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[30Dec2021 17:01:49.904] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[30Dec2021 17:01:50.532] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
+[30Dec2021 17:01:50.562] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/StairBlock
+[30Dec2021 17:01:50.597] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
+[30Dec2021 17:01:50.747] [pool-3-thread-1/DEBUG] [mixin/]: Mixing NoteblockInstrumentMixin from alloyed.mixins.json into net.minecraft.world.level.block.state.properties.NoteBlockInstrument
+[30Dec2021 17:01:50.751] [pool-3-thread-1/DEBUG] [mixin/]: Renaming @Invoker method newNoteblockInstrument(Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/sounds/SoundEvent;)Lnet/minecraft/world/level/block/state/properties/NoteBlockInstrument; to newNoteblockInstrument_$md$0ef199$0 in alloyed.mixins.json:NoteblockInstrumentMixin
+[30Dec2021 17:01:51.097] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
+[30Dec2021 17:01:52.416] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
+[30Dec2021 17:01:52.493] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
+[30Dec2021 17:01:53.706] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[30Dec2021 17:01:56.341] [Render thread/DEBUG] [net.minecraftforge.fml.ModWorkManager/LOADING]: Using 12 threads for parallel mod-loading
+[30Dec2021 17:01:56.349] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@7cea0110 - got cpw.mods.cl.ModuleClassLoader@1804f60d
+[30Dec2021 17:01:56.350] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for com.molybdenum.alloyed.Alloyed
+[30Dec2021 17:01:56.355] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@7cea0110 - got cpw.mods.cl.ModuleClassLoader@1804f60d
+[30Dec2021 17:01:56.356] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
+[30Dec2021 17:01:56.475] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for alloyed
+[30Dec2021 17:01:56.553] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
+[30Dec2021 17:01:56.554] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 17
+[30Dec2021 17:01:56.554] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
+[30Dec2021 17:01:56.555] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
+[30Dec2021 17:01:56.555] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
+[30Dec2021 17:01:56.556] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:253) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:247) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.ConstantPool.<init>(ConstantPool.java:34) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.AttributeKey$1.<init>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.AttributeKey.<clinit>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at net.minecraftforge.network.NetworkConstants.<clinit>(NetworkConstants.java:42) ~[forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar%2376%2382!:?]
+	at net.minecraftforge.common.ForgeMod.<init>(ForgeMod.java:144) ~[forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar%2376%2382!:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:81) ~[javafmllanguage-1.18.1-39.0.9.jar%2378!:?]
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:120) ~[fmlcore-1.18.1-39.0.9.jar%2380!:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) [?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) [?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
+[30Dec2021 17:01:56.558] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
+[30Dec2021 17:01:56.561] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 (in module io.netty.all) cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to module io.netty.all
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:560) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:375) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:366) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.ConstantPool.<init>(ConstantPool.java:34) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.AttributeKey$1.<init>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at io.netty.util.AttributeKey.<clinit>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2337!:4.1.68.Final]
+	at net.minecraftforge.network.NetworkConstants.<clinit>(NetworkConstants.java:42) ~[forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar%2376%2382!:?]
+	at net.minecraftforge.common.ForgeMod.<init>(ForgeMod.java:144) ~[forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar%2376%2382!:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:81) ~[javafmllanguage-1.18.1-39.0.9.jar%2378!:?]
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:120) ~[fmlcore-1.18.1-39.0.9.jar%2380!:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) [?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) [?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
+[30Dec2021 17:01:56.587] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[30Dec2021 17:01:56.587] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
+[30Dec2021 17:01:56.588] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 4282384384 bytes (maybe)
+[30Dec2021 17:01:56.589] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\Spotty\AppData\Local\Temp (java.io.tmpdir)
+[30Dec2021 17:01:56.589] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[30Dec2021 17:01:56.589] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
+[30Dec2021 17:01:56.590] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
+[30Dec2021 17:01:56.590] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[30Dec2021 17:01:56.593] [modloading-worker-0/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
+[30Dec2021 17:01:56.593] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
+[30Dec2021 17:01:56.662] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
+[30Dec2021 17:01:56.662] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
+[30Dec2021 17:01:56.663] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-common.toml for forge tracking
+[30Dec2021 17:01:56.704] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
+[30Dec2021 17:01:56.718] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler to MOD
+[30Dec2021 17:01:56.752] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$ColorRegisterHandler to MOD
+[30Dec2021 17:01:56.756] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.ModelDataManager to FORGE
+[30Dec2021 17:01:56.758] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ForgeHooksClient$ClientEvents to MOD
+[30Dec2021 17:01:57.800] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[30Dec2021 17:01:57.801] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[30Dec2021 17:01:57.801] [Render thread/DEBUG] [io.netty.util.internal.ThreadLocalRandom/]: -Dio.netty.initialSeedUniquifier: 0xa545517688fff25f
+[30Dec2021 17:01:57.959] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[30Dec2021 17:01:58.547] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type CLIENT
+[30Dec2021 17:01:58.548] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config\forge-client.toml
+[30Dec2021 17:01:58.549] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config\forge-client.toml
+[30Dec2021 17:01:58.550] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config\forge-client.toml for changes
+[30Dec2021 17:01:58.554] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type COMMON
+[30Dec2021 17:01:58.554] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config\forge-common.toml
+[30Dec2021 17:01:58.555] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config\forge-common.toml
+[30Dec2021 17:01:58.556] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file C:\Users\Spotty\Downloads\Create-Alloyed-1.18\run\config\forge-common.toml for changes
+[30Dec2021 17:01:59.651] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[30Dec2021 17:02:00.469] [Forge Version Check/DEBUG] [net.minecraftforge.fml.VersionChecker/]: [forge] Received version check data:
+{
+  "homepage": "https://files.minecraftforge.net/net/minecraftforge/forge/",
+  "promos": {
+    "1.1-latest": "1.3.4.29",
+    "1.2.3-latest": "1.4.1.64",
+    "1.2.4-latest": "2.0.0.68",
+    "1.2.5-latest": "3.4.9.171",
+    "1.3.2-latest": "4.3.5.318",
+    "1.4.0-latest": "5.0.0.326",
+    "1.4.1-latest": "6.0.0.329",
+    "1.4.2-latest": "6.0.1.355",
+    "1.4.3-latest": "6.2.1.358",
+    "1.4.4-latest": "6.3.0.378",
+    "1.4.5-latest": "6.4.2.448",
+    "1.4.6-latest": "6.5.0.489",
+    "1.4.7-latest": "6.6.2.534",
+    "1.5-latest": "7.7.0.598",
+    "1.5.1-latest": "7.7.2.682",
+    "1.5.2-latest": "7.8.1.738",
+    "1.5.2-recommended": "7.8.1.738",
+    "1.6.1-latest": "8.9.0.775",
+    "1.6.2-latest": "9.10.1.871",
+    "1.6.2-recommended": "9.10.1.871",
+    "1.6.3-latest": "9.11.0.878",
+    "1.6.4-latest": "9.11.1.1345",
+    "1.6.4-recommended": "9.11.1.1345",
+    "1.7.2-latest": "10.12.2.1161",
+    "1.7.2-recommended": "10.12.2.1161",
+    "1.7.10_pre4-latest": "10.12.2.1149",
+    "1.7.10-latest": "10.13.4.1614",
+    "1.7.10-recommended": "10.13.4.1614",
+    "1.8-latest": "11.14.4.1577",
+    "1.8-recommended": "11.14.4.1563",
+    "1.8.8-latest": "11.15.0.1655",
+    "1.8.9-latest": "11.15.1.2318",
+    "1.8.9-recommended": "11.15.1.2318",
+    "1.9-latest": "12.16.1.1938",
+    "1.9-recommended": "12.16.1.1887",
+    "1.9.4-latest": "12.17.0.2317",
+    "1.9.4-recommended": "12.17.0.2317",
+    "1.10-latest": "12.18.0.2000",
+    "1.10.2-latest": "12.18.3.2511",
+    "1.10.2-recommended": "12.18.3.2511",
+    "1.11-latest": "13.19.1.2199",
+    "1.11-recommended": "13.19.1.2189",
+    "1.11.2-latest": "13.20.1.2588",
+    "1.11.2-recommended": "13.20.1.2588",
+    "1.12-latest": "14.21.1.2443",
+    "1.12-recommended": "14.21.1.2387",
+    "1.12.1-latest": "14.22.1.2485",
+    "1.12.1-recommended": "14.22.1.2478",
+    "1.12.2-latest": "14.23.5.2860",
+    "1.12.2-recommended": "14.23.5.2859",
+    "1.13.2-latest": "25.0.223",
+    "1.14.2-latest": "26.0.63",
+    "1.14.3-latest": "27.0.60",
+    "1.14.4-latest": "28.2.26",
+    "1.14.4-recommended": "28.2.26",
+    "1.15-latest": "29.0.4",
+    "1.15.1-latest": "30.0.51",
+    "1.15.2-latest": "31.2.57",
+    "1.15.2-recommended": "31.2.57",
+    "1.16.1-latest": "32.0.108",
+    "1.16.2-latest": "33.0.61",
+    "1.16.3-latest": "34.1.42",
+    "1.16.3-recommended": "34.1.0",
+    "1.16.4-latest": "35.1.37",
+    "1.16.4-recommended": "35.1.4",
+    "1.16.5-latest": "36.2.22",
+    "1.16.5-recommended": "36.2.20",
+    "1.17.1-latest": "37.1.1",
+    "1.17.1-recommended": "37.1.1",
+    "1.18-latest": "38.0.17",
+    "1.18.1-latest": "39.0.9"
+  }
+}
+[30Dec2021 17:02:00.480] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA Current: 39.0.9 Target: 39.0.9
+[30Dec2021 17:04:45.680] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[30Dec2021 17:04:45.741] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Making serverconfig directory : .\saves\New World\serverconfig
+[30Dec2021 17:04:45.741] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Created serverconfig directory : .\saves\New World\serverconfig
+[30Dec2021 17:04:45.741] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type SERVER
+[30Dec2021 17:04:45.741] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\New World\serverconfig\forge-server.toml
+[30Dec2021 17:04:45.742] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\New World\serverconfig\forge-server.toml
+[30Dec2021 17:04:45.742] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\New World\serverconfig\forge-server.toml for changes
+[30Dec2021 17:04:49.247] [Render thread/DEBUG] [io.netty.channel.MultithreadEventLoopGroup/]: -Dio.netty.eventLoopThreads: 24
+[30Dec2021 17:04:49.264] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.noKeySetOptimization: false
+[30Dec2021 17:04:49.264] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.selectorAutoRebuildThreshold: 512
+[30Dec2021 17:04:49.270] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: org.jctools-core.MpscChunkedArrayQueue: available
+[30Dec2021 17:04:49.294] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.processId: 12384 (auto-detected)
+[30Dec2021 17:04:49.295] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv4Stack: false
+[30Dec2021 17:04:49.295] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv6Addresses: false
+[30Dec2021 17:04:49.300] [Render thread/DEBUG] [io.netty.util.NetUtilInitializations/]: Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[30Dec2021 17:04:49.300] [Render thread/DEBUG] [io.netty.util.NetUtil/]: Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[30Dec2021 17:04:49.310] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.machineId: 30:b4:9e:ff:fe:b1:44:fc (auto-detected)
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 24
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 24
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 11
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 16777216
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: true
+[30Dec2021 17:04:49.336] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[30Dec2021 17:04:49.433] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
+[30Dec2021 17:04:49.433] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
+[30Dec2021 17:04:49.433] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[30Dec2021 17:04:49.513] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxCapacityPerThread: 4096
+[30Dec2021 17:04:49.513] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxSharedCapacityFactor: 2
+[30Dec2021 17:04:49.513] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.linkCapacity: 16
+[30Dec2021 17:04:49.513] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.ratio: 8
+[30Dec2021 17:04:49.513] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.delayedQueue.ratio: 8
+[30Dec2021 17:04:49.526] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
+[30Dec2021 17:04:49.526] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
+[30Dec2021 17:04:49.527] [Netty Server IO #1/DEBUG] [io.netty.util.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3fcd5c52
+[30Dec2021 17:31:33.186] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing serverconfig directory : .\saves\New World\serverconfig
+[30Dec2021 17:31:33.186] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Unloading configs type SERVER

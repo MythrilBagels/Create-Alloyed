@@ -1,28 +1,7 @@
 {
   "variants": {
-    "oxidization=0": {
-      "model": "alloyed:block/bronze_block_0"
-    },
-    "oxidization=1": {
-      "model": "alloyed:block/bronze_block_0"
-    },
-    "oxidization=2": {
-      "model": "alloyed:block/bronze_block_1"
-    },
-    "oxidization=3": {
-      "model": "alloyed:block/bronze_block_1"
-    },
-    "oxidization=4": {
-      "model": "alloyed:block/bronze_block_1"
-    },
-    "oxidization=5": {
-      "model": "alloyed:block/bronze_block_1"
-    },
-    "oxidization=6": {
-      "model": "alloyed:block/bronze_block_2"
-    },
-    "oxidization=7": {
-      "model": "alloyed:block/bronze_block_2"
+    "": {
+      "model": "alloyed:block/bronze_block"
     }
   }
 }

@@ -14,7 +14,6 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
-apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
 
 mixin {
     add sourceSets.main, "alloyed.refmap.json"
@@ -24,7 +23,7 @@ version = '1.0-1.16.5'
 group = 'com.molybdenum.alloyed' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'alloyed'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17) // Mojang ships Java 17 to end users, so your mod should target Java 8.
+java.toolchain.languageVersion = JavaLanguageVersion.of(17) // Mojang ships Java 8 to end users, so your mod should target Java 8.
 
 repositories {
     maven {
@@ -150,7 +149,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.7'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.9'
 
     // --- DEBUG PURPOSES ---
     // compile against the JEI API but do not include it at runtime
@@ -158,8 +157,8 @@ dependencies {
     // at runtime, use the full JEI jar
     //runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.121")
 
-    implementation fg.deobf("curse.maven:create-328085:3583784") //create
-    implementation fg.deobf("curse.maven:flywheel-486392:3584224") //flywheel
+    //implementation fg.deobf("curse.maven:create-328085:3536025") //create
+    //implementation fg.deobf("curse.maven:flywheel-486392:3535459") //flywheel
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     // ----------------------
 
@@ -176,7 +175,7 @@ jar {
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"examplemodsareus",
-            "Implementation-Timestamp": "yyyy-MM-dd'T'HH:mm:ssZ",
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
             "MixinConfigs": "alloyed.mixins.json"
         ])
     }

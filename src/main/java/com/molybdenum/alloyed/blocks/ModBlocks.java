@@ -2,71 +2,72 @@ package com.molybdenum.alloyed.blocks;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.items.ModItemGroup;
-import com.simibubi.create.Create;
-import com.simibubi.create.content.AllSections;
-import com.simibubi.create.foundation.data.BlockStateGen;
-import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.foundation.data.ModelGen;
-import com.simibubi.create.repack.registrate.builders.BlockBuilder;
-import com.simibubi.create.repack.registrate.builders.ItemBuilder;
-import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
+import com.molybdenum.alloyed.items.ModItems;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.tags.BlockTags;
-import net.minecraftforge.common.Tags;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
-import javax.annotation.Nonnull;
-
-import static com.simibubi.create.AllTags.tagBlockAndItem;
-
+import java.util.function.Supplier;
 
 public class ModBlocks {
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> {
-        return ModItemGroup.MAIN_GROUP;
-    });
 
-    // Block Entries
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Alloyed.MOD_ID);
 
-    public static final BlockEntry<Block> BRONZE_BLOCK = REGISTRATE
-            .block("steel_block", Block::new)
-            .initialProperties(Material.METAL)
-            .simpleItem()
-            .lang("Block of Bronze")
-            .register();
 
-    public static final BlockEntry<Block> WAXED_BRONZE_BLOCK = REGISTRATE
-            .block("waxed_bronze_block", Block::new)
-            .initialProperties(Material.METAL)
-            .simpleItem()
-            .lang("Waxed Block of Bronze")
-            .register();
+    // Bronze
+    public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block",
+            () -> new Block(Block.Properties
+                    .of(Material.METAL)
+                    //.harvestLevel(2)
+                    .requiresCorrectToolForDrops()
+                    .strength(5f)));
 
-    public static final BlockEntry<Block> STEEL_BLOCK = REGISTRATE
-            .block("steel_block", Block::new)
-            .initialProperties(Material.METAL)
-		    .simpleItem()
-            .lang("Block of Steel")
-		    .register();
+    public static final RegistryObject<Block> BRONZE_BELL = registerBlock("bronze_bell",
+            () -> new Block(Block.Properties
+                    .of(Material.METAL)
+                    //.harvestLevel(1)
+                    //.harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3f)
+                    .sound(SoundType.ANVIL)
+                    .noOcclusion()));
 
-    public static final BlockEntry<Block> BRONZE_BELL = REGISTRATE
-            .block("bronze_bell", Block::new)
-            .initialProperties(Material.METAL)
-            .properties(properties -> properties
-                    .noOcclusion()
-                    .sound(SoundType.ANVIL))
-            .simpleItem()
-            .lang("Bronze Bell")
-            .register();
+    // Steel
+    public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
+            () -> new Block(Block.Properties
+                    .of(Material.METAL)
+                    //.harvestLevel(2)
+                    .requiresCorrectToolForDrops()
+                    .strength(6f)));
 
-    // End Block Entries
 
-    public ModBlocks() {}
 
-    public static void register() {
-        Create.registrate().addToSection(BRONZE_BLOCK,AllSections.MATERIALS);
-        Create.registrate().addToSection(WAXED_BRONZE_BLOCK,AllSections.MATERIALS);
-        Create.registrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
-        Create.registrate().addToSection(BRONZE_BELL, AllSections.CURIOSITIES);
+    //public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",
+    //        () -> new LightningChannelerBlock(AbstractBlock.Properties.create(Material.IRON)));
+
+
+
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+
+        registerBlockItem(name, toReturn);
+
+        return toReturn;
+    }
+
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModItemGroup.MAIN_GROUP)));
+    }
+
+
+
+    public static void register(IEventBus eventBus) {
+        BLOCKS.register(eventBus);
     }
 }

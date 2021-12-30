@@ -1,17 +1,17 @@
-Java Launcher: C:\Users\Spotty\.jdks\openjdk-17.0.1\bin\java.exe
-Arguments: '--clean, C:\Users\Spotty\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.18.1-20211210.034407\joined-1.18.1-20211210.034407-srg.jar, --output, C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatched.jar, --apply, C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatches.lzma'
+Java Launcher: C:\Users\Spotty\.gradle\jdks\jdk-17.0.1+12\bin\java.exe
+Arguments: '--clean, C:\Users\Spotty\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.18.1-20211210.034407\joined-1.18.1-20211210.034407-srg.jar, --output, C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.9\forge-1.18.1-39.0.9-binpatched.jar, --apply, C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.9\forge-1.18.1-39.0.9-binpatches.lzma'
 Classpath:
  - C:\Users\Spotty\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\binarypatcher\1.0.12\binarypatcher-1.0.12-fatjar.jar
-Working directory: C:\Users\Spotty\Downloads\Create-Alloyed-master\build\_applyBinpatches_2
+Working directory: C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\_applyBinpatches_2
 Main class: net.minecraftforge.binarypatcher.ConsoleTool
 ====================================
 Applying: 
   Clean:     C:\Users\Spotty\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.18.1-20211210.034407\joined-1.18.1-20211210.034407-srg.jar
-  Output:    C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatched.jar
+  Output:    C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.9\forge-1.18.1-39.0.9-binpatched.jar
   KeepData:  false
   Unpatched: false
-  Patches:   C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatches.lzma
-Loading patches file: C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatches.lzma
+  Patches:   C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.9\forge-1.18.1-39.0.9-binpatches.lzma
+Loading patches file: C:\Users\Spotty\Downloads\Create-Alloyed-1.18\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.9\forge-1.18.1-39.0.9-binpatches.lzma
   Reading patch com.mojang.blaze3d.pipeline.RenderTarget.binpatch
     Checksum: 35977cab Exists: true
   Reading patch com.mojang.blaze3d.platform.GlStateManager$BlendState.binpatch
@@ -2368,10 +2368,16 @@ Loading patches file: C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_c
     Checksum: 3ea13a3 Exists: true
   Reading patch net.minecraft.world.level.levelgen.feature.MonsterRoomFeature.binpatch
     Checksum: 3514b759 Exists: true
+  Reading patch net.minecraft.world.level.levelgen.feature.NetherFortressFeature.binpatch
+    Checksum: 5eb4ec7a Exists: true
   Reading patch net.minecraft.world.level.levelgen.feature.OceanMonumentFeature.binpatch
     Checksum: 5bd92512 Exists: true
+  Reading patch net.minecraft.world.level.levelgen.feature.PillagerOutpostFeature.binpatch
+    Checksum: 780f02b3 Exists: true
   Reading patch net.minecraft.world.level.levelgen.feature.StructureFeature.binpatch
     Checksum: 451a1f83 Exists: true
+  Reading patch net.minecraft.world.level.levelgen.feature.SwamplandHutFeature.binpatch
+    Checksum: e8a5d37e Exists: true
   Reading patch net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration$TreeConfigurationBuilder.binpatch
     Checksum: 539e2c35 Exists: true
   Reading patch net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration.binpatch
@@ -3683,8 +3689,11 @@ Processing: C:\Users\Spotty\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\j
   Patching net/minecraft/world/level/levelgen/carver/WorldCarver 1/1
   Patching net/minecraft/world/level/levelgen/feature/Feature 1/1
   Patching net/minecraft/world/level/levelgen/feature/MonsterRoomFeature 1/1
+  Patching net/minecraft/world/level/levelgen/feature/NetherFortressFeature 1/1
   Patching net/minecraft/world/level/levelgen/feature/OceanMonumentFeature 1/1
+  Patching net/minecraft/world/level/levelgen/feature/PillagerOutpostFeature 1/1
   Patching net/minecraft/world/level/levelgen/feature/StructureFeature 1/1
+  Patching net/minecraft/world/level/levelgen/feature/SwamplandHutFeature 1/1
   Patching net/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration$TreeConfigurationBuilder 1/1
   Patching net/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration 1/1
   Patching net/minecraft/world/level/levelgen/feature/foliageplacers/FoliagePlacerType 1/1
