@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "alloyed:bronze_block",
+    "alloyed:waxed_bronze_block",
+    "alloyed:bronze_bell",
+    "alloyed:steel_block"
+  ]
+}

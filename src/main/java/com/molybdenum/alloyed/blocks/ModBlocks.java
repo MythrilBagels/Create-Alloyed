@@ -65,6 +65,7 @@ public class ModBlocks {
 
     public static void register() {
         Create.registrate().addToSection(BRONZE_BLOCK,AllSections.MATERIALS);
+        Create.registrate().addToSection(WAXED_BRONZE_BLOCK,AllSections.MATERIALS);
         Create.registrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
         Create.registrate().addToSection(BRONZE_BELL, AllSections.CURIOSITIES);
     }
