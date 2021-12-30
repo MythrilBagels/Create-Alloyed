@@ -40,7 +40,7 @@ public enum ModItemTiers implements Tier {
 
     @Override
     public float getAttackDamageBonus() {
-        return getAttackDamageBonus();
+        return 0; // FIXME
     }
 
     @Override
