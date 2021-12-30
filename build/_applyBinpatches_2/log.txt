@@ -1,17 +1,17 @@
-Java Launcher: C:\Users\Spotty\.gradle\jdks\jdk-17.0.1+12\bin\java.exe
-Arguments: '--clean, C:\Users\Spotty\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.18.1-20211210.034407\joined-1.18.1-20211210.034407-srg.jar, --output, C:\Users\Spotty\Create-Alloyed\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatched.jar, --apply, C:\Users\Spotty\Create-Alloyed\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatches.lzma'
+Java Launcher: C:\Users\Spotty\.jdks\openjdk-17.0.1\bin\java.exe
+Arguments: '--clean, C:\Users\Spotty\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.18.1-20211210.034407\joined-1.18.1-20211210.034407-srg.jar, --output, C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatched.jar, --apply, C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatches.lzma'
 Classpath:
  - C:\Users\Spotty\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\binarypatcher\1.0.12\binarypatcher-1.0.12-fatjar.jar
-Working directory: C:\Users\Spotty\Create-Alloyed\build\_applyBinpatches_2
+Working directory: C:\Users\Spotty\Downloads\Create-Alloyed-master\build\_applyBinpatches_2
 Main class: net.minecraftforge.binarypatcher.ConsoleTool
 ====================================
 Applying: 
   Clean:     C:\Users\Spotty\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.18.1-20211210.034407\joined-1.18.1-20211210.034407-srg.jar
-  Output:    C:\Users\Spotty\Create-Alloyed\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatched.jar
+  Output:    C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatched.jar
   KeepData:  false
   Unpatched: false
-  Patches:   C:\Users\Spotty\Create-Alloyed\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatches.lzma
-Loading patches file: C:\Users\Spotty\Create-Alloyed\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatches.lzma
+  Patches:   C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatches.lzma
+Loading patches file: C:\Users\Spotty\Downloads\Create-Alloyed-master\build\fg_cache\net\minecraftforge\forge\1.18.1-39.0.7\forge-1.18.1-39.0.7-binpatches.lzma
   Reading patch com.mojang.blaze3d.pipeline.RenderTarget.binpatch
     Checksum: 35977cab Exists: true
   Reading patch com.mojang.blaze3d.platform.GlStateManager$BlendState.binpatch

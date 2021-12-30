@@ -1,8 +1,9 @@
 package com.molybdenum.alloyed.items;
 
-import com.google.common.base.Suppliers;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.util.LazyLoadedValue;
+
 import java.util.function.Supplier;
 
 public enum ModItemTiers implements Tier {
@@ -17,7 +18,7 @@ public enum ModItemTiers implements Tier {
     private final float speed;
     private final float damage;
     private final int enchantmentValue;
-    private final Supplier<Ingredient> repairIngredient;
+    private final LazyLoadedValue<Ingredient> repairIngredient;
 
     ModItemTiers(int level, int uses, float speed, float damage, int enchantmentValue, Supplier<Ingredient> repairIngredient) {
         this.level = level;
@@ -25,7 +26,7 @@ public enum ModItemTiers implements Tier {
         this.speed = speed;
         this.damage = damage;
         this.enchantmentValue = enchantmentValue;
-        this.repairIngredient = Suppliers.memoize(repairIngredient::get);
+        this.repairIngredient = new LazyLoadedValue<>(repairIngredient);
     }
 
     @Override
@@ -40,17 +41,17 @@ public enum ModItemTiers implements Tier {
 
     @Override
     public float getAttackDamageBonus() {
-        return getAttackDamageBonus();
+        return damage;
     }
 
     @Override
     public int getLevel() {
-        return getLevel();
+        return level;
     }
 
     @Override
     public int getEnchantmentValue() {
-        return getEnchantmentValue();
+        return enchantmentValue;
     }
 
     @Override
