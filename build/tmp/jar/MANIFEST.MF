@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: Create Composition
-Implementation-Version: 1.0
-Specification-Vendor: examplemodsareus
-Specification-Title: examplemod
-Implementation-Timestamp: 2021-12-03T18:03:44+0000
-Specification-Version: 1
-Implementation-Vendor: examplemodsareus
-
