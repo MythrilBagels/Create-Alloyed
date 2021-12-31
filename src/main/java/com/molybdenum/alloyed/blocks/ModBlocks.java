@@ -27,20 +27,35 @@ public class ModBlocks {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
     // Bronze Oxidization Stages
-    public static final BlockEntry<Block> BRONZE_BLOCK = REGISTRATE
-            .block("bronze_block", Block::new)
+    public static final BlockEntry<WeatheringBronzeFullBlock> BRONZE_BLOCK = REGISTRATE
+            .block("bronze_block",
+                    props -> new WeatheringBronzeFullBlock(
+                            WeatheringBronze.WeatherState.UNAFFECTED,
+                            props
+                    )
+            )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .register();
 
-    public static final BlockEntry<Block> EXPOSED_BRONZE_BLOCK = REGISTRATE
-            .block("exposed_bronze_block", Block::new)
+    public static final BlockEntry<WeatheringBronzeFullBlock> EXPOSED_BRONZE_BLOCK = REGISTRATE
+            .block("exposed_bronze_block",
+                    props -> new WeatheringBronzeFullBlock(
+                            WeatheringBronze.WeatherState.EXPOSED,
+                            props
+                    )
+            )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .register();
 
-    public static final BlockEntry<Block> OXIDIZED_BRONZE_BLOCK = REGISTRATE
-            .block("oxidized_bronze_block", Block::new)
+    public static final BlockEntry<WeatheringBronzeFullBlock> OXIDIZED_BRONZE_BLOCK = REGISTRATE
+            .block("oxidized_bronze_block",
+                    props -> new WeatheringBronzeFullBlock(
+                            WeatheringBronze.WeatherState.OXIDIZED,
+                            props
+                    )
+            )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .register();
