@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "alloyed:block/bronze_block_2"
+    "all": "alloyed:block/exposed_bronze_block"
   }
 }

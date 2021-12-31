@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "alloyed:bronze_block",
+    "alloyed:exposed_bronze_block",
+    "alloyed:oxidized_bronze_block",
     "alloyed:bronze_bell",
     "alloyed:steel_block"
   ]
