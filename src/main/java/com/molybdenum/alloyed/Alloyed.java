@@ -4,6 +4,8 @@ import com.molybdenum.alloyed.blocks.ModBlocks;
 import com.molybdenum.alloyed.fluids.ModFluids;
 import com.molybdenum.alloyed.items.ModItems;
 import com.molybdenum.alloyed.sounds.ModSounds;
+import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.repack.registrate.util.NonNullLazyValue;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
@@ -20,6 +22,8 @@ public class Alloyed {
 
     public static final String MOD_ID = "alloyed";
 
+    private static final NonNullLazyValue<CreateRegistrate> registrate = CreateRegistrate.lazy(MOD_ID);
+
 
 
     public Alloyed() {
@@ -27,7 +31,7 @@ public class Alloyed {
 
 
         ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
+        ModBlocks.register();
         ModFluids.register(eventBus);
         ModSounds.register(eventBus);
         //ModTileEntities.register(eventBus);
@@ -62,7 +66,9 @@ public class Alloyed {
         });
     }
 
-
+    public static CreateRegistrate getRegistrate() {
+        return registrate.get();
+    }
 
 
 }

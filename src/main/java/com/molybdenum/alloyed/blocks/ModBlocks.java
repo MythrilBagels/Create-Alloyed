@@ -3,10 +3,17 @@ package com.molybdenum.alloyed.blocks;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.items.ModItemGroup;
 import com.molybdenum.alloyed.items.ModItems;
+import com.simibubi.create.Create;
+import com.simibubi.create.content.AllSections;
+import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.WeatheringCopper;
+import net.minecraft.world.level.block.WeatheringCopperFullBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,57 +24,34 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Alloyed.MOD_ID);
-
+    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
     // Bronze
-    public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block",
-            () -> new Block(Block.Properties
-                    .of(Material.METAL)
-                    //.harvestLevel(2)
-                    .requiresCorrectToolForDrops()
-                    .strength(5f)));
+    public static final BlockEntry<Block> BRONZE_BLOCK = REGISTRATE
+            .block("bronze_block", Block::new)
+            .initialProperties(Material.METAL)
+            .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .register();
 
-    public static final RegistryObject<Block> BRONZE_BELL = registerBlock("bronze_bell",
-            () -> new Block(Block.Properties
-                    .of(Material.METAL)
-                    //.harvestLevel(1)
-                    //.harvestTool(ToolType.PICKAXE)
+    public static final BlockEntry<Block> BRONZE_BELL = REGISTRATE
+            .block("bronze_bell", Block::new)
+            .initialProperties(Material.METAL)
+            .properties(properties -> properties
                     .requiresCorrectToolForDrops()
-                    .strength(3f)
-                    .sound(SoundType.ANVIL)
-                    .noOcclusion()));
+                    .noOcclusion()
+                    .sound(SoundType.ANVIL))
+            .register();
 
     // Steel
-    public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
-            () -> new Block(Block.Properties
-                    .of(Material.METAL)
-                    //.harvestLevel(2)
-                    .requiresCorrectToolForDrops()
-                    .strength(6f)));
+    public static final BlockEntry<Block> STEEL_BLOCK = REGISTRATE
+            .block("steel_block", Block::new)
+            .initialProperties(Material.METAL)
+            .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .register();
 
-
-
-    //public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",
-    //        () -> new LightningChannelerBlock(AbstractBlock.Properties.create(Material.IRON)));
-
-
-
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-
-        registerBlockItem(name, toReturn);
-
-        return toReturn;
-    }
-
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModItemGroup.MAIN_GROUP)));
-    }
-
-
-
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
+    public static void register() {
+        Create.registrate().addToSection(BRONZE_BLOCK, AllSections.MATERIALS);
+        Create.registrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
+        Create.registrate().addToSection(BRONZE_BELL, AllSections.CURIOSITIES);
     }
 }
