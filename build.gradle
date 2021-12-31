@@ -157,10 +157,13 @@ dependencies {
     // at runtime, use the full JEI jar
     //runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.121")
 
-    //implementation fg.deobf("curse.maven:create-328085:3536025") //create
-    //implementation fg.deobf("curse.maven:flywheel-486392:3535459") //flywheel
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     // ----------------------
+
+    implementation fg.deobf("curse.maven:create-328085:3536025") //create
+    implementation fg.deobf("curse.maven:flywheel-486392:3535459") //flywheel
+
+
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor' // mixin
 }

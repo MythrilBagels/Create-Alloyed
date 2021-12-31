@@ -22,14 +22,20 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]
+    modId="create"
+    mandatory=true
+    versionRange="[mc1.18.1_v0.4b,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.alloyed]]
+    modId="flywheel"
+    mandatory=true
+    versionRange="[1.18-0.5.0,1.18-0.6.0)"
+    ordering="AFTER"
+    side="CLIENT"
+[[dependencies.alloyed]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.1]"
     ordering="NONE"
-    side="BOTH"
-[[dependencies.alloyed]]
-    modId="steampowered"
-    mandatory=false
-    versionRange="[1.16.5-1.1.9,)"
-    ordering="AFTER"
     side="BOTH"
