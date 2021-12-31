@@ -68,8 +68,8 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
-            property 'mixin.env.remapRefMap', 'true'
             arg "-mixin.config=alloyed.mixins.json"
+            property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             // Recommended logging data for a userdev environment
@@ -101,13 +101,16 @@ minecraft {
             // "REGISTRYDUMP": For getting the contents of all registries.
             property 'forge.logging.markers', 'REGISTRIES'
 
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
             // Recommended logging level for the console
             // You can set various levels here.
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                alloyed {
                     source sourceSets.main
                 }
             }
@@ -128,11 +131,14 @@ minecraft {
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'alloyed', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                examplemod {
+                alloyed {
                     source sourceSets.main
                 }
             }
@@ -153,15 +159,15 @@ dependencies {
 
     // --- DEBUG PURPOSES ---
     // compile against the JEI API but do not include it at runtime
-    //compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.121:api")
+    compileOnly fg.deobf("mezz.jei:jei-1.18.1:9.1.1.48:api")
     // at runtime, use the full JEI jar
-    //runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.121")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.1:9.1.1.48")
 
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     // ----------------------
 
-    implementation fg.deobf("curse.maven:create-328085:3536025") //create
-    implementation fg.deobf("curse.maven:flywheel-486392:3535459") //flywheel
+    implementation fg.deobf("curse.maven:create-328085:3583784") // Create
+    implementation fg.deobf("curse.maven:flywheel-486392:3584224") // Flywheel
 
 
 
@@ -172,12 +178,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "examplemod",
-            "Specification-Vendor": "examplemodsareus",
+            "Specification-Title": "alloyed",
+            "Specification-Vendor": "alloyedsareus",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"examplemodsareus",
+            "Implementation-Vendor" :"alloyedsareus",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
             "MixinConfigs": "alloyed.mixins.json"
         ])
