@@ -26,13 +26,26 @@ public class ModBlocks {
 
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
-    // Bronze
+    // Bronze Oxidization Stages
     public static final BlockEntry<Block> BRONZE_BLOCK = REGISTRATE
             .block("bronze_block", Block::new)
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .register();
 
+    public static final BlockEntry<Block> EXPOSED_BRONZE_BLOCK = REGISTRATE
+            .block("exposed_bronze_block", Block::new)
+            .initialProperties(Material.METAL)
+            .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .register();
+
+    public static final BlockEntry<Block> OXIDIZED_BRONZE_BLOCK = REGISTRATE
+            .block("oxidized_bronze_block", Block::new)
+            .initialProperties(Material.METAL)
+            .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .register();
+
+    // Bronze instruments
     public static final BlockEntry<Block> BRONZE_BELL = REGISTRATE
             .block("bronze_bell", Block::new)
             .initialProperties(Material.METAL)
@@ -51,6 +64,9 @@ public class ModBlocks {
 
     public static void register() {
         Create.registrate().addToSection(BRONZE_BLOCK, AllSections.MATERIALS);
+        Create.registrate().addToSection(EXPOSED_BRONZE_BLOCK, AllSections.MATERIALS);
+        Create.registrate().addToSection(OXIDIZED_BRONZE_BLOCK, AllSections.MATERIALS);
+
         Create.registrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
         Create.registrate().addToSection(BRONZE_BELL, AllSections.CURIOSITIES);
     }
