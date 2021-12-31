@@ -30,7 +30,7 @@ public class Alloyed {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 
-        ModItems.register(eventBus);
+        ModItems.register();
         ModBlocks.register();
         ModFluids.register(eventBus);
         ModSounds.register(eventBus);
