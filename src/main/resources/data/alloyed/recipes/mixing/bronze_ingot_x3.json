@@ -2,13 +2,13 @@
   "type": "create:mixing",
   "ingredients": [
     {
-      "tag": "forge:ingots/copper"
+      "item": "minecraft:copper_ingot"
     },
     {
-      "tag": "forge:ingots/copper"
+      "item": "minecraft:copper_ingot"
     },
     {
-      "tag": "forge:ingots/copper"
+      "item": "minecraft:copper_ingot"
     },
     {
       "tag": "forge:ingots/zinc"
