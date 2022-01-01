@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "alloyed:block/exposed_bronze_block"
+    }
+  }
+}

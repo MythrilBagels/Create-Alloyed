@@ -63,6 +63,28 @@ public class ModBlocks {
             .simpleItem()
             .register();
 
+    // Waxed Bronze Oxidization Stages
+    public static final BlockEntry<Block> WAXED_BRONZE_BLOCK = REGISTRATE
+            .block("waxed_bronze_block", Block::new)
+            .initialProperties(Material.METAL)
+            .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .simpleItem()
+            .register();
+
+    public static final BlockEntry<Block> WAXED_EXPOSED_BRONZE_BLOCK = REGISTRATE
+            .block("waxed_exposed_bronze_block",Block::new)
+            .initialProperties(Material.METAL)
+            .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .simpleItem()
+            .register();
+
+    public static final BlockEntry<Block> WAXED_OXIDIZED_BRONZE_BLOCK = REGISTRATE
+            .block("waxed_oxidized_bronze_block",Block::new)
+            .initialProperties(Material.METAL)
+            .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .simpleItem()
+            .register();
+
     // Bronze instruments
     public static final BlockEntry<Block> BRONZE_BELL = REGISTRATE
             .block("bronze_bell", Block::new)
@@ -86,6 +108,10 @@ public class ModBlocks {
         Create.registrate().addToSection(BRONZE_BLOCK, AllSections.MATERIALS);
         Create.registrate().addToSection(EXPOSED_BRONZE_BLOCK, AllSections.MATERIALS);
         Create.registrate().addToSection(OXIDIZED_BRONZE_BLOCK, AllSections.MATERIALS);
+
+        Create.registrate().addToSection(WAXED_BRONZE_BLOCK, AllSections.MATERIALS);
+        Create.registrate().addToSection(WAXED_EXPOSED_BRONZE_BLOCK, AllSections.MATERIALS);
+        Create.registrate().addToSection(WAXED_OXIDIZED_BRONZE_BLOCK, AllSections.MATERIALS);
 
         Create.registrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
         Create.registrate().addToSection(BRONZE_BELL, AllSections.CURIOSITIES);
