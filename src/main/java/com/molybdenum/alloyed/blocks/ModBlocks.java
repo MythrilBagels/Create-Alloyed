@@ -36,6 +36,7 @@ public class ModBlocks {
             )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .simpleItem()
             .register();
 
     public static final BlockEntry<WeatheringBronzeFullBlock> EXPOSED_BRONZE_BLOCK = REGISTRATE
