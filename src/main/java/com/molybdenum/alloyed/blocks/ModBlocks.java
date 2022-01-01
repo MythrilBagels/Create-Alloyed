@@ -39,13 +39,6 @@ public class ModBlocks {
             .lang("Block of Bronze")
             .register();
 
-    public static final BlockEntry<Block> WAXED_BRONZE_BLOCK = REGISTRATE
-            .block("waxed_bronze_block", p -> new Block(p))
-            .initialProperties(Material.METAL)
-            .simpleItem()
-            .lang("Waxed Block of Bronze")
-            .register();
-
     public static final BlockEntry<Block> STEEL_BLOCK = REGISTRATE
             .block("steel_block", p -> new Block(p))
             .initialProperties(Material.METAL)
