@@ -21,6 +21,9 @@ public class ModBlocks {
     public static final BlockEntry<OxidizingBlock> BRONZE_BLOCK = REGISTRATE
             .block("bronze_block", p -> new OxidizingBlock(p, 1 / 16f))
             .initialProperties(Material.METAL)
+            .properties(properties -> properties
+                    .requiresCorrectToolForDrops()
+                    .strength(5f))
             .item()
             .transform(ModelGen.oxidizedItemModel())
             .transform(BlockStateGen.oxidizedBlockstate())
@@ -30,6 +33,9 @@ public class ModBlocks {
     public static final BlockEntry<Block> STEEL_BLOCK = REGISTRATE
             .block("steel_block", p -> new Block(p))
             .initialProperties(Material.METAL)
+            .properties(properties -> properties
+                    .requiresCorrectToolForDrops()
+                    .strength(5f))
 		    .simpleItem()
             .lang("Block of Steel")
 		    .register();
@@ -39,7 +45,9 @@ public class ModBlocks {
             .initialProperties(Material.METAL)
             .properties(properties -> properties
                     .noOcclusion()
-                    .sound(SoundType.ANVIL))
+                    .sound(SoundType.ANVIL)
+                    .requiresCorrectToolForDrops()
+                    .strength(5f))
             .simpleItem()
             .lang("Bronze Bell")
             .register();
