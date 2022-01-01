@@ -20,38 +20,31 @@ public class ModItems {
     public static final ItemEntry<Item> STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
 
     public static final ItemEntry<SwordItem> STEEL_SWORD = REGISTRATE
-            .object("steel_sword")
-            .item((p) -> new SwordItem(ModItemTiers.STEEL, 3, -2.4F, p))
+            .item("steel_sword", (p) -> new SwordItem(ModItemTiers.STEEL, 3, -2.4F, p))
             .register();
 
     public static final ItemEntry<PickaxeItem> STEEL_PICKAXE = REGISTRATE
-            .object("steel_pickaxe")
-            .item((p) -> new PickaxeItem(ModItemTiers.STEEL, 1, -2.8F,p))
+            .item("steel_pickaxe", (p) -> new PickaxeItem(ModItemTiers.STEEL, 1, -2.8F,p))
             .register();
 
     public static final ItemEntry<AxeItem> STEEL_AXE = REGISTRATE
-            .object("steel_axe")
-            .item((p) -> new AxeItem(ModItemTiers.STEEL, 5.0F, -3.0F,p))
+            .item("steel_axe", (p) -> new AxeItem(ModItemTiers.STEEL, 5.0F, -3.0F,p))
             .register();
 
     public static final ItemEntry<ShovelItem> STEEL_SHOVEL = REGISTRATE
-            .object("steel_shovel")
-            .item((p) -> new ShovelItem(ModItemTiers.STEEL, 1.5F, -3.0F, p))
+            .item("steel_shovel", (p) -> new ShovelItem(ModItemTiers.STEEL, 1.5F, -3.0F, p))
             .register();
 
     public static final ItemEntry<HoeItem> STEEL_HOE = REGISTRATE
-            .object("steel_hoe")
-            .item((p) -> new HoeItem(ModItemTiers.STEEL, -3, 0.0F, p))
+            .item("steel_hoe", (p) -> new HoeItem(ModItemTiers.STEEL, -3, 0.0F, p))
             .register();
 
     public static final ItemEntry<ShearsItem> STEEL_SHEARS = REGISTRATE
-            .object("steel_shears")
-            .item((p) -> new ShearsItem(p.durability(476)))
+            .item("steel_shears", (p) -> new ShearsItem(p.durability(476)))
             .register();
 
     public static final ItemEntry<FishingRodItem> STEEL_FISHING_ROD = REGISTRATE
-            .object("steel_fishing_rod")
-            .item((p) -> new FishingRodItem(p.durability(128)))
+            .item("steel_fishing_rod", (p) -> new FishingRodItem(p.durability(128)))
             .register();
 
     // End Item Entries
