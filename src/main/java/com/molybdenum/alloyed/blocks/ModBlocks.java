@@ -47,6 +47,7 @@ public class ModBlocks {
             )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .simpleItem()
             .register();
 
     public static final BlockEntry<WeatheringBronzeFullBlock> OXIDIZED_BRONZE_BLOCK = REGISTRATE
@@ -58,6 +59,7 @@ public class ModBlocks {
             )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .simpleItem()
             .register();
 
     // Bronze instruments
@@ -68,6 +70,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .noOcclusion()
                     .sound(SoundType.ANVIL))
+            .simpleItem()
             .register();
 
     // Steel
@@ -75,6 +78,7 @@ public class ModBlocks {
             .block("steel_block", Block::new)
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
+            .simpleItem()
             .register();
 
     public static void register() {
