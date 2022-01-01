@@ -12,6 +12,7 @@ import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.common.ToolType;
 
 public class ModBlocks {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroup.MAIN_GROUP);
@@ -22,6 +23,8 @@ public class ModBlocks {
             .block("bronze_block", p -> new OxidizingBlock(p, 1 / 16f))
             .initialProperties(Material.METAL)
             .properties(properties -> properties
+                    .harvestTool(ToolType.PICKAXE)
+                    .harvestLevel(1)
                     .requiresCorrectToolForDrops()
                     .strength(5f))
             .item()
@@ -34,6 +37,8 @@ public class ModBlocks {
             .block("steel_block", p -> new Block(p))
             .initialProperties(Material.METAL)
             .properties(properties -> properties
+                    .harvestTool(ToolType.PICKAXE)
+                    .harvestLevel(1)
                     .requiresCorrectToolForDrops()
                     .strength(5f))
 		    .simpleItem()
@@ -46,6 +51,8 @@ public class ModBlocks {
             .properties(properties -> properties
                     .noOcclusion()
                     .sound(SoundType.ANVIL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .harvestLevel(1)
                     .requiresCorrectToolForDrops()
                     .strength(5f))
             .simpleItem()
