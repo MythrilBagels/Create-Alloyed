@@ -6,8 +6,8 @@ import com.molybdenum.alloyed.sounds.ModSounds;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.properties.NoteBlockInstrument;
 import net.minecraft.util.SoundEvent;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.*;
+import org.spongepowered.asm.mixin.gen.Invoker;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -21,13 +21,22 @@ import java.lang.reflect.Modifier;
 @Mixin(NoteBlockInstrument.class)
 @Unique
 public abstract class NoteblockInstrumentMixin {
+    @Shadow(remap = false)
+    @Final
+    @Mutable
+    private static NoteBlockInstrument[] $VALUES;
+
     static {
         try {
             ModSounds.BRONZE_BELL_NOTEBLOCK = addToEnum(createNoteBlockInstrument("BRONZE_BELL", "bronze_bell"));
         } catch (Exception e) {
-            Alloyed.LOGGER.error("FAILED TO LOAD BRONZE BELL");
             e.printStackTrace();
         }
+    }
+
+    @Invoker(value = "<init>", remap = false)
+    static NoteBlockInstrument newNoteblockInstrument(String internalName, int ordinal, String soundName, SoundEvent sound) {
+        throw new AssertionError();
     }
 
     @Inject(method = "byState", at = @At("HEAD"), cancellable = true)
@@ -38,32 +47,14 @@ public abstract class NoteblockInstrumentMixin {
     }
 
     private static NoteBlockInstrument createNoteBlockInstrument(String internalName, String soundName) throws Exception {
-        Constructor<?> constructor = NoteBlockInstrument.class.getDeclaredConstructor(String.class, int.class, String.class, SoundEvent.class);
-        constructor.setAccessible(true);
-        Field constructorAccessorField = Constructor.class.getDeclaredField("constructorAccessor");
-        constructorAccessorField.setAccessible(true);
-        ConstructorAccessor ca = (ConstructorAccessor) constructorAccessorField.get(constructor);
-        if (ca == null) {
-            Method acquireConstructorAccessorMethod = Constructor.class.getDeclaredMethod("acquireConstructorAccessor");
-            acquireConstructorAccessorMethod.setAccessible(true);
-            ca = (ConstructorAccessor) acquireConstructorAccessorMethod.invoke(constructor);
-        }
-        // note that real constructor contains 2 additional parameters, name and ordinal
-        NoteBlockInstrument enumValue = (NoteBlockInstrument) ca.newInstance(new Object[]{internalName, NoteBlockInstrument.values().length + 1, soundName, null});
-        return enumValue;
+        return newNoteblockInstrument(internalName, NoteBlockInstrument.values().length + 1, soundName, null);
     }
 
     private static NoteBlockInstrument addToEnum(NoteBlockInstrument instrument) throws Exception {
-        Field values = NoteBlockInstrument.class.getDeclaredField("$VALUES");
-        values.setAccessible(true);
-        Field modifiersField = Field.class.getDeclaredField("modifiers");
-        modifiersField.setAccessible(true);
-        modifiersField.setInt(values, values.getModifiers() & ~Modifier.FINAL);
-        NoteBlockInstrument[] oldValues = (NoteBlockInstrument[]) values.get(null);
-        NoteBlockInstrument[] newValues = new NoteBlockInstrument[oldValues.length + 1];
-        System.arraycopy(oldValues, 0, newValues, 0, oldValues.length);
-        newValues[oldValues.length] = instrument;
-        values.set(null, newValues);
+        NoteBlockInstrument[] newValues = new NoteBlockInstrument[NoteBlockInstrument.values().length + 1];
+        System.arraycopy(NoteBlockInstrument.values(), 0, newValues, 0, NoteBlockInstrument.values().length);
+        newValues[NoteBlockInstrument.values().length] = instrument;
+        $VALUES = newValues;
         return instrument;
     }
 
