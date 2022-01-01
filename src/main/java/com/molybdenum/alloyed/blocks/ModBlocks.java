@@ -8,25 +8,13 @@ import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.ModelGen;
 import com.simibubi.create.foundation.worldgen.OxidizingBlock;
-import com.simibubi.create.repack.registrate.builders.BlockBuilder;
-import com.simibubi.create.repack.registrate.builders.ItemBuilder;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.tags.BlockTags;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.ToolType;
-
-import javax.annotation.Nonnull;
-
-import static com.simibubi.create.AllTags.tagBlockAndItem;
 
 public class ModBlocks {
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> {
-        return ModItemGroup.MAIN_GROUP;
-    });
+    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroup.MAIN_GROUP);
 
     // Block Entries
 
