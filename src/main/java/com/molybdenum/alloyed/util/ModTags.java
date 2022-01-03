@@ -12,6 +12,8 @@ import net.minecraftforge.common.Tags;
 public class ModTags {
 
     public static class Items {
+        // Get steel shears working
+        public static final Tags.IOptionalNamedTag<Item> STEEL_SHEARS = createForgeTag("shears");
 
         // Compat for other mods' ingots
         public static final Tags.IOptionalNamedTag<Item> BRONZE_INGOT = createForgeTag("ingots/bronze");
