@@ -52,16 +52,16 @@ public class Alloyed {
         */
 
         //*pain*
-        ItemProperties.register(ModItems.STEEL_FISHING_ROD.get(), new ResourceLocation("cast"), (heldStack, world, livingEntity, x) -> {
-            if (livingEntity == null) {
+        ItemProperties.register(ModItems.STEEL_FISHING_ROD.get(), new ResourceLocation("cast"), (stack, level, entity, i) -> {
+            if (entity == null) {
                 return 0.0F;
             } else {
-                boolean isMainhand = livingEntity.getMainHandItem() == heldStack;
-                boolean isOffHand = livingEntity.getOffhandItem() == heldStack;
-                if (livingEntity.getMainHandItem().getItem() instanceof FishingRodItem) {
+                boolean isMainhand = entity.getMainHandItem() == stack;
+                boolean isOffHand = entity.getOffhandItem() == stack;
+                if (entity.getMainHandItem().getItem() instanceof FishingRodItem) {
                     isOffHand = false;
                 }
-                return (isMainhand || isOffHand) && livingEntity instanceof Player && ((Player) livingEntity).fishing != null ? 1.0F : 0.0F;
+                return (isMainhand || isOffHand) && entity instanceof Player && ((Player) entity).fishing != null ? 1.0F : 0.0F;
             }
         });
     }
