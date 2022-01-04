@@ -1,19 +1,19 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="MIT"
-issueTrackerURL="http://my.issue.tracker/"
+license="MIT License"
+issueTrackerURL="https://github.com/MythrilBagels/Create-Alloyed/issues"
 [[mods]]
-modId="alloyed"
-version="1.16.5"
-displayName="Create: Alloyed"
-updateJSONURL="http://myurl.me/"
-displayURL="http://example.com/"
-logoFile="alloyed.png"
-credits="yes"
-authors="yes"
-description='''
-A Create addon adding Bronze and Steel, both items used for compatibility and decoration!
-'''
+    modId="alloyed"
+    version="1.16.5"
+    displayName="Create: Alloyed"
+    #updateJSONURL="http://myurl.me/"
+    displayURL="https://github.com/MythrilBagels/Create-Alloyed"
+    logoFile="alloyed.png"
+    credits="Thanks to the kind folks over on the Create and Create Modders Discord!"
+    authors="Fortress Nebula, SpottyTheTurtle, and Bagels"
+    description='''
+    A Create addon adding Bronze and Steel, both items used for compatibility and decoration!
+    '''
 
 [[dependencies.alloyed]]
     modId="forge"
