@@ -16,7 +16,8 @@ public class SteelFishingHook extends FishingHook {
         super(p_37106_, p_37107_, p_37108_, p_37109_);
     }
 
-    private boolean shouldStopFishing(Player p_37137_) {
+    @Override
+    public boolean shouldStopFishing(Player p_37137_) {
         ItemStack itemstack = p_37137_.getMainHandItem();
         ItemStack itemstack1 = p_37137_.getOffhandItem();
         // Modified bit
