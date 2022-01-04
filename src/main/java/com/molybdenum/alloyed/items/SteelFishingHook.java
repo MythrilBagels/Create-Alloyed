@@ -17,14 +17,14 @@ public class SteelFishingHook extends FishingHook {
     }
 
     @Override
-    public boolean shouldStopFishing(Player p_37137_) {
-        ItemStack itemstack = p_37137_.getMainHandItem();
-        ItemStack itemstack1 = p_37137_.getOffhandItem();
+    public boolean shouldStopFishing(Player player) {
+        ItemStack mainHandItem = player.getMainHandItem();
+        ItemStack offhandItem = player.getOffhandItem();
         // Modified bit
-        boolean flag = itemstack.is(ModItems.STEEL_FISHING_ROD.get());
-        boolean flag1 = itemstack1.is(ModItems.STEEL_FISHING_ROD.get());
+        boolean isMainhand = mainHandItem.is(ModItems.STEEL_FISHING_ROD.get());
+        boolean isOffhand = offhandItem.is(ModItems.STEEL_FISHING_ROD.get());
         // ------------
-        if (!p_37137_.isRemoved() && p_37137_.isAlive() && (flag || flag1) && !(this.distanceToSqr(p_37137_) > 1024.0D)) {
+        if (!player.isRemoved() && player.isAlive() && (isMainhand || isOffhand) && !(this.distanceToSqr(player) > 1024.0D)) {
             return false;
         } else {
             this.discard();
