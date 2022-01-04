@@ -41,8 +41,8 @@ public class ModItems {
             .item("steel_shears", (p) -> new ShearsItem(p.durability(476)))
             .register();
 
-    public static final ItemEntry<FishingRodItem> STEEL_FISHING_ROD = REGISTRATE
-            .item("steel_fishing_rod", (p) -> new FishingRodItem(p.durability(128)))
+    public static final ItemEntry<SteelFishingRodItem> STEEL_FISHING_ROD = REGISTRATE
+            .item("steel_fishing_rod", (p) -> new SteelFishingRodItem(p.durability(128)))
             .register();
 
     // End Item Entries
