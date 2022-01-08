@@ -45,12 +45,12 @@ public enum ModItemTiers implements Tier {
 
     @Override
     public int getLevel() {
-        return getLevel();
+        return level;
     }
 
     @Override
     public int getEnchantmentValue() {
-        return getEnchantmentValue();
+        return enchantmentValue;
     }
 
     @Override
