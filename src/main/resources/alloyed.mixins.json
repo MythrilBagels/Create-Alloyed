@@ -4,7 +4,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "alloyed.refmap.json",
   "mixins": [
-    "NoteblockInstrumentMixin"
+    "NoteblockInstrumentMixin",
+    "LightningBoltMixin"
   ],
   "minVersion": "0.8",
   "injectors": {
