@@ -1,7 +1,6 @@
 package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.blocks.ModBlocks;
-import com.molybdenum.alloyed.fluids.ModFluids;
 import com.molybdenum.alloyed.items.ModItems;
 import com.molybdenum.alloyed.sounds.ModSounds;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -32,7 +31,6 @@ public class Alloyed {
 
         ModItems.register();
         ModBlocks.register();
-        ModFluids.register(eventBus);
         ModSounds.register(eventBus);
         //ModTileEntities.register(eventBus);
         //ModContainers.register(eventBus);
