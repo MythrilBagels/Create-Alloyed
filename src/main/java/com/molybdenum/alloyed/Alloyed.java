@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.blocks.ModBlocks;
+import com.molybdenum.alloyed.client.ClientHandler;
 import com.molybdenum.alloyed.items.ModItems;
 import com.molybdenum.alloyed.sounds.ModSounds;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -35,21 +36,8 @@ public class Alloyed {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-
-
-    private void setupClient(final FMLClientSetupEvent event) {
-        ItemModelsProperties.register(ModItems.STEEL_FISHING_ROD.get(), new ResourceLocation("cast"), (heldStack, world, livingEntity) -> {
-            if (livingEntity == null) {
-                return 0.0F;
-            } else {
-                boolean isMainhand = livingEntity.getMainHandItem() == heldStack;
-                boolean isOffHand = livingEntity.getOffhandItem() == heldStack;
-                if (livingEntity.getMainHandItem().getItem() instanceof FishingRodItem) {
-                    isOffHand = false;
-                }
-                return (isMainhand || isOffHand) && livingEntity instanceof PlayerEntity && ((PlayerEntity) livingEntity).fishing != null ? 1.0F : 0.0F;
-            }
-        });
+    private void setupClient(FMLClientSetupEvent event) {
+        ClientHandler.setupClient();
     }
 
     // Registrate getter
