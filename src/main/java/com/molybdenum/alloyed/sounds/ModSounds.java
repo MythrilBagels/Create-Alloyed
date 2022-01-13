@@ -19,7 +19,9 @@ public class ModSounds {
     @Nullable
     public static NoteBlockInstrument BRONZE_BELL_NOTEBLOCK;
 
-    public static final RegistryObject<SoundEvent> BRONZE_BELL = registerSoundEvent("bronze_bell", soundEvent -> BRONZE_BELL_NOTEBLOCK.soundEvent = soundEvent);
+    public static final RegistryObject<SoundEvent> BRONZE_BELL = registerSoundEvent("bronze_bell", soundEvent -> {
+        if (BRONZE_BELL_NOTEBLOCK != null) BRONZE_BELL_NOTEBLOCK.soundEvent = soundEvent;
+    });
 
     public static RegistryObject<SoundEvent> registerSoundEvent(String name, Consumer<SoundEvent> onRegister) {
         return SOUND_EVENTS.register(name,
