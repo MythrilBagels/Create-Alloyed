@@ -9,6 +9,7 @@ import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -32,6 +33,8 @@ public class ModBlocks {
                     ModTags.Blocks.BRONZE_BLOCK,
                     ModTags.Items.BRONZE_BLOCK
             ))
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .defaultBlockstate()
             .defaultLoot()
             .lang("Block of Bronze")
@@ -47,6 +50,8 @@ public class ModBlocks {
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .defaultBlockstate()
             .defaultLoot()
             .lang("Exposed Bronze")
@@ -62,6 +67,8 @@ public class ModBlocks {
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .defaultBlockstate()
             .defaultLoot()
             .lang("Oxidized Bronze")
@@ -76,6 +83,8 @@ public class ModBlocks {
                     ModTags.Blocks.BRONZE_BLOCK,
                     ModTags.Items.BRONZE_BLOCK
             ))
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .transform(AssetUtils.copyModel("bronze_block"))
             .defaultLoot()
             .lang("Waxed Block of Bronze")
@@ -86,6 +95,8 @@ public class ModBlocks {
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .transform(AssetUtils.copyModel("exposed_bronze_block"))
             .defaultLoot()
             .lang("Waxed Exposed Bronze")
@@ -96,6 +107,8 @@ public class ModBlocks {
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .transform(AssetUtils.copyModel("oxidized_bronze_block"))
             .defaultLoot()
             .lang("Waxed Oxidized Bronze")
@@ -110,6 +123,8 @@ public class ModBlocks {
                     .noOcclusion()
                     .sound(SoundType.ANVIL))
             .simpleItem()
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .transform(AssetUtils.existingModel())
             .defaultLoot()
             .defaultLang()
@@ -124,6 +139,8 @@ public class ModBlocks {
                     ModTags.Blocks.STEEL_BLOCK,
                     ModTags.Items.STEEL_BLOCK
             ))
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .defaultBlockstate()
             .defaultLoot()
             .lang("Block of Steel")
