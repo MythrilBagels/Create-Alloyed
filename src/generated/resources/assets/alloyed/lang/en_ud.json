@@ -1,0 +1,22 @@
+{
+  "block.alloyed.bronze_bell": "\u05DF\u05DF\u01DD\u15FA \u01DDzuo\u0279\u15FA",
+  "block.alloyed.bronze_block": "\u01DDzuo\u0279\u15FA \u025Fo \u029E\u0254o\u05DF\u15FA",
+  "block.alloyed.exposed_bronze_block": "\u01DDzuo\u0279\u15FA p\u01DDsodx\u018E",
+  "block.alloyed.oxidized_bronze_block": "\u01DDzuo\u0279\u15FA p\u01DDz\u0131p\u0131xO",
+  "block.alloyed.steel_block": "\u05DF\u01DD\u01DD\u0287S \u025Fo \u029E\u0254o\u05DF\u15FA",
+  "block.alloyed.waxed_bronze_block": "\u01DDzuo\u0279\u15FA \u025Fo \u029E\u0254o\u05DF\u15FA p\u01DDx\u0250M",
+  "block.alloyed.waxed_exposed_bronze_block": "\u01DDzuo\u0279\u15FA p\u01DDsodx\u018E p\u01DDx\u0250M",
+  "block.alloyed.waxed_oxidized_bronze_block": "\u01DDzuo\u0279\u15FA p\u01DDz\u0131p\u0131xO p\u01DDx\u0250M",
+  "item.alloyed.bronze_ingot": "\u0287obuI \u01DDzuo\u0279\u15FA",
+  "item.alloyed.bronze_sheet": "\u0287\u01DD\u01DD\u0265S \u01DDzuo\u0279\u15FA",
+  "item.alloyed.steel_axe": "\u01DDx\u2C6F \u05DF\u01DD\u01DD\u0287S",
+  "item.alloyed.steel_fishing_rod": "po\u1D1A bu\u0131\u0265s\u0131\u2132 \u05DF\u01DD\u01DD\u0287S",
+  "item.alloyed.steel_hoe": "\u01DDoH \u05DF\u01DD\u01DD\u0287S",
+  "item.alloyed.steel_ingot": "\u0287obuI \u05DF\u01DD\u01DD\u0287S",
+  "item.alloyed.steel_pickaxe": "\u01DDx\u0250\u029E\u0254\u0131\u0500 \u05DF\u01DD\u01DD\u0287S",
+  "item.alloyed.steel_shears": "s\u0279\u0250\u01DD\u0265S \u05DF\u01DD\u01DD\u0287S",
+  "item.alloyed.steel_sheet": "\u0287\u01DD\u01DD\u0265S \u05DF\u01DD\u01DD\u0287S",
+  "item.alloyed.steel_shovel": "\u05DF\u01DD\u028Co\u0265S \u05DF\u01DD\u01DD\u0287S",
+  "item.alloyed.steel_sword": "p\u0279o\u028DS \u05DF\u01DD\u01DD\u0287S",
+  "itemGroup.main_group": "p\u01DD\u028Eo\u05DF\u05DF\u2C6F :\u01DD\u0287\u0250\u01DD\u0279\u0186"
+}

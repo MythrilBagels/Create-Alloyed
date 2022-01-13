@@ -2,11 +2,12 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "alloyed:waxed_bronze_block"
+          "name": "alloyed:bronze_block"
         }
       ],
       "conditions": [
