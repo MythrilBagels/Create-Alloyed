@@ -16,10 +16,10 @@ public class AssetUtils {
         );
     }
 
-    public static <P> NonNullUnaryOperator<BlockBuilder<Block, P>> copyModel(String name) {
+    public static <P> NonNullUnaryOperator<BlockBuilder<Block, P>> copyModel(String path) {
         return b -> b.blockstate((ctx, prov) -> prov.simpleBlock(
                 ctx.getEntry(),
-                prov.models().cubeAll(ctx.getName(), prov.modLoc(name))
+                prov.models().cubeAll(ctx.getName(), prov.modLoc("block/" + path))
         ));
     }
 
