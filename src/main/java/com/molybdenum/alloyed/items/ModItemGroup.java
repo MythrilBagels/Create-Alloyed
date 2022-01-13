@@ -1,5 +1,7 @@
 package com.molybdenum.alloyed.items;
 
+import com.molybdenum.alloyed.Alloyed;
+import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
@@ -12,4 +14,9 @@ public class ModItemGroup {
             return new ItemStack(ModItems.BRONZE_INGOT.get());
         }
     };
+
+    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(
+            () -> MAIN_GROUP,
+            "Create: Alloyed"
+    );
 }

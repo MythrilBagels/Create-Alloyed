@@ -2,26 +2,17 @@ package com.molybdenum.alloyed.blocks;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.items.ModItemGroup;
-import com.molybdenum.alloyed.items.ModItems;
 import com.molybdenum.alloyed.util.AssetUtils;
+import com.molybdenum.alloyed.util.DataUtils;
+import com.molybdenum.alloyed.util.ModTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.WeatheringCopper;
-import net.minecraft.world.level.block.WeatheringCopperFullBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-
-import java.util.function.Supplier;
 
 public class ModBlocks {
 
@@ -37,7 +28,10 @@ public class ModBlocks {
             )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
-            .simpleItem()
+            .transform(DataUtils.tagBlockAndItem(
+                    ModTags.Blocks.BRONZE_BLOCK,
+                    ModTags.Items.BRONZE_BLOCK
+            ))
             .defaultBlockstate()
             .defaultLoot()
             .lang("Block of Bronze")
@@ -78,7 +72,10 @@ public class ModBlocks {
             .block("waxed_bronze_block", Block::new)
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
-            .simpleItem()
+            .transform(DataUtils.tagBlockAndItem(
+                    ModTags.Blocks.BRONZE_BLOCK,
+                    ModTags.Items.BRONZE_BLOCK
+            ))
             .transform(AssetUtils.copyModel("bronze_block"))
             .defaultLoot()
             .lang("Waxed Block of Bronze")
@@ -123,7 +120,10 @@ public class ModBlocks {
             .block("steel_block", Block::new)
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
-            .simpleItem()
+            .transform(DataUtils.tagBlockAndItem(
+                    ModTags.Blocks.STEEL_BLOCK,
+                    ModTags.Items.STEEL_BLOCK
+            ))
             .defaultBlockstate()
             .defaultLoot()
             .lang("Block of Steel")
