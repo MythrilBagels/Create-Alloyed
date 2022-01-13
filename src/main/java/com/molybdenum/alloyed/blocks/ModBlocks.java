@@ -3,6 +3,7 @@ package com.molybdenum.alloyed.blocks;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.items.ModItemGroup;
 import com.molybdenum.alloyed.items.ModItems;
+import com.molybdenum.alloyed.util.AssetUtils;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -29,38 +30,47 @@ public class ModBlocks {
     // Bronze Oxidization Stages
     public static final BlockEntry<WeatheringBronzeFullBlock> BRONZE_BLOCK = REGISTRATE
             .block("bronze_block",
-                    props -> new WeatheringBronzeFullBlock(
+                    properties -> new WeatheringBronzeFullBlock(
                             WeatheringBronze.WeatherState.UNAFFECTED,
-                            props
+                            properties
                     )
             )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .defaultBlockstate()
+            .defaultLoot()
+            .lang("Block of Bronze")
             .register();
 
     public static final BlockEntry<WeatheringBronzeFullBlock> EXPOSED_BRONZE_BLOCK = REGISTRATE
             .block("exposed_bronze_block",
-                    props -> new WeatheringBronzeFullBlock(
+                    properties -> new WeatheringBronzeFullBlock(
                             WeatheringBronze.WeatherState.EXPOSED,
-                            props
+                            properties
                     )
             )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .defaultBlockstate()
+            .defaultLoot()
+            .lang("Exposed Bronze")
             .register();
 
     public static final BlockEntry<WeatheringBronzeFullBlock> OXIDIZED_BRONZE_BLOCK = REGISTRATE
             .block("oxidized_bronze_block",
-                    props -> new WeatheringBronzeFullBlock(
+                    properties -> new WeatheringBronzeFullBlock(
                             WeatheringBronze.WeatherState.OXIDIZED,
-                            props
+                            properties
                     )
             )
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .defaultBlockstate()
+            .defaultLoot()
+            .lang("Oxidized Bronze")
             .register();
 
     // Waxed Bronze Oxidization Stages
@@ -69,6 +79,9 @@ public class ModBlocks {
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .transform(AssetUtils.copyModel("bronze_block"))
+            .defaultLoot()
+            .lang("Waxed Block of Bronze")
             .register();
 
     public static final BlockEntry<Block> WAXED_EXPOSED_BRONZE_BLOCK = REGISTRATE
@@ -76,6 +89,9 @@ public class ModBlocks {
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .transform(AssetUtils.copyModel("exposed_bronze_block"))
+            .defaultLoot()
+            .lang("Waxed Exposed Bronze")
             .register();
 
     public static final BlockEntry<Block> WAXED_OXIDIZED_BRONZE_BLOCK = REGISTRATE
@@ -83,6 +99,9 @@ public class ModBlocks {
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .transform(AssetUtils.copyModel("oxidized_bronze_block"))
+            .defaultLoot()
+            .lang("Waxed Oxidized Bronze")
             .register();
 
     // Bronze instruments
@@ -94,6 +113,9 @@ public class ModBlocks {
                     .noOcclusion()
                     .sound(SoundType.ANVIL))
             .simpleItem()
+            .transform(AssetUtils.existingModel())
+            .defaultLoot()
+            .defaultLang()
             .register();
 
     // Steel
@@ -102,6 +124,9 @@ public class ModBlocks {
             .initialProperties(Material.METAL)
             .properties(BlockBehaviour.Properties::requiresCorrectToolForDrops)
             .simpleItem()
+            .defaultBlockstate()
+            .defaultLoot()
+            .lang("Block of Steel")
             .register();
 
     public static void register() {
