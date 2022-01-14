@@ -4,13 +4,12 @@ import com.molybdenum.alloyed.blocks.WeatheringBronze;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LightningRodBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.Optional;
 
@@ -19,23 +18,10 @@ public abstract class LightningBoltMixin { // Add bronze oxidization stuff to th
 
     @Inject(
             method = "clearCopperOnLightningStrike(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V",
-            at = @At("TAIL")
+            at = @At("TAIL"),
+            locals = LocalCapture.CAPTURE_FAILHARD // If something goes wrong, we want to be aware of it.
     )
-    private static void alloyed$clearCopperOnLightningStrike(Level level, BlockPos blockPos, CallbackInfo callback) {
-        BlockState blockstate = level.getBlockState(blockPos);
-        BlockPos blockpos;
-        BlockState blockstate1;
-
-        // Ideally want to remove this check, since we're repeating it twice.
-        if (blockstate.is(Blocks.LIGHTNING_ROD)) {
-            blockpos = blockPos.relative(blockstate.getValue(LightningRodBlock.FACING).getOpposite());
-            blockstate1 = level.getBlockState(blockpos);
-        } else {
-            blockpos = blockPos;
-            blockstate1 = blockstate;
-        }
-        // ------------------------------------------------------------------
-
+    private static void alloyed$clearCopperOnLightningStrike(Level level, BlockPos blockPos, CallbackInfo ci, BlockState blockstate, BlockPos blockpos, BlockState blockstate1) {
         // Custom functionality
         if (blockstate1.getBlock() instanceof WeatheringBronze) {
             level.setBlockAndUpdate(blockpos, WeatheringBronze.getFirst(level.getBlockState(blockpos)));
