@@ -68,11 +68,7 @@ public class ModItems {
         Create.registrate().addToSection(STEEL_FISHING_ROD, AllSections.CURIOSITIES);
     }
 
-    // Functions from Create's item registrate. Found them useful, so copied them over.
-    private static ItemEntry<Item> ingredient(String name) {
-        return REGISTRATE.item(name, Item::new).register();
-    }
-
+    // Function from Create's item registrate. Found it useful, so copied it over.
     @SafeVarargs
     private static ItemEntry<Item> taggedIngredient(String name, ITag.INamedTag<Item>... tags) {
         return REGISTRATE.item(name, Item::new).tag(tags).register();
