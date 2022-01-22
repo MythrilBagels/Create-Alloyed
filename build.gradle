@@ -24,7 +24,7 @@ mixin {
     add sourceSets.main, "alloyed.refmap.json"
 }
 
-version = '1.16.5-v0.1a' // [mc version]-[mod version]
+version = '1.16.5-v0.1b' // [mc version]-[mod version]
 group = 'com.molybdenum.alloyed' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'alloyed'
 
