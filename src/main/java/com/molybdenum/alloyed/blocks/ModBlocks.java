@@ -2,7 +2,8 @@ package com.molybdenum.alloyed.blocks;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.items.ModItemGroup;
-import com.molybdenum.alloyed.util.RegistryUtils;
+import com.molybdenum.alloyed.util.BlockStateUtils;
+import com.molybdenum.alloyed.util.DataUtils;
 import com.molybdenum.alloyed.util.ModTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
@@ -31,7 +32,7 @@ public class ModBlocks {
             .item()
             .tag(ModTags.Items.BRONZE_BLOCK)
             .transform(ModelGen.oxidizedItemModel())
-            .transform(RegistryUtils.oxidizedBronzeBlockstate())
+            .transform(BlockStateUtils.oxidizedBronzeBlockstate())
             .tag(ModTags.Blocks.BRONZE_BLOCK)
             .defaultLoot()
             .lang("Block of Bronze")
@@ -47,7 +48,7 @@ public class ModBlocks {
                     .strength(5f))
 		    .simpleItem()
             .defaultBlockstate()
-            .transform(RegistryUtils.tagBlockAndItem(ModTags.Blocks.STEEL_BLOCK, ModTags.Items.STEEL_BLOCK))
+            .transform(DataUtils.tagBlockAndItem(ModTags.Blocks.STEEL_BLOCK, ModTags.Items.STEEL_BLOCK))
             .defaultLoot()
             .lang("Block of Steel")
 		    .register();
@@ -63,7 +64,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(5f))
             .simpleItem()
-            .transform(RegistryUtils.existingModel())
+            .transform(BlockStateUtils.existingModel())
             .defaultLoot()
             .lang("Bronze Bell")
             .register();
