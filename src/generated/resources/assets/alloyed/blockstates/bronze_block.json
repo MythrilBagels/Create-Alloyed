@@ -13,16 +13,16 @@
       "model": "alloyed:block/oxidized/bronze_block_1"
     },
     "oxidization=4": {
-      "model": "alloyed:block/oxidized/bronze_block_1"
+      "model": "alloyed:block/oxidized/bronze_block_2"
     },
     "oxidization=5": {
-      "model": "alloyed:block/oxidized/bronze_block_1"
+      "model": "alloyed:block/oxidized/bronze_block_2"
     },
     "oxidization=6": {
-      "model": "alloyed:block/oxidized/bronze_block_2"
+      "model": "alloyed:block/oxidized/bronze_block_3"
     },
     "oxidization=7": {
-      "model": "alloyed:block/oxidized/bronze_block_2"
+      "model": "alloyed:block/oxidized/bronze_block_3"
     }
   }
 }
