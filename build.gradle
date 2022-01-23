@@ -181,6 +181,7 @@ dependencies {
     implementation fg.deobf("curse.maven:create-328085:3536025") //create
     implementation fg.deobf("curse.maven:flywheel-486392:3535459") //flywheel
     implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
+    implementation fg.deobf("curse.maven:craftadditions-439890:3567777") // CC&A
     // ----------------------
 
     def registrate = "com.tterrag.registrate:Registrate:MC1.16.5-1.0.10"
