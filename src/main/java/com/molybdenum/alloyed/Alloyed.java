@@ -1,9 +1,9 @@
 package com.molybdenum.alloyed;
 
-import com.molybdenum.alloyed.blocks.ModBlocks;
+import com.molybdenum.alloyed.registry.ModBlocks;
 import com.molybdenum.alloyed.client.ClientHandler;
-import com.molybdenum.alloyed.items.ModItems;
-import com.molybdenum.alloyed.sounds.ModSounds;
+import com.molybdenum.alloyed.registry.ModItems;
+import com.molybdenum.alloyed.registry.ModSounds;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.NonNullLazyValue;
 import net.minecraftforge.common.MinecraftForge;

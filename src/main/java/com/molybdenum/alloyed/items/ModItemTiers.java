@@ -1,5 +1,6 @@
 package com.molybdenum.alloyed.items;
 
+import com.molybdenum.alloyed.registry.ModItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;

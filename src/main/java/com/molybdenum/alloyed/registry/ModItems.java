@@ -1,7 +1,7 @@
-package com.molybdenum.alloyed.items;
+package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.util.ModTags;
+import com.molybdenum.alloyed.items.ModItemTiers;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -10,10 +10,8 @@ import com.simibubi.create.repack.registrate.util.nullness.NonNullFunction;
 import net.minecraft.item.*;
 import net.minecraft.tags.ITag;
 
-import java.util.function.Supplier;
-
 public class ModItems {
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroup.MAIN_GROUP);
+    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroups.MAIN_GROUP);
 
     // Item Entries
     public static final ItemEntry<Item> BRONZE_INGOT = taggedIngredient("bronze_ingot", ModTags.Items.BRONZE_INGOT);

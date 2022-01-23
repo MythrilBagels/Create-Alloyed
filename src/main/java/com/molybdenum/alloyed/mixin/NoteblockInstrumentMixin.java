@@ -1,8 +1,7 @@
 package com.molybdenum.alloyed.mixin;
 
-import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.blocks.ModBlocks;
-import com.molybdenum.alloyed.sounds.ModSounds;
+import com.molybdenum.alloyed.registry.ModBlocks;
+import com.molybdenum.alloyed.registry.ModSounds;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.properties.NoteBlockInstrument;
 import net.minecraft.util.SoundEvent;
@@ -11,12 +10,6 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import sun.reflect.ConstructorAccessor;
-
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
 
 @Mixin(NoteBlockInstrument.class)
 @Unique

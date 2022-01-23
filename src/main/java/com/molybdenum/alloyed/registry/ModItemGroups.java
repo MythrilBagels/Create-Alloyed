@@ -1,11 +1,12 @@
-package com.molybdenum.alloyed.items;
+package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.registry.ModItems;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
-public class ModItemGroup {
+public class ModItemGroups {
 
     public static final ItemGroup MAIN_GROUP = new ItemGroup("main_group")
     {

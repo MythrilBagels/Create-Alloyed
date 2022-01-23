@@ -1,10 +1,8 @@
-package com.molybdenum.alloyed.blocks;
+package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.items.ModItemGroup;
 import com.molybdenum.alloyed.util.BlockStateUtils;
 import com.molybdenum.alloyed.util.DataUtils;
-import com.molybdenum.alloyed.util.ModTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -17,7 +15,7 @@ import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
 
 public class ModBlocks {
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroup.MAIN_GROUP);
+    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroups.MAIN_GROUP);
 
     // Block Entries
 
