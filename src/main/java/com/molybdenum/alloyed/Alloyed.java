@@ -3,6 +3,7 @@ package com.molybdenum.alloyed;
 import com.molybdenum.alloyed.registry.ModBlocks;
 import com.molybdenum.alloyed.client.ClientHandler;
 import com.molybdenum.alloyed.registry.ModItems;
+import com.molybdenum.alloyed.registry.ModPonders;
 import com.molybdenum.alloyed.registry.ModSounds;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.NonNullLazyValue;
@@ -22,7 +23,7 @@ public class Alloyed {
     public static final Logger LOGGER = LogManager.getLogger();
 
     // Registrate
-    private static final NonNullLazyValue<CreateRegistrate> registrate = CreateRegistrate.lazy(MOD_ID);
+    private static final NonNullLazyValue<CreateRegistrate> REGISTRATE = CreateRegistrate.lazy(MOD_ID);
 
     public Alloyed() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -31,19 +32,13 @@ public class Alloyed {
         ModBlocks.register();
         ModSounds.register(eventBus);
 
-        eventBus.addListener(this::setupClient);
         MinecraftForge.EVENT_BUS.register(this);
     }
-
-    private void setupClient(FMLClientSetupEvent event) {
-        ClientHandler.setupClient();
-    }
-
 
     // Registrate getter
     @SuppressWarnings("deprecation")
     public static CreateRegistrate getRegistrate() {
-        return registrate.get();
+        return REGISTRATE.get();
     }
 
 }
