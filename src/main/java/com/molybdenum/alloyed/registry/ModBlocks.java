@@ -18,7 +18,6 @@ public class ModBlocks {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroups.MAIN_GROUP);
 
     // Block Entries
-
     public static final BlockEntry<OxidizingBlock> BRONZE_BLOCK = REGISTRATE
             .block("bronze_block", p -> new OxidizingBlock(p, 1 / 16f))
             .initialProperties(Material.METAL)

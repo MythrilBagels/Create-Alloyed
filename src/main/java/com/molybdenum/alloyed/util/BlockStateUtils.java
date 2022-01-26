@@ -12,7 +12,7 @@ public class BlockStateUtils {
                 .forAllStates(blockState -> {
                     String name = "block/oxidized/" + ctx.getName() + "_";
 
-                    // Since bronze only has 3 oxidization states, this is where things differ.
+                    // Since bronze only has 4 oxidization states, this is where things differ.
                     int level = blockState.getValue(OxidizingBlock.OXIDIZATION);
 
                     if (level <= 1) {

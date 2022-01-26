@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:item/handheld_rod",
     "textures": {
-        "layer0": "alloyed:item/steel_fishing_rod_uncast"
+        "layer0": "alloyed:item/steel_fishing_rod"
     },
     "overrides": [
         {
