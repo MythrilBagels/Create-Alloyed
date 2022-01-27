@@ -178,10 +178,11 @@ dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.121")
 
-    implementation fg.deobf("curse.maven:create-328085:3536025") //create
-    implementation fg.deobf("curse.maven:flywheel-486392:3535459") //flywheel
-    implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
+    implementation fg.deobf("curse.maven:create-328085:3536025") // create
+    implementation fg.deobf("curse.maven:flywheel-486392:3535459") // flywheel
+    implementation fg.deobf("curse.maven:steampowered-534610:3536735") // steampowered
     implementation fg.deobf("curse.maven:craftadditions-439890:3567777") // CC&A
+    implementation fg.deobf("curse.maven:farmersdelight-398521:3573686") // farmer's delight
     // ----------------------
 
     def registrate = "com.tterrag.registrate:Registrate:MC1.16.5-1.0.10"

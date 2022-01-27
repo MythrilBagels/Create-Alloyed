@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.items.ModItemGroups;
 import com.molybdenum.alloyed.util.BlockStateUtils;
 import com.molybdenum.alloyed.util.DataUtils;
 import com.simibubi.create.Create;
@@ -8,8 +9,11 @@ import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.ModelGen;
 import com.simibubi.create.foundation.worldgen.OxidizingBlock;
+import com.simibubi.create.repack.registrate.builders.BlockBuilder;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
+import com.simibubi.create.repack.registrate.util.nullness.NonNullUnaryOperator;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
@@ -17,62 +21,43 @@ import net.minecraftforge.common.ToolType;
 public class ModBlocks {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroups.MAIN_GROUP);
 
-    // Block Entries
+    // Materials
+    static { REGISTRATE.startSection(AllSections.MATERIALS); }
+
     public static final BlockEntry<OxidizingBlock> BRONZE_BLOCK = REGISTRATE
             .block("bronze_block", p -> new OxidizingBlock(p, 1 / 16f))
-            .initialProperties(Material.METAL)
-            .properties(properties -> properties
-                    .harvestTool(ToolType.PICKAXE)
-                    .harvestLevel(1)
-                    .requiresCorrectToolForDrops()
-                    .strength(5f))
+            .initialProperties(() -> Blocks.IRON_BLOCK)
             .item()
             .tag(ModTags.Items.BRONZE_BLOCK)
             .transform(ModelGen.oxidizedItemModel())
             .transform(BlockStateUtils.oxidizedBronzeBlockstate())
             .tag(ModTags.Blocks.BRONZE_BLOCK)
-            .defaultLoot()
             .lang("Block of Bronze")
             .register();
 
     public static final BlockEntry<Block> STEEL_BLOCK = REGISTRATE
             .block("steel_block", p -> new Block(p))
-            .initialProperties(Material.METAL)
-            .properties(properties -> properties
-                    .harvestTool(ToolType.PICKAXE)
-                    .harvestLevel(1)
-                    .requiresCorrectToolForDrops()
-                    .strength(5f))
-		    .simpleItem()
-            .defaultBlockstate()
+            .initialProperties(() -> Blocks.IRON_BLOCK)
             .transform(DataUtils.tagBlockAndItem(ModTags.Blocks.STEEL_BLOCK, ModTags.Items.STEEL_BLOCK))
-            .defaultLoot()
+            .simpleItem()
             .lang("Block of Steel")
 		    .register();
 
+    // Curiosities
+    static { REGISTRATE.startSection(AllSections.CURIOSITIES); }
+
     public static final BlockEntry<Block> BRONZE_BELL = REGISTRATE
-            .block("bronze_bell", p -> new Block(p))
-            .initialProperties(Material.METAL)
+            .block("bronze_bell", Block::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(properties -> properties
                     .noOcclusion()
-                    .sound(SoundType.ANVIL)
-                    .harvestTool(ToolType.PICKAXE)
-                    .harvestLevel(1)
-                    .requiresCorrectToolForDrops()
-                    .strength(5f))
+                    .sound(SoundType.ANVIL))
             .simpleItem()
             .transform(BlockStateUtils.existingModel())
-            .defaultLoot()
             .lang("Bronze Bell")
             .register();
 
     // End Block Entries
 
-    public ModBlocks() {}
-
-    public static void register() {
-        Create.registrate().addToSection(BRONZE_BLOCK,AllSections.MATERIALS);
-        Create.registrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
-        Create.registrate().addToSection(BRONZE_BELL, AllSections.CURIOSITIES);
-    }
+    public static void register() {}
 }
