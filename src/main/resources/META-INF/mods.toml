@@ -34,6 +34,12 @@ issueTrackerURL="https://github.com/MythrilBagels/Create-Alloyed/issues"
     ordering="AFTER"
     side="CLIENT"
 [[dependencies.alloyed]]
+    modId="farmersdelight"
+    mandatory=false
+    versionRange="[1.16.5-0.5.3,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.alloyed]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"
