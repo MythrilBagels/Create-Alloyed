@@ -29,12 +29,12 @@ public class BronzeBellPonder {
 
         // Talk about bronze bells in general
         scene.idle(30);
-        scene.overlay.showText(90)
+        scene.overlay.showText(80)
                 .attachKeyFrame()
                 .text("The Bronze Bell is a decorative block made from bronze.")
                 .placeNearTarget()
                 .pointAt(util.vector.centerOf(groundBronzeBell));
-        scene.idle(100); // Wait for the text to go away
+        scene.idle(90); // Wait for the text to go away
 
         // Show the rest of the bronze bells
         scene.world.hideSection(util.select.position(groundBronzeBell), Direction.UP);
@@ -43,24 +43,24 @@ public class BronzeBellPonder {
         scene.idle(30);
 
         // Talk about ways to hang them
-        scene.overlay.showText(80)
+        scene.overlay.showText(70)
                 .attachKeyFrame()
                 .text("A good effect can be achieved by hanging them with chains...")
                 .placeNearTarget()
                 .pointAt(util.vector.blockSurface(chainHungBell, Direction.UP));
-        scene.idle(90);
+        scene.idle(80);
 
-        scene.overlay.showText(50)
+        scene.overlay.showText(40)
                 .text("...fences...")
                 .placeNearTarget()
                 .pointAt(util.vector.blockSurface(fenceHungBell, Direction.UP));
-        scene.idle(60);
+        scene.idle(50);
 
-        scene.overlay.showText(60)
+        scene.overlay.showText(50)
                 .text("...or iron bars.")
                 .placeNearTarget()
                 .pointAt(util.vector.blockSurface(barHungBell, Direction.UP));
-        scene.idle(80); // End
+        scene.idle(60); // End
     }
 
     public static void instrument(SceneBuilder scene, SceneBuildingUtil util) {
