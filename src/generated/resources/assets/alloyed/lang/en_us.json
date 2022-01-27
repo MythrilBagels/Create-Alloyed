@@ -5,6 +5,7 @@
   "alloyed.ponder.bronze_bell_decoration.text_3": "...fences...",
   "alloyed.ponder.bronze_bell_decoration.text_4": "...or iron bars.",
   "alloyed.ponder.bronze_bell_instrument.header": "Making Music with the Bronze Bell",
+  "alloyed.ponder.bronze_bell_instrument.text_1": "Noteblocks placed above a Bronze Bell will play a special bell sound.",
   "block.alloyed.bronze_bell": "Bronze Bell",
   "block.alloyed.bronze_block": "Block of Bronze",
   "block.alloyed.steel_block": "Block of Steel",
