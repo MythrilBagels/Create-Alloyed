@@ -1,11 +1,12 @@
 07cd109e0db5abaab50a6c6b1018a9072c821cc0 assets/alloyed/blockstates/bronze_bell.json
-d651b52e227cdddd2bf437f511d47c109bd0fc3b assets/alloyed/blockstates/bronze_block.json
+769a6b45eae4bcd8fba5ce42f2ae967be1809cd5 assets/alloyed/blockstates/bronze_block.json
 1b4559c0f91c296816fe620323ea7765a2dc03c9 assets/alloyed/blockstates/steel_block.json
-cbdfba4c6529d2793f4327e2aeff86114fd3cacf assets/alloyed/lang/en_ud.json
-24e182d525b4ea442dc686e4f7eee51509e0882a assets/alloyed/lang/en_us.json
+bb4961758d2a880b572700942c0b930379378146 assets/alloyed/lang/en_ud.json
+88eeb69683ac3d9b69faf68b5c811d9f15ebd510 assets/alloyed/lang/en_us.json
 497d453366ab8014eccb1e81b2684d0db783dedf assets/alloyed/models/block/oxidized/bronze_block_0.json
 bf777a8de07e5e7f32b25a007691a44b7ce26dc2 assets/alloyed/models/block/oxidized/bronze_block_1.json
 90ff6728f3aa9c53572bf92e371c952a5e00fbd6 assets/alloyed/models/block/oxidized/bronze_block_2.json
+e4f57c7a42b064ddec28b6e3048d409dbe0edbc1 assets/alloyed/models/block/oxidized/bronze_block_3.json
 6872a94944649b3d9b1bb1dac5928b33d7b0e2a3 assets/alloyed/models/block/steel_block.json
 b8d6e9d10ed4c7d7406def75442832b10df19caf assets/alloyed/models/item/bronze_bell.json
 63bba800543e72388915de21420c78a7b2aa0744 assets/alloyed/models/item/bronze_block.json
@@ -15,6 +16,7 @@ b8d6e9d10ed4c7d7406def75442832b10df19caf assets/alloyed/models/item/bronze_bell.
 ff68fbb1d756719bdc6e690ddea0e7390599a779 assets/alloyed/models/item/steel_block.json
 81bce5bf88a11ef16aec163aa33072b8dacbaeb2 assets/alloyed/models/item/steel_hoe.json
 b4b096014a76a7d6af2162ca9e2b206729363a75 assets/alloyed/models/item/steel_ingot.json
+4c0d7e40bc1efabfebdfcbfc1308cd221a273a64 assets/alloyed/models/item/steel_knife.json
 14dcb49acc6a521bb3e51bd395256d242f2a6fb0 assets/alloyed/models/item/steel_pickaxe.json
 aad4a949ecfebcfab6f17d458223883ec7aeeda2 assets/alloyed/models/item/steel_shears.json
 189b047cc45556114d9c4ccd1a86410103ab6801 assets/alloyed/models/item/steel_sheet.json
@@ -32,3 +34,4 @@ cb8eef681013270c930482eddea80f4ee8857607 data/forge/tags/items/plates/steel.json
 43dd93fa1755effd645774d5cc9d676f92f7910d data/forge/tags/items/shears.json
 4f76d3a7f83d0c3b3de7d92fa74b44be962b77f5 data/forge/tags/items/storage_blocks/bronze.json
 b222e5b96dbb9bc799453af4f984cb2fede41b7d data/forge/tags/items/storage_blocks/steel.json
+3ce2eb5712dd5094010144dc0245069043d3ff3a data/forge/tags/items/tools/knives.json
