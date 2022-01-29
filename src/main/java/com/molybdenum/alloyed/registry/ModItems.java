@@ -1,10 +1,8 @@
 package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.compat.famersdelight.FarmersDelightCompat;
 import com.molybdenum.alloyed.items.ModItemGroups;
 import com.molybdenum.alloyed.items.ModItemTiers;
-import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
@@ -63,7 +61,7 @@ public class ModItems {
         return REGISTRATE.item(name, Item::new).tag(tags).register();
     }
 
-    // This one isn't from Create, its by Nebula
+    // These aren't from Create, they're by Nebula
     @SafeVarargs
     public static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, ITag.INamedTag<Item>... tags) {
         return REGISTRATE

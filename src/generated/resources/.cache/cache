@@ -25,6 +25,7 @@ aad4a949ecfebcfab6f17d458223883ec7aeeda2 assets/alloyed/models/item/steel_shears
 0b77080abd9c01bf5f116661c582184c017b200b data/alloyed/loot_tables/blocks/bronze_bell.json
 5e9268483600529e715d28a1fb95d19c526200b9 data/alloyed/loot_tables/blocks/bronze_block.json
 143967a199b629c2c8af3dd930fdc3bcdbd50fcc data/alloyed/loot_tables/blocks/steel_block.json
+3ce2eb5712dd5094010144dc0245069043d3ff3a data/farmersdelight/tags/items/tools/knives.json
 4f76d3a7f83d0c3b3de7d92fa74b44be962b77f5 data/forge/tags/blocks/storage_blocks/bronze.json
 b222e5b96dbb9bc799453af4f984cb2fede41b7d data/forge/tags/blocks/storage_blocks/steel.json
 e637c9bae5bb1ad2529adb632c063e609c5de7d2 data/forge/tags/items/ingots/bronze.json

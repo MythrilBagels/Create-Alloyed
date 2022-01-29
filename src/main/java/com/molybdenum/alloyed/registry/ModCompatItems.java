@@ -1,7 +1,7 @@
 package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.compat.famersdelight.FarmersDelightCompat;
+import com.molybdenum.alloyed.compat.farmersdelight.FarmersDelightCompat;
 import com.molybdenum.alloyed.items.ModItemGroups;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -16,8 +16,8 @@ public class ModCompatItems {
 
     public static final ItemEntry<Item> STEEL_KNIFE = ModItems.handheldItem(
             "steel_knife",
-            properties -> Alloyed.isFarmersDelightLoaded ? FarmersDelightCompat.newSteelKnifeItem(properties) : new Item(properties),
-            ModTags.Items.STEEL_KNIFE
+            properties -> Alloyed.isFarmersDelightLoaded ? FarmersDelightCompat.newSteelKnife(properties) : new Item(properties),
+            ModTags.Items.STEEL_KNIFE, ModTags.Items.STEEL_KNIFE_FD
     );
 
     public static void register() {}

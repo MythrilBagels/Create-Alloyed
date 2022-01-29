@@ -1,15 +1,12 @@
 package com.molybdenum.alloyed.ponder;
 
-import com.molybdenum.alloyed.Alloyed;
 import com.simibubi.create.foundation.ponder.SceneBuilder;
 import com.simibubi.create.foundation.ponder.SceneBuildingUtil;
 import com.simibubi.create.foundation.ponder.elements.InputWindowElement;
 import com.simibubi.create.foundation.ponder.instructions.EmitParticlesInstruction;
 import com.simibubi.create.foundation.utility.Pointing;
-import net.minecraft.client.particle.EmitterParticle;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.Direction;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 

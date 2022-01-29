@@ -26,8 +26,11 @@ public class ModTags {
         public static final ITag.INamedTag<Item> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
         public static final ITag.INamedTag<Item> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
 
-        // Compat for other mod' knives
+        // Compat for other mods' knives
         public static final ITag.INamedTag<Item> STEEL_KNIFE = createForgeTag("tools/knives");
+
+        // Compat for Farmer's Delight's knives
+        public static final ITag.INamedTag<Item> STEEL_KNIFE_FD = createSpecialTag("farmersdelight","tools/knives");
 
         private static ITag.INamedTag<Item> createTag(String path) {
             return ItemTags.bind(new ResourceLocation(Alloyed.MOD_ID, path).toString());
@@ -35,6 +38,10 @@ public class ModTags {
 
         private static ITag.INamedTag<Item> createForgeTag(String path) {
             return ItemTags.bind(new ResourceLocation("forge", path).toString());
+        }
+
+        private static ITag.INamedTag<Item> createSpecialTag(String modId, String path) {
+            return ItemTags.bind(new ResourceLocation(modId, path).toString());
         }
     }
 
