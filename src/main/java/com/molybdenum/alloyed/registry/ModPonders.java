@@ -29,8 +29,9 @@ public class ModPonders {
 
     public static void safeRegister() {
         if (hasRegistered) {
-            Alloyed.LOGGER.debug("Tried to register ModPonders twice!"); // Unlikely to happen but hey
+            Alloyed.LOGGER.warn("Tried to register ModPonders twice!"); // Unlikely to happen but hey
         } else {
+            Alloyed.LOGGER.debug("Registering Alloyed Ponders");
             register();
             hasRegistered = true;
         }
