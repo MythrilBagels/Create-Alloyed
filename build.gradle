@@ -3,18 +3,21 @@ buildscript {
         maven { url = 'https://files.minecraftforge.net/maven' }
         maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
         mavenCentral()
+        maven {url 'https://maven.parchmentmc.org' }
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: "${forgegradle_version}", changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: "${mixin_version}"
+        classpath "org.parchmentmc:librarian:1.+"
     }
 }
 
 plugins {
-    id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id 'com.github.johnrengelman.shadow' version "${shadow_version}"
 }
 
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
@@ -24,7 +27,7 @@ mixin {
     add sourceSets.main, "alloyed.refmap.json"
 }
 
-version = '1.16.5-v0.2a' // [mc version]-[mod version]
+version = "${mc_version}-v0.2a" // [mc version]-[mod version]
 group = 'com.molybdenum.alloyed' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'alloyed'
 
@@ -69,7 +72,7 @@ minecraft {
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
     //mappings channel: 'official', version: '1.16.5'
-    mappings channel: 'official', version: '1.16.5'
+    mappings channel: 'parchment', version: "${parchment_version}-${mc_version}"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -174,18 +177,24 @@ dependencies {
 
     // --- DEBUG PURPOSES ---
     // compile against the JEI API but do not include it at runtime
-    compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.121:api")
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.121")
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 
-    implementation fg.deobf("curse.maven:create-328085:3536025") // create
-    implementation fg.deobf("curse.maven:flywheel-486392:3535459") // flywheel
+    // Cursemaven implementations
+    //implementation fg.deobf("curse.maven:create-328085:3536025") // create
+    //implementation fg.deobf("curse.maven:flywheel-486392:3535459") // flywheel
+
+    // (Recommended) tterrag maven implementations
+    implementation fg.deobf("com.simibubi.create:Create:mc1.16.5_v${create_version}")
+    implementation fg.deobf("com.jozufozu.flywheel:Flywheel:1.16-${flywheel_version}")
+
     implementation fg.deobf("curse.maven:steampowered-534610:3536735") // steampowered
     implementation fg.deobf("curse.maven:craftadditions-439890:3567777") // CC&A
     implementation fg.deobf("curse.maven:farmersdelight-398521:3573686") // farmer's delight
     // ----------------------
 
-    def registrate = "com.tterrag.registrate:Registrate:MC1.16.5-1.0.10"
+    def registrate = "com.tterrag.registrate:Registrate:MC${registrate_version}"
     implementation fg.deobf(registrate)
     shade registrate
 
