@@ -1,15 +1,11 @@
 package com.molybdenum.alloyed;
 
-import com.molybdenum.alloyed.blocks.ModBlocks;
+import com.molybdenum.alloyed.registry.ModBlocks;
 import com.molybdenum.alloyed.client.ClientHandler;
-import com.molybdenum.alloyed.items.ModItems;
-import com.molybdenum.alloyed.sounds.ModSounds;
+import com.molybdenum.alloyed.registry.ModItems;
+import com.molybdenum.alloyed.registry.ModSounds;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.NonNullLazyValue;
-import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.FishingRodItem;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

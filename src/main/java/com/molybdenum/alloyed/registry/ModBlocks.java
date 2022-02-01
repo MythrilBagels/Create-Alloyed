@@ -1,10 +1,10 @@
-package com.molybdenum.alloyed.blocks;
+package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.items.ModItemGroup;
+import com.molybdenum.alloyed.blocks.WeatheringBronze;
+import com.molybdenum.alloyed.blocks.WeatheringBronzeFullBlock;
 import com.molybdenum.alloyed.util.AssetUtils;
 import com.molybdenum.alloyed.util.DataUtils;
-import com.molybdenum.alloyed.util.ModTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;

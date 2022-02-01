@@ -1,5 +1,6 @@
 package com.molybdenum.alloyed.items;
 
+import com.molybdenum.alloyed.registry.ModItems;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.FishingHook;

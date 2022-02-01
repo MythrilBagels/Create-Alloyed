@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed.items;
 
 import com.google.common.base.Suppliers;
+import com.molybdenum.alloyed.registry.ModItems;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;

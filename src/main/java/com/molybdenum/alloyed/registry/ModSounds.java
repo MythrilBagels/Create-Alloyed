@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.sounds;
+package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
 import net.minecraft.resources.ResourceLocation;

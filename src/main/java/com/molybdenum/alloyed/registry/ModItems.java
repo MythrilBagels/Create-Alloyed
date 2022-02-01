@@ -1,7 +1,8 @@
-package com.molybdenum.alloyed.items;
+package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.util.ModTags;
+import com.molybdenum.alloyed.items.ModItemTiers;
+import com.molybdenum.alloyed.items.SteelFishingRodItem;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
