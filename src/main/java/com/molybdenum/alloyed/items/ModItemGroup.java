@@ -1,6 +1,7 @@
-package com.molybdenum.alloyed.registry;
+package com.molybdenum.alloyed.items;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.registry.ModItems;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
