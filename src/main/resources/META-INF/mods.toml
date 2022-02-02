@@ -24,13 +24,13 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
 [[dependencies.alloyed]]
     modId="create"
     mandatory=true
-    versionRange="[mc1.18.1_v0.4b,)"
+    versionRange="[mc1.18.1_v0.4d,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]
     modId="flywheel"
     mandatory=true
-    versionRange="[1.18-0.5.0,1.18-0.6.0)"
+    versionRange="[1.18-0.6.0,)"
     ordering="AFTER"
     side="CLIENT"
 [[dependencies.alloyed]]
