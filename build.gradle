@@ -56,6 +56,7 @@ repositories {
         name "tterrag maven"
         url "https://maven.tterrag.com/"
     }
+    mavenLocal()
 }
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
@@ -185,8 +186,8 @@ dependencies {
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     // ----------------------
 
-    implementation fg.deobf("com.simibubi.create:Create:mc1.18.1_v${create_version}")
-    implementation fg.deobf("com.jozufozu.flywheel:Flywheel-Forge:1.18-${flywheel_version}")
+    implementation fg.deobf("curse.maven:create-328085:3623348") // Create
+    implementation fg.deobf("curse.maven:flywheel-486392:3623314") // Flywheel
 
     def registrate = "com.tterrag.registrate:Registrate:MC${registrate_version}"
     implementation fg.deobf(registrate)
