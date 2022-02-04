@@ -13,44 +13,44 @@ public class ModTags {
 
     public static class Items {
         // Get steel shears working
-        public static final Tags.IOptionalNamedTag<Item> STEEL_SHEARS = createForgeTag("shears");
+        public static final Tag.Named<Item> STEEL_SHEARS = createForgeTag("shears");
 
         // Compat for other mods' ingots
-        public static final Tags.IOptionalNamedTag<Item> BRONZE_INGOT = createForgeTag("ingots/bronze");
-        public static final Tags.IOptionalNamedTag<Item> STEEL_INGOT = createForgeTag("ingots/steel");
+        public static final Tag.Named<Item> BRONZE_INGOT = createForgeTag("ingots/bronze");
+        public static final Tag.Named<Item> STEEL_INGOT = createForgeTag("ingots/steel");
 
         // Compat for other mods' sheets/plates
-        public static final Tags.IOptionalNamedTag<Item> BRONZE_SHEET = createForgeTag("plates/bronze");
-        public static final Tags.IOptionalNamedTag<Item> STEEL_SHEET = createForgeTag("plates/steel");
+        public static final Tag.Named<Item> BRONZE_SHEET = createForgeTag("plates/bronze");
+        public static final Tag.Named<Item> STEEL_SHEET = createForgeTag("plates/steel");
 
         // Compat for other mods' ingot blocks
-        public static final Tags.IOptionalNamedTag<Item> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
-        public static final Tags.IOptionalNamedTag<Item> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
+        public static final Tag.Named<Item> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
+        public static final Tag.Named<Item> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
 
-        private static Tags.IOptionalNamedTag<Item> createTag(String name) {
-            return ItemTags.createOptional(new ResourceLocation(Alloyed.MOD_ID, name));
+        private static Tag.Named<Item> createTag(String name) {
+            return ItemTags.bind(new ResourceLocation(Alloyed.MOD_ID, name).toString());
         }
 
-        private static Tags.IOptionalNamedTag<Item> createForgeTag(String name) {
-            return ItemTags.createOptional(new ResourceLocation("forge", name));
+        private static Tag.Named<Item> createForgeTag(String name) {
+            return ItemTags.bind(new ResourceLocation("forge", name).toString());
         }
     }
 
     public static class Blocks {
 
         // Compat for other mods' ingot blocks
-        public static final Tags.IOptionalNamedTag<Block> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
-        public static final Tags.IOptionalNamedTag<Block> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
+        public static final Tag.Named<Block> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
+        public static final Tag.Named<Block> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
 
         // 1.18 mineability
-        //public static final Tags.IOptionalNamedTag<Block> PICKAXE = BlockTags.MINEABLE_WITH_PICKAXE;
+        //public static final Tag.Named<Block> PICKAXE = BlockTags.MINEABLE_WITH_PICKAXE;
 
-        private static Tags.IOptionalNamedTag<Block> createTag(String name) {
-            return BlockTags.createOptional(new ResourceLocation(Alloyed.MOD_ID, name));
+        private static Tag.Named<Block> createTag(String name) {
+            return BlockTags.bind(new ResourceLocation(Alloyed.MOD_ID, name).toString());
         }
 
-        private static Tags.IOptionalNamedTag<Block> createForgeTag(String name) {
-            return BlockTags.createOptional(new ResourceLocation("forge", name));
+        private static Tag.Named<Block> createForgeTag(String name) {
+            return BlockTags.bind(new ResourceLocation("forge", name).toString());
         }
     }
 
