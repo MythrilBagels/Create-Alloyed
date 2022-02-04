@@ -65,7 +65,9 @@ public class ModItems {
 
     public ModItems() {}
 
-    public static void register() {}
+    public static void register() {
+        System.out.println("Registering ModItems!");
+    }
 
     @SafeVarargs
     private static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, Tag.Named<Item>... tags) {

@@ -33,6 +33,7 @@ public class ModSounds {
     }
 
     public static void register(IEventBus eventBus) {
+        System.out.println("Registering ModSounds!");
         SOUND_EVENTS.register(eventBus);
     }
 }
