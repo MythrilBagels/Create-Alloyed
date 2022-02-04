@@ -7,6 +7,8 @@
   "block.alloyed.waxed_bronze_block": "\u01DDzuo\u0279\u15FA \u025Fo \u029E\u0254o\u05DF\u15FA p\u01DDx\u0250M",
   "block.alloyed.waxed_exposed_bronze_block": "\u01DDzuo\u0279\u15FA p\u01DDsodx\u018E p\u01DDx\u0250M",
   "block.alloyed.waxed_oxidized_bronze_block": "\u01DDzuo\u0279\u15FA p\u01DDz\u0131p\u0131xO p\u01DDx\u0250M",
+  "block.alloyed.waxed_weathered_bronze_block": "\u01DDzuo\u0279\u15FA p\u01DD\u0279\u01DD\u0265\u0287\u0250\u01DDM p\u01DDx\u0250M",
+  "block.alloyed.weathered_bronze_block": "\u01DDzuo\u0279\u15FA p\u01DD\u0279\u01DD\u0265\u0287\u0250\u01DDM",
   "item.alloyed.bronze_ingot": "\u0287obuI \u01DDzuo\u0279\u15FA",
   "item.alloyed.bronze_sheet": "\u0287\u01DD\u01DD\u0265S \u01DDzuo\u0279\u15FA",
   "item.alloyed.steel_axe": "\u01DDx\u2C6F \u05DF\u01DD\u01DD\u0287S",

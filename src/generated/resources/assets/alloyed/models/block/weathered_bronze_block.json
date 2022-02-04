@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "alloyed:block/bronze/weathered_bronze_block",
+    "end": "alloyed:block/bronze/weathered_bronze_block"
+  }
+}

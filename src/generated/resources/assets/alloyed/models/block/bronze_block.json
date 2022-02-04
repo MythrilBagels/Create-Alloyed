@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "alloyed:block/bronze_block"
+    "side": "alloyed:block/bronze/bronze_block",
+    "end": "alloyed:block/bronze/bronze_block"
   }
 }
