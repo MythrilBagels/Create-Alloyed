@@ -175,7 +175,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.9'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.46'
 
     // --- DEBUG PURPOSES ---
     // compile against the JEI API but do not include it at runtime
@@ -186,8 +186,8 @@ dependencies {
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     // ----------------------
 
-    implementation fg.deobf("curse.maven:create-328085:3623348") // Create
-    implementation fg.deobf("curse.maven:flywheel-486392:3623314") // Flywheel
+    implementation fg.deobf("com.simibubi.create:Create:mc1.18.1_v${create_version}")
+    implementation fg.deobf("com.jozufozu.flywheel:Flywheel-Forge:1.18-${flywheel_version}")
 
     def registrate = "com.tterrag.registrate:Registrate:MC${registrate_version}"
     implementation fg.deobf(registrate)
