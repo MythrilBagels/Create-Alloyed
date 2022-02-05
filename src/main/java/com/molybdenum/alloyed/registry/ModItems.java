@@ -69,7 +69,7 @@ public class ModItems {
     }
 
     @SafeVarargs
-    private static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, Tag.Named<Item>... tags) {
+    public static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, Tag.Named<Item>... tags) {
         return REGISTRATE
                 .item(name, factory)
                 .model((ctx, prov) -> prov.handheld(ctx::getEntry, prov.modLoc("item/" + name)))

@@ -27,12 +27,22 @@ public class ModTags {
         public static final Tag.Named<Item> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
         public static final Tag.Named<Item> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
 
+        // Compat for other mods' knives
+        public static final Tag.Named<Item> STEEL_KNIFE = createForgeTag("tools/knives");
+
+        // Compat for Farmer's Delight's knives
+        public static final Tag.Named<Item> STEEL_KNIFE_FD = createSpecialTag("farmersdelight","tools/knives");
+
         private static Tag.Named<Item> createTag(String name) {
             return ItemTags.bind(new ResourceLocation(Alloyed.MOD_ID, name).toString());
         }
 
         private static Tag.Named<Item> createForgeTag(String name) {
             return ItemTags.bind(new ResourceLocation("forge", name).toString());
+        }
+
+        private static Tag.Named<Item> createSpecialTag(String modId, String path) {
+            return ItemTags.bind(new ResourceLocation(modId, path).toString());
         }
     }
 
