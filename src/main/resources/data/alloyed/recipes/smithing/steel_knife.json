@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "farmersdelight:iron_knife"
+  },
+  "addition": {
+    "tag": "forge:ingots/steel"
+  },
+  "result": {
+    "item": "alloyed:steel_knife"
+  },
+  "conditions": [ {
+    "type": "forge:mod_loaded",
+    "modid": "farmersdelight"
+  } ]
+}
