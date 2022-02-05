@@ -10,10 +10,10 @@ public class LangUtils {
             String waxedLangPrefix = waxed ? "Waxed " : "";
             String waxedNamePrefix = waxed ? "waxed_" : "";
 
-            PostRegistrationHelper.addBlockLang(waxedNamePrefix + name, waxedLangPrefix + "Block of " + metalLang);
-            PostRegistrationHelper.addBlockLang(waxedNamePrefix + "exposed_" + name, waxedLangPrefix + "Exposed " + metalLang);
+            PostRegistrationHelper.addBlockLang(waxedNamePrefix + name,                waxedLangPrefix + "Block of " + metalLang);
+            PostRegistrationHelper.addBlockLang(waxedNamePrefix + "exposed_" + name,   waxedLangPrefix + "Exposed " + metalLang);
             PostRegistrationHelper.addBlockLang(waxedNamePrefix + "weathered_" + name, waxedLangPrefix + "Weathered " + metalLang);
-            PostRegistrationHelper.addBlockLang(waxedNamePrefix + "oxidized_" + name, waxedLangPrefix + "Oxidized " + metalLang);
+            PostRegistrationHelper.addBlockLang(waxedNamePrefix + "oxidized_" + name,  waxedLangPrefix + "Oxidized " + metalLang);
         }
     }
 }
