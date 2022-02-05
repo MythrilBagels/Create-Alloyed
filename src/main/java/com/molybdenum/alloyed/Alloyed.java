@@ -36,8 +36,6 @@ public class Alloyed {
         ModCompatItems.register();
         ModBlocks.register();
         ModSounds.register(eventBus);
-
-        LOGGER.debug("Finished registering items, blocks, and sounds!");
     }
 
     public static CreateRegistrate getRegistrate() {

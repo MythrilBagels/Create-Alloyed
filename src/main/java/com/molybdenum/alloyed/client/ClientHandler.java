@@ -2,6 +2,7 @@ package com.molybdenum.alloyed.client;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.registry.ModItems;
+import com.molybdenum.alloyed.registry.ModPonders;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
@@ -29,6 +30,9 @@ public class ClientHandler {
                 return (isMainhand || isOffHand) && entity instanceof Player && ((Player) entity).fishing != null ? 1.0F : 0.0F;
             }
         });
+
+        // Set up ponder scenes
+        ModPonders.safeRegister();
 
         Alloyed.LOGGER.debug("Finished client setup for Alloyed");
     }
