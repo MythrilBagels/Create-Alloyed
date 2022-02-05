@@ -33,7 +33,7 @@ public abstract class NoteblockInstrumentMixin {
 	}
 
 	@Inject(method = "byState", at = @At("HEAD"), cancellable = true)
-	private static void alloyed$byState(BlockState state, CallbackInfoReturnable<NoteBlockInstrument> ci) {
+	private static void onByState(BlockState state, CallbackInfoReturnable<NoteBlockInstrument> ci) {
 		if (state.is(ModBlocks.BRONZE_BELL.get())) {
 			ci.setReturnValue(ModSounds.BRONZE_BELL_NOTEBLOCK);
 		}

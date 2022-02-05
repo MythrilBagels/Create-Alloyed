@@ -3,7 +3,6 @@ package com.molybdenum.alloyed.registry;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.items.ModItemGroup;
 import com.molybdenum.alloyed.items.ModItemTiers;
-import com.molybdenum.alloyed.items.SteelFishingRodItem;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
@@ -56,8 +55,8 @@ public class ModItems {
             .tag(ModTags.Items.STEEL_SHEARS)
             .register();
 
-    public static final ItemEntry<SteelFishingRodItem> STEEL_FISHING_ROD = REGISTRATE
-            .item("steel_fishing_rod", properties -> new SteelFishingRodItem(properties.durability(128)))
+    public static final ItemEntry<FishingRodItem> STEEL_FISHING_ROD = REGISTRATE
+            .item("steel_fishing_rod", properties -> new FishingRodItem(properties.durability(128)))
             .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/steel_fishing_rod")))
             .register();
 
