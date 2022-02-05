@@ -15,10 +15,12 @@
   "item.alloyed.steel_fishing_rod": "Steel Fishing Rod",
   "item.alloyed.steel_hoe": "Steel Hoe",
   "item.alloyed.steel_ingot": "Steel Ingot",
+  "item.alloyed.steel_knife": "Steel Knife",
   "item.alloyed.steel_pickaxe": "Steel Pickaxe",
   "item.alloyed.steel_shears": "Steel Shears",
   "item.alloyed.steel_sheet": "Steel Sheet",
   "item.alloyed.steel_shovel": "Steel Shovel",
   "item.alloyed.steel_sword": "Steel Sword",
+  "itemGroup.compat_group": "Create: Alloyed Compat",
   "itemGroup.main_group": "Create: Alloyed"
 }
