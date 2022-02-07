@@ -15,7 +15,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.Objects;
 
-public class CobwebShearsModifier extends LootModifier {
+/**
+ * Fixes the `Silk Touch` effect of steel shears to work outside the dev environment.
+ */
+public class SteelShearsModifier extends LootModifier {
     private final Item FINAL_LOOT;
 
     /**
@@ -24,7 +27,7 @@ public class CobwebShearsModifier extends LootModifier {
      * @param conditionsIn the ILootConditions that need to be matched before the loot is modified.
      * @param final_loot the final loot that is dropped
      */
-    protected CobwebShearsModifier(LootItemCondition[] conditionsIn, Item final_loot) {
+    protected SteelShearsModifier(LootItemCondition[] conditionsIn, Item final_loot) {
         super(conditionsIn);
         FINAL_LOOT = final_loot;
     }
@@ -39,16 +42,16 @@ public class CobwebShearsModifier extends LootModifier {
         return generatedLoot;
     }
 
-    public static class Serializer extends GlobalLootModifierSerializer<CobwebShearsModifier> {
+    public static class Serializer extends GlobalLootModifierSerializer<SteelShearsModifier> {
 
         @Override
-        public CobwebShearsModifier read(ResourceLocation location, JsonObject object, LootItemCondition[] conditions) {
+        public SteelShearsModifier read(ResourceLocation location, JsonObject object, LootItemCondition[] conditions) {
             Item final_loot = ForgeRegistries.ITEMS.getValue(new ResourceLocation(GsonHelper.getAsString(object, "replacement")));
-            return new CobwebShearsModifier(conditions, final_loot);
+            return new SteelShearsModifier(conditions, final_loot);
         }
 
         @Override
-        public JsonObject write(CobwebShearsModifier instance) {
+        public JsonObject write(SteelShearsModifier instance) {
             JsonObject jsonObject = makeConditions(instance.conditions);
             jsonObject.addProperty("replacement", Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(instance.FINAL_LOOT)).toString());
             return null;
