@@ -1,6 +1,6 @@
 package com.molybdenum.alloyed.util;
 
-import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
+import com.molybdenum.alloyed.registrate.PostRegistrationHelper;
 import com.simibubi.create.foundation.utility.Iterate;
 
 public class LangUtils {

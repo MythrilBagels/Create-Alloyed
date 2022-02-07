@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.data;
+package com.molybdenum.alloyed.events;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.registry.ModBlocks;
@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = Alloyed.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class DataHandler {
+public class DataEventsHandler {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void gatherData(GatherDataEvent event) {
         Alloyed.LOGGER.debug("Gathering data for Alloyed ...");

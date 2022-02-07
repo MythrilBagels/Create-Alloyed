@@ -1,12 +1,9 @@
-package com.molybdenum.alloyed.data.registrate;
+package com.molybdenum.alloyed.registrate;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.providers.ProviderType;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
-import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
-import net.minecraft.tags.Tag;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
 public class PostRegistrationHelper {

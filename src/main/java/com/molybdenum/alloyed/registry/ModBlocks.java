@@ -1,7 +1,6 @@
 package com.molybdenum.alloyed.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.items.ModItemGroup;
 import com.molybdenum.alloyed.util.BlockStateUtils;
 import com.molybdenum.alloyed.util.DataUtils;
@@ -9,15 +8,11 @@ import com.molybdenum.alloyed.util.LangUtils;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.block.CopperBlockSet;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.foundation.utility.Iterate;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.WeatheringCopper.WeatherState;
-
-import static com.simibubi.create.foundation.block.CopperBlockSet.getWeatherStatePrefix;
 
 public class ModBlocks {
 

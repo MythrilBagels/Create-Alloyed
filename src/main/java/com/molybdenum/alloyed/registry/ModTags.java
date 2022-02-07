@@ -34,7 +34,7 @@ public class ModTags {
         public static final Tag.Named<Item> STEEL_KNIFE_FD = createSpecialTag("farmersdelight","tools/knives");
 
         private static Tag.Named<Item> createTag(String name) {
-            return ItemTags.bind(new ResourceLocation(Alloyed.MOD_ID, name).toString());
+            return ItemTags.bind(Alloyed.asResource(name).toString());
         }
 
         private static Tag.Named<Item> createForgeTag(String name) {
@@ -56,7 +56,7 @@ public class ModTags {
         //public static final Tag.Named<Block> PICKAXE = BlockTags.MINEABLE_WITH_PICKAXE;
 
         private static Tag.Named<Block> createTag(String name) {
-            return BlockTags.bind(new ResourceLocation(Alloyed.MOD_ID, name).toString());
+            return BlockTags.bind(Alloyed.asResource(name).toString());
         }
 
         private static Tag.Named<Block> createForgeTag(String name) {
