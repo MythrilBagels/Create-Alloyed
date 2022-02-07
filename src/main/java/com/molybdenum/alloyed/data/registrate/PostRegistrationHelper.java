@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.registrate;
+package com.molybdenum.alloyed.data.registrate;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.simibubi.create.foundation.data.CreateRegistrate;

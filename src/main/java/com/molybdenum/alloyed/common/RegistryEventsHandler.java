@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.events;
+package com.molybdenum.alloyed.common;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.events.loot.CobwebShearsModifier;
