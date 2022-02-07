@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    " #",
+    "I "
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:ingots/steel"
+    },
+    "I": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "alloyed:steel_axe"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ]
+}
