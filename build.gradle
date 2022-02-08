@@ -28,7 +28,7 @@ mixin {
     add sourceSets.main, "alloyed.refmap.json"
 }
 
-version = "${mc_version}-v0.1"
+version = "${mc_version}-v0.1a"
 group = 'com.molybdenum.alloyed' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'alloyed'
 
@@ -57,6 +57,7 @@ repositories {
         url "https://maven.tterrag.com/"
     }
     mavenLocal()
+    mavenCentral()
 }
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
@@ -170,7 +171,7 @@ configurations {
 }
 
 dependencies {
-    implementation 'org.jetbrains:annotations:20.1.0'
+    implementation 'org.jetbrains:annotations:22.0.0'
 
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
