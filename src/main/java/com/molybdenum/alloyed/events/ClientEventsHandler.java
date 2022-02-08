@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.client;
+package com.molybdenum.alloyed.events;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.registry.ModItems;
@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = Alloyed.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ClientHandler {
+public class ClientEventsHandler {
     // Proxy class for client setup
     @SubscribeEvent
     public static void setupClient(final FMLClientSetupEvent event) {
