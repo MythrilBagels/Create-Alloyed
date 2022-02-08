@@ -33,7 +33,7 @@ public class ModTags {
         public static final ITag.INamedTag<Item> STEEL_KNIFE_FD = createSpecialTag("farmersdelight","tools/knives");
 
         private static ITag.INamedTag<Item> createTag(String path) {
-            return ItemTags.bind(new ResourceLocation(Alloyed.MOD_ID, path).toString());
+            return ItemTags.bind(Alloyed.asResource(path).toString());
         }
 
         private static ITag.INamedTag<Item> createForgeTag(String path) {
@@ -51,12 +51,12 @@ public class ModTags {
         public static final ITag.INamedTag<Block> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
         public static final ITag.INamedTag<Block> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
 
-        private static ITag.INamedTag<Block> createTag(String name) {
-            return BlockTags.bind(new ResourceLocation(Alloyed.MOD_ID, name).toString());
+        private static ITag.INamedTag<Block> createTag(String path) {
+            return BlockTags.bind(Alloyed.asResource(path).toString());
         }
 
-        private static ITag.INamedTag<Block> createForgeTag(String name) {
-            return BlockTags.bind(new ResourceLocation("forge", name).toString());
+        private static ITag.INamedTag<Block> createForgeTag(String path) {
+            return BlockTags.bind(new ResourceLocation("forge", path).toString());
         }
     }
 

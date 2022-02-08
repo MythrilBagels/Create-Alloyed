@@ -6,6 +6,7 @@ import com.molybdenum.alloyed.registry.ModItems;
 import com.molybdenum.alloyed.registry.ModSounds;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.NonNullLazyValue;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
@@ -45,4 +46,7 @@ public class Alloyed {
         return REGISTRATE.get();
     }
 
+    public static ResourceLocation asResource(String path) {
+        return new ResourceLocation(MOD_ID, path);
+    }
 }

@@ -26,7 +26,7 @@ public class ModSounds {
     public static RegistryObject<SoundEvent> registerSoundEvent(String name, Consumer<SoundEvent> onRegister) {
         return SOUND_EVENTS.register(name,
                 () -> {
-                    SoundEvent event = new SoundEvent(new ResourceLocation(Alloyed.MOD_ID, name));
+                    SoundEvent event = new SoundEvent(Alloyed.asResource(name));
                     onRegister.accept(event);
                     return event;
                 });
