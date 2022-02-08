@@ -1,8 +1,8 @@
-package com.molybdenum.alloyed.items;
+package com.molybdenum.alloyed.common.items;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.registry.ModCompatItems;
-import com.molybdenum.alloyed.registry.ModItems;
+import com.molybdenum.alloyed.common.registry.ModCompatItems;
+import com.molybdenum.alloyed.common.registry.ModItems;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

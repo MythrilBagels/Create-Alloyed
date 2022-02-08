@@ -1,8 +1,7 @@
-package com.molybdenum.alloyed.registry;
+package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
 import net.minecraft.state.properties.NoteBlockInstrument;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;

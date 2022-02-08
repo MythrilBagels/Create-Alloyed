@@ -1,6 +1,6 @@
-package com.molybdenum.alloyed.items;
+package com.molybdenum.alloyed.common.items;
 
-import com.molybdenum.alloyed.registry.ModItems;
+import com.molybdenum.alloyed.common.registry.ModItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;

@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.molybdenum.alloyed.mixin",
+  "package": "com.molybdenum.alloyed.common.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "alloyed.refmap.json",
   "mixins": [

@@ -1,8 +1,8 @@
 package com.molybdenum.alloyed.client;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.registry.ModItems;
-import com.molybdenum.alloyed.registry.ModPonders;
+import com.molybdenum.alloyed.common.registry.ModItems;
+import com.molybdenum.alloyed.common.registry.ModPonders;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FishingRodItem;
 import net.minecraft.item.ItemModelsProperties;
