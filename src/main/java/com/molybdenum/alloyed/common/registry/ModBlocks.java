@@ -2,13 +2,17 @@ package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.items.ModItemGroup;
+import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.BlockStateUtils;
 import com.molybdenum.alloyed.data.util.DataUtils;
 import com.molybdenum.alloyed.data.util.LangUtils;
+import com.molybdenum.alloyed.data.util.RecipeUtils;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.block.CopperBlockSet;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -38,6 +42,7 @@ public class ModBlocks {
             ))
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
+            .recipe(RecipeUtils.Crafting.metalBlockRecipe(ModTags.Items.STEEL_INGOT, "steel_ingot"))
             .lang("Block of Steel")
             .register();
 
@@ -50,17 +55,27 @@ public class ModBlocks {
             .properties(properties -> properties
                     .noOcclusion()
                     .sound(SoundType.ANVIL))
-            .simpleItem()
+            .blockstate(BlockStateUtils::existingModel)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
-            .transform(BlockStateUtils.existingModel())
+            .simpleItem()
+            .recipe((ctx, prov) -> {
+                ShapedRecipeBuilder.shaped(ctx.get(), 1)
+                        .pattern("#")
+                        .pattern("-")
+                        .define('#', ModTags.Items.BRONZE_BLOCK)
+                        .define('-', ModTags.Items.BRONZE_SHEET)
+                        .unlockedBy("has_bronze_ingot", RegistrateRecipeProvider.has(ModTags.Items.BRONZE_INGOT))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
+            })
             .register();
 
     public static void register() {
         System.out.println("Registering ModBlocks!");
     }
 
-    public static void fixBronzeLang() {
+    public static void fixBronzeBlocks() {
         LangUtils.correctOxidizingMetalLang("bronze_block", "Bronze");
+        PostRegistrationHelper.addMetalBlockRecipe("bronze_block", ModTags.Items.BRONZE_INGOT, "bronze_ingot");
     }
 }

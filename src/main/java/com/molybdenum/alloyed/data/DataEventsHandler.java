@@ -16,7 +16,7 @@ public class DataEventsHandler {
         Alloyed.LOGGER.debug("Gathering data for Alloyed ...");
 
         // Correct bronze block lang
-        ModBlocks.fixBronzeLang();
+        ModBlocks.fixBronzeBlocks();
         // Register ponders and generate ponder lang
         ModPonders.safeRegister();
         ModPonders.registerLang();
