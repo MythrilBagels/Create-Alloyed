@@ -13,19 +13,6 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = Alloyed.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CommonEventsHandler {
-
-    // Datagen
-    @SubscribeEvent(priority = EventPriority.LOWEST)
-    public static void gatherData(GatherDataEvent event) {
-        Alloyed.LOGGER.debug("Gathering data for Alloyed ...");
-
-        ModBlocks.fixBronzeLang();
-        ModPonders.safeRegister();
-        ModPonders.registerLang();
-
-        Alloyed.LOGGER.debug("Finished gathering data for Alloyed");
-    }
-
     // Global loot modifiers
     @SubscribeEvent
     public static void registerModifierSerializers(final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {

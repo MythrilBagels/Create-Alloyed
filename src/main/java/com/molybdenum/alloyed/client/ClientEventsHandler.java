@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed.client;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.client.registry.ModItemProperties;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.client.registry.ModPonders;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -17,20 +18,9 @@ public class ClientEventsHandler {
     @SubscribeEvent
     public static void setupClient(final FMLClientSetupEvent event) {
         Alloyed.LOGGER.debug("Entering client setup for Alloyed ...");
-        // Set up steel fishing rod
-        ItemProperties.register(ModItems.STEEL_FISHING_ROD.get(), new ResourceLocation("cast"), (stack, level, entity, i) -> {
-            if (entity == null) {
-                return 0.0F;
-            } else {
-                boolean isMainhand = entity.getMainHandItem() == stack;
-                boolean isOffHand = entity.getOffhandItem() == stack;
-                if (entity.getMainHandItem().getItem() instanceof FishingRodItem) {
-                    isOffHand = false;
-                }
-                return (isMainhand || isOffHand) && entity instanceof Player && ((Player) entity).fishing != null ? 1.0F : 0.0F;
-            }
-        });
 
+        // Set up steel fishing rod
+        ModItemProperties.register();
         // Set up ponder scenes
         ModPonders.safeRegister();
 
