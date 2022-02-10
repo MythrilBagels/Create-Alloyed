@@ -1,10 +1,10 @@
-package com.molybdenum.alloyed.registry;
+package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.items.ModItemGroup;
-import com.molybdenum.alloyed.util.BlockStateUtils;
-import com.molybdenum.alloyed.util.DataUtils;
-import com.molybdenum.alloyed.util.LangUtils;
+import com.molybdenum.alloyed.common.items.ModItemGroup;
+import com.molybdenum.alloyed.data.util.BlockStateUtils;
+import com.molybdenum.alloyed.data.util.DataUtils;
+import com.molybdenum.alloyed.data.util.LangUtils;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.block.CopperBlockSet;
 import com.simibubi.create.foundation.data.CreateRegistrate;

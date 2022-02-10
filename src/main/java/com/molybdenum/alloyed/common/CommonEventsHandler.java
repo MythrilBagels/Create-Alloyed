@@ -1,9 +1,9 @@
 package com.molybdenum.alloyed.common;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.events.loot.SteelShearsModifier;
-import com.molybdenum.alloyed.registry.ModBlocks;
-import com.molybdenum.alloyed.registry.ModPonders;
+import com.molybdenum.alloyed.common.loot.SteelShearsModifier;
+import com.molybdenum.alloyed.common.registry.ModBlocks;
+import com.molybdenum.alloyed.client.registry.ModPonders;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;

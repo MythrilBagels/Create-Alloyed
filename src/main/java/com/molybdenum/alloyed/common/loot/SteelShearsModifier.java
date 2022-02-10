@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.events.loot;
+package com.molybdenum.alloyed.common.loot;
 
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;

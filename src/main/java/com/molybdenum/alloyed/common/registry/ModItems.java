@@ -1,8 +1,8 @@
-package com.molybdenum.alloyed.registry;
+package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.items.ModItemGroup;
-import com.molybdenum.alloyed.items.ModItemTiers;
+import com.molybdenum.alloyed.common.items.ModItemGroup;
+import com.molybdenum.alloyed.common.items.ModItemTiers;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.entry.ItemEntry;

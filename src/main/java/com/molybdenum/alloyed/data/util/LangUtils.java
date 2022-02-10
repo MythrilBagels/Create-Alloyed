@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.util;
+package com.molybdenum.alloyed.data.util;
 
 import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.simibubi.create.foundation.utility.Iterate;

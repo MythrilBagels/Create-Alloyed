@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.ponder;
+package com.molybdenum.alloyed.client.ponder;
 
 import com.simibubi.create.foundation.ponder.SceneBuilder;
 import com.simibubi.create.foundation.ponder.SceneBuildingUtil;

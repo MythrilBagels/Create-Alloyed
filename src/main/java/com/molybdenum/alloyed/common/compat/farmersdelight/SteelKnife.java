@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.compat.farmersdelight;
+package com.molybdenum.alloyed.common.compat.farmersdelight;
 
 import net.minecraft.world.item.Tier;
 import vectorwing.farmersdelight.common.item.KnifeItem;

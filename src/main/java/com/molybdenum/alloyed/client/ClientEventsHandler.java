@@ -1,8 +1,8 @@
 package com.molybdenum.alloyed.client;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.registry.ModItems;
-import com.molybdenum.alloyed.registry.ModPonders;
+import com.molybdenum.alloyed.common.registry.ModItems;
+import com.molybdenum.alloyed.client.registry.ModPonders;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;

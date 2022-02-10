@@ -1,6 +1,6 @@
 package com.molybdenum.alloyed.mixin;
 
-import com.molybdenum.alloyed.registry.ModItems;
+import com.molybdenum.alloyed.common.registry.ModItems;
 import net.minecraft.world.entity.projectile.FishingHook;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

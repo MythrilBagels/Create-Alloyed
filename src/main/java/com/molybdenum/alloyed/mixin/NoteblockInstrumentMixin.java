@@ -1,7 +1,7 @@
 package com.molybdenum.alloyed.mixin;
 
-import com.molybdenum.alloyed.registry.ModBlocks;
-import com.molybdenum.alloyed.registry.ModSounds;
+import com.molybdenum.alloyed.common.registry.ModBlocks;
+import com.molybdenum.alloyed.client.registry.ModSounds;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;

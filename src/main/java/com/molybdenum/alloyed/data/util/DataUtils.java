@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.util;
+package com.molybdenum.alloyed.data.util;
 
 import com.simibubi.create.repack.registrate.builders.BlockBuilder;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullFunction;

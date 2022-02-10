@@ -1,7 +1,8 @@
-package com.molybdenum.alloyed.registry;
+package com.molybdenum.alloyed.client.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.ponder.BronzeBellPonder;
+import com.molybdenum.alloyed.client.ponder.BronzeBellPonder;
+import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.ponder.PonderLocalization;
 import com.simibubi.create.foundation.ponder.PonderRegistrationHelper;

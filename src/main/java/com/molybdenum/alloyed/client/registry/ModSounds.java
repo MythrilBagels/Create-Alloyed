@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.registry;
+package com.molybdenum.alloyed.client.registry;
 
 import com.molybdenum.alloyed.Alloyed;
 import net.minecraft.resources.ResourceLocation;

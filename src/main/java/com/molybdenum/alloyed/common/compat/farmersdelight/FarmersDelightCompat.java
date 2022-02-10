@@ -1,6 +1,6 @@
-package com.molybdenum.alloyed.compat.farmersdelight;
+package com.molybdenum.alloyed.common.compat.farmersdelight;
 
-import com.molybdenum.alloyed.items.ModItemTiers;
+import com.molybdenum.alloyed.common.items.ModItemTiers;
 import net.minecraft.world.item.Item;
 
 public class FarmersDelightCompat {
