@@ -19,8 +19,7 @@
   ],
   "results": [
     {
-      "item": "alloyed:bronze_ingot",
-      "count": 1
+      "item": "alloyed:bronze_ingot"
     }
   ],
   "heatRequirement": "heated"

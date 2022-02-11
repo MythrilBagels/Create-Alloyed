@@ -2,11 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "forge:storage_blocks/bronze"
+      "tag": "forge:storage_blocks/steel"
     }
   ],
   "result": {
-    "item": "alloyed:bronze_ingot",
-    "count": 9
+    "item": "alloyed:steel_ingot"
   }
 }

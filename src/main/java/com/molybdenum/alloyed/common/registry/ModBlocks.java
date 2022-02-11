@@ -76,6 +76,6 @@ public class ModBlocks {
 
     public static void fixBronzeBlocks() {
         LangUtils.correctOxidizingMetalLang("bronze_block", "Bronze");
-        PostRegistrationHelper.addMetalBlockRecipe("bronze_block", ModTags.Items.BRONZE_INGOT, "bronze_ingot");
+        PostRegistrationHelper.addMetalBlockRecipe("bronze_block", ModTags.Items.BRONZE_INGOT, "bronze_ingot", "bronze/");
     }
 }

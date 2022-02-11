@@ -3,10 +3,16 @@ package com.molybdenum.alloyed.common.registry;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.items.ModItemGroup;
 import com.molybdenum.alloyed.common.items.ModItemTiers;
+import com.molybdenum.alloyed.data.util.RecipeUtils;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.foundation.data.recipe.MixingRecipeGen;
+import com.simibubi.create.repack.registrate.providers.DataGenContext;
+import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
 import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
+import com.simibubi.create.repack.registrate.util.nullness.NonNullBiConsumer;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullFunction;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.Tag;
 import net.minecraft.world.item.*;
 
@@ -16,8 +22,17 @@ public class ModItems {
     // Materials
     static { REGISTRATE.startSection(AllSections.MATERIALS); }
 
-    public static final ItemEntry<Item> BRONZE_INGOT = taggedIngredient("bronze_ingot", ModTags.Items.BRONZE_INGOT);
-    public static final ItemEntry<Item> STEEL_INGOT = taggedIngredient("steel_ingot", ModTags.Items.STEEL_INGOT);
+    public static final ItemEntry<Item> BRONZE_INGOT = taggedIngredient(
+            "bronze_ingot",
+            RecipeUtils.Crafting.metalIngotDecompactingRecipe(ModTags.Items.BRONZE_BLOCK, "bronze_block"),
+            ModTags.Items.BRONZE_INGOT
+    );
+
+    public static final ItemEntry<Item> STEEL_INGOT = taggedIngredient(
+            "steel_ingot",
+            RecipeUtils.Crafting.metalIngotDecompactingRecipe(ModTags.Items.STEEL_BLOCK, "steel_block"),
+            ModTags.Items.STEEL_INGOT
+    );
 
     public static final ItemEntry<Item> BRONZE_SHEET = taggedIngredient("bronze_sheet", ModTags.Items.BRONZE_SHEET);
     public static final ItemEntry<Item> STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
@@ -77,11 +92,20 @@ public class ModItems {
                 .register();
     }
 
-    // Function from Create's item registrate. Found it useful, so copied it over.
     @SafeVarargs
     private static ItemEntry<Item> taggedIngredient(String name, Tag.Named<Item>... tags) {
-        return REGISTRATE.item(name, Item::new)
+        return REGISTRATE
+                .item(name, Item::new)
                 .tag(tags)
+                .register();
+    }
+
+    @SafeVarargs
+    private static ItemEntry<Item> taggedIngredient(String name, NonNullBiConsumer<DataGenContext<Item, Item>, RegistrateRecipeProvider> recipe, Tag.Named<Item>... tags) {
+        return REGISTRATE
+                .item(name, Item::new)
+                .tag(tags)
+                .recipe(recipe)
                 .register();
     }
 }

@@ -43,7 +43,7 @@ public class PostRegistrationHelper {
         });
     }
 
-    public static <T extends Block, P extends RegistrateProvider> void addMetalBlockRecipe(String name, Tag.Named<Item> metalItem, String ingotName) {
+    public static <T extends Block, P extends RegistrateProvider> void addMetalBlockRecipe(String name, Tag.Named<Item> metalItem, String ingotName, String path) {
         BlockEntry<Block> blockEntry = (BlockEntry<Block>) REGISTRATE.get(name, Block.class);
 
         REGISTRATE.setDataGenerator(name, Block.class, ProviderType.RECIPE, prov -> {
@@ -53,7 +53,7 @@ public class PostRegistrationHelper {
                     .pattern("###")
                     .define('#', metalItem)
                     .unlockedBy("has_" + ingotName, RegistrateRecipeProvider.has(metalItem))
-                    .save(prov, Alloyed.asResource("crafting/" + name));
+                    .save(prov, Alloyed.asResource("crafting/" + path + name));
         });
     }
 

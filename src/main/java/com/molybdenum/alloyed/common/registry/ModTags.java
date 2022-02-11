@@ -64,4 +64,20 @@ public class ModTags {
         }
     }
 
+    public static class Generic {
+        // Used for recipes
+
+        // Ingots
+        public static final Tag.Named<Item> ZINC_INGOT = createForgeTag("ingots/zinc");
+        // Nuggets
+        public static final Tag.Named<Item> ZINC_NUGGET = createForgeTag("nuggets/zinc");
+        // Misc
+        public static final Tag.Named<Item> STICK = createForgeTag("rods/wooden");
+
+
+        private static Tag.Named<Item> createForgeTag(String name) {
+            return ItemTags.bind(new ResourceLocation("forge", name).toString());
+        }
+    }
+
 }
