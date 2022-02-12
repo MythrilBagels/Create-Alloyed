@@ -21,6 +21,6 @@ public class ModCompatItems {
     );
 
     public static void register() {
-        System.out.println("Registering ModCompatItems!");
+        Alloyed.LOGGER.debug("Registering ModCompatItems!");
     }
 }

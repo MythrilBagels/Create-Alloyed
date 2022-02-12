@@ -1,5 +1,6 @@
 package com.molybdenum.alloyed.client.registry;
 
+import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.renderer.item.ItemPropertyFunction;
@@ -24,6 +25,7 @@ public class ModItemProperties {
     };
 
     public static void register() {
+        Alloyed.LOGGER.debug("Registering ModItemProperties!");
         ItemProperties.register(ModItems.STEEL_FISHING_ROD.get(), new ResourceLocation("cast"), FISHING_ROD_CAST);
     }
 }

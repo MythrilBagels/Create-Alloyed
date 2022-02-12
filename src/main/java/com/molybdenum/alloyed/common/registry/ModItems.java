@@ -131,7 +131,7 @@ public class ModItems {
             .register();
 
     public static void register() {
-        System.out.println("Registering ModItems!");
+        Alloyed.LOGGER.debug("Registering ModItems!");
     }
 
     @SafeVarargs

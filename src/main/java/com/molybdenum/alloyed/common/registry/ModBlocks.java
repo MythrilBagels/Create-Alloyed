@@ -71,7 +71,7 @@ public class ModBlocks {
             .register();
 
     public static void register() {
-        System.out.println("Registering ModBlocks!");
+        Alloyed.LOGGER.debug("Registering ModBlocks!");
     }
 
     public static void fixBronzeBlocks() {
