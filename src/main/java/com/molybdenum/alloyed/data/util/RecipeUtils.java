@@ -33,27 +33,6 @@ public class RecipeUtils {
             };
         }
 
-        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> metalBlockRecipe(ItemLike metalItem, String ingotName) {
-            return (ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get(), 1)
-                        .pattern("###")
-                        .pattern("###")
-                        .pattern("###")
-                        .define('#', metalItem)
-                        .unlockedBy("has_" + ingotName, RegistrateRecipeProvider.has(metalItem))
-                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
-            };
-        }
-
-        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> metalIngotDecompactingRecipe(ItemLike blockItem, String blockName) {
-            return (ctx, prov) -> {
-                ShapelessRecipeBuilder.shapeless(ctx.get(), 1)
-                        .requires(blockItem)
-                        .unlockedBy("has_" + blockName, RegistrateRecipeProvider.has(blockItem))
-                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_decompacting"));
-            };
-        }
-
         public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> metalIngotDecompactingRecipe(Tag.Named<Item> blockTag, String blockName) {
             return (ctx, prov) -> {
                 ShapelessRecipeBuilder.shapeless(ctx.get(), 1)
