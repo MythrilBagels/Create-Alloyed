@@ -22,7 +22,7 @@ public class ClientEventsHandler {
         // Set up steel fishing rod
         ModItemProperties.register();
         // Set up ponder scenes
-        ModPonders.safeRegister();
+        ModPonders.register();
 
         Alloyed.LOGGER.debug("Finished client setup for Alloyed");
     }

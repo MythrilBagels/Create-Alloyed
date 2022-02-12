@@ -15,5 +15,6 @@
   },
   "result": {
     "item": "alloyed:steel_fishing_rod"
-  }
+  },
+  "acceptMirrored": true
 }

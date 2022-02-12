@@ -1,6 +1,5 @@
 package com.molybdenum.alloyed.data.recipes;
 
-import com.google.common.base.Supplier;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
@@ -8,20 +7,36 @@ import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import com.simibubi.create.foundation.data.recipe.MechanicalCraftingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 
+import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
-public class MechanicalCraftingRecipeProvider extends CreateRecipeProvider {
+import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
 
-    GeneratedRecipe STEEL_SHEARS = create(ModItems.STEEL_SHEARS::get).recipe(b -> b
+public class MechanicalCraftingRecipesProvider extends CreateRecipeProvider {
+
+    public GeneratedRecipe STEEL_AXE = create(ModItems.STEEL_AXE::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.AXE_PATTERN));
+    public GeneratedRecipe STEEL_HOE = create(ModItems.STEEL_HOE::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.HOE_PATTERN));
+    public GeneratedRecipe STEEL_PICKAXE = create(ModItems.STEEL_PICKAXE::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.PICKAXE_PATTERN));
+    public GeneratedRecipe STEEL_SHOVEL = create(ModItems.STEEL_SHOVEL::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.SHOVEL_PATTERN));
+    public GeneratedRecipe STEEL_SWORD = create(ModItems.STEEL_SWORD::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.SWORD_PATTERN));
+    public GeneratedRecipe STEEL_SHEARS = create(ModItems.STEEL_SHEARS::get).recipe(b -> b
             .patternLine(" #")
             .patternLine("# ")
             .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
     );
+    public GeneratedRecipe STEEL_FISHING_ROD = create(ModItems.STEEL_FISHING_ROD::get).recipe(b -> b
+            .patternLine("  #")
+            .patternLine(" #I")
+            .patternLine("# I")
+            .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
+            .key('I', Items.STRING)
+    );
 
-    public MechanicalCraftingRecipeProvider(DataGenerator generator) {
+    public MechanicalCraftingRecipesProvider(DataGenerator generator) {
         super(generator);
     }
 
@@ -54,7 +69,7 @@ public class MechanicalCraftingRecipeProvider extends CreateRecipeProvider {
         GeneratedRecipe recipe(UnaryOperator<MechanicalCraftingRecipeBuilder> builder) {
             return register(consumer -> {
                 MechanicalCraftingRecipeBuilder b =
-                        builder.apply(MechanicalCraftingRecipeBuilder.shapedRecipe(result.get(), amount));
+                        builder.apply( MechanicalCraftingRecipeBuilder.shapedRecipe(result.get(), amount));
                 ResourceLocation location = Alloyed.asResource("mechanical_crafting/" + result.get()
                         .asItem()
                         .getRegistryName()
@@ -62,5 +77,12 @@ public class MechanicalCraftingRecipeProvider extends CreateRecipeProvider {
                 b.build(consumer, location);
             });
         }
+    }
+
+
+
+    @Override
+    public String getName() {
+        return "Create: Alloyed's Mechanical Crafting Recipes";
     }
 }

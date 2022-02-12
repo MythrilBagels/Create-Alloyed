@@ -54,7 +54,7 @@ public class SteelShearsModifier extends LootModifier {
         public JsonObject write(SteelShearsModifier instance) {
             JsonObject jsonObject = makeConditions(instance.conditions);
             jsonObject.addProperty("replacement", Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(instance.FINAL_LOOT)).toString());
-            return null;
+            return jsonObject;
         }
     }
 }

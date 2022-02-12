@@ -1,10 +1,8 @@
 package com.molybdenum.alloyed.data.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipeProvider;
-import com.molybdenum.alloyed.data.recipes.MixingRecipeProvider;
-import com.molybdenum.alloyed.data.recipes.PressingRecipeProvider;
-import com.simibubi.create.Create;
+import com.molybdenum.alloyed.data.recipes.MixingRecipesProvider;
+import com.molybdenum.alloyed.data.recipes.PressingRecipesProvider;
 import com.simibubi.create.content.contraptions.processing.ProcessingRecipe;
 import com.simibubi.create.content.contraptions.processing.ProcessingRecipeBuilder;
 import com.simibubi.create.content.contraptions.processing.ProcessingRecipeSerializer;
@@ -22,13 +20,13 @@ import java.util.List;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
-public abstract class ModRecipeProviders extends CreateRecipeProvider {
+public abstract class ModProcessingRecipeProviders extends CreateRecipeProvider {
 
-    protected static final List<ModRecipeProviders> PROVIDERS = new ArrayList<>();
+    protected static final List<ModProcessingRecipeProviders> PROVIDERS = new ArrayList<>();
 
-    public static void registerAllProviders(DataGenerator generator) {
-        PROVIDERS.add(new PressingRecipeProvider(generator));
-        PROVIDERS.add(new MixingRecipeProvider(generator));
+    public static void registerAllProcessingProviders(DataGenerator generator) {
+        PROVIDERS.add(new PressingRecipesProvider(generator));
+        PROVIDERS.add(new MixingRecipesProvider(generator));
 
         generator.addProvider(new DataProvider() {
             @Override
@@ -44,12 +42,12 @@ public abstract class ModRecipeProviders extends CreateRecipeProvider {
 
             @Override
             public @NotNull String getName() {
-                return "Create: Alloyed Processing Recipes";
+                return "Create: Alloyed's Processing Recipes";
             }
         });
     }
 
-    public ModRecipeProviders(DataGenerator generator) {
+    public ModProcessingRecipeProviders(DataGenerator generator) {
         super(generator);
     }
 

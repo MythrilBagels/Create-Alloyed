@@ -3,8 +3,8 @@ package com.molybdenum.alloyed.data;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.client.registry.ModPonders;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
-import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipeProvider;
-import com.molybdenum.alloyed.data.registry.ModRecipeProviders;
+import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipesProvider;
+import com.molybdenum.alloyed.data.registry.ModProcessingRecipeProviders;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,14 +19,14 @@ public class DataEventsHandler {
         Alloyed.LOGGER.debug("Gathering data for Alloyed ...");
         DataGenerator generator = event.getGenerator();
 
-        // Correct bronze block lang
+        // Correct bronze blocks
         ModBlocks.fixBronzeBlocks();
         // Register ponders and generate ponder lang
-        ModPonders.safeRegister();
+        ModPonders.register();
         ModPonders.registerLang();
-        // Register recipes
-        generator.addProvider(new MechanicalCraftingRecipeProvider(generator));
-        ModRecipeProviders.registerAllProviders(generator);
+        // Register processing recipes
+        generator.addProvider(new MechanicalCraftingRecipesProvider(generator));
+        ModProcessingRecipeProviders.registerAllProcessingProviders(generator);
 
         Alloyed.LOGGER.debug("Finished gathering data for Alloyed");
     }
