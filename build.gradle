@@ -15,6 +15,7 @@ buildscript {
 
 plugins {
     id 'com.github.johnrengelman.shadow' version "${shadow_version}"
+    id 'com.matthewprenger.cursegradle' version "${cursegradle_version}"
 }
 
 apply plugin: 'net.minecraftforge.gradle'
@@ -28,7 +29,7 @@ mixin {
     add sourceSets.main, "alloyed.refmap.json"
 }
 
-version = "${mc_version}-v0.1b"
+version = "${mc_version}-${mod_version}"
 group = 'com.molybdenum.alloyed' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'alloyed'
 
@@ -215,8 +216,13 @@ jar {
 }
 
 shadowJar {
+    classifier = ''
     configurations = [project.configurations.shade]
     relocate 'com.tterrag.registrate', 'com.molybdenum.alloyed.repack.registrate'
+}
+
+reobf {
+    shadowJar {}
 }
 
 // Example configuration to allow publishing using the maven-publish task
@@ -226,14 +232,75 @@ jar.finalizedBy('reobfJar')
 //publish.dependsOn('reobfJar')
 
 publishing {
+    tasks.publish.dependsOn 'build'
     publications {
         mavenJava(MavenPublication) {
-            artifact jar
+            artifact shadowJar
         }
     }
     repositories {
         maven {
             url "file:///${project.projectDir}/mcmodsrepo"
+        }
+    }
+}
+
+String getChangelogText() {
+    def changelogFile = file('changelog.txt')
+    String str = ''
+    int lineCount = 0
+    boolean done = false
+    changelogFile.eachLine {
+        if (done || it == null) {
+            return
+        }
+        if (it.size() > 1) {
+            def temp = it
+            if (lineCount == 0) {
+                temp = "## Create: Alloyed ${mod_version} <br/> \n"
+            } else if (it.matches("Fixed:|Changed:|Added:|Removed:")) {
+                temp = temp.replaceAll("Fixed:|Changed:|Added:|Removed:", "### \$0 <br/> \n") // Fixed: -> ### Fixed: , etc
+            } else if (it.startsWith('-')) {
+                temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "<a href=\"https://github.com/\$1/issues/\$2\">\$0</a>")
+                temp = temp.replaceAll("#([0-9]+)\\b(?!<\\/a>)", "<a href=\"https://github.com/$github_project/issues/\$1\">\$0</a>")
+                temp = temp + " <br/> \n"
+            } else {
+                temp = "#### $temp <br/> \n"
+            }
+            str += temp
+            lineCount++
+        } else {
+            str += "#### If you find an issue with the mod, please submit it &nbsp;<a href=\"https://github.com/${github_project}/issues\" rel=\"nofollow\">here</a>."
+            done = true
+        }
+
+
+    }
+    return str
+}
+
+// Uncomment to debug changelog.
+//new File("changelog.md").write getChangelogText()
+curseforge {
+    project {
+        def envApiKey = System.getenv("CF_API_KEY")
+        apiKey = envApiKey == null ? 'No API key was found.' : envApiKey
+
+        id = '564792'
+        changelog = getChangelogText()
+        changelogType = 'markdown'
+        releaseType = 'release'
+        addGameVersion '1.18.1'
+
+        mainArtifact (shadowJar) {
+            displayName = "Create: Alloyed ${mod_version} for Minecraft ${mc_version}"
+        }
+        relations {
+            requiredDependency 'create'
+            requiredDependency 'flywheel'
+
+            optionalDependency 'farmersdelight'
+            optionalDependency 'steampowered'
         }
     }
 }
