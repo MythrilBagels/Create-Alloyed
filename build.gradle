@@ -185,7 +185,7 @@ dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 
-    //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
+    implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     implementation fg.deobf("curse.maven:farmersdelight-398521:3615366") // Farmers Delight 1.03
     // ----------------------
 
@@ -270,7 +270,7 @@ String getChangelogText() {
             str += temp
             lineCount++
         } else {
-            str += "#### If you find an issue with the mod, please submit it &nbsp;<a href=\"https://github.com/${github_project}/issues\" rel=\"nofollow\">here</a>."
+            str += "#### If you find an issue with the mod, please submit it&nbsp;<a href=\"https://github.com/${github_project}/issues\" rel=\"nofollow\">here</a>."
             done = true
         }
 
@@ -283,7 +283,7 @@ String getChangelogText() {
 //new File("changelog.md").write getChangelogText()
 curseforge {
     project {
-        def envApiKey = System.getenv("CF_API_KEY")
+        def envApiKey = '*PASTE API KEY HERE*' // Remove before committing to github.
         apiKey = envApiKey == null ? 'No API key was found.' : envApiKey
 
         id = '564792'
@@ -298,9 +298,6 @@ curseforge {
         relations {
             requiredDependency 'create'
             requiredDependency 'flywheel'
-
-            optionalDependency 'farmersdelight'
-            optionalDependency 'steampowered'
         }
     }
 }
