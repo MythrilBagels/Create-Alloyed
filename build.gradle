@@ -177,7 +177,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.66'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.76'
 
     // --- DEBUG PURPOSES ---
     // compile against the JEI API but do not include it at runtime
@@ -201,6 +201,7 @@ dependencies {
 
 // Example for how to get properties into the manifest for reading by the runtime..
 jar {
+    classifier = 'slim'
     manifest {
         attributes([
             "Specification-Title": "alloyed",
@@ -225,11 +226,9 @@ reobf {
     shadowJar {}
 }
 
-// Example configuration to allow publishing using the maven-publish task
-// This is the preferred method to reobfuscate your jar file
-jar.finalizedBy('reobfJar') 
-// However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
-//publish.dependsOn('reobfJar')
+artifacts {
+    archives jar, shadowJar
+}
 
 publishing {
     tasks.publish.dependsOn 'build'
@@ -283,8 +282,8 @@ String getChangelogText() {
 //new File("changelog.md").write getChangelogText()
 curseforge {
     project {
-        def envApiKey = '*PASTE API KEY HERE*' // Remove before committing to github.
-        apiKey = envApiKey == null ? 'No API key was found.' : envApiKey
+        def envAPIKey = System.getenv("CURSEFORGE_API_TOKEN")
+        apiKey = envAPIKey == null ? '*NO API KEY FOUND*' : envAPIKey
 
         id = '564792'
         changelog = getChangelogText()
@@ -298,6 +297,9 @@ curseforge {
         relations {
             requiredDependency 'create'
             requiredDependency 'flywheel'
+
+            optionalDependency 'steampowered'
+            optionalDependency 'farmers-delight'
         }
     }
 }
