@@ -1,6 +1,9 @@
-0.1b:
+0.1c:
 Fixed:
-- Steel knife not having a recipe ( Issue #17 )
+- Metal blocks having a broken recipe
 Changed:
-- Metal ingot textures
+- Steel shears durability (buffed to 750)
+- Steel fishing rod durability (buffed to 512)
+Added:
+- Advancements for obtaining Bronze, Steel, and the Bronze Bell
 #

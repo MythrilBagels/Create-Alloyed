@@ -33,6 +33,9 @@ public class ModTags {
         // Compat for Farmer's Delight's knives
         public static final Tag.Named<Item> STEEL_KNIFE_FD = createSpecialTag("farmersdelight","tools/knives");
 
+        // All bronze instruments
+        public static final Tag.Named<Item> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
+
         private static Tag.Named<Item> createTag(String name) {
             return ItemTags.bind(Alloyed.asResource(name).toString());
         }
@@ -52,8 +55,8 @@ public class ModTags {
         public static final Tag.Named<Block> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
         public static final Tag.Named<Block> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
 
-        // 1.18 mineability
-        //public static final Tag.Named<Block> PICKAXE = BlockTags.MINEABLE_WITH_PICKAXE;
+        // All bronze instruments
+        public static final Tag.Named<Block> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
 
         private static Tag.Named<Block> createTag(String name) {
             return BlockTags.bind(Alloyed.asResource(name).toString());

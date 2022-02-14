@@ -115,7 +115,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipesProvider#STEEL_SHEARS
      */
     public static final ItemEntry<ShearsItem> STEEL_SHEARS = REGISTRATE
-            .item("steel_shears", properties -> new ShearsItem(properties.durability(476)))
+            .item("steel_shears", properties -> new ShearsItem(properties.durability(750)))
             .tag(ModTags.Items.STEEL_SHEARS)
             .recipe(Smithing.steelToolRecipe(Items.SHEARS))
             .register();
@@ -125,7 +125,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipesProvider#STEEL_FISHING_ROD
      */
     public static final ItemEntry<FishingRodItem> STEEL_FISHING_ROD = REGISTRATE
-            .item("steel_fishing_rod", properties -> new FishingRodItem(properties.durability(128)))
+            .item("steel_fishing_rod", properties -> new FishingRodItem(properties.durability(512)))
             .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/steel_fishing_rod")))
             .recipe(Smithing.steelToolRecipe(Items.FISHING_ROD))
             .register();

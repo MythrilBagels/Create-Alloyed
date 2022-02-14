@@ -1,6 +1,9 @@
-## Create: Alloyed v0.1b <br/> 
+## Create: Alloyed v1.2 <br/> 
 ### Fixed: <br/> 
-- Steel knife not having a recipe ( Issue <a href="https://github.com/MythrilBagels/Create-Alloyed/issues/17">#17</a> ) <br/> 
+- Metal blocks having a broken recipe <br/> 
 ### Changed: <br/> 
-- Metal ingot textures <br/> 
+- Steel shears durability (buffed to 750) <br/> 
+- Steel fishing rod durability (buffed to 512) <br/> 
+### Added: <br/> 
+- Advancements for obtaining Bronze, Steel, and the Bronze Bell <br/> 
 #### If you find an issue with the mod, please submit it&nbsp;<a href="https://github.com/MythrilBagels/Create-Alloyed/issues" rel="nofollow">here</a>.

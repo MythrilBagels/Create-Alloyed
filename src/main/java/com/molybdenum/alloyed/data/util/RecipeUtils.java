@@ -35,7 +35,7 @@ public class RecipeUtils {
 
         public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> metalIngotDecompactingRecipe(Tag.Named<Item> blockTag, String blockName) {
             return (ctx, prov) -> {
-                ShapelessRecipeBuilder.shapeless(ctx.get(), 1)
+                ShapelessRecipeBuilder.shapeless(ctx.get(), 9)
                         .requires(blockTag)
                         .unlockedBy("has_" + blockName, RegistrateRecipeProvider.has(blockTag))
                         .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_decompacting"));

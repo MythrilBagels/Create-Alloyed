@@ -41,7 +41,8 @@ public class MixingRecipesProvider extends ModProcessingRecipeProviders {
             .require(Items.IRON_INGOT)
             .require(Ingredient.of(Items.COAL, Items.CHARCOAL))
             .output(ModItems.STEEL_INGOT.get(), 3)
-            .requiresHeat(HeatCondition.SUPERHEATED)
+            .requiresHeat(HeatCondition.HEATED)
+            .duration(200)
     );
 
     public MixingRecipesProvider(DataGenerator generator) {

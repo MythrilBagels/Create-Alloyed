@@ -58,7 +58,10 @@ public class ModBlocks {
             .blockstate(BlockStateUtils::existingModel)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
-            .simpleItem()
+            .transform(DataUtils.tagBlockAndItem(
+                    ModTags.Blocks.BRONZE_INSTRUMENTS,
+                    ModTags.Items.BRONZE_INSTRUMENTS
+            ))
             .recipe((ctx, prov) -> {
                 ShapedRecipeBuilder.shaped(ctx.get(), 1)
                         .pattern("#")

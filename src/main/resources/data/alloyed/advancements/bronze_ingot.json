@@ -1,0 +1,33 @@
+{
+  "parent": "create:blaze_burner",
+  "display": {
+    "icon": {
+      "item": "alloyed:bronze_ingot"
+    },
+    "title": "The Other Copper Alloy",
+    "description": "Acquire some Bronze, a decorative and sonorous metal.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "alloyed:bronze_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

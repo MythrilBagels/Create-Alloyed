@@ -185,7 +185,7 @@ dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 
-    implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
+    //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     implementation fg.deobf("curse.maven:farmersdelight-398521:3615366") // Farmers Delight 1.03
     // ----------------------
 
@@ -279,7 +279,7 @@ String getChangelogText() {
 }
 
 // Uncomment to debug changelog.
-//new File("changelog.md").write getChangelogText()
+new File("changelog.md").write getChangelogText()
 curseforge {
     project {
         def envAPIKey = System.getenv("CURSEFORGE_API_TOKEN")
@@ -298,7 +298,6 @@ curseforge {
             requiredDependency 'create'
             requiredDependency 'flywheel'
 
-            optionalDependency 'steampowered'
             optionalDependency 'farmers-delight'
         }
     }

@@ -6,6 +6,7 @@
     }
   ],
   "result": {
-    "item": "alloyed:bronze_ingot"
+    "item": "alloyed:bronze_ingot",
+    "count": 9
   }
 }
