@@ -3,9 +3,9 @@ package com.molybdenum.alloyed.common.registry;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.items.ModItemGroup;
 import com.molybdenum.alloyed.common.items.ModItemTiers;
-import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipesProvider;
-import com.molybdenum.alloyed.data.recipes.MixingRecipesProvider;
-import com.molybdenum.alloyed.data.recipes.PressingRecipesProvider;
+import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
+import com.molybdenum.alloyed.data.recipes.MixingRecipes;
+import com.molybdenum.alloyed.data.recipes.PressingRecipes;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.providers.DataGenContext;
@@ -26,8 +26,8 @@ public class ModItems {
 
     /**
      * Mixing recipe can be found here:
-     * @see MixingRecipesProvider#BRONZE_INGOT
-     * @see MixingRecipesProvider#BRONZE_INGOTx3
+     * @see MixingRecipes#BRONZE_INGOT
+     * @see MixingRecipes#BRONZE_INGOTx3
      */
     public static final ItemEntry<Item> BRONZE_INGOT = taggedIngredient(
             "bronze_ingot",
@@ -37,7 +37,7 @@ public class ModItems {
 
     /**
      * Mixing recipe can be found here:
-     * @see MixingRecipesProvider#STEEL_INGOT
+     * @see MixingRecipes#STEEL_INGOT
      */
     public static final ItemEntry<Item> STEEL_INGOT = taggedIngredient(
             "steel_ingot",
@@ -47,13 +47,13 @@ public class ModItems {
 
     /**
      * Pressing recipe can be found here:
-     * @see PressingRecipesProvider#BRONZE_SHEET
+     * @see PressingRecipes#BRONZE_SHEET
      */
     public static final ItemEntry<Item> BRONZE_SHEET = taggedIngredient("bronze_sheet", ModTags.Items.BRONZE_SHEET);
 
     /**
      * Pressing recipe can be found here:
-     * @see PressingRecipesProvider#STEEL_SHEET
+     * @see PressingRecipes#STEEL_SHEET
      */
     public static final ItemEntry<Item> STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
 
@@ -62,7 +62,7 @@ public class ModItems {
 
     /**
      * Mechanical Crafting recipe can be found here:
-     * @see MechanicalCraftingRecipesProvider#STEEL_SWORD
+     * @see MechanicalCraftingRecipes#STEEL_SWORD
      */
     public static final ItemEntry<SwordItem> STEEL_SWORD = handheldItem(
             "steel_sword", 
@@ -72,7 +72,7 @@ public class ModItems {
 
     /**
      * Mechanical Crafting recipe can be found here:
-     * @see MechanicalCraftingRecipesProvider#STEEL_PICKAXE
+     * @see MechanicalCraftingRecipes#STEEL_PICKAXE
      */
     public static final ItemEntry<PickaxeItem> STEEL_PICKAXE = handheldItem(
             "steel_pickaxe", 
@@ -82,7 +82,7 @@ public class ModItems {
 
     /**
      * Mechanical Crafting recipe can be found here:
-     * @see MechanicalCraftingRecipesProvider#STEEL_AXE
+     * @see MechanicalCraftingRecipes#STEEL_AXE
      */
     public static final ItemEntry<AxeItem> STEEL_AXE = handheldItem(
             "steel_axe", 
@@ -92,7 +92,7 @@ public class ModItems {
 
     /**
      * Mechanical Crafting recipe can be found here:
-     * @see MechanicalCraftingRecipesProvider#STEEL_SHOVEL
+     * @see MechanicalCraftingRecipes#STEEL_SHOVEL
      */
     public static final ItemEntry<ShovelItem> STEEL_SHOVEL = handheldItem(
             "steel_shovel", 
@@ -102,7 +102,7 @@ public class ModItems {
 
     /**
      * Mechanical Crafting recipe can be found here:
-     * @see MechanicalCraftingRecipesProvider#STEEL_HOE
+     * @see MechanicalCraftingRecipes#STEEL_HOE
      */
     public static final ItemEntry<HoeItem> STEEL_HOE = handheldItem(
             "steel_hoe", 
@@ -112,7 +112,7 @@ public class ModItems {
 
     /**
      * Mechanical Crafting recipe can be found here:
-     * @see MechanicalCraftingRecipesProvider#STEEL_SHEARS
+     * @see MechanicalCraftingRecipes#STEEL_SHEARS
      */
     public static final ItemEntry<ShearsItem> STEEL_SHEARS = REGISTRATE
             .item("steel_shears", properties -> new ShearsItem(properties.durability(750)))
@@ -122,7 +122,7 @@ public class ModItems {
 
     /**
      * Mechanical Crafting recipe can be found here:
-     * @see MechanicalCraftingRecipesProvider#STEEL_FISHING_ROD
+     * @see MechanicalCraftingRecipes#STEEL_FISHING_ROD
      */
     public static final ItemEntry<FishingRodItem> STEEL_FISHING_ROD = REGISTRATE
             .item("steel_fishing_rod", properties -> new FishingRodItem(properties.durability(512)))

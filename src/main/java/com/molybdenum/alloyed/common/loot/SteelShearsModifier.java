@@ -27,7 +27,7 @@ public class SteelShearsModifier extends LootModifier {
      * @param conditionsIn the ILootConditions that need to be matched before the loot is modified.
      * @param final_loot the final loot that is dropped
      */
-    protected SteelShearsModifier(LootItemCondition[] conditionsIn, Item final_loot) {
+    public SteelShearsModifier(LootItemCondition[] conditionsIn, Item final_loot) {
         super(conditionsIn);
         FINAL_LOOT = final_loot;
     }

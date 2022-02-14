@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "tag": "forge:shears"
+      }
+    },
+    {
+      "condition": "minecraft:block_state_property",
+      "block": "minecraft:dark_oak_leaves"
+    }
+  ],
+  "replacement": "minecraft:dark_oak_leaves",
+  "type": "minecraft:dark_oak_leaves_shears"
+}

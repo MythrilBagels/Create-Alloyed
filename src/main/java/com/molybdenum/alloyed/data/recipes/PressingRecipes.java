@@ -2,12 +2,12 @@ package com.molybdenum.alloyed.data.recipes;
 
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
-import com.molybdenum.alloyed.data.registry.ModProcessingRecipeProviders;
+import com.molybdenum.alloyed.data.registry.ModProcessingRecipes;
 import com.simibubi.create.AllRecipeTypes;
 import net.minecraft.data.DataGenerator;
 import org.jetbrains.annotations.NotNull;
 
-public class PressingRecipesProvider extends ModProcessingRecipeProviders {
+public class PressingRecipes extends ModProcessingRecipes {
 
     public GeneratedRecipe BRONZE_SHEET = create("bronze_sheet", b -> b
             .require(ModTags.Items.BRONZE_INGOT)
@@ -19,7 +19,7 @@ public class PressingRecipesProvider extends ModProcessingRecipeProviders {
             .output(ModItems.STEEL_SHEET.get())
     );
 
-    public PressingRecipesProvider(DataGenerator generator) {
+    public PressingRecipes(DataGenerator generator) {
         super(generator);
     }
 

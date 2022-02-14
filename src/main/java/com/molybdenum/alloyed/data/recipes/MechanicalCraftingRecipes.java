@@ -16,7 +16,7 @@ import java.util.function.UnaryOperator;
 
 import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
 
-public class MechanicalCraftingRecipesProvider extends CreateRecipeProvider {
+public class MechanicalCraftingRecipes extends CreateRecipeProvider {
 
     public GeneratedRecipe STEEL_AXE = create(ModItems.STEEL_AXE::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.AXE_PATTERN));
     public GeneratedRecipe STEEL_HOE = create(ModItems.STEEL_HOE::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.HOE_PATTERN));
@@ -36,8 +36,12 @@ public class MechanicalCraftingRecipesProvider extends CreateRecipeProvider {
             .key('I', Items.STRING)
     );
 
-    public MechanicalCraftingRecipesProvider(DataGenerator generator) {
+    public MechanicalCraftingRecipes(DataGenerator generator) {
         super(generator);
+    }
+
+    public static void register(DataGenerator generator) {
+        generator.addProvider(new MechanicalCraftingRecipes(generator));
     }
 
     GeneratedRecipeBuilder create(Supplier<ItemLike> result) {

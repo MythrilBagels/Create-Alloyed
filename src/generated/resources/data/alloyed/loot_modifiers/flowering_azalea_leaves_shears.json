@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "tag": "forge:shears"
+      }
+    },
+    {
+      "condition": "minecraft:block_state_property",
+      "block": "minecraft:flowering_azalea_leaves"
+    }
+  ],
+  "replacement": "minecraft:flowering_azalea_leaves",
+  "type": "minecraft:flowering_azalea_leaves_shears"
+}

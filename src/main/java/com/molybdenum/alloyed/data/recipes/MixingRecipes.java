@@ -2,7 +2,7 @@ package com.molybdenum.alloyed.data.recipes;
 
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
-import com.molybdenum.alloyed.data.registry.ModProcessingRecipeProviders;
+import com.molybdenum.alloyed.data.registry.ModProcessingRecipes;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.content.contraptions.processing.HeatCondition;
@@ -11,7 +11,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import org.jetbrains.annotations.NotNull;
 
-public class MixingRecipesProvider extends ModProcessingRecipeProviders {
+public class MixingRecipes extends ModProcessingRecipes {
 
     public GeneratedRecipe BRONZE_INGOT = create("bronze_ingot", b -> b
             .require(Items.COPPER_INGOT)
@@ -45,7 +45,7 @@ public class MixingRecipesProvider extends ModProcessingRecipeProviders {
             .duration(200)
     );
 
-    public MixingRecipesProvider(DataGenerator generator) {
+    public MixingRecipes(DataGenerator generator) {
         super(generator);
     }
 

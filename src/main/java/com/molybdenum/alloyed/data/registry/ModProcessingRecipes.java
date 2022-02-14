@@ -1,8 +1,8 @@
 package com.molybdenum.alloyed.data.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.data.recipes.MixingRecipesProvider;
-import com.molybdenum.alloyed.data.recipes.PressingRecipesProvider;
+import com.molybdenum.alloyed.data.recipes.MixingRecipes;
+import com.molybdenum.alloyed.data.recipes.PressingRecipes;
 import com.simibubi.create.content.contraptions.processing.ProcessingRecipe;
 import com.simibubi.create.content.contraptions.processing.ProcessingRecipeBuilder;
 import com.simibubi.create.content.contraptions.processing.ProcessingRecipeSerializer;
@@ -20,13 +20,13 @@ import java.util.List;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
-public abstract class ModProcessingRecipeProviders extends CreateRecipeProvider {
+public abstract class ModProcessingRecipes extends CreateRecipeProvider {
 
-    protected static final List<ModProcessingRecipeProviders> PROVIDERS = new ArrayList<>();
+    protected static final List<ModProcessingRecipes> PROVIDERS = new ArrayList<>();
 
     public static void registerAllProcessingProviders(DataGenerator generator) {
-        PROVIDERS.add(new PressingRecipesProvider(generator));
-        PROVIDERS.add(new MixingRecipesProvider(generator));
+        PROVIDERS.add(new PressingRecipes(generator));
+        PROVIDERS.add(new MixingRecipes(generator));
 
         generator.addProvider(new DataProvider() {
             @Override
@@ -47,7 +47,7 @@ public abstract class ModProcessingRecipeProviders extends CreateRecipeProvider 
         });
     }
 
-    public ModProcessingRecipeProviders(DataGenerator generator) {
+    public ModProcessingRecipes(DataGenerator generator) {
         super(generator);
     }
 

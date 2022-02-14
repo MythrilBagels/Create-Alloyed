@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "tag": "forge:shears"
+      }
+    },
+    {
+      "condition": "minecraft:block_state_property",
+      "block": "minecraft:nether_sprouts"
+    }
+  ],
+  "replacement": "minecraft:nether_sprouts",
+  "type": "minecraft:nether_sprouts_shears"
+}

@@ -3,8 +3,9 @@ package com.molybdenum.alloyed.data;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.client.registry.ModPonders;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
-import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipesProvider;
-import com.molybdenum.alloyed.data.registry.ModProcessingRecipeProviders;
+import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
+import com.molybdenum.alloyed.data.registry.ModLootModifiers;
+import com.molybdenum.alloyed.data.registry.ModProcessingRecipes;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -25,8 +26,10 @@ public class DataEventsHandler {
         ModPonders.register();
         ModPonders.registerLang();
         // Register processing recipes
-        generator.addProvider(new MechanicalCraftingRecipesProvider(generator));
-        ModProcessingRecipeProviders.registerAllProcessingProviders(generator);
+        MechanicalCraftingRecipes.register(generator);
+        ModProcessingRecipes.registerAllProcessingProviders(generator);
+        // Register loot modifiers
+        ModLootModifiers.register(generator);
 
         Alloyed.LOGGER.debug("Finished gathering data for Alloyed");
     }

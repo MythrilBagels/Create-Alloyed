@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "tag": "forge:shears"
+      }
+    },
+    {
+      "condition": "minecraft:block_state_property",
+      "block": "minecraft:seagrass"
+    }
+  ],
+  "replacement": "minecraft:seagrass",
+  "type": "minecraft:seagrass_shears"
+}
