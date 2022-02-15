@@ -9,6 +9,8 @@ import com.molybdenum.alloyed.data.registry.ModProcessingRecipes;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
@@ -17,7 +19,7 @@ public class DataEventsHandler {
     // Datagen
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void gatherData(GatherDataEvent event) {
-        Alloyed.LOGGER.debug("Gathering data for Alloyed ...");
+        Alloyed.LOGGER.info("Gathering data for Alloyed ...");
         DataGenerator generator = event.getGenerator();
 
         // Correct bronze blocks
@@ -31,6 +33,6 @@ public class DataEventsHandler {
         // Register loot modifiers
         ModLootModifiers.register(generator);
 
-        Alloyed.LOGGER.debug("Finished gathering data for Alloyed");
+        Alloyed.LOGGER.info("Finished gathering data for Alloyed");
     }
 }

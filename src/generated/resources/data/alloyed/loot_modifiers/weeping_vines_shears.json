@@ -3,7 +3,9 @@
     {
       "condition": "minecraft:match_tool",
       "predicate": {
-        "tag": "forge:shears"
+        "items": [
+          "alloyed:steel_shears"
+        ]
       }
     },
     {
@@ -12,5 +14,5 @@
     }
   ],
   "replacement": "minecraft:weeping_vines",
-  "type": "minecraft:weeping_vines_shears"
+  "type": "alloyed:weeping_vines_shears"
 }

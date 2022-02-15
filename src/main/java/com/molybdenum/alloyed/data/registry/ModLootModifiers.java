@@ -12,6 +12,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
+import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
@@ -31,7 +32,7 @@ public class ModLootModifiers extends GlobalLootModifierProvider {
         for (AllModifiers modifier : AllModifiers.values()) {
             add(
                     modifier.getSerializedName(),
-                    new SteelShearsModifier.Serializer().setRegistryName(Alloyed.asResource(modifier.getSerializedName())),
+                    modifier.serializer,
                     new SteelShearsModifier(new LootItemCondition[] {
                             MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.STEEL_SHEARS.get())).build(),
                            LootItemBlockStatePropertyCondition.hasBlockStateProperties(modifier.getBlock()).build()
@@ -64,14 +65,12 @@ public class ModLootModifiers extends GlobalLootModifierProvider {
 
         private final String location;
         private final Block block;
+        private final GlobalLootModifierSerializer<SteelShearsModifier> serializer;
 
         AllModifiers(Block block) {
-            this(Objects.requireNonNull(block.getRegistryName()).getPath() + "_shears", block);
-        }
-
-        AllModifiers(String location, Block block) {
-            this.location = location;
+            this.location = Objects.requireNonNull(block.getRegistryName()).getPath() + "_shears";;
             this.block = block;
+            this.serializer = new SteelShearsModifier.Serializer().setRegistryName(Alloyed.asResource(this.location));
         }
 
         @Override
@@ -82,5 +81,7 @@ public class ModLootModifiers extends GlobalLootModifierProvider {
         public Block getBlock() {
             return this.block;
         }
+
+        public GlobalLootModifierSerializer<SteelShearsModifier> getSerializer() { return this.serializer; }
     }
 }

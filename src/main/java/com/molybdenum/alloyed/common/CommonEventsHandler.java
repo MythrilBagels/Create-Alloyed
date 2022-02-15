@@ -14,7 +14,7 @@ public class CommonEventsHandler {
     @SubscribeEvent
     public static void registerModifierSerializers(final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
         for (ModLootModifiers.AllModifiers modifier : ModLootModifiers.AllModifiers.values()) {
-            event.getRegistry().register(new SteelShearsModifier.Serializer().setRegistryName(Alloyed.asResource(modifier.getSerializedName())));
+            event.getRegistry().register(modifier.getSerializer());
         }
     }
 }
