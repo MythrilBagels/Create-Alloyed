@@ -12,6 +12,9 @@ import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
+import net.minecraft.data.ShapedRecipeBuilder;
+
+import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
 
 public class ModBlocks {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroups.MAIN_GROUP);
@@ -22,19 +25,23 @@ public class ModBlocks {
     public static final BlockEntry<OxidizingBlock> BRONZE_BLOCK = REGISTRATE
             .block("bronze_block", p -> new OxidizingBlock(p, 1 / 16f))
             .initialProperties(() -> Blocks.IRON_BLOCK)
+            .blockstate(BlockStateUtils::oxidizedBronzeBlockstate)
             .item()
             .tag(ModTags.Items.BRONZE_BLOCK)
             .transform(ModelGen.oxidizedItemModel())
-            .transform(BlockStateUtils.oxidizedBronzeBlockstate())
             .tag(ModTags.Blocks.BRONZE_BLOCK)
+            .recipe(Crafting.metalBlockRecipe(ModTags.Items.BRONZE_INGOT, "bronze_ingot"))
             .lang("Block of Bronze")
             .register();
 
     public static final BlockEntry<Block> STEEL_BLOCK = REGISTRATE
-            .block("steel_block", p -> new Block(p))
+            .block("steel_block", Block::new)
             .initialProperties(() -> Blocks.IRON_BLOCK)
-            .transform(DataUtils.tagBlockAndItem(ModTags.Blocks.STEEL_BLOCK, ModTags.Items.STEEL_BLOCK))
-            .simpleItem()
+            .transform(DataUtils.tagBlockAndItem(
+                    ModTags.Blocks.STEEL_BLOCK,
+                    ModTags.Items.STEEL_BLOCK
+            ))
+            .recipe(Crafting.metalBlockRecipe(ModTags.Items.STEEL_INGOT, "steel_ingot"))
             .lang("Block of Steel")
 		    .register();
 
@@ -47,12 +54,22 @@ public class ModBlocks {
             .properties(properties -> properties
                     .noOcclusion()
                     .sound(SoundType.ANVIL))
-            .simpleItem()
-            .transform(BlockStateUtils.existingModel())
+            .blockstate(BlockStateUtils::existingModel)
+            .transform(DataUtils.tagBlockAndItem(
+                    ModTags.Blocks.BRONZE_INSTRUMENTS,
+                    ModTags.Items.BRONZE_INSTRUMENTS
+            ))
+            .recipe((ctx, prov) -> {
+                ShapedRecipeBuilder.shaped(ctx.get())
+                        .pattern("#")
+                        .pattern("-")
+                        .define('#', ModTags.Items.BRONZE_BLOCK)
+                        .define('-', ModTags.Items.BRONZE_SHEET)
+                        .unlockedBy("has_bronze_ingot", Criterion.has(ModTags.Items.BRONZE_INGOT))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
+            })
             .lang("Bronze Bell")
             .register();
 
-    // End Block Entries
-
-    public static void register() {}
+    public static void register() { Alloyed.LOGGER.info("Registering ModBlocks!"); }
 }

@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.common.registry;
+package com.molybdenum.alloyed.client.registry;
 
 import com.molybdenum.alloyed.Alloyed;
 import net.minecraft.state.properties.NoteBlockInstrument;
@@ -32,6 +32,7 @@ public class ModSounds {
     }
 
     public static void register(IEventBus eventBus) {
+        Alloyed.LOGGER.info("Registering ModSounds!");
         SOUND_EVENTS.register(eventBus);
     }
 }

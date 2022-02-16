@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
 
 public class ModTags {
@@ -32,6 +33,9 @@ public class ModTags {
         // Compat for Farmer's Delight's knives
         public static final ITag.INamedTag<Item> STEEL_KNIFE_FD = createSpecialTag("farmersdelight","tools/knives");
 
+        // All bronze instruments
+        public static final ITag.INamedTag<Item> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
+
         private static ITag.INamedTag<Item> createTag(String path) {
             return ItemTags.bind(Alloyed.asResource(path).toString());
         }
@@ -51,6 +55,9 @@ public class ModTags {
         public static final ITag.INamedTag<Block> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
         public static final ITag.INamedTag<Block> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
 
+        // All bronze instruments
+        public static final ITag.INamedTag<Block> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
+
         private static ITag.INamedTag<Block> createTag(String path) {
             return BlockTags.bind(Alloyed.asResource(path).toString());
         }
@@ -60,4 +67,20 @@ public class ModTags {
         }
     }
 
+    public static class Generic {
+        // Used for recipes
+
+        // Ingots
+        public static final ITag.INamedTag<Item> ZINC_INGOT = createForgeTag("ingots/zinc");
+        public static final ITag.INamedTag<Item> COPPER_INGOT = createForgeTag("ingots/copper");
+        // Nuggets
+        public static final ITag.INamedTag<Item> ZINC_NUGGET = createForgeTag("nuggets/zinc");
+        // Misc
+        public static final ITag.INamedTag<Item> STICK = createForgeTag("rods/wooden");
+
+
+        private static ITag.INamedTag<Item> createForgeTag(String name) {
+            return ItemTags.bind(new ResourceLocation("forge", name).toString());
+        }
+    }
 }

@@ -20,5 +20,5 @@ public class ModCompatItems {
             ModTags.Items.STEEL_KNIFE, ModTags.Items.STEEL_KNIFE_FD
     );
 
-    public static void register() {}
+    public static void register() { Alloyed.LOGGER.info("Registering ModCompatItems!"); }
 }

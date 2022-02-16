@@ -2,13 +2,15 @@ package com.molybdenum.alloyed.data.util;
 
 import com.simibubi.create.foundation.worldgen.OxidizingBlock;
 import com.simibubi.create.repack.registrate.builders.BlockBuilder;
+import com.simibubi.create.repack.registrate.providers.DataGenContext;
+import com.simibubi.create.repack.registrate.providers.RegistrateBlockstateProvider;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullUnaryOperator;
 import net.minecraft.block.Block;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 
 public class BlockStateUtils {
-    public static <P> NonNullUnaryOperator<BlockBuilder<OxidizingBlock, P>> oxidizedBronzeBlockstate() {
-        return b -> b.blockstate((ctx, prov) -> prov.getVariantBuilder(ctx.getEntry())
+    public static <T extends Block> void oxidizedBronzeBlockstate(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov) {
+        prov.getVariantBuilder(ctx.getEntry())
                 .forAllStates(blockState -> {
                     String name = "block/oxidized/" + ctx.getName() + "_";
 
@@ -28,16 +30,14 @@ public class BlockStateUtils {
                     return ConfiguredModel.builder()
                             .modelFile(prov.models().cubeAll(name, prov.modLoc(name)))
                             .build();
-                }));
+                });
     }
 
-    public static <P> NonNullUnaryOperator<BlockBuilder<Block, P>> existingModel() {
-        return b -> b.blockstate((ctx, prov) ->
-                prov.simpleBlock(
-                        ctx.getEntry(),
-                        prov.models()
-                                .getExistingFile(prov.modLoc("block/" + ctx.getName()))
-                )
+    public static <T extends Block> void existingModel(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov) {
+        prov.simpleBlock(
+                ctx.getEntry(),
+                prov.models()
+                        .getExistingFile(prov.modLoc("block/" + ctx.getName()))
         );
     }
 }
