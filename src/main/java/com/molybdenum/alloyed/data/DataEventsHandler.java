@@ -2,7 +2,9 @@ package com.molybdenum.alloyed.data;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.client.registry.ModPonders;
+import com.molybdenum.alloyed.common.registry.ModAdvancements;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
+import com.molybdenum.alloyed.data.registry.ModAdvancementProvider;
 import com.molybdenum.alloyed.data.registry.ModLootModifiers;
 import com.molybdenum.alloyed.data.registry.ModProcessingRecipes;
 import net.minecraft.data.DataGenerator;
@@ -26,6 +28,9 @@ public class DataEventsHandler {
         ModProcessingRecipes.registerAllProcessingProviders(generator);
         // Register loot modifiers
         ModLootModifiers.register(generator);
+        // Register advancements
+        ModAdvancements.register();
+        ModAdvancementProvider.register(generator);
 
         Alloyed.LOGGER.info("Finished gathering data for Alloyed");
     }

@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "item": "alloyed:steel_shears"
+      }
+    },
+    {
+      "condition": "minecraft:block_state_property",
+      "block": "minecraft:oak_leaves"
+    }
+  ],
+  "replacement": "minecraft:oak_leaves",
+  "type": "alloyed:oak_leaves_shears"
+}

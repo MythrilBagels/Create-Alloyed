@@ -1,0 +1,35 @@
+{
+  "parent": "create:blaze_burner",
+  "display": {
+    "icon": {
+      "item": "minecraft:air"
+    },
+    "title": {
+      "translate": "advancements.alloyed.steel_ingot.title"
+    },
+    "description": {
+      "translate": "advancements.alloyed.steel_ingot.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_steel_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/steel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_ingot"
+    ]
+  ]
+}

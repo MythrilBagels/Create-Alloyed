@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "item": "alloyed:steel_shears"
+      }
+    },
+    {
+      "condition": "minecraft:block_state_property",
+      "block": "minecraft:weeping_vines"
+    }
+  ],
+  "replacement": "minecraft:weeping_vines",
+  "type": "alloyed:weeping_vines_shears"
+}

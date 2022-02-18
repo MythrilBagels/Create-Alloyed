@@ -108,7 +108,7 @@ public class RecipeUtils {
         }
 
         private static InventoryChangeTrigger.Instance inventoryTrigger(ItemPredicate... pPredicate) {
-            return new InventoryChangeTrigger.Instance(EntityPredicate.AndPredicate.ANY, MinMaxBounds.IntBound.ANY, MinMaxBounds.IntBound.ANY, MinMaxBounds.IntBound.ANY, pPredicate);
+            return InventoryChangeTrigger.Instance.hasItems(pPredicate);
         }
     }
 }

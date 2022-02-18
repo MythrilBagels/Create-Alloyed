@@ -18,7 +18,7 @@ issueTrackerURL="https://github.com/MythrilBagels/Create-Alloyed/issues"
 [[dependencies.alloyed]]
     modId="forge"
     mandatory=true
-    versionRange="[31,)"
+    versionRange="[36.2.26,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]

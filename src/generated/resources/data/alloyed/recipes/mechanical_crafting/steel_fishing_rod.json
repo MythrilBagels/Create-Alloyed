@@ -1,0 +1,20 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "  #",
+    " #I",
+    "# I"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:ingots/steel"
+    },
+    "I": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "alloyed:steel_fishing_rod"
+  },
+  "acceptMirrored": true
+}
