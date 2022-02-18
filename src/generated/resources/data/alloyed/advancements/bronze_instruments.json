@@ -2,7 +2,7 @@
   "parent": "alloyed:bronze_ingot",
   "display": {
     "icon": {
-      "item": "minecraft:air"
+      "item": "alloyed:bronze_bell"
     },
     "title": {
       "translate": "advancements.alloyed.bronze_instruments.title"
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:ingots/bronze"
+            "tag": "alloyed:bronze_instruments"
           }
         ]
       }

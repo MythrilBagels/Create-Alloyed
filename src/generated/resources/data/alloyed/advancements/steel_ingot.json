@@ -2,7 +2,7 @@
   "parent": "create:blaze_burner",
   "display": {
     "icon": {
-      "item": "minecraft:air"
+      "item": "alloyed:steel_ingot"
     },
     "title": {
       "translate": "advancements.alloyed.steel_ingot.title"
