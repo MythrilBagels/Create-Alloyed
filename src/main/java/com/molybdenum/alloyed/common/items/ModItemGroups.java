@@ -27,9 +27,7 @@ public class ModItemGroups {
     };
 
     // Tell Registrate to create a lang entry for the item groups
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate();
-    static {
-        REGISTRATE.itemGroup(() -> MAIN_GROUP, "Create: Alloyed");
-        REGISTRATE.itemGroup(() -> COMPAT_GROUP, "Create: Alloyed Compat");
-    }
+    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate()
+            .itemGroup(() -> MAIN_GROUP, "Create: Alloyed")
+            .itemGroup(() -> COMPAT_GROUP, "Create: Alloyed Compat");
 }

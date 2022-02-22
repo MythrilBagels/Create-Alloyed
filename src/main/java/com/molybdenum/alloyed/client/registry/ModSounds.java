@@ -32,7 +32,7 @@ public class ModSounds {
     }
 
     public static void register(IEventBus eventBus) {
-        Alloyed.LOGGER.info("Registering ModSounds!");
+        Alloyed.LOGGER.debug("Registering ModSounds!");
         SOUND_EVENTS.register(eventBus);
     }
 }

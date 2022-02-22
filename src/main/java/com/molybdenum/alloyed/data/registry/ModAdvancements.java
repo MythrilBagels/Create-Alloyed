@@ -1,11 +1,15 @@
-package com.molybdenum.alloyed.common.registry;
+package com.molybdenum.alloyed.data.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.data.registry.ModAdvancementProvider.NamedAdvancementBuilder;
+import com.molybdenum.alloyed.common.registry.ModBlocks;
+import com.molybdenum.alloyed.common.registry.ModItems;
+import com.molybdenum.alloyed.common.registry.ModTags;
+import com.molybdenum.alloyed.data.providers.ModAdvancementProvider.NamedAdvancementBuilder;
 import com.molybdenum.alloyed.data.util.RecipeUtils;
 import com.simibubi.create.Create;
 import net.minecraft.advancements.Advancement;
 
+@SuppressWarnings("unused")
 public class ModAdvancements {
 
     public static final NamedAdvancementBuilder BRONZE_INGOT = advancement("bronze_ingot",
@@ -39,7 +43,7 @@ public class ModAdvancements {
     ).save();
 
     public static void register() {
-        Alloyed.LOGGER.info("Registering ModAdvancements!");
+        Alloyed.LOGGER.debug("Registering ModAdvancements!");
     }
 
     // Utilities

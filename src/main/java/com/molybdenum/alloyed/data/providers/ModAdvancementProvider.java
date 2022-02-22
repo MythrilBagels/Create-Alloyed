@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.data.registry;
+package com.molybdenum.alloyed.data.providers;
 
 import com.google.common.collect.Sets;
 import com.google.gson.Gson;
@@ -10,6 +10,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DirectoryCache;
 import net.minecraft.data.IDataProvider;
 import net.minecraft.util.ResourceLocation;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -20,7 +21,7 @@ import java.util.function.Function;
 
 public class ModAdvancementProvider implements IDataProvider {
     private final DataGenerator generator;
-    private static List<NamedAdvancementBuilder> advancements = new ArrayList<>();
+    private static final List<NamedAdvancementBuilder> advancements = new ArrayList<>();
     private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().create();
 
     public ModAdvancementProvider(DataGenerator generator) {
@@ -42,10 +43,10 @@ public class ModAdvancementProvider implements IDataProvider {
     /**
      * Performs this provider's action.
      *
-     * @param pCache
+     * @param pCache The directory cache
      */
     @Override
-    public void run(DirectoryCache pCache) throws IOException {
+    public void run(@NotNull DirectoryCache pCache) {
         Path path = this.generator.getOutputFolder();
         Set<ResourceLocation> set = Sets.newHashSet();
 
@@ -73,7 +74,7 @@ public class ModAdvancementProvider implements IDataProvider {
      * Gets a name for this provider, to use in logging.
      */
     @Override
-    public String getName() {
+    public @NotNull String getName() {
         return "Create: Alloyed's Advancements";
     }
 

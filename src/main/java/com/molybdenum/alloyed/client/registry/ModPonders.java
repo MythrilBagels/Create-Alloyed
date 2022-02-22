@@ -14,7 +14,7 @@ public class ModPonders {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate();
 
     public static void register() {
-        Alloyed.LOGGER.info("Registering ModPonders!");
+        Alloyed.LOGGER.debug("Registering ModPonders!");
         HELPER.forComponents(ModBlocks.BRONZE_BELL)
                 .addStoryBoard("bronze_bell/decoration", BronzeBellPonder::decoration, PonderTag.DECORATION)
                 .addStoryBoard("bronze_bell/instrument", BronzeBellPonder::instrument, PonderTag.DECORATION);

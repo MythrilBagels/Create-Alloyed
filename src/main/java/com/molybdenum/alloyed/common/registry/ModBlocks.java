@@ -4,18 +4,24 @@ import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.items.ModItemGroups;
 import com.molybdenum.alloyed.data.util.BlockStateUtils;
 import com.molybdenum.alloyed.data.util.DataUtils;
+import com.simibubi.create.AllBlocks;
+import com.simibubi.create.AllItems;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.ModelGen;
+import com.simibubi.create.foundation.data.SharedProperties;
 import com.simibubi.create.foundation.worldgen.OxidizingBlock;
+import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.data.ShapedRecipeBuilder;
+import net.minecraft.item.Items;
 
 import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
 
+@SuppressWarnings("unused")
 public class ModBlocks {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroups.MAIN_GROUP);
 
@@ -59,17 +65,15 @@ public class ModBlocks {
                     ModTags.Blocks.BRONZE_INSTRUMENTS,
                     ModTags.Items.BRONZE_INSTRUMENTS
             ))
-            .recipe((ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get())
-                        .pattern("#")
-                        .pattern("-")
-                        .define('#', ModTags.Items.BRONZE_BLOCK)
-                        .define('-', ModTags.Items.BRONZE_SHEET)
-                        .unlockedBy("has_bronze_ingot", Criterion.has(ModTags.Items.BRONZE_INGOT))
-                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
-            })
+            .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(ctx.get())
+                    .pattern("#")
+                    .pattern("-")
+                    .define('#', ModTags.Items.BRONZE_BLOCK)
+                    .define('-', ModTags.Items.BRONZE_SHEET)
+                    .unlockedBy("has_bronze_ingot", Criterion.has(ModTags.Items.BRONZE_INGOT))
+                    .save(prov, Alloyed.asResource("crafting/" + ctx.getName())))
             .lang("Bronze Bell")
             .register();
-
-    public static void register() { Alloyed.LOGGER.info("Registering ModBlocks!"); }
+    
+    public static void register() { Alloyed.LOGGER.debug("Registering ModBlocks!"); }
 }

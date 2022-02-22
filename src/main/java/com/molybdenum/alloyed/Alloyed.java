@@ -1,7 +1,6 @@
 package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.client.registry.ModSounds;
-import com.molybdenum.alloyed.common.registry.ModAdvancements;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.molybdenum.alloyed.common.registry.ModCompatItems;
 import com.molybdenum.alloyed.common.registry.ModItems;
