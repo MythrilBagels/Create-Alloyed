@@ -18,13 +18,13 @@ public class ClientEventsHandler {
     // Proxy class for client setup
     @SubscribeEvent
     public static void setupClient(final FMLClientSetupEvent event) {
-        Alloyed.LOGGER.info("Entering client setup for Alloyed ...");
+        Alloyed.LOGGER.debug("Entering client setup for Alloyed ...");
 
         // Set up steel fishing rod
         ModItemProperties.register();
         // Set up ponder scenes
         ModPonders.register();
 
-        Alloyed.LOGGER.info("Finished client setup for Alloyed");
+        Alloyed.LOGGER.debug("Finished client setup for Alloyed");
     }
 }

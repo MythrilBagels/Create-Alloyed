@@ -133,7 +133,7 @@ public class ModItems {
 
     // End Item Entries
 
-    public static void register() { Alloyed.LOGGER.info("Registering ModItems!"); }
+    public static void register() { Alloyed.LOGGER.debug("Registering ModItems!"); }
 
     @SafeVarargs
     public static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, ITag.INamedTag<Item>... tags) {

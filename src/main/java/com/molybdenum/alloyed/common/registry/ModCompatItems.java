@@ -16,9 +16,11 @@ public class ModCompatItems {
 
     public static final ItemEntry<Item> STEEL_KNIFE = ModItems.handheldItem(
             "steel_knife",
-            properties -> Alloyed.isFarmersDelightLoaded ? FarmersDelightCompat.newSteelKnife(properties) : new Item(properties),
+            properties -> Alloyed.isFarmersDelightLoaded ?
+                    FarmersDelightCompat.newSteelKnife(properties) :
+                    new Item(properties.stacksTo(1)),
             ModTags.Items.STEEL_KNIFE, ModTags.Items.STEEL_KNIFE_FD
     );
 
-    public static void register() { Alloyed.LOGGER.info("Registering ModCompatItems!"); }
+    public static void register() { Alloyed.LOGGER.debug("Registering ModCompatItems!"); }
 }

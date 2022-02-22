@@ -1,7 +1,7 @@
 package com.molybdenum.alloyed.data.advancements;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.data.registry.ModAdvancementProvider;
+import com.molybdenum.alloyed.data.providers.ModAdvancementProvider;
 import com.simibubi.create.repack.registrate.providers.ProviderType;
 import net.minecraft.advancements.DisplayInfo;
 import net.minecraft.advancements.FrameType;
