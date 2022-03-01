@@ -19,11 +19,11 @@ import net.minecraft.tags.ITag;
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Crafting;
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Smithing;
 
+@SuppressWarnings("unused")
 public class ModItems {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroups.MAIN_GROUP);
 
-    // Materials
-    static { REGISTRATE.startSection(AllSections.MATERIALS); }
+    // Ingots
 
     /**
      * Mixing recipe can be found here:
@@ -46,6 +46,7 @@ public class ModItems {
             ModTags.Items.STEEL_INGOT
     );
 
+    // Sheets
     /**
      * Pressing recipe can be found here:
      * @see PressingRecipes#BRONZE_SHEET
@@ -59,8 +60,6 @@ public class ModItems {
     public static final ItemEntry<Item> STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
 
     // Steel toolset
-    static { REGISTRATE.startSection(AllSections.CURIOSITIES); }
-
     /**
      * Mechanical Crafting recipe can be found here:
      * @see MechanicalCraftingRecipes#STEEL_SWORD
@@ -133,7 +132,14 @@ public class ModItems {
 
     // End Item Entries
 
-    public static void register() { Alloyed.LOGGER.debug("Registering ModItems!"); }
+    public static void register() {
+        Alloyed.getRegistrate().addToSection(BRONZE_INGOT, AllSections.MATERIALS);
+        Alloyed.getRegistrate().addToSection(BRONZE_SHEET, AllSections.MATERIALS);
+        Alloyed.getRegistrate().addToSection(STEEL_INGOT, AllSections.MATERIALS);
+        Alloyed.getRegistrate().addToSection(STEEL_SHEET, AllSections.MATERIALS);
+
+        Alloyed.LOGGER.debug("Registering ModItems!");
+    }
 
     @SafeVarargs
     public static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, ITag.INamedTag<Item>... tags) {

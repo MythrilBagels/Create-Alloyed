@@ -192,6 +192,7 @@ dependencies {
     implementation fg.deobf("com.jozufozu.flywheel:Flywheel:1.16-${flywheel_version}")
 
     implementation fg.deobf("curse.maven:steampowered-534610:3536735") // steampowered
+    implementation fg.deobf("curse.maven:createdeco-509285:3503936") // Create Deco
     implementation fg.deobf("curse.maven:craftadditions-439890:3567777") // CC&A
     implementation fg.deobf("curse.maven:farmersdelight-398521:3573686") // farmer's delight
     // ----------------------

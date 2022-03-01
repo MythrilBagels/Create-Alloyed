@@ -14,7 +14,10 @@
   "alloyed.ponder.bronze_bell_instrument.text_1": "Noteblocks placed above a Bronze Bell will play a special bell sound.",
   "block.alloyed.bronze_bell": "Bronze Bell",
   "block.alloyed.bronze_block": "Block of Bronze",
+  "block.alloyed.locked_steel_door": "Locked Steel Door",
   "block.alloyed.steel_block": "Block of Steel",
+  "block.alloyed.steel_catwalk": "Steel Catwalk",
+  "block.alloyed.steel_door": "Steel Door",
   "item.alloyed.bronze_ingot": "Bronze Ingot",
   "item.alloyed.bronze_sheet": "Bronze Sheet",
   "item.alloyed.steel_axe": "Steel Axe",
@@ -27,6 +30,5 @@
   "item.alloyed.steel_sheet": "Steel Sheet",
   "item.alloyed.steel_shovel": "Steel Shovel",
   "item.alloyed.steel_sword": "Steel Sword",
-  "itemGroup.compat_group": "Create: Alloyed Compat",
   "itemGroup.main_group": "Create: Alloyed"
 }

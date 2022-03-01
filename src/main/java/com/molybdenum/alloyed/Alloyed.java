@@ -1,9 +1,7 @@
 package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.client.registry.ModSounds;
-import com.molybdenum.alloyed.common.registry.ModBlocks;
-import com.molybdenum.alloyed.common.registry.ModCompatItems;
-import com.molybdenum.alloyed.common.registry.ModItems;
+import com.molybdenum.alloyed.common.registry.*;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.NonNullLazyValue;
 import net.minecraft.util.ResourceLocation;
@@ -24,6 +22,7 @@ public class Alloyed {
 
     // Compat
     public static boolean isFarmersDelightLoaded = false;
+    public static boolean isCreateDecoLoaded = false;
 
     // Registrate
     private static final NonNullLazyValue<CreateRegistrate> REGISTRATE = CreateRegistrate.lazy(MOD_ID);
@@ -33,10 +32,14 @@ public class Alloyed {
         MinecraftForge.EVENT_BUS.register(this);
 
         isFarmersDelightLoaded = ModList.get().isLoaded("farmersdelight");
+        isCreateDecoLoaded = ModList.get().isLoaded("createdeco");
 
         ModItems.register();
-        ModCompatItems.register();
         ModBlocks.register();
+        ModCompatItems.register();
+        ModCompatBlocks.register();
+
+        ModSpriteShifts.register();
         ModSounds.register(eventBus);
     }
 

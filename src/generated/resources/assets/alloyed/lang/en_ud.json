@@ -14,7 +14,10 @@
   "alloyed.ponder.bronze_bell_instrument.text_1": "\u02D9punos \u05DF\u05DF\u01DDq \u05DF\u0250\u0131\u0254\u01DDds \u0250 \u028E\u0250\u05DFd \u05DF\u05DF\u0131\u028D \u05DF\u05DF\u01DD\u15FA \u01DDzuo\u0279\u15FA \u0250 \u01DD\u028Coq\u0250 p\u01DD\u0254\u0250\u05DFd s\u029E\u0254o\u05DFq\u01DD\u0287oN",
   "block.alloyed.bronze_bell": "\u05DF\u05DF\u01DD\u15FA \u01DDzuo\u0279\u15FA",
   "block.alloyed.bronze_block": "\u01DDzuo\u0279\u15FA \u025Fo \u029E\u0254o\u05DF\u15FA",
+  "block.alloyed.locked_steel_door": "\u0279oo\u15E1 \u05DF\u01DD\u01DD\u0287S p\u01DD\u029E\u0254o\uA780",
   "block.alloyed.steel_block": "\u05DF\u01DD\u01DD\u0287S \u025Fo \u029E\u0254o\u05DF\u15FA",
+  "block.alloyed.steel_catwalk": "\u029E\u05DF\u0250\u028D\u0287\u0250\u0186 \u05DF\u01DD\u01DD\u0287S",
+  "block.alloyed.steel_door": "\u0279oo\u15E1 \u05DF\u01DD\u01DD\u0287S",
   "item.alloyed.bronze_ingot": "\u0287obuI \u01DDzuo\u0279\u15FA",
   "item.alloyed.bronze_sheet": "\u0287\u01DD\u01DD\u0265S \u01DDzuo\u0279\u15FA",
   "item.alloyed.steel_axe": "\u01DDx\u2C6F \u05DF\u01DD\u01DD\u0287S",
@@ -27,6 +30,5 @@
   "item.alloyed.steel_sheet": "\u0287\u01DD\u01DD\u0265S \u05DF\u01DD\u01DD\u0287S",
   "item.alloyed.steel_shovel": "\u05DF\u01DD\u028Co\u0265S \u05DF\u01DD\u01DD\u0287S",
   "item.alloyed.steel_sword": "p\u0279o\u028DS \u05DF\u01DD\u01DD\u0287S",
-  "itemGroup.compat_group": "\u0287\u0250d\u026Fo\u0186 p\u01DD\u028Eo\u05DF\u05DF\u2C6F :\u01DD\u0287\u0250\u01DD\u0279\u0186",
   "itemGroup.main_group": "p\u01DD\u028Eo\u05DF\u05DF\u2C6F :\u01DD\u0287\u0250\u01DD\u0279\u0186"
 }

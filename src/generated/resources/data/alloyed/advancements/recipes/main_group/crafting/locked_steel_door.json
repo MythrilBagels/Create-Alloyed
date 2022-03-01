@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alloyed:crafting/locked_steel_door"
+    ]
+  },
+  "criteria": {
+    "has_door": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "alloyed:steel_door"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alloyed:crafting/locked_steel_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_door",
+      "has_the_recipe"
+    ]
+  ]
+}
