@@ -5,7 +5,7 @@
         "bottom": "true"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_bottom"
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_bottom"
       }
     },
     {
@@ -13,7 +13,7 @@
         "bottom": "false"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_top"
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_top"
       }
     },
     {
@@ -22,7 +22,7 @@
         "north": "true"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_rail_lower",
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_rail_lower",
         "y": 90
       }
     },
@@ -32,7 +32,7 @@
         "south": "true"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_rail_lower",
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_rail_lower",
         "y": -90
       }
     },
@@ -42,7 +42,7 @@
         "east": "true"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_rail_lower",
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_rail_lower",
         "y": 180
       }
     },
@@ -52,7 +52,7 @@
         "west": "true"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_rail_lower"
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_rail_lower"
       }
     },
     {
@@ -61,7 +61,7 @@
         "north": "true"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_rail_upper",
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_rail_upper",
         "y": 90
       }
     },
@@ -71,7 +71,7 @@
         "south": "true"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_rail_upper",
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_rail_upper",
         "y": -90
       }
     },
@@ -81,7 +81,7 @@
         "east": "true"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_rail_upper",
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_rail_upper",
         "y": 180
       }
     },
@@ -91,7 +91,7 @@
         "west": "true"
       },
       "apply": {
-        "model": "alloyed:block/compat/createdeco/steel_catwalk_rail_upper"
+        "model": "alloyed:block/steel_catwalk/steel_catwalk_rail_upper"
       }
     }
   ]

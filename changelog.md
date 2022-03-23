@@ -1,9 +1,14 @@
-## Create: Alloyed v0.2b <br/> 
-### Changed: <br/> 
-- Steel shears durability (buffed to 750) <br/> 
-- Steel fishing rod durability (buffed to 512) <br/> 
-- Metal ingot textures <br/> 
-- Steel recipe (no longer needs superheating) <br/> 
+## Create: Alloyed v0.3 <br/> 
 ### Added: <br/> 
-- Advancements for obtaining Bronze, Steel, and the Bronze Bell <br/> 
+- Spanish translation (courtesy of albertosaurio65) <br/> 
+- Steel Catwalk (C: Deco compat) <br/> 
+- Steel Sheet Metal (Block, Stairs, and Slab) <br/> 
+- Steel Sheet Metal Vertical Slab (C: Deco compat) <br/> 
+- Steel Bars <br/> 
+- Steel Mesh Fence (C: Deco compat) <br/> 
+- Steel Door (Normal and Locked) <br/> 
+### Changed: <br/> 
+- Steel Blast Resistance <br/> 
+### Removed: <br/> 
+- 'Create: Alloyed Compat' item group (compat items will now be added to the normal item group, and hidden if their mod isn't loaded) <br/> 
 #### If you find an issue with the mod, please submit it&nbsp;<a href="https://github.com/MythrilBagels/Create-Alloyed/issues" rel="nofollow">here</a>.

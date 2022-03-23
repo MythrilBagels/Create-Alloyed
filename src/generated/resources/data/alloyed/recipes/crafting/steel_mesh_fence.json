@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "-s-",
+    "-s-"
+  ],
+  "key": {
+    "-": {
+      "tag": "forge:plates/steel"
+    },
+    "s": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "alloyed:steel_mesh_fence",
+    "count": 3
+  }
+}

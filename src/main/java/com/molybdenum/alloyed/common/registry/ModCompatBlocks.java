@@ -1,23 +1,35 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.common.compat.HiddenBlock;
-import com.molybdenum.alloyed.common.compat.HiddenBlockItem;
 import com.molybdenum.alloyed.common.compat.createdeco.CreateDecoCompat;
-import com.molybdenum.alloyed.common.compat.createdeco.SteelCatwalkBlock;
-import com.molybdenum.alloyed.common.compat.createdeco.SteelCatwalkCTBehaviour;
+import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelCatwalkCTBehaviour;
+import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetVertCTBehaviour;
+import com.molybdenum.alloyed.common.compat.hidden.HiddenBlock;
+import com.molybdenum.alloyed.common.compat.hidden.HiddenBlockItem;
+import com.molybdenum.alloyed.common.compat.hidden.HiddenSlabBlock;
 import com.molybdenum.alloyed.common.items.ModItemGroups;
+import com.molybdenum.alloyed.data.util.BlockStateUtils;
+import com.molybdenum.alloyed.data.util.ModelUtils;
+import com.molybdenum.alloyed.data.util.RecipeUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
+import net.minecraft.advancements.criterion.StatePropertiesPredicate;
+import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.data.ShapedRecipeBuilder;
+import net.minecraft.item.Items;
+import net.minecraft.loot.ConstantRange;
+import net.minecraft.loot.ItemLootEntry;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.conditions.BlockStateProperty;
+import net.minecraft.loot.functions.SetCount;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
+import net.minecraft.state.properties.SlabType;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 
-@SuppressWarnings("unused")
 public class ModCompatBlocks {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate()
             .itemGroup(() -> ModItemGroups.MAIN_GROUP);
@@ -34,74 +46,77 @@ public class ModCompatBlocks {
                     .noOcclusion()
                     .sound(SoundType.NETHERITE_BLOCK)
             )
+            .blockstate(BlockStateUtils.Unique::steelCatwalkBlockstate)
             .item((block, properties) -> Alloyed.isCreateDecoLoaded ?
-                    CreateDecoCompat.newCatwalkBlockItem((SteelCatwalkBlock) block, properties) :
+                    CreateDecoCompat.newCatwalkBlockItem(block, properties) :
                     new HiddenBlockItem(block, properties))
-            .model((ctx,prov)-> prov.withExistingParent(ctx.getName(), prov.mcLoc("block/template_trapdoor_bottom"))
+            .model((ctx,prov)->
+                    prov.withExistingParent(ctx.getName(), prov.mcLoc("block/template_trapdoor_bottom"))
                     .texture("texture", prov.modLoc("block/steel_catwalk"))
             )
             .build()
-            .recipe((ctx, prov) -> { /* TODO */})
-            .blockstate((ctx,prov)-> {
-                // Credit to C: Deco for most of this blockstate code
-                String texture = "alloyed:block/steel_catwalk";
-
-                String lowerParent = "alloyed:block/compat/createdeco/catwalk_bottom";
-                String upperParent = "alloyed:block/compat/createdeco/catwalk_top";
-                String railUpperParent = "alloyed:block/compat/createdeco/catwalk_rail_upper";
-                String railLowerParent = "alloyed:block/compat/createdeco/catwalk_rail_lower";
-
-                String path = "block/compat/createdeco/";
-
-                BlockModelBuilder lower = prov.models().withExistingParent(path + ctx.getName() + "_bottom",
-                                lowerParent)
-                        .texture("2", texture)
-                        .texture("particle", texture);
-                BlockModelBuilder upper = prov.models().withExistingParent(path + ctx.getName() + "_top",
-                                upperParent)
-                        .texture("2", texture)
-                        .texture("particle", texture);
-                BlockModelBuilder railUpper = prov.models().withExistingParent(path + ctx.getName() + "_rail_upper",
-                                railUpperParent)
-                        .texture("3", texture + "_rail")
-                        .texture("particle", texture + "_rail");
-                BlockModelBuilder railLower = prov.models().withExistingParent(path + ctx.getName() + "_rail_lower",
-                                railLowerParent)
-                        .texture("3", texture + "_rail")
-                        .texture("particle", texture + "_rail");
-
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(lower).addModel().condition(BlockStateProperties.BOTTOM, true).end();
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(upper).addModel().condition(BlockStateProperties.BOTTOM, false).end();
-
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(railLower).rotationY( 90).addModel()
-                        .condition(BlockStateProperties.BOTTOM, true)
-                        .condition(BlockStateProperties.NORTH, true).end();
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(railLower).rotationY(-90).addModel()
-                        .condition(BlockStateProperties.BOTTOM, true)
-                        .condition(BlockStateProperties.SOUTH, true).end();
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(railLower).rotationY(180).addModel()
-                        .condition(BlockStateProperties.BOTTOM, true)
-                        .condition(BlockStateProperties.EAST,  true).end();
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(railLower).rotationY(  0).addModel()
-                        .condition(BlockStateProperties.BOTTOM, true)
-                        .condition(BlockStateProperties.WEST,  true).end();
-
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(railUpper).rotationY( 90).addModel()
-                        .condition(BlockStateProperties.BOTTOM, false)
-                        .condition(BlockStateProperties.NORTH, true).end();
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(railUpper).rotationY(-90).addModel()
-                        .condition(BlockStateProperties.BOTTOM, false)
-                        .condition(BlockStateProperties.SOUTH, true).end();
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(railUpper).rotationY(180).addModel()
-                        .condition(BlockStateProperties.BOTTOM, false)
-                        .condition(BlockStateProperties.EAST,  true).end();
-                prov.getMultipartBuilder(ctx.get()).part().modelFile(railUpper).rotationY(  0).addModel()
-                        .condition(BlockStateProperties.BOTTOM, false)
-                        .condition(BlockStateProperties.WEST,  true).end();
-            })
             .addLayer(() -> RenderType::cutoutMipped)
             .onRegister(CreateRegistrate.connectedTextures(new SteelCatwalkCTBehaviour()))
             .register();
 
-    public static void register() { Alloyed.LOGGER.debug("Registering ModCompatBlocks!"); }
+    public static final BlockEntry<SlabBlock> STEEL_SHEET_VERTICAL_SLAB = REGISTRATE
+            .block("steel_sheet_vertical_slab", Alloyed.isCreateDecoLoaded ?
+                    CreateDecoCompat::newVerticalSlabBlock : HiddenSlabBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .properties(ModBlocks::steelProperties)
+            .simpleItem()
+            .blockstate(BlockStateUtils.Unique::steelVerticalSlabBlockstate)
+            .loot((lootTable, block) -> {
+                LootTable.Builder lootBuilder = LootTable.lootTable();
+                LootPool.Builder lootPool = LootPool.lootPool();
+
+                lootPool.setRolls(ConstantRange.exactly(1))
+                        .add(ItemLootEntry.lootTableItem(block)
+                        .apply(SetCount.setCount(ConstantRange.exactly(2)).when(
+                                BlockStateProperty.hasBlockStateProperties(block)
+                                        .setProperties(StatePropertiesPredicate.Builder.properties()
+                                        .hasProperty(BlockStateProperties.SLAB_TYPE, SlabType.DOUBLE))
+                        )));
+
+                lootPool.setRolls(ConstantRange.exactly(1))
+                        .add(ItemLootEntry.lootTableItem(block)
+                        .apply(SetCount.setCount(ConstantRange.exactly(1))));
+
+                lootTable.add(block, lootBuilder.withPool(lootPool));
+            })
+            .onRegister(CreateRegistrate.connectedTextures(new SteelSheetVertCTBehaviour()))
+            .register();
+
+    public static final BlockEntry<Block> STEEL_MESH_FENCE = REGISTRATE
+            .block("steel_mesh_fence", Alloyed.isCreateDecoLoaded ?
+                    FenceBlock::new : HiddenBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .properties(properties -> properties.sound(SoundType.CHAIN))
+            .tag(BlockTags.FENCES)
+            .item()
+            .model((ctx,prov) -> ModelUtils.customModel(ctx, prov, "block/steel_chain_link"))
+            .build()
+            .blockstate(BlockStateUtils.Unique::steelMeshFenceBlockstate)
+            .recipe((ctx,prov)-> ShapedRecipeBuilder.shaped(ctx.get(), 3)
+                    .pattern("-s-")
+                    .pattern("-s-")
+                    .define('-', ModTags.Items.STEEL_SHEET)
+                    .define('s', Items.STRING)
+                    .unlockedBy("has_ingredient", RecipeUtils.Criterion
+                            .has(ModTags.Items.STEEL_SHEET))
+                    .save(prov, Alloyed.asResource("crafting/" + ctx.getName())))
+            .addLayer(() -> RenderType::cutoutMipped)
+            .register();
+
+    public static void register() {
+        Alloyed.LOGGER.debug("Registering ModCompatBlocks!");
+    }
+
+    public static ResourceLocation asDecoResource(String path) {
+        return new ResourceLocation("createdeco", path);
+    }
+
+    public static ResourceLocation asDecoBlockPath(String path) {
+        return asDecoResource("block/" + path);
+    }
 }

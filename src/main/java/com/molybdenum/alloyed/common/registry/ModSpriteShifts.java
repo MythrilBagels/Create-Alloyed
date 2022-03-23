@@ -11,5 +11,10 @@ public class ModSpriteShifts {
                     Alloyed.asResource("block/steel_catwalk"),
                     Alloyed.asResource("block/steel_catwalk_connected"));
 
+    public static final CTSpriteShiftEntry STEEL_SHEET_METAL =
+            CTSpriteShifter.getCT(CTType.VERTICAL,
+                    Alloyed.asResource("block/steel_sheet_metal"),
+                    Alloyed.asResource("block/steel_sheet_metal_connected"));
+
     public static void register() { Alloyed.LOGGER.debug("Registering ModSpriteShifts!"); }
 }

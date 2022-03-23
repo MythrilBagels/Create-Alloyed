@@ -24,7 +24,6 @@ public class ModItems {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().itemGroup(() -> ModItemGroups.MAIN_GROUP);
 
     // Ingots
-
     /**
      * Mixing recipe can be found here:
      * @see MixingRecipes#BRONZE_INGOT
@@ -32,7 +31,7 @@ public class ModItems {
      */
     public static final ItemEntry<Item> BRONZE_INGOT = taggedIngredient(
             "bronze_ingot",
-            Crafting.metalIngotDecompactingRecipe(ModTags.Items.BRONZE_BLOCK, "bronze_block"),
+            Crafting.metalIngotDecompactingRecipe(ModTags.Items.BRONZE_BLOCK),
             ModTags.Items.BRONZE_INGOT
     );
 
@@ -42,7 +41,7 @@ public class ModItems {
      */
     public static final ItemEntry<Item> STEEL_INGOT = taggedIngredient(
             "steel_ingot",
-            Crafting.metalIngotDecompactingRecipe(ModTags.Items.STEEL_BLOCK, "steel_block"),
+            Crafting.metalIngotDecompactingRecipe(ModTags.Items.STEEL_BLOCK),
             ModTags.Items.STEEL_INGOT
     );
 

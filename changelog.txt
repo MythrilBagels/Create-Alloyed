@@ -1,9 +1,14 @@
-v0.2b
-Changed:
-- Steel shears durability (buffed to 750)
-- Steel fishing rod durability (buffed to 512)
-- Metal ingot textures
-- Steel recipe (no longer needs superheating)
+v0.3
 Added:
-- Advancements for obtaining Bronze, Steel, and the Bronze Bell
+- Spanish translation (courtesy of albertosaurio65)
+- Steel Catwalk (C: Deco compat)
+- Steel Sheet Metal (Block, Stairs, and Slab)
+- Steel Sheet Metal Vertical Slab (C: Deco compat)
+- Steel Bars
+- Steel Mesh Fence (C: Deco compat)
+- Steel Door (Normal and Locked)
+Changed:
+- Steel Blast Resistance (buffed to 14)
+Removed:
+- 'Create: Alloyed Compat' item group (compat items will now be added to the normal item group, and hidden if their mod isn't loaded)
 #

@@ -15,4 +15,13 @@ public class ModelUtils {
                 prov.modLoc("item/" + ctx.getName())
         );
     }
+
+    public static <T extends Item> void customModel(DataGenContext<Item, T> ctx, RegistrateItemModelProvider prov, String path) {
+        prov.singleTexture(
+                ctx.getName(),
+                prov.mcLoc("item/generated"),
+                "layer0",
+                prov.modLoc(path)
+        );
+    }
 }

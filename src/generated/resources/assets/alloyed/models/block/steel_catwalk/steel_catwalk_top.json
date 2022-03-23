@@ -1,0 +1,7 @@
+{
+  "parent": "alloyed:block/catwalk_top",
+  "textures": {
+    "2": "alloyed:block/steel_catwalk",
+    "particle": "alloyed:block/steel_catwalk"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "alloyed:block/vertical_slab",
+  "textures": {
+    "side": "alloyed:block/steel_sheet_metal"
+  }
+}

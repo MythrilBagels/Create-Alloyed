@@ -1,0 +1,8 @@
+{
+  "parent": "createdeco:block/chainlink_fence_corner",
+  "textures": {
+    "0": "alloyed:block/steel_chain_link",
+    "1": "alloyed:block/steel_sheet_metal",
+    "particle": "alloyed:block/steel_sheet_metal"
+  }
+}
