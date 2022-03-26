@@ -67,22 +67,18 @@ public class ModCompatBlocks {
             .simpleItem()
             .blockstate(BlockStateUtils.Unique::steelVerticalSlabBlockstate)
             .loot((lootTable, block) -> {
-                LootTable.Builder lootBuilder = LootTable.lootTable();
+                LootTable.Builder builder = LootTable.lootTable();
                 LootPool.Builder lootPool = LootPool.lootPool();
 
                 lootPool.setRolls(ConstantRange.exactly(1))
                         .add(ItemLootEntry.lootTableItem(block)
-                        .apply(SetCount.setCount(ConstantRange.exactly(2)).when(
-                                BlockStateProperty.hasBlockStateProperties(block)
-                                        .setProperties(StatePropertiesPredicate.Builder.properties()
-                                        .hasProperty(BlockStateProperties.SLAB_TYPE, SlabType.DOUBLE))
-                        )));
+                                .apply(SetCount
+                                        .setCount(ConstantRange.exactly(2))
+                                        .when(BlockStateProperty.hasBlockStateProperties(block)
+                                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                        .hasProperty(BlockStateProperties.SLAB_TYPE, SlabType.DOUBLE)))));
 
-                lootPool.setRolls(ConstantRange.exactly(1))
-                        .add(ItemLootEntry.lootTableItem(block)
-                        .apply(SetCount.setCount(ConstantRange.exactly(1))));
-
-                lootTable.add(block, lootBuilder.withPool(lootPool));
+                lootTable.add(block, builder.withPool(lootPool));
             })
             .onRegister(CreateRegistrate.connectedTextures(new SteelSheetVertCTBehaviour()))
             .register();
@@ -97,14 +93,6 @@ public class ModCompatBlocks {
             .model((ctx,prov) -> ModelUtils.customModel(ctx, prov, "block/steel_chain_link"))
             .build()
             .blockstate(BlockStateUtils.Unique::steelMeshFenceBlockstate)
-            .recipe((ctx,prov)-> ShapedRecipeBuilder.shaped(ctx.get(), 3)
-                    .pattern("-s-")
-                    .pattern("-s-")
-                    .define('-', ModTags.Items.STEEL_SHEET)
-                    .define('s', Items.STRING)
-                    .unlockedBy("has_ingredient", RecipeUtils.Criterion
-                            .has(ModTags.Items.STEEL_SHEET))
-                    .save(prov, Alloyed.asResource("crafting/" + ctx.getName())))
             .addLayer(() -> RenderType::cutoutMipped)
             .register();
 

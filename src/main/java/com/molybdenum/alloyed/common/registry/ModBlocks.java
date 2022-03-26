@@ -28,8 +28,10 @@ import net.minecraft.loot.ItemLootEntry;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.conditions.BlockStateProperty;
+import net.minecraft.loot.functions.SetCount;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.DoubleBlockHalf;
+import net.minecraft.state.properties.SlabType;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
@@ -146,6 +148,21 @@ public class ModBlocks {
                         .unlockedBy("has_ingredient",
                                 RecipeUtils.Criterion.has(STEEL_SHEET_METAL.get()))
                         .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
+            })
+            .loot((table, block) -> {
+                LootTable.Builder builder = LootTable.lootTable();
+                LootPool.Builder lootPool = LootPool.lootPool();
+
+                lootPool.setRolls(ConstantRange.exactly(1))
+                        .add(ItemLootEntry.lootTableItem(block)
+                                .apply(SetCount
+                                        .setCount(ConstantRange.exactly(2))
+                                        .when(BlockStateProperty
+                                                .hasBlockStateProperties(block)
+                                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                        .hasProperty(BlockStateProperties.SLAB_TYPE, SlabType.DOUBLE)))));
+
+                table.add(block, builder.withPool(lootPool));
             })
             .onRegister(CreateRegistrate.connectedTextures(new SteelSheetSlabCTBehaviour()))
             .register();

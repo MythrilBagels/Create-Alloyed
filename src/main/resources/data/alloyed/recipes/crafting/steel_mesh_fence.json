@@ -15,5 +15,9 @@
   "result": {
     "item": "alloyed:steel_mesh_fence",
     "count": 3
-  }
+  },
+  "conditions": [ {
+    "type": "forge:mod_loaded",
+    "modid": "createdeco"
+  } ]
 }
