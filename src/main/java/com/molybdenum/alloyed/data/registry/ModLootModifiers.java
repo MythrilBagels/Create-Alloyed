@@ -42,26 +42,26 @@ public class ModLootModifiers extends GlobalLootModifierProvider {
     }
 
     public enum AllModifiers implements StringRepresentable {
-        ACACIA_LEAVES(          Blocks.ACACIA_LEAVES),
-        AZALEA_LEAVES(          Blocks.AZALEA_LEAVES),
-        BIRCH_LEAVES(           Blocks.BIRCH_LEAVES),
-        COBWEB(                 Blocks.COBWEB),
-        DARK_OAK_LEAVES(        Blocks.DARK_OAK_LEAVES),
-        DEAD_BUSH(              Blocks.DEAD_BUSH),
-        FERN(                   Blocks.FERN),
+        ACACIA_LEAVES          (Blocks.ACACIA_LEAVES),
+        BIRCH_LEAVES           (Blocks.BIRCH_LEAVES),
+        COBWEB                 (Blocks.COBWEB),
+        DARK_OAK_LEAVES        (Blocks.DARK_OAK_LEAVES),
+        DEAD_BUSH              (Blocks.DEAD_BUSH),
+        FERN                   (Blocks.FERN),
+        JUNGLE_LEAVES          (Blocks.JUNGLE_LEAVES),
+        LARGE_FERN             (Blocks.LARGE_FERN),
+        NETHER_SPROUTS         (Blocks.NETHER_SPROUTS),
+        OAK_LEAVES             (Blocks.OAK_LEAVES),
+        SEAGRASS               (Blocks.SEAGRASS),
+        SPRUCE_LEAVES          (Blocks.SPRUCE_LEAVES),
+        TALL_GRASS             (Blocks.TALL_GRASS),
+        TALL_SEAGRASS          (Blocks.TALL_SEAGRASS),
+        TWISTING_VINES         (Blocks.TWISTING_VINES),
+        VINE                   (Blocks.VINE),
+        WEEPING_VINES          (Blocks.WEEPING_VINES),
+        AZALEA_LEAVES          (Blocks.AZALEA_LEAVES),
         FLOWERING_AZALEA_LEAVES(Blocks.FLOWERING_AZALEA_LEAVES),
-        GLOW_LICHEN(            Blocks.GLOW_LICHEN),
-        JUNGLE_LEAVES(          Blocks.JUNGLE_LEAVES),
-        LARGE_FERN(             Blocks.LARGE_FERN),
-        NETHER_SPROUTS(         Blocks.NETHER_SPROUTS),
-        OAK_LEAVES(             Blocks.OAK_LEAVES),
-        SEAGRASS(               Blocks.SEAGRASS),
-        SPRUCE_LEAVES(          Blocks.SPRUCE_LEAVES),
-        TALL_GRASS(             Blocks.TALL_GRASS),
-        TALL_SEAGRASS(          Blocks.TALL_SEAGRASS),
-        TWISTING_VINES(         Blocks.TWISTING_VINES),
-        VINE(                   Blocks.VINE),
-        WEEPING_VINES(          Blocks.WEEPING_VINES);
+        GLOW_LICHEN            (Blocks.GLOW_LICHEN);
 
         private final String location;
         private final Block block;

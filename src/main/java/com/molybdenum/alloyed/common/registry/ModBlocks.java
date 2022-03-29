@@ -22,8 +22,7 @@ public class ModBlocks {
 
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
-    // Materials
-    static { REGISTRATE.startSection(AllSections.MATERIALS); }
+    // BRONZE
 
     public static final CopperBlockSet BRONZE_BLOCKS = new CopperBlockSet( // Ignore that it says COPPER block set. The code works for any oxidizing metal.
             REGISTRATE,
@@ -32,22 +31,6 @@ public class ModBlocks {
             new CopperBlockSet.Variant<?>[] { CopperBlockSet.BlockVariant.INSTANCE },
             "bronze/"
     );
-
-    public static final BlockEntry<Block> STEEL_BLOCK = REGISTRATE
-            .block("steel_block", Block::new)
-            .initialProperties(() -> Blocks.IRON_BLOCK)
-            .transform(DataUtils.tagBlockAndItem(
-                    ModTags.Blocks.STEEL_BLOCK,
-                    ModTags.Items.STEEL_BLOCK
-            ))
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .tag(BlockTags.NEEDS_STONE_TOOL)
-            .recipe(RecipeUtils.Crafting.metalBlockRecipe(ModTags.Items.STEEL_INGOT, "steel_ingot"))
-            .lang("Block of Steel")
-            .register();
-
-    // Curiosities
-    static { REGISTRATE.startSection(AllSections.MATERIALS); }
 
     public static final BlockEntry<Block> BRONZE_BELL = REGISTRATE
             .block("bronze_bell", Block::new)
@@ -73,7 +56,26 @@ public class ModBlocks {
             })
             .register();
 
+
+
+    // STEEL
+
+    public static final BlockEntry<Block> STEEL_BLOCK = REGISTRATE
+            .block("steel_block", Block::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .transform(DataUtils.tagBlockAndItem(
+                    ModTags.Blocks.STEEL_BLOCK,
+                    ModTags.Items.STEEL_BLOCK
+            ))
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
+            .recipe(RecipeUtils.Crafting.metalBlockRecipe(ModTags.Items.STEEL_INGOT))
+            .lang("Block of Steel")
+            .register();
+
     public static void register() {
+        Alloyed.getRegistrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
+
         Alloyed.LOGGER.debug("Registering ModBlocks!");
     }
 

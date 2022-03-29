@@ -17,19 +17,8 @@ public class ModItemGroup {
             return new ItemStack(ModItems.BRONZE_INGOT.get());
         }
     };
-    public static final CreativeModeTab COMPAT_GROUP = new CreativeModeTab("compat_group")
-    {
-        @Override
-        public ItemStack makeIcon()
-        {
-            return new ItemStack(ModCompatItems.STEEL_KNIFE.get());
-        }
-    };
 
     // Tell Registrate to create a lang entry for the item groups
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate();
-    static {
-        REGISTRATE.creativeModeTab(() -> MAIN_GROUP, "Create: Alloyed");
-        REGISTRATE.creativeModeTab(() -> COMPAT_GROUP, "Create: Alloyed Compat");
-    }
+    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate()
+            .creativeModeTab(() -> MAIN_GROUP, "Create: Alloyed");
 }

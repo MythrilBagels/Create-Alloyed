@@ -21,9 +21,7 @@ import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
 public class ModItems {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
-    // Materials
-    static { REGISTRATE.startSection(AllSections.MATERIALS); }
-
+    // Ingots
     /**
      * Mixing recipe can be found here:
      * @see MixingRecipes#BRONZE_INGOT
@@ -31,7 +29,7 @@ public class ModItems {
      */
     public static final ItemEntry<Item> BRONZE_INGOT = taggedIngredient(
             "bronze_ingot",
-            Crafting.metalIngotDecompactingRecipe(ModTags.Items.BRONZE_BLOCK, "bronze_block"),
+            Crafting.metalIngotDecompactingRecipe(ModTags.Items.BRONZE_BLOCK),
             ModTags.Items.BRONZE_INGOT
     );
 
@@ -41,10 +39,11 @@ public class ModItems {
      */
     public static final ItemEntry<Item> STEEL_INGOT = taggedIngredient(
             "steel_ingot",
-            Crafting.metalIngotDecompactingRecipe(ModTags.Items.STEEL_BLOCK, "steel_block"),
+            Crafting.metalIngotDecompactingRecipe(ModTags.Items.STEEL_BLOCK),
             ModTags.Items.STEEL_INGOT
     );
 
+    // Sheets
     /**
      * Pressing recipe can be found here:
      * @see PressingRecipes#BRONZE_SHEET
@@ -58,8 +57,6 @@ public class ModItems {
     public static final ItemEntry<Item> STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
 
     // Steel toolset.
-    static { REGISTRATE.startSection(AllSections.CURIOSITIES); }
-
     /**
      * Mechanical Crafting recipe can be found here:
      * @see MechanicalCraftingRecipes#STEEL_SWORD
@@ -130,7 +127,14 @@ public class ModItems {
             .recipe(Smithing.steelToolRecipe(Items.FISHING_ROD))
             .register();
 
+    // End Item Entries
+
     public static void register() {
+        Alloyed.getRegistrate().addToSection(BRONZE_INGOT, AllSections.MATERIALS);
+        Alloyed.getRegistrate().addToSection(BRONZE_SHEET, AllSections.MATERIALS);
+        Alloyed.getRegistrate().addToSection(STEEL_INGOT, AllSections.MATERIALS);
+        Alloyed.getRegistrate().addToSection(STEEL_SHEET, AllSections.MATERIALS);
+
         Alloyed.LOGGER.debug("Registering ModItems!");
     }
 

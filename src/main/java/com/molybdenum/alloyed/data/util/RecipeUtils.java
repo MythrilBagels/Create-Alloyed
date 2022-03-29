@@ -8,6 +8,7 @@ import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullBiConsumer;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.data.recipes.UpgradeRecipeBuilder;
 import net.minecraft.tags.Tag;
 import net.minecraft.world.item.Item;
@@ -15,29 +16,52 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 
+import java.util.Objects;
 import java.util.function.UnaryOperator;
 
 public class RecipeUtils {
 
     public static class Crafting {
 
-        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> metalBlockRecipe(Tag.Named<Item> metalTag, String ingotName) {
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> metalBlockRecipe(Tag.Named<Item> metalTag) {
             return (ctx, prov) -> {
                 ShapedRecipeBuilder.shaped(ctx.get(), 1)
                         .pattern("###")
                         .pattern("###")
                         .pattern("###")
                         .define('#', metalTag)
-                        .unlockedBy("has_" + ingotName, RegistrateRecipeProvider.has(metalTag))
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(metalTag))
                         .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
             };
         }
 
-        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> metalIngotDecompactingRecipe(Tag.Named<Item> blockTag, String blockName) {
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> stairs(ItemLike item) {
+            return (ctx, prov) -> {
+                ShapedRecipeBuilder.shaped(ctx.get())
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', item)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(item))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
+            };
+        }
+
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> slab(ItemLike item) {
+            return (ctx, prov) -> {
+                ShapedRecipeBuilder.shaped(ctx.get())
+                        .pattern("###")
+                        .define('#', item)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(item))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
+            };
+        }
+
+        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> metalIngotDecompactingRecipe(Tag.Named<Item> blockTag) {
             return (ctx, prov) -> {
                 ShapelessRecipeBuilder.shapeless(ctx.get(), 9)
                         .requires(blockTag)
-                        .unlockedBy("has_" + blockName, RegistrateRecipeProvider.has(blockTag))
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(blockTag))
                         .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_decompacting"));
             };
         }
@@ -63,12 +87,39 @@ public class RecipeUtils {
             return (ctx, prov) -> {
                 UpgradeRecipeBuilder
                         .smithing(Ingredient.of(ironToolEquivalent), Ingredient.of(ModTags.Items.STEEL_INGOT), ctx.get())
-                        .unlocks("has_steel_ingot", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
+                        .unlocks("has_ingredient", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
                         .save(prov, Alloyed.asResource("smithing/" + ctx.getName()));
             };
         }
 
     }
+
+    public static class Stonecutting {
+
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> customDefaultLang(Tag.Named<Item> source, int count, String sourceName) {
+            return (ctx, prov) -> {
+                SingleItemRecipeBuilder
+                        .stonecutting(Ingredient.of(source), ctx.get(), count)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(source))
+                        .save(prov, Alloyed.asResource("stonecutting/" + ctx.getName() + "_from_" + sourceName));
+            };
+        }
+
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> customDefaultLang(ItemLike source, int count, String sourceName) {
+            return (ctx, prov) -> {
+                SingleItemRecipeBuilder
+                        .stonecutting(Ingredient.of(source), ctx.get(), count)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(source))
+                        .save(prov, Alloyed.asResource("stonecutting/" + ctx.getName() + "_from_" + sourceName));
+            };
+        }
+
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> customDefaultLang(ItemLike source, int count) {
+            return customDefaultLang(source, count, Objects.requireNonNull(source.asItem().getRegistryName()).getPath());
+        }
+
+    }
+
 
     public static class Lang {
         public static final String[] AXE_PATTERN = {
@@ -96,5 +147,9 @@ public class RecipeUtils {
                 " # ",
                 " / "
         };
+    }
+
+    public static <T extends Block> void toFunction(DataGenContext<Block, T> ctx, RegistrateRecipeProvider prov, NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> factory) {
+        factory.accept(ctx, prov);
     }
 }

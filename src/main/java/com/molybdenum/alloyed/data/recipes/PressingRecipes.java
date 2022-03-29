@@ -2,7 +2,7 @@ package com.molybdenum.alloyed.data.recipes;
 
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
-import com.molybdenum.alloyed.data.registry.ModProcessingRecipes;
+import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.simibubi.create.AllRecipeTypes;
 import net.minecraft.data.DataGenerator;
 import org.jetbrains.annotations.NotNull;

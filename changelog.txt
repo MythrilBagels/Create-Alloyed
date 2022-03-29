@@ -1,5 +1,8 @@
-v1.2a:
-Bugfix Patch
-Fixed:
-- Broken loot tables
+v1.3:
+Added:
+-
+Changed:
+- Compat items are now found in the main creative tab (they are hidden when their mod isn't loaded)
+Removed:
+- Create: Alloyed compat creative tab
 #

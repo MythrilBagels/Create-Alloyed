@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.data.registry;
+package com.molybdenum.alloyed.data.providers;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.data.recipes.MixingRecipes;

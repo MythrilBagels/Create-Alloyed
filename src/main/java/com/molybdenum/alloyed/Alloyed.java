@@ -24,6 +24,7 @@ public class Alloyed {
 
     // Compat
     public static boolean isFarmersDelightLoaded = false;
+    public static boolean isCreateDecoLoaded = false;
 
     private static final NonNullLazyValue<CreateRegistrate> REGISTRATE = CreateRegistrate.lazy(MOD_ID);
 
@@ -32,15 +33,16 @@ public class Alloyed {
         MinecraftForge.EVENT_BUS.register(this);
 
         isFarmersDelightLoaded = ModList.get().isLoaded("farmersdelight");
+        isCreateDecoLoaded = ModList.get().isLoaded("createdeco");
 
         ModItems.register();
-        ModCompatItems.register();
         ModBlocks.register();
+        ModCompatItems.register();
         ModSounds.register(eventBus);
     }
 
     public static ResourceLocation asResource(String path) {
-        return new ResourceLocation(Alloyed.MOD_ID, path);
+        return new ResourceLocation(MOD_ID, path);
     }
 
     public static CreateRegistrate getRegistrate() {
