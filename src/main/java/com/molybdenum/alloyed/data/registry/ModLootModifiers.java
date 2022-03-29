@@ -68,7 +68,7 @@ public class ModLootModifiers extends GlobalLootModifierProvider {
         private final GlobalLootModifierSerializer<SteelShearsModifier> serializer;
 
         AllModifiers(Block block) {
-            this.location = Objects.requireNonNull(block.getRegistryName()).getPath() + "_shears";;
+            this.location = Objects.requireNonNull(block.getRegistryName()).getPath() + "_shears";
             this.block = block;
             this.serializer = new SteelShearsModifier.Serializer().setRegistryName(Alloyed.asResource(this.location));
         }

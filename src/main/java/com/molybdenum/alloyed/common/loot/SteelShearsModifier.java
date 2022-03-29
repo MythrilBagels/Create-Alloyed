@@ -24,7 +24,7 @@ public class SteelShearsModifier extends LootModifier {
     /**
      * Constructs a LootModifier.
      *
-     * @param conditionsIn the ILootConditions that need to be matched before the loot is modified.
+     * @param conditionsIn the LootItemConditions that need to be matched before the loot is modified.
      * @param final_loot the final loot that is dropped
      */
     public SteelShearsModifier(LootItemCondition[] conditionsIn, Item final_loot) {
@@ -38,7 +38,7 @@ public class SteelShearsModifier extends LootModifier {
         // Remove all unwanted loot
         generatedLoot.removeIf(ctx -> ctx.getItem() != FINAL_LOOT);
         // Add wanted loot
-        generatedLoot.add(new ItemStack(FINAL_LOOT, 1));
+        if (generatedLoot.isEmpty()) generatedLoot.add(new ItemStack(FINAL_LOOT, 1));
         return generatedLoot;
     }
 

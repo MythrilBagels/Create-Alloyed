@@ -1,9 +1,5 @@
-0.1c:
+v1.2a:
+Bugfix Patch
 Fixed:
-- Metal blocks having a broken recipe
-Changed:
-- Steel shears durability (buffed to 750)
-- Steel fishing rod durability (buffed to 512)
-Added:
-- Advancements for obtaining Bronze, Steel, and the Bronze Bell
+- Broken loot tables
 #
