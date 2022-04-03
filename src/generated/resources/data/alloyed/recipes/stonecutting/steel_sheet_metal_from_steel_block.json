@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:storage_blocks/steel"
+  },
+  "result": "alloyed:steel_sheet_metal",
+  "count": 4
+}

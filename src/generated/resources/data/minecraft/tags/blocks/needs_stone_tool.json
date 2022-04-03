@@ -10,6 +10,8 @@
     "alloyed:waxed_weathered_bronze_block",
     "alloyed:waxed_oxidized_bronze_block",
     "alloyed:bronze_bell",
-    "alloyed:steel_block"
+    "alloyed:steel_block",
+    "alloyed:steel_door",
+    "alloyed:locked_steel_door"
   ]
 }

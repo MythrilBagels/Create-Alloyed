@@ -187,6 +187,7 @@ dependencies {
 
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     implementation fg.deobf("curse.maven:farmersdelight-398521:3615366") // Farmers Delight 1.03
+    implementation fg.deobf("curse.maven:createdeco-509285:3634963") // Create Deco
     // ----------------------
 
     implementation fg.deobf("com.simibubi.create:Create:mc1.18.1_v${create_version}")
