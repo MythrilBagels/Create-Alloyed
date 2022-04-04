@@ -7,6 +7,7 @@ import com.molybdenum.alloyed.common.items.ModItemGroup;
 import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
 import com.simibubi.create.AllInteractionBehaviours;
+import com.simibubi.create.AllTags;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.content.contraptions.components.structureMovement.interaction.DoorMovingInteraction;
 import com.simibubi.create.foundation.block.CopperBlockSet;
@@ -14,6 +15,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.BlockTags;
@@ -161,6 +163,24 @@ public class ModBlocks {
             .onRegister(CreateRegistrate.connectedTextures(SteelSheetSlabCTBehaviour::new))
             .register();
 
+    public static final BlockEntry<IronBarsBlock> STEEL_BARS = REGISTRATE
+            .block("steel_bars", IronBarsBlock::new)
+            .initialProperties(() -> Blocks.IRON_BARS)
+            .properties(ModBlocks::steelProperties)
+            .blockstate(BlockStateUtils.Unique::steelBarsBlockstate)
+            .tag(BlockTags.WALLS)
+            .item()
+            .model((ctx, prov) -> ModelUtils.customModel(ctx, prov, "block/steel_bars/block"))
+            .tag(ItemTags.WALLS).build()
+            .addLayer(() -> RenderType::cutoutMipped)
+            .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
+            .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(ctx.get(), 16)
+                    .pattern("###")
+                    .pattern("###")
+                    .define('#', ModTags.Items.STEEL_INGOT)
+                    .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
+                    .save(prov, Alloyed.asResource("crafting/" + ctx.getName())))
+            .register();
 
     public static void register() {
         Alloyed.getRegistrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
