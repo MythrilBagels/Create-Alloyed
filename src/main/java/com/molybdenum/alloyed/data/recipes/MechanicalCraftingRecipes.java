@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed.data.recipes;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.common.registry.ModCompatItems;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
@@ -34,6 +35,13 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
             .patternLine("# I")
             .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
             .key('I', Items.STRING)
+    );
+    public GeneratedRecipe STEEL_KNIFE = create(ModCompatItems.STEEL_KNIFE::get).recipe(b -> b
+            .patternLine(" #")
+            .patternLine("/ ")
+            .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
+            .key('/', Ingredient.of(ModTags.Generic.STICK))
+            .whenModLoaded("farmersdelight")
     );
 
     public MechanicalCraftingRecipes(DataGenerator generator) {
