@@ -1,13 +1,5 @@
-v1.3:
-Added:
- - Steel Catwalk (C: Deco compat)
- - Steel Sheet Metal (Block, Stairs, and Slab)
- - Steel Sheet Metal Vertical Slab (C: Deco compat)
- - Steel Bars
- - Steel Mesh Fence (C: Deco compat)
- - Steel Door (Normal and Locked)
-Changed:
- - Steel Blast Resistance (buffed to 14)
-Removed:
- - 'Create: Alloyed Compat' item group (compat items will now be added to the normal item group, and hidden if their mod isn't loaded)
+v1.3a
+Fixed:
+- Steel Sheet Stairs recipe only returning one instead of four
+- Steel Sheet Slab recipe only returning one instead of six
 #

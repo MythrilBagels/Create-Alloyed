@@ -9,6 +9,7 @@
     }
   },
   "result": {
-    "item": "alloyed:steel_sheet_slab"
+    "item": "alloyed:steel_sheet_slab",
+    "count": 6
   }
 }

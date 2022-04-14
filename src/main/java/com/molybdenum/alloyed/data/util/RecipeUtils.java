@@ -37,7 +37,7 @@ public class RecipeUtils {
 
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> stairs(ItemLike item) {
             return (ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get())
+                ShapedRecipeBuilder.shaped(ctx.get(), 4)
                         .pattern("#  ")
                         .pattern("## ")
                         .pattern("###")
@@ -49,7 +49,7 @@ public class RecipeUtils {
 
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> slab(ItemLike item) {
             return (ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get())
+                ShapedRecipeBuilder.shaped(ctx.get(), 6)
                         .pattern("###")
                         .define('#', item)
                         .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(item))

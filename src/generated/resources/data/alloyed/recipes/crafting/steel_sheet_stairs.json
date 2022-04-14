@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "alloyed:steel_sheet_stairs"
+    "item": "alloyed:steel_sheet_stairs",
+    "count": 4
   }
 }
