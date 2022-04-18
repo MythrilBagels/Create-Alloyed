@@ -4,66 +4,65 @@ import com.molybdenum.alloyed.Alloyed;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.Tags;
 
 public class ModTags {
 
     public static class Items {
         // Get steel shears working
-        public static final Tag.Named<Item> STEEL_SHEARS = createForgeTag("shears");
+        public static final TagKey<Item> STEEL_SHEARS = createForgeTag("shears");
 
         // Compat for other mods' ingots
-        public static final Tag.Named<Item> BRONZE_INGOT = createForgeTag("ingots/bronze");
-        public static final Tag.Named<Item> STEEL_INGOT = createForgeTag("ingots/steel");
+        public static final TagKey<Item> BRONZE_INGOT = createForgeTag("ingots/bronze");
+        public static final TagKey<Item> STEEL_INGOT = createForgeTag("ingots/steel");
 
         // Compat for other mods' sheets/plates
-        public static final Tag.Named<Item> BRONZE_SHEET = createForgeTag("plates/bronze");
-        public static final Tag.Named<Item> STEEL_SHEET = createForgeTag("plates/steel");
+        public static final TagKey<Item> BRONZE_SHEET = createForgeTag("plates/bronze");
+        public static final TagKey<Item> STEEL_SHEET = createForgeTag("plates/steel");
 
         // Compat for other mods' ingot blocks
-        public static final Tag.Named<Item> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
-        public static final Tag.Named<Item> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
+        public static final TagKey<Item> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
+        public static final TagKey<Item> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
 
         // Compat for other mods' knives
-        public static final Tag.Named<Item> STEEL_KNIFE = createForgeTag("tools/knives");
+        public static final TagKey<Item> STEEL_KNIFE = createForgeTag("tools/knives");
 
         // Compat for Farmer's Delight's knives
-        public static final Tag.Named<Item> STEEL_KNIFE_FD = createSpecialTag("farmersdelight","tools/knives");
+        public static final TagKey<Item> STEEL_KNIFE_FD = createSpecialTag("farmersdelight","tools/knives");
 
         // All bronze instruments
-        public static final Tag.Named<Item> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
+        public static final TagKey<Item> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
 
-        private static Tag.Named<Item> createTag(String name) {
-            return ItemTags.bind(Alloyed.asResource(name).toString());
+        private static TagKey<Item> createTag(String name) {
+            return ItemTags.create(Alloyed.asResource(name));
         }
 
-        private static Tag.Named<Item> createForgeTag(String name) {
-            return ItemTags.bind(new ResourceLocation("forge", name).toString());
+        private static TagKey<Item> createForgeTag(String name) {
+            return ItemTags.create(new ResourceLocation("forge", name));
         }
 
-        private static Tag.Named<Item> createSpecialTag(String modId, String path) {
-            return ItemTags.bind(new ResourceLocation(modId, path).toString());
+        private static TagKey<Item> createSpecialTag(String modId, String path) {
+            return ItemTags.create(new ResourceLocation(modId, path));
         }
     }
 
     public static class Blocks {
 
         // Compat for other mods' ingot blocks
-        public static final Tag.Named<Block> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
-        public static final Tag.Named<Block> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
+        public static final TagKey<Block> BRONZE_BLOCK = createForgeTag("storage_blocks/bronze");
+        public static final TagKey<Block> STEEL_BLOCK = createForgeTag("storage_blocks/steel");
 
         // All bronze instruments
-        public static final Tag.Named<Block> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
+        public static final TagKey<Block> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
 
-        private static Tag.Named<Block> createTag(String name) {
-            return BlockTags.bind(Alloyed.asResource(name).toString());
+        private static TagKey<Block> createTag(String name) {
+            return BlockTags.create(Alloyed.asResource(name));
         }
 
-        private static Tag.Named<Block> createForgeTag(String name) {
-            return BlockTags.bind(new ResourceLocation("forge", name).toString());
+        private static TagKey<Block> createForgeTag(String name) {
+            return BlockTags.create(new ResourceLocation("forge", name));
         }
     }
 
@@ -71,15 +70,15 @@ public class ModTags {
         // Used for recipes
 
         // Ingots
-        public static final Tag.Named<Item> ZINC_INGOT = createForgeTag("ingots/zinc");
+        public static final TagKey<Item> ZINC_INGOT = createForgeTag("ingots/zinc");
         // Nuggets
-        public static final Tag.Named<Item> ZINC_NUGGET = createForgeTag("nuggets/zinc");
+        public static final TagKey<Item> ZINC_NUGGET = createForgeTag("nuggets/zinc");
         // Misc
-        public static final Tag.Named<Item> STICK = createForgeTag("rods/wooden");
+        public static final TagKey<Item> STICK = createForgeTag("rods/wooden");
 
 
-        private static Tag.Named<Item> createForgeTag(String name) {
-            return ItemTags.bind(new ResourceLocation("forge", name).toString());
+        private static TagKey<Item> createForgeTag(String name) {
+            return ItemTags.create(new ResourceLocation("forge", name));
         }
     }
 

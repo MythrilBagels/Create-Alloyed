@@ -21,6 +21,7 @@ import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
@@ -205,7 +206,7 @@ public class ModBlocks {
     private static BlockEntry<DoorBlock> metalDoorBlock(String name,
                                                         String path,
                                                         String lang,
-                                                        Tag.Named<Item> tag,
+                                                        TagKey<Item> tag,
                                                         boolean locked,
                                                         @Nullable BlockEntry<DoorBlock> normalDoor) {
         return REGISTRATE

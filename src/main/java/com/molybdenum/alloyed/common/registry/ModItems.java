@@ -14,6 +14,7 @@ import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullBiConsumer;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullFunction;
 import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 
 import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
@@ -139,7 +140,7 @@ public class ModItems {
     }
 
     @SafeVarargs
-    public static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, Tag.Named<Item>... tags) {
+    public static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, TagKey<Item>... tags) {
         return REGISTRATE
                 .item(name, factory)
                 .model((ctx, prov) -> prov.handheld(ctx::getEntry, prov.modLoc("item/" + name)))
@@ -148,7 +149,7 @@ public class ModItems {
     }
 
     @SafeVarargs
-    public static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> recipe, Tag.Named<Item>... tags) {
+    public static <T extends Item> ItemEntry<T> handheldItem(String name, NonNullFunction<Item.Properties, T> factory, NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> recipe, TagKey<Item>... tags) {
         return REGISTRATE
                 .item(name, factory)
                 .model((ctx, prov) -> prov.handheld(ctx::getEntry, prov.modLoc("item/" + name)))
@@ -158,7 +159,7 @@ public class ModItems {
     }
 
     @SafeVarargs
-    private static ItemEntry<Item> taggedIngredient(String name, Tag.Named<Item>... tags) {
+    private static ItemEntry<Item> taggedIngredient(String name, TagKey<Item>... tags) {
         return REGISTRATE
                 .item(name, Item::new)
                 .tag(tags)
@@ -166,7 +167,7 @@ public class ModItems {
     }
 
     @SafeVarargs
-    private static ItemEntry<Item> taggedIngredient(String name, NonNullBiConsumer<DataGenContext<Item, Item>, RegistrateRecipeProvider> recipe, Tag.Named<Item>... tags) {
+    private static ItemEntry<Item> taggedIngredient(String name, NonNullBiConsumer<DataGenContext<Item, Item>, RegistrateRecipeProvider> recipe, TagKey<Item>... tags) {
         return REGISTRATE
                 .item(name, Item::new)
                 .tag(tags)

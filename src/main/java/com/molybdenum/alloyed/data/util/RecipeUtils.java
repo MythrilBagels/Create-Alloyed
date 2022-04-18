@@ -11,6 +11,7 @@ import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.data.recipes.UpgradeRecipeBuilder;
 import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -23,7 +24,7 @@ public class RecipeUtils {
 
     public static class Crafting {
 
-        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> metalBlockRecipe(Tag.Named<Item> metalTag) {
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> metalBlockRecipe(TagKey<Item> metalTag) {
             return (ctx, prov) -> {
                 ShapedRecipeBuilder.shaped(ctx.get(), 1)
                         .pattern("###")
@@ -57,7 +58,7 @@ public class RecipeUtils {
             };
         }
 
-        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> metalIngotDecompactingRecipe(Tag.Named<Item> blockTag) {
+        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> metalIngotDecompactingRecipe(TagKey<Item> blockTag) {
             return (ctx, prov) -> {
                 ShapelessRecipeBuilder.shapeless(ctx.get(), 9)
                         .requires(blockTag)
@@ -96,7 +97,7 @@ public class RecipeUtils {
 
     public static class Stonecutting {
 
-        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> customDefaultLang(Tag.Named<Item> source, int count, String sourceName) {
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> customDefaultLang(TagKey<Item> source, int count, String sourceName) {
             return (ctx, prov) -> {
                 SingleItemRecipeBuilder
                         .stonecutting(Ingredient.of(source), ctx.get(), count)

@@ -11,6 +11,7 @@ import com.simibubi.create.repack.registrate.util.nullness.NonNullBiConsumer;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullConsumer;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -43,7 +44,7 @@ public class PostRegistrationHelper {
         });
     }
 
-    public static <T extends Block, P extends RegistrateProvider> void addMetalBlockRecipe(String name, Tag.Named<Item> metalItem, String ingotName, String path) {
+    public static <T extends Block, P extends RegistrateProvider> void addMetalBlockRecipe(String name, TagKey<Item> metalItem, String ingotName, String path) {
         BlockEntry<Block> blockEntry = (BlockEntry<Block>) REGISTRATE.get(name, Block.class);
 
         REGISTRATE.setDataGenerator(name, Block.class, ProviderType.RECIPE, prov -> {

@@ -1,4 +1,4 @@
-## Create: Alloyed v1.3a <br/> 
+## Create: Alloyed v1.3b <br/> 
 ### Fixed: <br/> 
 - Steel Sheet Stairs recipe only returning one instead of four <br/> 
 - Steel Sheet Slab recipe only returning one instead of six <br/> 
