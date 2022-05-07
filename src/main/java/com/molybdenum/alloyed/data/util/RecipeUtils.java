@@ -84,10 +84,10 @@ public class RecipeUtils {
 
     public static class Smithing {
 
-        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> steelToolRecipe(ItemLike ironToolEquivalent) {
+        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> steelItemRecipe(ItemLike ironEquivalent) {
             return (ctx, prov) -> {
                 UpgradeRecipeBuilder
-                        .smithing(Ingredient.of(ironToolEquivalent), Ingredient.of(ModTags.Items.STEEL_INGOT), ctx.get())
+                        .smithing(Ingredient.of(ironEquivalent), Ingredient.of(ModTags.Items.STEEL_INGOT), ctx.get())
                         .unlocks("has_ingredient", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
                         .save(prov, Alloyed.asResource("smithing/" + ctx.getName()));
             };

@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.common.items.ModArmourMaterials;
 import com.molybdenum.alloyed.common.items.ModItemGroup;
 import com.molybdenum.alloyed.common.items.ModItemTiers;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
@@ -13,8 +14,9 @@ import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
 import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullBiConsumer;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullFunction;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 
 import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
@@ -65,7 +67,7 @@ public class ModItems {
     public static final ItemEntry<SwordItem> STEEL_SWORD = handheldItem(
             "steel_sword", 
             properties -> new SwordItem(ModItemTiers.STEEL, 3, -2.4F, properties),
-            Smithing.steelToolRecipe(Items.IRON_SWORD)
+            Smithing.steelItemRecipe(Items.IRON_SWORD)
     );
 
     /**
@@ -75,7 +77,7 @@ public class ModItems {
     public static final ItemEntry<PickaxeItem> STEEL_PICKAXE = handheldItem(
             "steel_pickaxe", 
             properties -> new PickaxeItem(ModItemTiers.STEEL, 1, -2.8F,properties),
-            Smithing.steelToolRecipe(Items.IRON_PICKAXE)
+            Smithing.steelItemRecipe(Items.IRON_PICKAXE)
     );
 
     /**
@@ -85,7 +87,7 @@ public class ModItems {
     public static final ItemEntry<AxeItem> STEEL_AXE = handheldItem(
             "steel_axe", 
             properties -> new AxeItem(ModItemTiers.STEEL, 5.0F, -3.0F,properties),
-            Smithing.steelToolRecipe(Items.IRON_AXE)
+            Smithing.steelItemRecipe(Items.IRON_AXE)
     );
 
     /**
@@ -95,7 +97,7 @@ public class ModItems {
     public static final ItemEntry<ShovelItem> STEEL_SHOVEL = handheldItem(
             "steel_shovel", 
             properties -> new ShovelItem(ModItemTiers.STEEL, 1.5F, -3.0F, properties),
-            Smithing.steelToolRecipe(Items.IRON_SHOVEL)
+            Smithing.steelItemRecipe(Items.IRON_SHOVEL)
     );
 
     /**
@@ -105,7 +107,7 @@ public class ModItems {
     public static final ItemEntry<HoeItem> STEEL_HOE = handheldItem(
             "steel_hoe", 
             properties -> new HoeItem(ModItemTiers.STEEL, -3, 0.0F, properties),
-            Smithing.steelToolRecipe(Items.IRON_HOE)
+            Smithing.steelItemRecipe(Items.IRON_HOE)
     );
 
     /**
@@ -115,7 +117,7 @@ public class ModItems {
     public static final ItemEntry<ShearsItem> STEEL_SHEARS = REGISTRATE
             .item("steel_shears", properties -> new ShearsItem(properties.durability(750)))
             .tag(ModTags.Items.STEEL_SHEARS)
-            .recipe(Smithing.steelToolRecipe(Items.SHEARS))
+            .recipe(Smithing.steelItemRecipe(Items.SHEARS))
             .register();
 
     /**
@@ -125,7 +127,44 @@ public class ModItems {
     public static final ItemEntry<FishingRodItem> STEEL_FISHING_ROD = REGISTRATE
             .item("steel_fishing_rod", properties -> new FishingRodItem(properties.durability(512)))
             .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/steel_fishing_rod")))
-            .recipe(Smithing.steelToolRecipe(Items.FISHING_ROD))
+            .recipe(Smithing.steelItemRecipe(Items.FISHING_ROD))
+            .register();
+
+    // Steel Armour
+    /**
+     * Mechanical Crafting recipe can be found here:
+     * @see MechanicalCraftingRecipes#STEEL_HELMET
+     */
+    public static final ItemEntry<ArmorItem> STEEL_HELMET = REGISTRATE
+            .item("steel_helmet", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.HEAD, properties))
+            .recipe(Smithing.steelItemRecipe(Items.IRON_HELMET))
+            .register();
+
+    /**
+     * Mechanical Crafting recipe can be found here:
+     * @see MechanicalCraftingRecipes#STEEL_CHESTPLATE
+     */
+    public static final ItemEntry<ArmorItem> STEEL_CHESTPLATE = REGISTRATE
+            .item("steel_chestplate", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.CHEST, properties))
+            .recipe(Smithing.steelItemRecipe(Items.IRON_CHESTPLATE))
+            .register();
+
+    /**
+     * Mechanical Crafting recipe can be found here:
+     * @see MechanicalCraftingRecipes#STEEL_LEGGINGS
+     */
+    public static final ItemEntry<ArmorItem> STEEL_LEGGINGS = REGISTRATE
+            .item("steel_leggings", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.LEGS, properties))
+            .recipe(Smithing.steelItemRecipe(Items.IRON_LEGGINGS))
+            .register();
+
+    /**
+     * Mechanical Crafting recipe can be found here:
+     * @see MechanicalCraftingRecipes#STEEL_BOOTS
+     */
+    public static final ItemEntry<ArmorItem> STEEL_BOOTS = REGISTRATE
+            .item("steel_boots", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.FEET, properties))
+            .recipe(Smithing.steelItemRecipe(Items.IRON_BOOTS))
             .register();
 
     // End Item Entries

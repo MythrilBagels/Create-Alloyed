@@ -1,5 +1,9 @@
-v1.3a
-Fixed:
-- Steel Sheet Stairs recipe only returning one instead of four
-- Steel Sheet Slab recipe only returning one instead of six
+v1.3c
+Added:
+- Steel Trapdoor
+- Steel Armour
+Changed:
+- Steel Door texture
+- Steel Door (normal and locked) item textures
+- Bronze Bell model and texture
 #

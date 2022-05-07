@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed.data.recipes;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.molybdenum.alloyed.common.registry.ModCompatItems;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
@@ -19,6 +20,7 @@ import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
 
 public class MechanicalCraftingRecipes extends CreateRecipeProvider {
 
+    // Steel toolset
     public GeneratedRecipe STEEL_AXE = create(ModItems.STEEL_AXE::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.AXE_PATTERN));
     public GeneratedRecipe STEEL_HOE = create(ModItems.STEEL_HOE::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.HOE_PATTERN));
     public GeneratedRecipe STEEL_PICKAXE = create(ModItems.STEEL_PICKAXE::get).recipe(MechanicalCrafting.steelToolRecipe(Lang.PICKAXE_PATTERN));
@@ -42,6 +44,37 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
             .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
             .key('/', Ingredient.of(ModTags.Generic.STICK))
             .whenModLoaded("farmersdelight")
+    );
+
+    // Steel armour
+    public GeneratedRecipe STEEL_HELMET = create(ModItems.STEEL_HELMET::get).recipe(b -> b
+            .patternLine("###")
+            .patternLine("# #")
+            .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
+    );
+    public GeneratedRecipe STEEL_CHESTPLATE = create(ModItems.STEEL_CHESTPLATE::get).recipe(b -> b
+            .patternLine("# #")
+            .patternLine("###")
+            .patternLine("###")
+            .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
+    );
+    public GeneratedRecipe STEEL_LEGGINGS = create(ModItems.STEEL_LEGGINGS::get).recipe(b -> b
+            .patternLine("###")
+            .patternLine("# #")
+            .patternLine("# #")
+            .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
+    );
+    public GeneratedRecipe STEEL_BOOTS = create(ModItems.STEEL_BOOTS::get).recipe(b -> b
+            .patternLine("# #")
+            .patternLine("# #")
+            .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
+    );
+
+    // Misc
+    public GeneratedRecipe STEEL_TRAPDOOR = create(ModBlocks.STEEL_TRAPDOOR::get).recipe(b -> b
+            .patternLine("##")
+            .patternLine("##")
+            .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
     );
 
     public MechanicalCraftingRecipes(DataGenerator generator) {

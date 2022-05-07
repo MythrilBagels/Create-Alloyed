@@ -183,6 +183,23 @@ public class ModBlocks {
                     .save(prov, Alloyed.asResource("crafting/" + ctx.getName())))
             .register();
 
+    public static final BlockEntry<TrapDoorBlock> STEEL_TRAPDOOR = REGISTRATE
+            .block("steel_trapdoor", TrapDoorBlock::new)
+            .initialProperties(() -> Blocks.IRON_TRAPDOOR)
+            .properties(ModBlocks::steelProperties)
+            .blockstate((ctx, prov) ->
+                    prov.trapdoorBlock(ctx.get(), prov.modLoc("block/steel_trapdoor"), true))
+            .tag(BlockTags.TRAPDOORS)
+            .item()
+            .model((ctx,prov) ->
+                    prov.withExistingParent(ctx.getName(), prov.modLoc("block/steel_trapdoor_bottom"))
+            )
+            .tag(ItemTags.TRAPDOORS)
+            .build()
+            .addLayer(() -> RenderType::cutoutMipped)
+            .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
+            .register();
+
     public static void register() {
         Alloyed.getRegistrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
 
