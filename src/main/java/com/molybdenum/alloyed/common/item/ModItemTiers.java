@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.common.items;
+package com.molybdenum.alloyed.common.item;
 
 import com.google.common.base.Suppliers;
 import com.molybdenum.alloyed.common.registry.ModItems;

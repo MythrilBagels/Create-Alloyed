@@ -70,13 +70,6 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
             .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
     );
 
-    // Misc
-    public GeneratedRecipe STEEL_TRAPDOOR = create(ModBlocks.STEEL_TRAPDOOR::get).recipe(b -> b
-            .patternLine("##")
-            .patternLine("##")
-            .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
-    );
-
     public MechanicalCraftingRecipes(DataGenerator generator) {
         super(generator);
     }

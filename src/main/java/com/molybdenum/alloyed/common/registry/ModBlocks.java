@@ -1,9 +1,10 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.common.block.SteelDoorBlock;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetMetalCTBehaviour;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetSlabCTBehaviour;
-import com.molybdenum.alloyed.common.items.ModItemGroup;
+import com.molybdenum.alloyed.common.item.ModItemGroup;
 import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
 import com.simibubi.create.AllInteractionBehaviours;
@@ -20,7 +21,6 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -97,11 +97,11 @@ public class ModBlocks {
             .lang("Block of Steel")
             .register();
 
-    public static final BlockEntry<DoorBlock> STEEL_DOOR =
-            steelDoorBlock("steel_door", "Steel Door", false, null);
+    public static final BlockEntry<SteelDoorBlock> STEEL_DOOR =
+            steelDoorBlock(false, null);
 
-    public static final BlockEntry<DoorBlock> LOCKED_STEEL_DOOR =
-            steelDoorBlock("locked_steel_door", "Locked Steel Door", true, STEEL_DOOR);
+    public static final BlockEntry<SteelDoorBlock> LOCKED_STEEL_DOOR =
+            steelDoorBlock(true, STEEL_DOOR);
 
     public static final BlockEntry<Block> STEEL_SHEET_METAL = REGISTRATE
             .block("steel_sheet_metal",Block::new)
@@ -198,6 +198,12 @@ public class ModBlocks {
             .build()
             .addLayer(() -> RenderType::cutoutMipped)
             .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
+            .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(ctx.get(), 16)
+                    .pattern("##")
+                    .pattern("##")
+                    .define('#', ModTags.Items.STEEL_INGOT)
+                    .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
+                    .save(prov, Alloyed.asResource("crafting/" + ctx.getName())))
             .register();
 
     public static void register() {
@@ -215,19 +221,15 @@ public class ModBlocks {
         PostRegistrationHelper.addMetalBlockRecipe("bronze_block", ModTags.Items.BRONZE_INGOT, "bronze_ingot", "bronze/");
     }
 
-    private static BlockEntry<DoorBlock> steelDoorBlock(
-            String name, String lang, boolean locked, @Nullable BlockEntry<DoorBlock> normalDoor) {
-        return metalDoorBlock(name, "block/" + (locked ? "locked_" : "") + "steel_door/", lang, ModTags.Items.STEEL_INGOT, locked, normalDoor);
-    }
+    private static BlockEntry<SteelDoorBlock> steelDoorBlock(boolean locked,
+                                                        @Nullable BlockEntry<SteelDoorBlock> normalDoor) {
 
-    private static BlockEntry<DoorBlock> metalDoorBlock(String name,
-                                                        String path,
-                                                        String lang,
-                                                        TagKey<Item> tag,
-                                                        boolean locked,
-                                                        @Nullable BlockEntry<DoorBlock> normalDoor) {
+
+        String path = "block/" + (locked ? "locked_" : "") + "steel_door/";
+        String name = (locked ? "locked_" : "") + "steel_door";
+
         return REGISTRATE
-                .block(name, DoorBlock::new)
+                .block(name, SteelDoorBlock::new)
                 .initialProperties(locked ? Material.METAL : Material.NETHER_WOOD)
                 .properties(properties -> properties
                         .noOcclusion()
@@ -246,8 +248,8 @@ public class ModBlocks {
                                 .pattern("##")
                                 .pattern("##")
                                 .pattern("##")
-                                .define('#', tag)
-                                .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(tag))
+                                .define('#', ModTags.Items.STEEL_INGOT)
+                                .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
                                 .save(prov, Alloyed.asResource("crafting/" + name));
                     } else {
                         DoorBlock door = Objects.requireNonNull(normalDoor).get();
@@ -273,7 +275,6 @@ public class ModBlocks {
                                     )));
                     lootTable.add(door, tableBuilder.withPool(poolBuilder));
                 })
-                .lang(lang)
                 .onRegister(door -> {
                     if (!locked) AllInteractionBehaviours.addInteractionBehaviour(door, DoorMovingInteraction::new);
                 })

@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.common.items;
+package com.molybdenum.alloyed.common.item;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.registry.ModItems;
@@ -12,7 +12,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmourMaterials implements ArmorMaterial {
-    STEEL("steel", 36, new int[]{3, 6, 9, 3}, 11, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5F, 0.2F, () -> {
+    STEEL("steel", 31, new int[]{3, 6, 9, 3}, 10, SoundEvents.ARMOR_EQUIP_CHAIN, 2F, 0.2F, () -> {
         return Ingredient.of(ModItems.STEEL_INGOT.get());
     });
 

@@ -1,9 +1,9 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.common.items.ModArmourMaterials;
-import com.molybdenum.alloyed.common.items.ModItemGroup;
-import com.molybdenum.alloyed.common.items.ModItemTiers;
+import com.molybdenum.alloyed.common.item.ModArmourMaterials;
+import com.molybdenum.alloyed.common.item.ModItemGroup;
+import com.molybdenum.alloyed.common.item.ModItemTiers;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
 import com.molybdenum.alloyed.data.recipes.MixingRecipes;
 import com.molybdenum.alloyed.data.recipes.PressingRecipes;
@@ -14,7 +14,6 @@ import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
 import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullBiConsumer;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullFunction;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;

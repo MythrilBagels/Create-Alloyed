@@ -7,7 +7,7 @@ import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetVertC
 import com.molybdenum.alloyed.common.compat.hidden.HiddenBlock;
 import com.molybdenum.alloyed.common.compat.hidden.HiddenBlockItem;
 import com.molybdenum.alloyed.common.compat.hidden.HiddenSlabBlock;
-import com.molybdenum.alloyed.common.items.ModItemGroup;
+import com.molybdenum.alloyed.common.item.ModItemGroup;
 import com.molybdenum.alloyed.data.util.BlockStateUtils;
 import com.molybdenum.alloyed.data.util.ModelUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
