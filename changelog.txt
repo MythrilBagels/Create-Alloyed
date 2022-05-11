@@ -6,4 +6,7 @@ Changed:
 - Steel Door texture
 - Steel Door (normal and locked) item textures
 - Bronze Bell model and texture
+- Lots of recipes relating to steel blocks
+Fixed:
+- Steel Door using the wooden door sound effect
 #
