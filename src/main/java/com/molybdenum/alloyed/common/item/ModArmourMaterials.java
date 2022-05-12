@@ -12,7 +12,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmourMaterials implements ArmorMaterial {
-    STEEL("steel", 31, new int[]{3, 5, 7, 3}, 10, SoundEvents.ARMOR_EQUIP_CHAIN, 1F, 0.1F, () -> {
+    STEEL("steel", 30, new int[]{3, 5, 7, 3}, 10, SoundEvents.ARMOR_EQUIP_CHAIN, 1F, 0.1F, () -> {
         return Ingredient.of(ModItems.STEEL_INGOT.get());
     });
 
