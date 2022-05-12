@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:iron_chestplate"
+    "item": "minecraft:chainmail_chestplate"
   },
   "addition": {
     "tag": "forge:ingots/steel"

@@ -136,7 +136,7 @@ public class ModItems {
      */
     public static final ItemEntry<ArmorItem> STEEL_HELMET = REGISTRATE
             .item("steel_helmet", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.HEAD, properties))
-            .recipe(Smithing.steelItemRecipe(Items.IRON_HELMET))
+            .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_HELMET))
             .register();
 
     /**
@@ -145,7 +145,7 @@ public class ModItems {
      */
     public static final ItemEntry<ArmorItem> STEEL_CHESTPLATE = REGISTRATE
             .item("steel_chestplate", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.CHEST, properties))
-            .recipe(Smithing.steelItemRecipe(Items.IRON_CHESTPLATE))
+            .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_CHESTPLATE))
             .register();
 
     /**
@@ -154,7 +154,7 @@ public class ModItems {
      */
     public static final ItemEntry<ArmorItem> STEEL_LEGGINGS = REGISTRATE
             .item("steel_leggings", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.LEGS, properties))
-            .recipe(Smithing.steelItemRecipe(Items.IRON_LEGGINGS))
+            .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_LEGGINGS))
             .register();
 
     /**
@@ -163,7 +163,7 @@ public class ModItems {
      */
     public static final ItemEntry<ArmorItem> STEEL_BOOTS = REGISTRATE
             .item("steel_boots", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.FEET, properties))
-            .recipe(Smithing.steelItemRecipe(Items.IRON_BOOTS))
+            .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_BOOTS))
             .register();
 
     // End Item Entries

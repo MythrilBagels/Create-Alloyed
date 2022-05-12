@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:iron_boots"
+    "item": "minecraft:chainmail_boots"
   },
   "addition": {
     "tag": "forge:ingots/steel"

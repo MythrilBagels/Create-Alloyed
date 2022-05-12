@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:iron_helmet"
+    "item": "minecraft:chainmail_helmet"
   },
   "addition": {
     "tag": "forge:ingots/steel"

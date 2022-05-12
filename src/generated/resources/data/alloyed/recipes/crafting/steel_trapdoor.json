@@ -1,5 +1,5 @@
 {
-  "type": "create:mechanical_crafting",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "##",
     "##"
@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "alloyed:steel_trapdoor"
-  },
-  "acceptMirrored": true
+    "item": "alloyed:steel_trapdoor",
+    "count": 16
+  }
 }

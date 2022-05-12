@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:iron_leggings"
+    "item": "minecraft:chainmail_leggings"
   },
   "addition": {
     "tag": "forge:ingots/steel"
