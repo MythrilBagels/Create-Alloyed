@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "alloyed:steel_mesh_fence"
+          "name": "alloyed:steel_ladder"
         }
       ],
       "conditions": [

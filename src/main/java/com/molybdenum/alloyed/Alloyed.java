@@ -39,7 +39,7 @@ public class Alloyed {
         ModItems.register();
         ModBlocks.register();
         ModCompatItems.register();
-        ModCompatBlocks.register();
+        //ModCompatBlocks.register();
         ModSounds.register(eventBus);
     }
 

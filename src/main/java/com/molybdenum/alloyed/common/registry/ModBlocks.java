@@ -9,11 +9,16 @@ import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
 import com.simibubi.create.AllInteractionBehaviours;
 import com.simibubi.create.AllTags;
+import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.content.contraptions.components.structureMovement.interaction.DoorMovingInteraction;
+import com.simibubi.create.content.curiosities.deco.MetalLadderBlock;
 import com.simibubi.create.foundation.block.CopperBlockSet;
+import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.repack.registrate.builders.BlockBuilder;
 import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
+import com.simibubi.create.repack.registrate.util.DataIngredient;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.client.renderer.RenderType;
@@ -99,10 +104,12 @@ public class ModBlocks {
             .register();
 
     public static final BlockEntry<SteelDoorBlock> STEEL_DOOR =
-            steelDoorBlock(false, null);
+            steelDoorBlock(false, null)
+                    .onRegister(AllInteractionBehaviours.interactionBehaviour(new DoorMovingInteraction()))
+                    .register();
 
     public static final BlockEntry<SteelDoorBlock> LOCKED_STEEL_DOOR =
-            steelDoorBlock(true, STEEL_DOOR);
+            steelDoorBlock(true, STEEL_DOOR).register();
 
     public static final BlockEntry<Block> STEEL_SHEET_METAL = REGISTRATE
             .block("steel_sheet_metal",Block::new)
@@ -217,6 +224,16 @@ public class ModBlocks {
                     .save(prov, Alloyed.asResource("crafting/" + ctx.getName())))
             .register();
 
+    public static final BlockEntry<MetalLadderBlock> STEEL_LADDER = REGISTRATE
+            .block("steel_ladder", MetalLadderBlock::new)
+            .transform(BuilderTransformers.ladder("steel",
+                    () -> DataIngredient.tag(ModTags.Items.STEEL_SHEET)))
+            .blockstate((ctx, prov) -> prov.horizontalBlock(ctx.get(), prov.models()
+                    .getExistingFile(prov.modLoc("block/steel_ladder"))))
+            .lang("Steel Ladder")
+            .register();
+
+
     public static void register() {
         Alloyed.getRegistrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
 
@@ -232,8 +249,8 @@ public class ModBlocks {
         PostRegistrationHelper.addMetalBlockRecipe("bronze_block", ModTags.Items.BRONZE_INGOT, "bronze_ingot", "bronze/");
     }
 
-    private static BlockEntry<SteelDoorBlock> steelDoorBlock(boolean locked,
-                                                        @Nullable BlockEntry<SteelDoorBlock> normalDoor) {
+    private static BlockBuilder<SteelDoorBlock, CreateRegistrate> steelDoorBlock(boolean locked,
+                                                     @Nullable BlockEntry<SteelDoorBlock> normalDoor) {
 
 
         String path = "block/" + (locked ? "locked_" : "") + "steel_door/";
@@ -285,10 +302,6 @@ public class ModBlocks {
                                             BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER
                                     )));
                     lootTable.add(door, tableBuilder.withPool(poolBuilder));
-                })
-                .onRegister(door -> {
-                    if (!locked) AllInteractionBehaviours.registerBehaviour(door.delegate, new DoorMovingInteraction());
-                })
-                .register();
+                });
     }
 }

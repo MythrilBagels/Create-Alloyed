@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "alloyed:block/steel_chain_link"
+    "layer0": "alloyed:block/ladder_steel"
   }
 }
