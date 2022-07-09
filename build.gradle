@@ -177,7 +177,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.34'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.59'
 
     // --- DEBUG PURPOSES ---
     // compile against the JEI API but do not include it at runtime
@@ -187,7 +187,7 @@ dependencies {
 
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     implementation fg.deobf("curse.maven:farmersdelight-398521:3739914") // Farmers Delight 1.04
-    implementation fg.deobf("curse.maven:createdeco-509285:3748826") // Create Deco
+    compileOnly fg.deobf("curse.maven:createdeco-509285:3748826") // Create Deco
     // ----------------------
 
     implementation fg.deobf("com.simibubi.create:Create:mc1.18.2_v${create_version}")

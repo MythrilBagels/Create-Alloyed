@@ -287,7 +287,7 @@ public class ModBlocks {
                     lootTable.add(door, tableBuilder.withPool(poolBuilder));
                 })
                 .onRegister(door -> {
-                    if (!locked) AllInteractionBehaviours.addInteractionBehaviour(door, DoorMovingInteraction::new);
+                    if (!locked) AllInteractionBehaviours.registerBehaviour(door.delegate, new DoorMovingInteraction());
                 })
                 .register();
     }
