@@ -36,6 +36,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraftforge.common.ForgeHooks;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
@@ -110,6 +111,8 @@ public class ModBlocks {
             .simpleItem()
             .recipe(RecipeUtils.Stonecutting
                     .customDefaultLang(ModTags.Items.STEEL_BLOCK, 4, "steel_block"))
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
             .register();
 
@@ -120,6 +123,8 @@ public class ModBlocks {
             .properties(ModBlocks::steelProperties)
             .item().tag(ItemTags.STAIRS).build()
             .tag(BlockTags.STAIRS)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .blockstate((ctx, prov) -> prov.stairsBlock(ctx.get(),
                     prov.modLoc("block/steel_sheet_metal")))
             .recipe((ctx, prov) -> {
@@ -137,6 +142,8 @@ public class ModBlocks {
             .properties(ModBlocks::steelProperties)
             .item().tag(ItemTags.SLABS).build()
             .tag(BlockTags.SLABS)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .blockstate((ctx, prov) -> prov.slabBlock(ctx.get(),
                     prov.modLoc("block/steel_sheet_metal"),
                     prov.modLoc("block/steel_sheet_metal")))
@@ -175,6 +182,8 @@ public class ModBlocks {
             .tag(ItemTags.WALLS).build()
             .addLayer(() -> RenderType::cutoutMipped)
             .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(ctx.get(), 16)
                     .pattern("###")
                     .pattern("###")
@@ -190,6 +199,8 @@ public class ModBlocks {
             .blockstate((ctx, prov) ->
                     prov.trapdoorBlock(ctx.get(), prov.modLoc("block/steel_trapdoor"), true))
             .tag(BlockTags.TRAPDOORS)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
             .item()
             .model((ctx,prov) ->
                     prov.withExistingParent(ctx.getName(), prov.modLoc("block/steel_trapdoor_bottom"))
@@ -198,7 +209,7 @@ public class ModBlocks {
             .build()
             .addLayer(() -> RenderType::cutoutMipped)
             .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
-            .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(ctx.get(), 16)
+            .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(ctx.get())
                     .pattern("##")
                     .pattern("##")
                     .define('#', ModTags.Items.STEEL_INGOT)

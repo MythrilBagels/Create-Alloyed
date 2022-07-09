@@ -290,7 +290,7 @@ curseforge {
         changelog = getChangelogText()
         changelogType = 'markdown'
         releaseType = 'release'
-        addGameVersion '1.18.1'
+        addGameVersion '1.18.2'
 
         mainArtifact (shadowJar) {
             displayName = "Create: Alloyed ${mod_version} for Minecraft ${mc_version}"

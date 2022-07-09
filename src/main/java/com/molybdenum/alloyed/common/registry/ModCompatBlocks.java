@@ -60,6 +60,7 @@ public class ModCompatBlocks {
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(ModBlocks::steelProperties)
             .simpleItem()
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .blockstate(BlockStateUtils.Unique::steelVerticalSlabBlockstate)
             .loot((lootTable, block) -> {
                 LootTable.Builder builder = LootTable.lootTable();
@@ -84,6 +85,7 @@ public class ModCompatBlocks {
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(properties -> properties.sound(SoundType.CHAIN))
             .tag(BlockTags.FENCES)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .item()
             .model((ctx,prov) -> ModelUtils.customModel(ctx, prov, "block/steel_chain_link"))
             .build()

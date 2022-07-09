@@ -1,12 +1,4 @@
-v1.3c
-Added:
-- Steel Trapdoor
-- Steel Armour
-Changed:
-- Steel Door texture
-- Steel Door (normal and locked) item textures
-- Bronze Bell model and texture
-- Lots of recipes relating to steel blocks
+v1.3d
 Fixed:
-- Steel Door using the wooden door sound effect
+- A lot of blocks being unbreakable
 #

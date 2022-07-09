@@ -13,6 +13,13 @@
     "alloyed:steel_block",
     "alloyed:steel_door",
     "alloyed:locked_steel_door",
-    "alloyed:steel_catwalk"
+    "alloyed:steel_sheet_metal",
+    "alloyed:steel_sheet_stairs",
+    "alloyed:steel_sheet_slab",
+    "alloyed:steel_bars",
+    "alloyed:steel_trapdoor",
+    "alloyed:steel_catwalk",
+    "alloyed:steel_sheet_vertical_slab",
+    "alloyed:steel_mesh_fence"
   ]
 }

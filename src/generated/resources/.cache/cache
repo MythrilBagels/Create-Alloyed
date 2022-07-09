@@ -177,7 +177,7 @@ e7ef97b0cf31ac75591d944b6d378fb65bcafc57 data/alloyed/recipes/crafting/steel_blo
 4e735e5491e74c1dca4c0fe18f06bc45b0703745 data/alloyed/recipes/crafting/steel_ingot_from_decompacting.json
 041bc67d7e3207d589cf32f1b3cfb785f027bf26 data/alloyed/recipes/crafting/steel_sheet_slab.json
 7d814e32caaaa78007e8b0f27665f3cde6fd3733 data/alloyed/recipes/crafting/steel_sheet_stairs.json
-32c13d55890ea981f347ec7b22b79ad72c50a111 data/alloyed/recipes/crafting/steel_trapdoor.json
+573e41b47d2f6f14077e6812b29d6c5ecefdf020 data/alloyed/recipes/crafting/steel_trapdoor.json
 75153764974b32d7c0a5b7e95efb543ee8721fca data/alloyed/recipes/mechanical_crafting/steel_axe.json
 b9dcd3e360d405b97145a37303931b4773bf2e91 data/alloyed/recipes/mechanical_crafting/steel_boots.json
 0a2313e1332650628843dcc846ce7fa0789bac09 data/alloyed/recipes/mechanical_crafting/steel_chestplate.json
@@ -224,8 +224,8 @@ b222e5b96dbb9bc799453af4f984cb2fede41b7d data/forge/tags/items/storage_blocks/st
 3ce2eb5712dd5094010144dc0245069043d3ff3a data/forge/tags/items/tools/knives.json
 1ba88abf7eb4ffef9bdf71c103b499f92a35a20b data/minecraft/tags/blocks/doors.json
 dcf4dc23a1d2fb48f7de1aa4a48ef660225a2a69 data/minecraft/tags/blocks/fences.json
-6f088f5e9e06c1bb7193d9589976463f765e3841 data/minecraft/tags/blocks/mineable/pickaxe.json
-52e7ceb5a475254b517aaa59c1b4472e67548c0d data/minecraft/tags/blocks/needs_stone_tool.json
+68aaad7ee13965b8cb496de24760cdb90ba254fe data/minecraft/tags/blocks/mineable/pickaxe.json
+65e585fb6acfd953b9d39fdf4e6bd49269e6c02c data/minecraft/tags/blocks/needs_stone_tool.json
 d8b67efb6252e8841433d7569d97f91c3f2d249a data/minecraft/tags/blocks/slabs.json
 586d3639b6b0575f2ecc0189ddb1012653d3c4e9 data/minecraft/tags/blocks/stairs.json
 afbdf200e99e5c640ca271a0d3d28dca62bcbdec data/minecraft/tags/blocks/trapdoors.json
