@@ -1,4 +1,4 @@
-v1.3d
+v1.4a
 Fixed:
-- A lot of blocks being unbreakable
+- Create: Deco compat being broken
 #

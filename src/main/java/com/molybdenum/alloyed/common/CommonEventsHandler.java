@@ -2,7 +2,6 @@ package com.molybdenum.alloyed.common;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.compat.farmersdelight.FarmersDelightCompat;
-import com.molybdenum.alloyed.common.loot.SteelShearsModifier;
 import com.molybdenum.alloyed.data.registry.ModLootModifiers;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;

@@ -9,7 +9,6 @@ import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
 import com.simibubi.create.AllInteractionBehaviours;
 import com.simibubi.create.AllTags;
-import com.simibubi.create.Create;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.content.contraptions.components.structureMovement.interaction.DoorMovingInteraction;
 import com.simibubi.create.content.curiosities.deco.MetalLadderBlock;
@@ -26,8 +25,6 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -41,7 +38,6 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraftforge.common.ForgeHooks;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
@@ -105,7 +101,8 @@ public class ModBlocks {
 
     public static final BlockEntry<SteelDoorBlock> STEEL_DOOR =
             steelDoorBlock(false, null)
-                    .onRegister(AllInteractionBehaviours.interactionBehaviour(new DoorMovingInteraction()))
+                    .onRegister(
+                            AllInteractionBehaviours.addInteractionBehaviour(new DoorMovingInteraction()))
                     .register();
 
     public static final BlockEntry<SteelDoorBlock> LOCKED_STEEL_DOOR =
@@ -236,7 +233,7 @@ public class ModBlocks {
 
     public static void register() {
         Alloyed.getRegistrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
-
+        ;
         Alloyed.LOGGER.debug("Registering ModBlocks!");
     }
 

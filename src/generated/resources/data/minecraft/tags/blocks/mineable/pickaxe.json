@@ -18,6 +18,9 @@
     "alloyed:steel_sheet_slab",
     "alloyed:steel_bars",
     "alloyed:steel_trapdoor",
-    "alloyed:steel_ladder"
+    "alloyed:steel_ladder",
+    "alloyed:steel_catwalk",
+    "alloyed:steel_sheet_vertical_slab",
+    "alloyed:steel_mesh_fence"
   ]
 }

@@ -187,11 +187,13 @@ dependencies {
 
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     implementation fg.deobf("curse.maven:farmersdelight-398521:3739914") // Farmers Delight 1.04
-    compileOnly fg.deobf("curse.maven:createdeco-509285:3748826") // Create Deco
+    implementation fg.deobf("curse.maven:createdeco-509285:3866123") // Create Deco
     // ----------------------
 
-    implementation fg.deobf("com.simibubi.create:Create:mc1.18.2_v${create_version}")
-    implementation fg.deobf("com.jozufozu.flywheel:Flywheel-Forge:1.18-${flywheel_version}")
+    implementation fg.deobf("curse.maven:Create-328085:3864525")
+    implementation fg.deobf("curse.maven:Flywheel-486392:3864518")
+    //implementation fg.deobf("com.simibubi.create:Create:mc1.18.2_v${create_version}")
+    //implementation fg.deobf("com.jozufozu.flywheel:Flywheel-Forge:1.18-${flywheel_version}")
 
     def registrate = "com.tterrag.registrate:Registrate:MC${registrate_version}"
     implementation fg.deobf(registrate)

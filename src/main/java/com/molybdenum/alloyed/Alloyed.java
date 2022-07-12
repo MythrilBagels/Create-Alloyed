@@ -5,6 +5,8 @@ import com.molybdenum.alloyed.common.registry.ModCompatBlocks;
 import com.molybdenum.alloyed.common.registry.ModCompatItems;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.client.registry.ModSounds;
+import com.simibubi.create.AllInteractionBehaviours;
+import com.simibubi.create.content.contraptions.components.structureMovement.interaction.DoorMovingInteraction;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.resources.ResourceLocation;
@@ -39,7 +41,7 @@ public class Alloyed {
         ModItems.register();
         ModBlocks.register();
         ModCompatItems.register();
-        //ModCompatBlocks.register();
+        ModCompatBlocks.register();
         ModSounds.register(eventBus);
     }
 

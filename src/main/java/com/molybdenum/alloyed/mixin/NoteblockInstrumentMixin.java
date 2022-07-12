@@ -32,7 +32,7 @@ public abstract class NoteblockInstrumentMixin {
 		throw new AssertionError();
 	}
 
-	@Inject(method = "byState", at = @At("HEAD"), cancellable = true)
+	@Inject(method = "byState(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/state/properties/NoteBlockInstrument;", at = @At("HEAD"), cancellable = true)
 	private static void onByState(BlockState state, CallbackInfoReturnable<NoteBlockInstrument> ci) {
 		if (state.is(ModBlocks.BRONZE_BELL.get())) {
 			ci.setReturnValue(ModSounds.BRONZE_BELL_NOTEBLOCK);
