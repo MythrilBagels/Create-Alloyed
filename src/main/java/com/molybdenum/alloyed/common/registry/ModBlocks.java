@@ -102,7 +102,7 @@ public class ModBlocks {
     public static final BlockEntry<SteelDoorBlock> STEEL_DOOR =
             steelDoorBlock(false, null)
                     .onRegister(
-                            AllInteractionBehaviours.addInteractionBehaviour(new DoorMovingInteraction()))
+                            AllInteractionBehaviours.interactionBehaviour(new DoorMovingInteraction()))
                     .register();
 
     public static final BlockEntry<SteelDoorBlock> LOCKED_STEEL_DOOR =

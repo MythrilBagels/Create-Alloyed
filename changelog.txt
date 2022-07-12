@@ -1,4 +1,4 @@
-v1.4a
+v1.4b
 Fixed:
-- Create: Deco compat being broken
+- Mod not working on Create 0.5b
 #
