@@ -8,6 +8,7 @@
       "translate": "advancements.alloyed.bronze_instruments.title"
     },
     "description": {
+      "color": "#DBA213",
       "translate": "advancements.alloyed.bronze_instruments.description"
     },
     "frame": "task",

@@ -9,16 +9,15 @@ import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
 import com.simibubi.create.AllInteractionBehaviours;
 import com.simibubi.create.AllTags;
-import com.simibubi.create.content.AllSections;
 import com.simibubi.create.content.contraptions.components.structureMovement.interaction.DoorMovingInteraction;
 import com.simibubi.create.content.curiosities.deco.MetalLadderBlock;
 import com.simibubi.create.foundation.block.CopperBlockSet;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.repack.registrate.builders.BlockBuilder;
-import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
-import com.simibubi.create.repack.registrate.util.DataIngredient;
-import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.builders.BlockBuilder;
+import com.tterrag.registrate.providers.RegistrateRecipeProvider;
+import com.tterrag.registrate.util.DataIngredient;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
@@ -232,8 +231,6 @@ public class ModBlocks {
 
 
     public static void register() {
-        Alloyed.getRegistrate().addToSection(STEEL_BLOCK, AllSections.MATERIALS);
-        ;
         Alloyed.LOGGER.debug("Registering ModBlocks!");
     }
 
@@ -247,9 +244,7 @@ public class ModBlocks {
     }
 
     private static BlockBuilder<SteelDoorBlock, CreateRegistrate> steelDoorBlock(boolean locked,
-                                                     @Nullable BlockEntry<SteelDoorBlock> normalDoor) {
-
-
+                                                                                 @Nullable BlockEntry<SteelDoorBlock> normalDoor) {
         String path = "block/" + (locked ? "locked_" : "") + "steel_door/";
         String name = (locked ? "locked_" : "") + "steel_door";
 

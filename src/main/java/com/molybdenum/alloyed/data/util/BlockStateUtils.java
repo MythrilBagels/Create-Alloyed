@@ -2,8 +2,8 @@ package com.molybdenum.alloyed.data.util;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.simibubi.create.foundation.utility.Iterate;
-import com.simibubi.create.repack.registrate.providers.DataGenContext;
-import com.simibubi.create.repack.registrate.providers.RegistrateBlockstateProvider;
+import com.tterrag.registrate.providers.DataGenContext;
+import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;

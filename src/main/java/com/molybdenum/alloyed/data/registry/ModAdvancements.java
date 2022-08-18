@@ -5,9 +5,8 @@ import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
 import com.molybdenum.alloyed.data.providers.ModAdvancementProvider.NamedAdvancementBuilder;
-import com.molybdenum.alloyed.data.util.RecipeUtils;
 import com.simibubi.create.Create;
-import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
+import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import net.minecraft.advancements.Advancement;
 
 import java.util.function.Function;
@@ -16,7 +15,7 @@ import java.util.function.Function;
 public class ModAdvancements {
 
     public static final NamedAdvancementBuilder BRONZE_INGOT = advancement("bronze_ingot", advancement -> advancement
-            .parent(Create.asResource("blaze_burner"))
+            .parent(Create.asResource("burner"))
             .addCriterion("has_bronze_ingot", RegistrateRecipeProvider.has(ModTags.Items.BRONZE_INGOT))
     ).displayInfo(builder -> builder
             .icon(ModItems.BRONZE_INGOT.get())
@@ -25,7 +24,7 @@ public class ModAdvancements {
     ).save();
 
     public static final NamedAdvancementBuilder STEEL_INGOT = advancement("steel_ingot", advancement -> advancement
-            .parent(Create.asResource("blaze_burner"))
+            .parent(Create.asResource("burner"))
             .addCriterion("has_steel_ingot", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
     ).displayInfo(builder -> builder
             .icon(ModItems.STEEL_INGOT.get())

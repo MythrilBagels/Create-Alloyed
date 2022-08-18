@@ -1,5 +1,5 @@
 {
-  "parent": "create:blaze_burner",
+  "parent": "create:burner",
   "display": {
     "icon": {
       "item": "alloyed:bronze_ingot"
@@ -8,6 +8,7 @@
       "translate": "advancements.alloyed.bronze_ingot.title"
     },
     "description": {
+      "color": "#DBA213",
       "translate": "advancements.alloyed.bronze_ingot.description"
     },
     "frame": "task",

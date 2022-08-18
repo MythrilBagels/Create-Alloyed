@@ -1,7 +1,7 @@
 package com.molybdenum.alloyed.data.util;
 
-import com.simibubi.create.repack.registrate.providers.DataGenContext;
-import com.simibubi.create.repack.registrate.providers.RegistrateItemModelProvider;
+import com.tterrag.registrate.providers.DataGenContext;
+import com.tterrag.registrate.providers.RegistrateItemModelProvider;
 import net.minecraft.world.item.Item;
 
 public class ModelUtils {

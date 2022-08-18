@@ -1,14 +1,12 @@
 package com.molybdenum.alloyed;
 
+import com.molybdenum.alloyed.client.registry.ModSounds;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.molybdenum.alloyed.common.registry.ModCompatBlocks;
 import com.molybdenum.alloyed.common.registry.ModCompatItems;
 import com.molybdenum.alloyed.common.registry.ModItems;
-import com.molybdenum.alloyed.client.registry.ModSounds;
-import com.simibubi.create.AllInteractionBehaviours;
-import com.simibubi.create.content.contraptions.components.structureMovement.interaction.DoorMovingInteraction;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.repack.registrate.util.nullness.NonNullSupplier;
+import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;

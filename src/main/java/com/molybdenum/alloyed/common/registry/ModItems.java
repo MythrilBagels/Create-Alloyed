@@ -9,16 +9,17 @@ import com.molybdenum.alloyed.data.recipes.MixingRecipes;
 import com.molybdenum.alloyed.data.recipes.PressingRecipes;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.repack.registrate.providers.DataGenContext;
-import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;
-import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
-import com.simibubi.create.repack.registrate.util.nullness.NonNullBiConsumer;
-import com.simibubi.create.repack.registrate.util.nullness.NonNullFunction;
+import com.tterrag.registrate.providers.DataGenContext;
+import com.tterrag.registrate.providers.RegistrateRecipeProvider;
+import com.tterrag.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
+import com.tterrag.registrate.util.nullness.NonNullFunction;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 
-import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
+import static com.molybdenum.alloyed.data.util.RecipeUtils.Crafting;
+import static com.molybdenum.alloyed.data.util.RecipeUtils.Smithing;
 
 public class ModItems {
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);

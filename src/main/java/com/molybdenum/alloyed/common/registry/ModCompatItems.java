@@ -3,7 +3,7 @@ package com.molybdenum.alloyed.common.registry;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.compat.farmersdelight.FarmersDelightCompat;
 import com.molybdenum.alloyed.common.compat.hidden.HiddenItem;
-import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 
 public class ModCompatItems {
