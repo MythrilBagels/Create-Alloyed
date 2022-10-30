@@ -1,8 +1,4 @@
-v1.4c
+v1.4d
 Fixed:
-- Mod not working on Create 0.5.0d
-- Advancements not working
-Changed:
-- Steel Shovel texture
-- Steel Tools to be at iron mining level
+- Mod not working on Create 0.5.0e
 #
