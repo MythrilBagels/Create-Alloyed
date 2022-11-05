@@ -2,6 +2,7 @@ package com.molybdenum.alloyed.client.ponder;
 
 import com.simibubi.create.foundation.ponder.SceneBuilder;
 import com.simibubi.create.foundation.ponder.SceneBuildingUtil;
+import com.simibubi.create.foundation.ponder.Selection;
 import com.simibubi.create.foundation.ponder.element.InputWindowElement;
 import com.simibubi.create.foundation.ponder.instruction.EmitParticlesInstruction;
 import com.simibubi.create.foundation.utility.Pointing;
@@ -72,7 +73,10 @@ public class BronzeBellPonder {
 
         // Useful positions
         BlockPos bell = util.grid.at(2,1,2);
-        BlockPos noteblock = util.grid.at(2, 2, 2);
+        Selection redstoneSegment = util.select.fromTo(2,1,3,2,1,4);
+        BlockPos deployer = util.grid.at(2, 1, 0);
+        Selection deployerSection = util.select.fromTo(3,1,0,5,1,0)
+                .add(util.select.position(5,0,1));
         // ----------------
 
         scene.showBasePlate(); // Begin
@@ -81,22 +85,61 @@ public class BronzeBellPonder {
         // Show the bronze bell
         scene.idle(5);
         scene.world.showSection(util.select.position(bell), Direction.DOWN);
-        // Show the noteblock
-        scene.idle(5);
-        scene.world.showSection(util.select.position(noteblock), Direction.DOWN);
 
-        // Talk about bronze bells in general
+        // Hitting them
         scene.idle(30);
         scene.overlay.showText(90)
                 .attachKeyFrame()
-                .text("Noteblocks placed above a Bronze Bell will play a special bell sound.")
+                .text("Bronze Bells will play a sound when they are hit...")
                 .placeNearTarget()
-                .pointAt(util.vector.centerOf(noteblock));
-        scene.idle(100); // Wait for the text to go away
+                .pointAt(util.vector.centerOf(bell));
+        scene.idle(30);
 
-        scene.overlay.showControls(new InputWindowElement(util.vector.centerOf(noteblock), Pointing.UP).rightClick(), 30);
+        scene.overlay.showControls(new InputWindowElement(util.vector.centerOf(bell), Pointing.UP).rightClick(), 30);
         scene.idle(10);
-        scene.effects.emitParticles(util.vector.blockSurface(noteblock, Direction.UP), EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, Vec3.ZERO) , 1, 1);
+        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP), EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, Vec3.ZERO) , 1, 1);
+
+        // Show the lever and redstone
+        scene.idle(50);
+        scene.world.showSection(redstoneSegment, Direction.DOWN);
+
+        // Powering them
+        scene.idle(30);
+        scene.overlay.showText(90)
+                .attachKeyFrame()
+                .text("...or when they are powered by redstone.")
+                .placeNearTarget()
+                .pointAt(util.vector.centerOf(bell));
+        scene.idle(30);
+
+        scene.world.toggleRedstonePower(redstoneSegment);
+        scene.effects.indicateRedstone(util.grid.at(2, 1, 3));
+        scene.idle(10);
+        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP), EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, Vec3.ZERO) , 1, 1);
+
+        // Show the deployers
+        scene.idle(50);
+        scene.rotateCameraY(-90);
+        scene.world.showSection(util.select.position(deployer), Direction.DOWN);
+        scene.idle(20);
+        scene.world.showSection(deployerSection, Direction.DOWN);
+
+        // Deployers
+        scene.idle(30);
+        scene.overlay.showText(90)
+                .attachKeyFrame()
+                .text("Deployers can be used to automatically ring them.")
+                .placeNearTarget()
+                .pointAt(util.vector.centerOf(bell));
+        scene.idle(30);
+
+        scene.world.setKineticSpeed(util.select.position(5, 0, 1), 16);
+        scene.world.setKineticSpeed(util.select.layer(1), -32);
+        scene.idle(10);
+        scene.world.moveDeployer(deployer, 1, 25);
+        scene.idle(25);
+        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP), EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, Vec3.ZERO) , 1, 1);
+        scene.world.moveDeployer(deployer, -1, 25);
 
         scene.idle(60); // End
     }

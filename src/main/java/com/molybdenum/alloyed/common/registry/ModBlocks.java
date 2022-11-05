@@ -1,7 +1,8 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.common.block.SteelDoorBlock;
+import com.molybdenum.alloyed.common.content.BronzeBellBlock;
+import com.molybdenum.alloyed.common.content.SteelDoorBlock;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetMetalCTBehaviour;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetSlabCTBehaviour;
 import com.molybdenum.alloyed.common.item.ModItemGroup;
@@ -42,6 +43,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class ModBlocks {
 
     private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
@@ -56,8 +58,8 @@ public class ModBlocks {
             "bronze/"
     );
 
-    public static final BlockEntry<Block> BRONZE_BELL = REGISTRATE
-            .block("bronze_bell", Block::new)
+    public static final BlockEntry<BronzeBellBlock> BRONZE_BELL = REGISTRATE
+            .block("bronze_bell", BronzeBellBlock::new)
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(properties -> properties
                     .noOcclusion()
