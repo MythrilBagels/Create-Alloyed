@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/door_top",
+  "parent": "minecraft:block/door_top_right",
   "textures": {
     "bottom": "alloyed:block/steel_door/bottom",
     "top": "alloyed:block/steel_door/top"

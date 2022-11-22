@@ -23,3 +23,11 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
+run/config/fml.toml
+run/logs/debug-1.log.gz
+run/logs/debug-2.log.gz
+run/logs/debug-3.log.gz
+run/logs/debug-4.log.gz
+run/logs/debug-5.log.gz
+run/logs/debug.log
+run/logs/latest.log

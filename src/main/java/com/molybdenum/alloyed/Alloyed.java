@@ -2,6 +2,7 @@ package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.client.registry.ModSoundEvents;
 import com.molybdenum.alloyed.common.registry.*;
+import com.molybdenum.alloyed.data.registry.ModLootModifiers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.resources.ResourceLocation;
@@ -38,6 +39,7 @@ public class Alloyed {
         ModCompatItems.register();
         ModCompatBlocks.register();
         ModSoundEvents.register(eventBus);
+        ModLootModifiers.register(eventBus);
     }
 
     public static ResourceLocation asResource(String path) {

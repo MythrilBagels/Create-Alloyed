@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
   "key": {
     "#": {
       "item": "alloyed:steel_sheet_metal"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "alloyed:steel_sheet_stairs",
-    "count": 4
+    "count": 4,
+    "item": "alloyed:steel_sheet_stairs"
   }
 }

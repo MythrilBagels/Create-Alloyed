@@ -1,8 +1,11 @@
 {
   "type": "create:mechanical_crafting",
-  "pattern": [
-    " #",
-    "/ "
+  "acceptMirrored": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
   ],
   "key": {
     "#": {
@@ -12,14 +15,11 @@
       "tag": "forge:rods/wooden"
     }
   },
+  "pattern": [
+    " #",
+    "/ "
+  ],
   "result": {
     "item": "alloyed:steel_knife"
-  },
-  "acceptMirrored": true,
-  "conditions": [
-    {
-      "modid": "farmersdelight",
-      "type": "forge:mod_loaded"
-    }
-  ]
+  }
 }

@@ -1,77 +1,77 @@
 {
   "multipart": [
     {
+      "apply": {
+        "model": "alloyed:block/steel_sheet_vertical_slab"
+      },
       "when": {
         "type": "bottom",
         "facing": "north"
-      },
-      "apply": {
-        "model": "alloyed:block/steel_sheet_vertical_slab"
       }
     },
     {
-      "when": {
-        "type": "double"
-      },
       "apply": {
         "model": "alloyed:block/steel_sheet_vertical_slab_double"
+      },
+      "when": {
+        "type": "double"
       }
     },
     {
+      "apply": {
+        "model": "alloyed:block/steel_sheet_vertical_slab",
+        "y": 180
+      },
       "when": {
         "type": "bottom",
         "facing": "south"
-      },
-      "apply": {
-        "model": "alloyed:block/steel_sheet_vertical_slab",
-        "y": 180
       }
     },
     {
-      "when": {
-        "type": "double"
-      },
       "apply": {
         "model": "alloyed:block/steel_sheet_vertical_slab_double",
         "y": 180
+      },
+      "when": {
+        "type": "double"
       }
     },
     {
+      "apply": {
+        "model": "alloyed:block/steel_sheet_vertical_slab",
+        "y": -90
+      },
       "when": {
         "type": "bottom",
         "facing": "west"
-      },
-      "apply": {
-        "model": "alloyed:block/steel_sheet_vertical_slab",
-        "y": -90
       }
     },
     {
-      "when": {
-        "type": "double"
-      },
       "apply": {
         "model": "alloyed:block/steel_sheet_vertical_slab_double",
         "y": -90
+      },
+      "when": {
+        "type": "double"
       }
     },
     {
+      "apply": {
+        "model": "alloyed:block/steel_sheet_vertical_slab",
+        "y": 90
+      },
       "when": {
         "type": "bottom",
         "facing": "east"
-      },
-      "apply": {
-        "model": "alloyed:block/steel_sheet_vertical_slab",
-        "y": 90
       }
     },
     {
-      "when": {
-        "type": "double"
-      },
       "apply": {
         "model": "alloyed:block/steel_sheet_vertical_slab_double",
         "y": 90
+      },
+      "when": {
+        "type": "double"
       }
     }
   ]

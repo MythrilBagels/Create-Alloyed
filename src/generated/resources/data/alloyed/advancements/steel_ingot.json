@@ -1,31 +1,30 @@
 {
   "parent": "create:burner",
-  "display": {
-    "icon": {
-      "item": "alloyed:steel_ingot"
-    },
-    "title": {
-      "translate": "advancements.alloyed.steel_ingot.title"
-    },
-    "description": {
-      "color": "#DBA213",
-      "translate": "advancements.alloyed.steel_ingot.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
   "criteria": {
     "has_steel_ingot": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "tag": "forge:ingots/steel"
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.alloyed.steel_ingot.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "alloyed:steel_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.alloyed.steel_ingot.title"
     }
   },
   "requirements": [

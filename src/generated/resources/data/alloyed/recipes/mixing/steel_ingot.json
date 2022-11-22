@@ -1,5 +1,6 @@
 {
   "type": "create:mixing",
+  "heatRequirement": "heated",
   "ingredients": [
     {
       "item": "minecraft:iron_ingot"
@@ -19,12 +20,11 @@
       }
     ]
   ],
+  "processingTime": 200,
   "results": [
     {
-      "item": "alloyed:steel_ingot",
-      "count": 3
+      "count": 3,
+      "item": "alloyed:steel_ingot"
     }
-  ],
-  "processingTime": 200,
-  "heatRequirement": "heated"
+  ]
 }

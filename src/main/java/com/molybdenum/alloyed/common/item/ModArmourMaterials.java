@@ -1,5 +1,6 @@
 package com.molybdenum.alloyed.common.item;
 
+import com.google.common.base.Suppliers;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import net.minecraft.sounds.SoundEvent;
@@ -24,9 +25,9 @@ public enum ModArmourMaterials implements ArmorMaterial {
     private final SoundEvent sound;
     private final float toughness;
     private final float knockbackResistance;
-    private final LazyLoadedValue<Ingredient> repairIngredient;
+    private final Supplier<Ingredient> repairIngredient;
 
-    private ModArmourMaterials(String pName, int pDurabilityMultiplier, int[] pSlotProtections, int pEnchantmentValue, SoundEvent pSound, float pToughness, float pKnockbackResistance, Supplier<Ingredient> pRepairIngredient) {
+    ModArmourMaterials(String pName, int pDurabilityMultiplier, int[] pSlotProtections, int pEnchantmentValue, SoundEvent pSound, float pToughness, float pKnockbackResistance, Supplier<Ingredient> pRepairIngredient) {
         this.name = pName;
         this.durabilityMultiplier = pDurabilityMultiplier;
         this.slotProtections = pSlotProtections;
@@ -34,7 +35,7 @@ public enum ModArmourMaterials implements ArmorMaterial {
         this.sound = pSound;
         this.toughness = pToughness;
         this.knockbackResistance = pKnockbackResistance;
-        this.repairIngredient = new LazyLoadedValue<>(pRepairIngredient);
+        this.repairIngredient = Suppliers.memoize(pRepairIngredient::get);
     }
 
     public int getDurabilityForSlot(EquipmentSlot pSlot) {

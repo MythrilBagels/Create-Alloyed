@@ -1,5 +1,6 @@
 {
   "type": "create:mixing",
+  "heatRequirement": "heated",
   "ingredients": [
     {
       "item": "minecraft:copper_ingot"
@@ -21,6 +22,5 @@
     {
       "item": "alloyed:bronze_ingot"
     }
-  ],
-  "heatRequirement": "heated"
+  ]
 }

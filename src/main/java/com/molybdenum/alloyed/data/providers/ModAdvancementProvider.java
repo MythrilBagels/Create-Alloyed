@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.data.advancements.DisplayInfoBuilder;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.HashCache;
@@ -37,7 +38,7 @@ public class ModAdvancementProvider implements DataProvider {
     }
 
     public static void register(DataGenerator generator) {
-        generator.addProvider(new ModAdvancementProvider(generator));
+        generator.addProvider(true, new ModAdvancementProvider(generator));
     }
 
     /**
@@ -46,7 +47,7 @@ public class ModAdvancementProvider implements DataProvider {
      * @param pCache The directory cache
      */
     @Override
-    public void run(@NotNull HashCache pCache) {
+    public void run(@NotNull CachedOutput pCache) {
         Path path = this.generator.getOutputFolder();
         Set<ResourceLocation> set = Sets.newHashSet();
 
@@ -57,7 +58,7 @@ public class ModAdvancementProvider implements DataProvider {
                 Path path1 = createPath(path, advancement);
 
                 try {
-                    DataProvider.save(GSON, pCache, advancement.builder.serializeToJson(), path1);
+                    DataProvider.saveStable(pCache, advancement.builder.serializeToJson(), path1);
                 } catch (IOException ioexception) {
                     Alloyed.LOGGER.error("Couldn't save advancement {}", path1, ioexception);
                 }

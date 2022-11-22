@@ -12,6 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
@@ -75,7 +76,7 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
     }
 
     public static void register(DataGenerator generator) {
-        generator.addProvider(new MechanicalCraftingRecipes(generator));
+        generator.addProvider(true, new MechanicalCraftingRecipes(generator));
     }
 
     GeneratedRecipeBuilder create(Supplier<ItemLike> result) {
@@ -108,11 +109,10 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
             return register(consumer -> {
                 MechanicalCraftingRecipeBuilder b =
                         builder.apply( MechanicalCraftingRecipeBuilder.shapedRecipe(result.get(), amount));
-                ResourceLocation location = Alloyed.asResource("mechanical_crafting/" + result.get()
-                        .asItem()
-                        .getRegistryName()
-                        .getPath() + suffix);
-                b.build(consumer, location);
+
+                ResourceLocation resultLocation = ForgeRegistries.ITEMS.getKey(result.get().asItem());
+                b.build(consumer, Alloyed.asResource("mechanical_crafting/" +
+                        (resultLocation == null ? "unregistered_sadface" : resultLocation.getPath()) + suffix));
             });
         }
     }

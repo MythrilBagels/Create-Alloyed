@@ -5,15 +5,15 @@ import com.molybdenum.alloyed.data.providers.ModAdvancementProvider;
 import com.tterrag.registrate.providers.ProviderType;
 import net.minecraft.advancements.DisplayInfo;
 import net.minecraft.advancements.FrameType;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 
 public class DisplayInfoBuilder {
     private final ModAdvancementProvider.NamedAdvancementBuilder parent;
-    private final TranslatableComponent title;
-    private final TranslatableComponent description;
+    private final Component title;
+    private final Component description;
     private ItemStack icon = ItemStack.EMPTY;
     private ResourceLocation background = null;
     private FrameType frame = FrameType.TASK;
@@ -22,18 +22,18 @@ public class DisplayInfoBuilder {
     private boolean hidden = false;
 
     private DisplayInfoBuilder(ModAdvancementProvider.NamedAdvancementBuilder parent,
-                               TranslatableComponent title,
-                               TranslatableComponent description) {
+                               Component title,
+                               Component description) {
         this.title = title;
         this.description = description;
         this.parent = parent;
     }
 
     public static DisplayInfoBuilder create(String name, ModAdvancementProvider.NamedAdvancementBuilder parent) {
-        TranslatableComponent title =
-                new TranslatableComponent("advancements." + Alloyed.MOD_ID + "." + name + ".title");
-        TranslatableComponent description =
-                new TranslatableComponent("advancements." + Alloyed.MOD_ID + "." + name + ".description");
+        Component title =
+                Component.translatable("advancements." + Alloyed.MOD_ID + "." + name + ".title");
+        Component description =
+                Component.translatable("advancements." + Alloyed.MOD_ID + "." + name + ".description");
 
         return new DisplayInfoBuilder(
                 parent,

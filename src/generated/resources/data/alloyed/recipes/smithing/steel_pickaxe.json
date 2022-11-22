@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:iron_pickaxe"
-  },
   "addition": {
     "tag": "forge:ingots/steel"
+  },
+  "base": {
+    "item": "minecraft:iron_pickaxe"
   },
   "result": {
     "item": "alloyed:steel_pickaxe"

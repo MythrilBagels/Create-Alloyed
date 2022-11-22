@@ -3,14 +3,10 @@
   "package": "com.molybdenum.alloyed.mixin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "alloyed.refmap.json",
-  "mixins": [
-    "FishingHookMixin"
-  ],
+  "mixins": [],
   "minVersion": "0.8",
   "injectors": {
     "defaultRequire": 1
   },
-  "client": [
-    "FishingHookRendererMixin"
-  ]
+  "client": []
 }

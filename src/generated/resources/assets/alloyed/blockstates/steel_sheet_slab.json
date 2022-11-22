@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "alloyed:block/steel_sheet_slab_top"
-    },
     "type=bottom": {
       "model": "alloyed:block/steel_sheet_slab"
     },
     "type=double": {
       "model": "alloyed:block/steel_sheet_metal"
+    },
+    "type=top": {
+      "model": "alloyed:block/steel_sheet_slab_top"
     }
   }
 }

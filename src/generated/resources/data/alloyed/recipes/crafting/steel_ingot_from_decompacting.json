@@ -6,7 +6,7 @@
     }
   ],
   "result": {
-    "item": "alloyed:steel_ingot",
-    "count": 9
+    "count": 9,
+    "item": "alloyed:steel_ingot"
   }
 }

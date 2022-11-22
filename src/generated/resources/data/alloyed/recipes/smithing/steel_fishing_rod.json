@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:fishing_rod"
-  },
   "addition": {
     "tag": "forge:ingots/steel"
+  },
+  "base": {
+    "item": "minecraft:fishing_rod"
   },
   "result": {
     "item": "alloyed:steel_fishing_rod"

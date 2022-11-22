@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:chainmail_chestplate"
-  },
   "addition": {
     "tag": "forge:ingots/steel"
+  },
+  "base": {
+    "item": "minecraft:chainmail_chestplate"
   },
   "result": {
     "item": "alloyed:steel_chestplate"

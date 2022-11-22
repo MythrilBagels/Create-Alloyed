@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:iron_hoe"
-  },
   "addition": {
     "tag": "forge:ingots/steel"
+  },
+  "base": {
+    "item": "minecraft:iron_hoe"
   },
   "result": {
     "item": "alloyed:steel_hoe"

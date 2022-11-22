@@ -1,5 +1,6 @@
 {
   "type": "create:mixing",
+  "heatRequirement": "heated",
   "ingredients": [
     {
       "item": "minecraft:copper_ingot"
@@ -25,9 +26,8 @@
   ],
   "results": [
     {
-      "item": "alloyed:bronze_ingot",
-      "count": 3
+      "count": 3,
+      "item": "alloyed:bronze_ingot"
     }
-  ],
-  "heatRequirement": "heated"
+  ]
 }

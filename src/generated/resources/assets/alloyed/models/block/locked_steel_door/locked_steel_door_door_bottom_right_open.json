@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/door_bottom_rh",
+  "parent": "minecraft:block/door_bottom_right_open",
   "textures": {
     "bottom": "alloyed:block/locked_steel_door/bottom",
     "top": "alloyed:block/locked_steel_door/top"

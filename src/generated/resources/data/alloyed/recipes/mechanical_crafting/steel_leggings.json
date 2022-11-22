@@ -1,17 +1,17 @@
 {
   "type": "create:mechanical_crafting",
-  "pattern": [
-    "###",
-    "# #",
-    "# #"
-  ],
+  "acceptMirrored": true,
   "key": {
     "#": {
       "tag": "forge:ingots/steel"
     }
   },
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
   "result": {
     "item": "alloyed:steel_leggings"
-  },
-  "acceptMirrored": true
+  }
 }

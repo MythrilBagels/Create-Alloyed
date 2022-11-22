@@ -8,6 +8,7 @@ import com.simibubi.create.content.contraptions.processing.ProcessingRecipeBuild
 import com.simibubi.create.content.contraptions.processing.ProcessingRecipeSerializer;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import com.simibubi.create.foundation.utility.recipe.IRecipeTypeInfo;
+import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.HashCache;
@@ -28,9 +29,9 @@ public abstract class ModProcessingRecipes extends CreateRecipeProvider {
         PROVIDERS.add(new PressingRecipes(generator));
         PROVIDERS.add(new MixingRecipes(generator));
 
-        generator.addProvider(new DataProvider() {
+        generator.addProvider(true,new DataProvider() {
             @Override
-            public void run(@NotNull HashCache pCache) throws IOException {
+            public void run(@NotNull CachedOutput pCache) {
                 PROVIDERS.forEach(generator -> {
                     try {
                         generator.run(pCache);

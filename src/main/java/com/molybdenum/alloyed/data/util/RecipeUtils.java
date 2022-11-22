@@ -10,11 +10,13 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.data.recipes.UpgradeRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Objects;
 import java.util.function.UnaryOperator;
@@ -115,7 +117,8 @@ public class RecipeUtils {
         }
 
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> customDefaultLang(ItemLike source, int count) {
-            return customDefaultLang(source, count, Objects.requireNonNull(source.asItem().getRegistryName()).getPath());
+            ResourceLocation id = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(source.asItem()));
+            return customDefaultLang(source, count, id.getPath());
         }
 
     }

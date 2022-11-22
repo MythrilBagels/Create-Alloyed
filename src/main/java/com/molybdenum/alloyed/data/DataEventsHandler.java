@@ -9,10 +9,10 @@ import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
 import com.molybdenum.alloyed.data.registry.ModAdvancements;
 import com.molybdenum.alloyed.data.registry.ModLootModifiers;
 import net.minecraft.data.DataGenerator;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = Alloyed.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataEventsHandler {
@@ -27,14 +27,18 @@ public class DataEventsHandler {
         // Register ponders and generate ponder lang
         ModPonders.register();
         ModPonders.registerLang();
-        // Register processing recipes
-        MechanicalCraftingRecipes.register(generator);
-        ModProcessingRecipes.registerAllProcessingProviders(generator);
-        // Register loot modifiers
-        ModLootModifiers.register(generator);
-        // Register advancements
-        ModAdvancements.register();
-        ModAdvancementProvider.register(generator);
+
+        if (event.includeServer()) {
+            // Register processing recipes
+            MechanicalCraftingRecipes.register(generator);
+            ModProcessingRecipes.registerAllProcessingProviders(generator);
+
+            // Register loot modifiers
+            ModLootModifiers.register(generator);
+            // Register advancements
+            ModAdvancements.register();
+            ModAdvancementProvider.register(generator);
+        }
 
         Alloyed.LOGGER.debug("Finished gathering data for Alloyed");
     }

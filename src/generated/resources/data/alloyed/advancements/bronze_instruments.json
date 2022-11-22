@@ -1,31 +1,30 @@
 {
   "parent": "alloyed:bronze_ingot",
-  "display": {
-    "icon": {
-      "item": "alloyed:bronze_bell"
-    },
-    "title": {
-      "translate": "advancements.alloyed.bronze_instruments.title"
-    },
-    "description": {
-      "color": "#DBA213",
-      "translate": "advancements.alloyed.bronze_instruments.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
   "criteria": {
     "has_bronze_ingot": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "tag": "alloyed:bronze_instruments"
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.alloyed.bronze_instruments.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "alloyed:bronze_bell"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.alloyed.bronze_instruments.title"
     }
   },
   "requirements": [

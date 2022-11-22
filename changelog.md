@@ -1,4 +1,4 @@
-## Create: Alloyed v1.4d <br/> 
+## Create: Alloyed v1.5 <br/> 
 ### Changed: <br/> 
 - How the Bronze Bell works <br/> 
 ### Fixed: <br/> 
