@@ -7,7 +7,6 @@ import com.molybdenum.alloyed.data.providers.ModAdvancementProvider;
 import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
 import com.molybdenum.alloyed.data.registry.ModAdvancements;
-import com.molybdenum.alloyed.data.registry.ModLootModifiers;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -33,8 +32,6 @@ public class DataEventsHandler {
             MechanicalCraftingRecipes.register(generator);
             ModProcessingRecipes.registerAllProcessingProviders(generator);
 
-            // Register loot modifiers
-            ModLootModifiers.register(generator);
             // Register advancements
             ModAdvancements.register();
             ModAdvancementProvider.register(generator);
