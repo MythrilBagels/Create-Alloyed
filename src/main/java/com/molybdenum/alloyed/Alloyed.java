@@ -2,11 +2,14 @@ package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.client.registry.ModSoundEvents;
 import com.molybdenum.alloyed.common.registry.*;
+import com.simibubi.create.CreateClient;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -24,11 +27,12 @@ public class Alloyed {
     public static boolean isFarmersDelightLoaded = false;
     public static boolean isCreateDecoLoaded = false;
 
-    private static final NonNullSupplier<CreateRegistrate> REGISTRATE = CreateRegistrate.lazy(MOD_ID);
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID);
 
     public Alloyed() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
+        REGISTRATE.registerEventListeners(eventBus);
 
         isFarmersDelightLoaded = ModList.get().isLoaded("farmersdelight");
         isCreateDecoLoaded = ModList.get().isLoaded("createdeco");
@@ -38,14 +42,13 @@ public class Alloyed {
         ModCompatItems.register();
         ModCompatBlocks.register();
         ModSoundEvents.register(eventBus);
+
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT,
+                () -> () -> AlloyedClient.onClientInit(eventBus));
     }
 
     public static ResourceLocation asResource(String path) {
         return new ResourceLocation(MOD_ID, path);
-    }
-
-    public static CreateRegistrate getRegistrate() {
-        return REGISTRATE.get();
     }
 
 }

@@ -11,7 +11,6 @@ import com.simibubi.create.foundation.ponder.PonderTag;
 
 public class ModPonders {
     private static final PonderRegistrationHelper HELPER = new PonderRegistrationHelper(Alloyed.MOD_ID);
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate();
 
     public static void register() {
         Alloyed.LOGGER.debug("Registering ModPonders!");
@@ -24,6 +23,6 @@ public class ModPonders {
     }
 
     public static void registerLang() {
-        PonderLocalization.provideRegistrateLang(REGISTRATE);
+        PonderLocalization.provideRegistrateLang(Alloyed.REGISTRATE);
     }
 }

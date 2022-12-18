@@ -23,18 +23,6 @@ public class RecipeUtils {
 
     public static class Crafting {
 
-        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> metalBlockRecipe(TagKey<Item> metalTag) {
-            return (ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get(), 1)
-                        .pattern("###")
-                        .pattern("###")
-                        .pattern("###")
-                        .define('#', metalTag)
-                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(metalTag))
-                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
-            };
-        }
-
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> stairs(ItemLike item) {
             return (ctx, prov) -> {
                 ShapedRecipeBuilder.shaped(ctx.get(), 4)
@@ -57,7 +45,7 @@ public class RecipeUtils {
             };
         }
 
-        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> metalIngotDecompactingRecipe(TagKey<Item> blockTag) {
+        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> decompactingRecipe(TagKey<Item> blockTag) {
             return (ctx, prov) -> {
                 ShapelessRecipeBuilder.shapeless(ctx.get(), 9)
                         .requires(blockTag)
@@ -66,6 +54,34 @@ public class RecipeUtils {
             };
         }
 
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> compactingRecipe(TagKey<Item> metalTag) {
+            return (ctx, prov) -> {
+                ShapedRecipeBuilder.shaped(ctx.get(), 1)
+                        .pattern("###")
+                        .pattern("###")
+                        .pattern("###")
+                        .define('#', metalTag)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(metalTag))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_compacting"));
+            };
+        }
+
+        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> compactingDecompactingRecipe(TagKey<Item> blockTag, TagKey<Item> nuggetTag) {
+            return (ctx, prov) -> {
+                ShapelessRecipeBuilder.shapeless(ctx.get(), 9)
+                        .requires(blockTag)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(blockTag))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_decompacting"));
+
+                ShapedRecipeBuilder.shaped(ctx.get(), 1)
+                        .pattern("###")
+                        .pattern("###")
+                        .pattern("###")
+                        .define('#', nuggetTag)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(nuggetTag))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_compacting"));
+            };
+        }
     }
 
     public static class MechanicalCrafting {

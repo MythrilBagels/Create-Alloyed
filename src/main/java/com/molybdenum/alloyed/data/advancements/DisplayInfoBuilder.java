@@ -43,13 +43,13 @@ public class DisplayInfoBuilder {
     }
 
     public DisplayInfoBuilder title(String title) {
-        Alloyed.getRegistrate().addDataGenerator(ProviderType.ADVANCEMENT,
+        Alloyed.REGISTRATE.addDataGenerator(ProviderType.ADVANCEMENT,
                 prov -> prov.title(Alloyed.MOD_ID, parent.name, title));
         return this;
     }
 
     public DisplayInfoBuilder description(String desc) {
-        Alloyed.getRegistrate().addDataGenerator(ProviderType.ADVANCEMENT,
+        Alloyed.REGISTRATE.addDataGenerator(ProviderType.ADVANCEMENT,
                 prov -> prov.desc(Alloyed.MOD_ID, parent.name, desc));
         return this;
     }

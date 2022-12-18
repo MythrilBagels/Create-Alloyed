@@ -12,7 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
 public class PostRegistrationHelper {
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate();
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE;
 
     // Lang
     public static void addBlockLang(String name, String lang) {

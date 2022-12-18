@@ -46,7 +46,7 @@ import java.util.Objects;
 @SuppressWarnings("unused")
 public class ModBlocks {
 
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
     // BRONZE
 
@@ -96,7 +96,7 @@ public class ModBlocks {
             ))
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
-            .recipe(RecipeUtils.Crafting.metalBlockRecipe(ModTags.Items.STEEL_INGOT))
+            .recipe(RecipeUtils.Crafting.compactingRecipe(ModTags.Items.STEEL_INGOT))
             .lang("Block of Steel")
             .register();
 

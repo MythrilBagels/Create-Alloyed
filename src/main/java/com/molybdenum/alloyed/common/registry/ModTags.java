@@ -18,6 +18,10 @@ public class ModTags {
         public static final TagKey<Item> BRONZE_INGOT = createForgeTag("ingots/bronze");
         public static final TagKey<Item> STEEL_INGOT = createForgeTag("ingots/steel");
 
+        // Compat for other mods' nuggets
+        public static final TagKey<Item> BRONZE_NUGGET = createForgeTag("nuggets/bronze");
+        public static final TagKey<Item> STEEL_NUGGET = createForgeTag("nuggets/steel");
+
         // Compat for other mods' sheets/plates
         public static final TagKey<Item> BRONZE_SHEET = createForgeTag("plates/bronze");
         public static final TagKey<Item> STEEL_SHEET = createForgeTag("plates/steel");
