@@ -1,6 +1,8 @@
-v1.4d
+v1.4e
 Changed:
-- How the Bronze Bell works
-Fixed:
-- Mod not working on Create 0.5.0e
+- The Bronze Bell ponder to include info on tuning
+- The Bronze Bell's volume
+- Various textures
+Added:
+- Bronze and Steel nuggets
 #
