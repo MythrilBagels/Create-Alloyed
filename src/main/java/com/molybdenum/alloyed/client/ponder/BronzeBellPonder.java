@@ -97,7 +97,8 @@ public class BronzeBellPonder {
 
         scene.overlay.showControls(new InputWindowElement(util.vector.centerOf(bell), Pointing.UP).rightClick(), 30);
         scene.idle(10);
-        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP), EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, Vec3.ZERO) , 1, 1);
+        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP),
+                EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, Vec3.ZERO) , 1, 1);
 
         // Show the lever and redstone
         scene.idle(50);
@@ -115,7 +116,23 @@ public class BronzeBellPonder {
         scene.world.toggleRedstonePower(redstoneSegment);
         scene.effects.indicateRedstone(util.grid.at(2, 1, 3));
         scene.idle(10);
-        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP), EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, Vec3.ZERO) , 1, 1);
+        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP),
+                EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, Vec3.ZERO), 1, 1);
+
+        // Show how to tune it
+        scene.idle(50);
+        scene.overlay.showText(90)
+                .attachKeyFrame()
+                .text("Wrenches can be used to tune them.")
+                .placeNearTarget()
+                .pointAt(util.vector.centerOf(bell));
+        scene.idle(30);
+
+        scene.overlay.showControls(new InputWindowElement(util.vector.centerOf(bell), Pointing.UP)
+                .rightClick().withWrench(), 30);
+        scene.idle(10);
+        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP),
+                EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, new Vec3(0.5, 0, 0)), 1, 1);
 
         // Show the deployers
         scene.idle(50);
