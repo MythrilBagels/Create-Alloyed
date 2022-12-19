@@ -22,7 +22,7 @@ import static com.molybdenum.alloyed.data.util.RecipeUtils.Crafting;
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Smithing;
 
 public class ModItems {
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
     // Ingots
     /**
@@ -32,7 +32,7 @@ public class ModItems {
      */
     public static final ItemEntry<Item> BRONZE_INGOT = taggedIngredient(
             "bronze_ingot",
-            Crafting.metalIngotDecompactingRecipe(ModTags.Items.BRONZE_BLOCK),
+            Crafting.compactingDecompactingRecipe(ModTags.Items.BRONZE_BLOCK, ModTags.Items.BRONZE_NUGGET),
             ModTags.Items.BRONZE_INGOT
     );
 
@@ -42,8 +42,21 @@ public class ModItems {
      */
     public static final ItemEntry<Item> STEEL_INGOT = taggedIngredient(
             "steel_ingot",
-            Crafting.metalIngotDecompactingRecipe(ModTags.Items.STEEL_BLOCK),
+            Crafting.compactingDecompactingRecipe(ModTags.Items.STEEL_BLOCK, ModTags.Items.STEEL_NUGGET),
             ModTags.Items.STEEL_INGOT
+    );
+
+    // Nuggets
+    public static final ItemEntry<Item> BRONZE_NUGGET = taggedIngredient(
+            "bronze_nugget",
+            Crafting.decompactingRecipe(ModTags.Items.BRONZE_INGOT),
+            ModTags.Items.BRONZE_NUGGET
+    );
+
+    public static final ItemEntry<Item> STEEL_NUGGET = taggedIngredient(
+            "steel_nugget",
+            Crafting.decompactingRecipe(ModTags.Items.STEEL_INGOT),
+            ModTags.Items.STEEL_NUGGET
     );
 
     // Sheets
@@ -170,10 +183,10 @@ public class ModItems {
     // End Item Entries
 
     public static void register() {
-        Alloyed.getRegistrate().addToSection(BRONZE_INGOT, AllSections.MATERIALS);
-        Alloyed.getRegistrate().addToSection(BRONZE_SHEET, AllSections.MATERIALS);
-        Alloyed.getRegistrate().addToSection(STEEL_INGOT, AllSections.MATERIALS);
-        Alloyed.getRegistrate().addToSection(STEEL_SHEET, AllSections.MATERIALS);
+        Alloyed.REGISTRATE.addToSection(BRONZE_INGOT, AllSections.MATERIALS);
+        Alloyed.REGISTRATE.addToSection(BRONZE_SHEET, AllSections.MATERIALS);
+        Alloyed.REGISTRATE.addToSection(STEEL_INGOT, AllSections.MATERIALS);
+        Alloyed.REGISTRATE.addToSection(STEEL_SHEET, AllSections.MATERIALS);
 
         Alloyed.LOGGER.debug("Registering ModItems!");
     }

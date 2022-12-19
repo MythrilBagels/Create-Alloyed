@@ -27,11 +27,12 @@ public class Alloyed {
     public static boolean isFarmersDelightLoaded = false;
     public static boolean isCreateDecoLoaded = false;
 
-    private static final NonNullSupplier<CreateRegistrate> REGISTRATE = CreateRegistrate.lazy(MOD_ID);
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID);
 
     public Alloyed() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
+        REGISTRATE.registerEventListeners(eventBus);
 
         isFarmersDelightLoaded = ModList.get().isLoaded("farmersdelight");
         isCreateDecoLoaded = ModList.get().isLoaded("createdeco");
@@ -46,9 +47,4 @@ public class Alloyed {
     public static ResourceLocation asResource(String path) {
         return new ResourceLocation(MOD_ID, path);
     }
-
-    public static CreateRegistrate getRegistrate() {
-        return REGISTRATE.get();
-    }
-
 }

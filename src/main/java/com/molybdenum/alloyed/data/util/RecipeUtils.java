@@ -10,13 +10,11 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.data.recipes.UpgradeRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Objects;
 import java.util.function.UnaryOperator;
@@ -24,18 +22,6 @@ import java.util.function.UnaryOperator;
 public class RecipeUtils {
 
     public static class Crafting {
-
-        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> metalBlockRecipe(TagKey<Item> metalTag) {
-            return (ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get(), 1)
-                        .pattern("###")
-                        .pattern("###")
-                        .pattern("###")
-                        .define('#', metalTag)
-                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(metalTag))
-                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
-            };
-        }
 
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> stairs(ItemLike item) {
             return (ctx, prov) -> {
@@ -59,7 +45,7 @@ public class RecipeUtils {
             };
         }
 
-        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> metalIngotDecompactingRecipe(TagKey<Item> blockTag) {
+        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> decompactingRecipe(TagKey<Item> blockTag) {
             return (ctx, prov) -> {
                 ShapelessRecipeBuilder.shapeless(ctx.get(), 9)
                         .requires(blockTag)
@@ -68,6 +54,34 @@ public class RecipeUtils {
             };
         }
 
+        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> compactingRecipe(TagKey<Item> metalTag) {
+            return (ctx, prov) -> {
+                ShapedRecipeBuilder.shaped(ctx.get(), 1)
+                        .pattern("###")
+                        .pattern("###")
+                        .pattern("###")
+                        .define('#', metalTag)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(metalTag))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_compacting"));
+            };
+        }
+
+        public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> compactingDecompactingRecipe(TagKey<Item> blockTag, TagKey<Item> nuggetTag) {
+            return (ctx, prov) -> {
+                ShapelessRecipeBuilder.shapeless(ctx.get(), 9)
+                        .requires(blockTag)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(blockTag))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_decompacting"));
+
+                ShapedRecipeBuilder.shaped(ctx.get(), 1)
+                        .pattern("###")
+                        .pattern("###")
+                        .pattern("###")
+                        .define('#', nuggetTag)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(nuggetTag))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_compacting"));
+            };
+        }
     }
 
     public static class MechanicalCrafting {
@@ -115,12 +129,6 @@ public class RecipeUtils {
                         .save(prov, Alloyed.asResource("stonecutting/" + ctx.getName() + "_from_" + sourceName));
             };
         }
-
-        public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> customDefaultLang(ItemLike source, int count) {
-            ResourceLocation id = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(source.asItem()));
-            return customDefaultLang(source, count, id.getPath());
-        }
-
     }
 
 

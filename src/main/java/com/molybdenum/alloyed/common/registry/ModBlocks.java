@@ -46,7 +46,7 @@ import java.util.Objects;
 @SuppressWarnings("unused")
 public class ModBlocks {
 
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
     // BRONZE
 
@@ -96,7 +96,7 @@ public class ModBlocks {
             ))
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
-            .recipe(RecipeUtils.Crafting.metalBlockRecipe(ModTags.Items.STEEL_INGOT))
+            .recipe(RecipeUtils.Crafting.compactingRecipe(ModTags.Items.STEEL_INGOT))
             .lang("Block of Steel")
             .register();
 
@@ -136,7 +136,7 @@ public class ModBlocks {
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Crafting
                         .stairs(STEEL_SHEET_METAL.get()));
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Stonecutting.
-                        customDefaultLang(STEEL_SHEET_METAL.get(), 1));
+                        customDefaultLang(STEEL_SHEET_METAL.get(), 1, "steel_sheet_metal"));
             })
             .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
             .register();
@@ -154,7 +154,7 @@ public class ModBlocks {
                     prov.modLoc("block/steel_sheet_metal")))
             .recipe((ctx, prov) -> {
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Stonecutting.
-                        customDefaultLang(STEEL_SHEET_METAL.get(), 2));
+                        customDefaultLang(STEEL_SHEET_METAL.get(), 2, "steel_sheet_metal"));
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Crafting.
                         slab(STEEL_SHEET_METAL.get()));
             })

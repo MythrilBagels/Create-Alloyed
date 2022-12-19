@@ -101,7 +101,7 @@ public class BronzeBellBlock extends Block {
         int i = pState.getValue(NOTE);
         float f = (float)Math.pow(2.0D, (double)(i - 12) / 12.0D);
 
-        pLevel.playSound(null, pPos, ModSoundEvents.BRONZE_BELL.get(), SoundSource.RECORDS, 3.0F, f);
+        pLevel.playSound(null, pPos, ModSoundEvents.BRONZE_BELL.get(), SoundSource.RECORDS, 5.0F, f);
         return true;
     }
 }

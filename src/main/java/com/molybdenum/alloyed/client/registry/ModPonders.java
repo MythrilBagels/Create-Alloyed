@@ -9,9 +9,10 @@ import com.simibubi.create.foundation.ponder.PonderRegistrationHelper;
 import com.simibubi.create.foundation.ponder.PonderRegistry;
 import com.simibubi.create.foundation.ponder.PonderTag;
 
+import static com.molybdenum.alloyed.Alloyed.REGISTRATE;
+
 public class ModPonders {
     private static final PonderRegistrationHelper HELPER = new PonderRegistrationHelper(Alloyed.MOD_ID);
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate();
 
     public static void register() {
         Alloyed.LOGGER.debug("Registering ModPonders!");

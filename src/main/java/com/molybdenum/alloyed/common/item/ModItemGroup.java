@@ -18,6 +18,6 @@ public class ModItemGroup {
     };
 
     // Tell Registrate to create a lang entry for the item groups
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate()
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE
             .creativeModeTab(() -> MAIN_GROUP, "Create: Alloyed");
 }

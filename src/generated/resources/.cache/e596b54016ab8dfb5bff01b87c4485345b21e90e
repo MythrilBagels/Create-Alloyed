@@ -1,4 +1,4 @@
-// 1.19.2	2022-11-22T19:01:59.3223456	Registrate Provider for alloyed [Recipes, Advancements, Loot tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+// 1.19.2	2022-12-19T12:42:57.6407752	Registrate Provider for alloyed [Recipes, Advancements, Loot tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
 fd8f3a1614a68df45edfe0b560342220a6a2a090 assets/alloyed/blockstates/bronze_bell.json
 9bb2e79030af6c4f8bbe92746ba183b2697ec634 assets/alloyed/blockstates/bronze_block.json
 a011b4bd153267f4db47636930ce12a47ebf5959 assets/alloyed/blockstates/exposed_bronze_block.json
@@ -20,8 +20,8 @@ e68db3d0531ee85d6b57175fdbdc493b7c11930f assets/alloyed/blockstates/waxed_bronze
 814c85c84d510508bbc71dff6db26ae995a9c895 assets/alloyed/blockstates/waxed_oxidized_bronze_block.json
 b4a5d73009dd3224150d0917a715eaa12b00fb47 assets/alloyed/blockstates/waxed_weathered_bronze_block.json
 f6550003af858b341513962264ee1bc22a9718ea assets/alloyed/blockstates/weathered_bronze_block.json
-5b9bd8f29510532d1839f36662f0ffa7bf1e3ddc assets/alloyed/lang/en_ud.json
-322c0e8ae8324a231acc5b6c879e73304b97c808 assets/alloyed/lang/en_us.json
+8bae3f53b3be16b3fae552a2452a014bd3035da8 assets/alloyed/lang/en_ud.json
+274a1287ac28171c70bd25a82993751a788af6e4 assets/alloyed/lang/en_us.json
 fa17db5fded8a378d95d294a6cc5bd569bcd4fb6 assets/alloyed/models/block/bronze_block.json
 d86d59ff3f066f06e24309102e54373d2511b0d9 assets/alloyed/models/block/exposed_bronze_block.json
 4cbf6ea4902241d22a33c243195cc655dc1d1e9e assets/alloyed/models/block/locked_steel_door/locked_steel_door_door_bottom_left.json
@@ -69,6 +69,7 @@ d7f3e619341483b73eb1c071faf06071b1e6e929 assets/alloyed/models/block/weathered_b
 dfd8fbabfe4b698cb4ef86e0b59f96fb4f506d74 assets/alloyed/models/item/bronze_bell.json
 899ad4252e28000e7021e937cdbbae2dfe4c7e48 assets/alloyed/models/item/bronze_block.json
 8db2582a2373101886a22e3535267a25ae112af2 assets/alloyed/models/item/bronze_ingot.json
+0f55785b8672238de9809d07fc8e0994e01e4e10 assets/alloyed/models/item/bronze_nugget.json
 ac2484ff9d3facafa67a126fc92af31f8db0fd94 assets/alloyed/models/item/bronze_sheet.json
 d6385612da4f9ebe71e0507b739f8d2306e33cdf assets/alloyed/models/item/exposed_bronze_block.json
 5f6da0b002886d0e293ce715e306793f056feba0 assets/alloyed/models/item/locked_steel_door.json
@@ -87,6 +88,7 @@ f97196735f3a43455ca07d5ef5e5b34162e81729 assets/alloyed/models/item/steel_knife.
 bbb57bece690b14de3d68cfe96f03b2dc8cb569e assets/alloyed/models/item/steel_ladder.json
 423ae9e8b73095e034f415bd24595c0628e9e231 assets/alloyed/models/item/steel_leggings.json
 d210982a0632116fad792f8f639a92ebc85c29ba assets/alloyed/models/item/steel_mesh_fence.json
+68d6e16e580d7ee8bcfc214b04a66476974588c2 assets/alloyed/models/item/steel_nugget.json
 017472b2d0794e071544ef0f0b1ba2628428442c assets/alloyed/models/item/steel_pickaxe.json
 ee517b7ae3980c2e402aa65a32098e58a55dfe61 assets/alloyed/models/item/steel_shears.json
 eee3eaec0554003a89d29f7c5b88ac77730937e0 assets/alloyed/models/item/steel_sheet.json
@@ -108,12 +110,16 @@ c297dfa8e36c09514e9087bf8f4b5b0e210bb6f5 assets/alloyed/models/item/steel_sheet_
 d7043768ad306d1ca30985f511c71636106d3c38 data/alloyed/advancements/recipes/main_group/crafting/bronze/waxed_oxidized_bronze_block_from_honeycomb.json
 ac8da17d5d4f4633ae51c7a0128f132f89ee45e5 data/alloyed/advancements/recipes/main_group/crafting/bronze/waxed_weathered_bronze_block_from_honeycomb.json
 0c324a0496a53c541f857357d383d1eb0ee8de24 data/alloyed/advancements/recipes/main_group/crafting/bronze_bell.json
+7a278d3e715112d38af41fdad4ec3f439d557198 data/alloyed/advancements/recipes/main_group/crafting/bronze_ingot_from_compacting.json
 b5e850aa998c40d48c65c8184fdd4d8032506654 data/alloyed/advancements/recipes/main_group/crafting/bronze_ingot_from_decompacting.json
+408050a347a22060d6bba3391f48ba6c23537ca7 data/alloyed/advancements/recipes/main_group/crafting/bronze_nugget_from_decompacting.json
 c68495503326295f1c85e02f965fd9ef7bda26ed data/alloyed/advancements/recipes/main_group/crafting/locked_steel_door.json
 96db477229a5d39c6baba56d6fb0a0fe770a7168 data/alloyed/advancements/recipes/main_group/crafting/steel_bars.json
-18f3b9511b033daba3b961bfe85e5f88ae06ea85 data/alloyed/advancements/recipes/main_group/crafting/steel_block.json
+c3065c17880d3fe2523731c24b2c292f344c8faa data/alloyed/advancements/recipes/main_group/crafting/steel_block_from_compacting.json
 9927be00699b871aeb7cbbe1c21a7af64f0f05ca data/alloyed/advancements/recipes/main_group/crafting/steel_door.json
+0cc61b03be0f4daf43fab2494c50b46fded591a8 data/alloyed/advancements/recipes/main_group/crafting/steel_ingot_from_compacting.json
 5944834f0afe1684fc7a3ccb30b1b67ff654be5c data/alloyed/advancements/recipes/main_group/crafting/steel_ingot_from_decompacting.json
+0d0291472325ba1c0bf320de7d90ec5067ff52b5 data/alloyed/advancements/recipes/main_group/crafting/steel_nugget_from_decompacting.json
 9e8ea82524c6ad5d5a85922eeaff8ebd5808bb9c data/alloyed/advancements/recipes/main_group/crafting/steel_sheet_slab.json
 31619a7b7bd2645d978e86ffc33ba3154986b517 data/alloyed/advancements/recipes/main_group/crafting/steel_sheet_stairs.json
 e679315fc2310aec3a8b7543744fd43632f85564 data/alloyed/advancements/recipes/main_group/crafting/steel_trapdoor.json
@@ -159,12 +165,16 @@ b8bd573868389324001680ab379e25c4197ffe19 data/alloyed/recipes/crafting/bronze/wa
 1ae0aa035d980d91217c708eebbd763ee403e1f0 data/alloyed/recipes/crafting/bronze/waxed_oxidized_bronze_block_from_honeycomb.json
 78c488d1b717525d3ea4fc62375e7a30a49d0ee9 data/alloyed/recipes/crafting/bronze/waxed_weathered_bronze_block_from_honeycomb.json
 583b46fabb8e468b351fd41c4fa7056b2b35093e data/alloyed/recipes/crafting/bronze_bell.json
+e51be62834a374211bc6a4d2466498e242c2ada0 data/alloyed/recipes/crafting/bronze_ingot_from_compacting.json
 b52e18ff62d64fd450aef8871bf5c3f81320893f data/alloyed/recipes/crafting/bronze_ingot_from_decompacting.json
+530bc265e19467c5297461a3acb8b415818e6490 data/alloyed/recipes/crafting/bronze_nugget_from_decompacting.json
 178b12f6a3511b6685d140c6165869fed387697a data/alloyed/recipes/crafting/locked_steel_door.json
 4510f7999cb3ca35f8590f3d6394512e383a5397 data/alloyed/recipes/crafting/steel_bars.json
-74f0f2a412514eaa630feb28a6cbd39c083178d7 data/alloyed/recipes/crafting/steel_block.json
+74f0f2a412514eaa630feb28a6cbd39c083178d7 data/alloyed/recipes/crafting/steel_block_from_compacting.json
 68c1dd81e26f70845d22462088de3171ed696087 data/alloyed/recipes/crafting/steel_door.json
+1879be9197c360f7f5097c6f4377016049a998c5 data/alloyed/recipes/crafting/steel_ingot_from_compacting.json
 48c0699ce92a077c7b6427b89f95ce8667d94151 data/alloyed/recipes/crafting/steel_ingot_from_decompacting.json
+30ce5438de00cfcfb4f5512339c6e57ddca0ecf3 data/alloyed/recipes/crafting/steel_nugget_from_decompacting.json
 43f7b7fe25317374c6ff559e813c886df900a868 data/alloyed/recipes/crafting/steel_sheet_slab.json
 8578b154725d4cbd0ad264163dfc025c2ea1c7d4 data/alloyed/recipes/crafting/steel_sheet_stairs.json
 2198c1d732c1e10b4c33143688fa68165e341342 data/alloyed/recipes/crafting/steel_trapdoor.json
@@ -190,6 +200,8 @@ cde2c4599da12c9db11133403591da49b2c5f6f4 data/alloyed/recipes/stonecutting/steel
 a44f92f306833b3a10a4010ad3653190f2f21661 data/forge/tags/blocks/storage_blocks/steel.json
 562788f57e39f0cfbcbe23a7de1108cc253afc31 data/forge/tags/items/ingots/bronze.json
 acd97ebf9fe57f6d359b7aeb60347941177c5354 data/forge/tags/items/ingots/steel.json
+2b0dfd74484212723199a4d349e4cc71c1f2306f data/forge/tags/items/nuggets/bronze.json
+5cadeb28972ac6b0e5b7da3f8a9381ea6cfa8e34 data/forge/tags/items/nuggets/steel.json
 ae19b0f0555c9ddba38b0852cb29e1febef47095 data/forge/tags/items/plates/bronze.json
 4ffffbeff9b38671f6b10cbe51f7b77f98a944f9 data/forge/tags/items/plates/steel.json
 b858331023ad2c0dcec9bc7737cbc98fa8b704c8 data/forge/tags/items/shears.json

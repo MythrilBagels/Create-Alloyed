@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alloyed:crafting/steel_block"
+        "recipe": "alloyed:crafting/steel_nugget_from_decompacting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "alloyed:crafting/steel_block"
+      "alloyed:crafting/steel_nugget_from_decompacting"
     ]
   }
 }

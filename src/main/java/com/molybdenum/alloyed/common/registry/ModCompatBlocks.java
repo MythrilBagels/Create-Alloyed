@@ -26,7 +26,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 public class ModCompatBlocks {
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate()
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE
             .creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
     // Create: Deco

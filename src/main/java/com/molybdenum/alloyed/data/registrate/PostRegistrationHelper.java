@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class PostRegistrationHelper {
-    private static final CreateRegistrate REGISTRATE = Alloyed.getRegistrate();
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE;
 
     // Lang
     public static void addBlockLang(String name, String lang) {
