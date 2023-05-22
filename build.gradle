@@ -174,8 +174,9 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
-    implementation fg.deobf("curse.maven:farmersdelight-398521:3739914") // Farmers Delight 1.04
-    implementation fg.deobf("curse.maven:createdeco-509285:4009050") // Create Deco
+    implementation fg.deobf("curse.maven:farmersdelight-398521:4525645") // Farmers Delight 1.04
+    implementation fg.deobf("curse.maven:createdeco-509285:4519293") // Create Deco
+    implementation fg.deobf("curse.maven:ctm-267602:3933537") // CTM
     // ----------------------
 
     implementation fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }
