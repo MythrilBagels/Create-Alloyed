@@ -1,120 +1,130 @@
 {
-  "variants": {
-    "east=false,north=false,south=false,waterlogged=false,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/post"
+  "multipart": [
+    {
+      "when": {
+        "north": "false",
+        "south": "false",
+        "east": "false",
+        "west": "false"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_post"
+      }
     },
-    "east=true,north=false,south=false,waterlogged=false,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/end"
+    {
+      "when": {
+        "north": "true",
+        "east": "true"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_post"
+      }
     },
-    "east=false,north=true,south=false,waterlogged=false,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/end",
-      "y": -90
+    {
+      "when": {
+        "north": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_post"
+      }
     },
-    "east=true,north=true,south=false,waterlogged=false,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/corner"
+    {
+      "when": {
+        "south": "true",
+        "east": "true"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_post"
+      }
     },
-    "east=false,north=false,south=true,waterlogged=false,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/end",
-      "y": 90
+    {
+      "when": {
+        "south": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_post"
+      }
     },
-    "east=true,north=false,south=true,waterlogged=false,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/corner",
-      "y": 90
+    {
+      "when": {
+        "north": "true",
+        "south": "false",
+        "east": "false",
+        "west": "false"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_post"
+      }
     },
-    "east=false,north=true,south=true,waterlogged=false,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/straight",
-      "y": 90
+    {
+      "when": {
+        "north": "false",
+        "south": "true",
+        "east": "false",
+        "west": "false"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_post"
+      }
     },
-    "east=true,north=true,south=true,waterlogged=false,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/tri_way",
-      "y": 90
+    {
+      "when": {
+        "north": "false",
+        "south": "false",
+        "east": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_post"
+      }
     },
-    "east=false,north=false,south=false,waterlogged=true,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/post"
+    {
+      "when": {
+        "north": "false",
+        "south": "false",
+        "east": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_post"
+      }
     },
-    "east=true,north=false,south=false,waterlogged=true,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/end"
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_side"
+      }
     },
-    "east=false,north=true,south=false,waterlogged=true,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/end",
-      "y": -90
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_side",
+        "y": 90
+      }
     },
-    "east=true,north=true,south=false,waterlogged=true,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/corner"
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_side",
+        "y": 180
+      }
     },
-    "east=false,north=false,south=true,waterlogged=true,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/end",
-      "y": 90
-    },
-    "east=true,north=false,south=true,waterlogged=true,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/corner",
-      "y": 90
-    },
-    "east=false,north=true,south=true,waterlogged=true,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/straight",
-      "y": 90
-    },
-    "east=true,north=true,south=true,waterlogged=true,west=false": {
-      "model": "alloyed:block/steel_mesh_fence/tri_way",
-      "y": 90
-    },
-    "east=false,north=false,south=false,waterlogged=false,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/end",
-      "y": 180
-    },
-    "east=true,north=false,south=false,waterlogged=false,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/straight"
-    },
-    "east=false,north=true,south=false,waterlogged=false,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/corner",
-      "y": -90
-    },
-    "east=true,north=true,south=false,waterlogged=false,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/tri_way"
-    },
-    "east=false,north=false,south=true,waterlogged=false,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/corner",
-      "y": 180
-    },
-    "east=true,north=false,south=true,waterlogged=false,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/tri_way",
-      "y": 180
-    },
-    "east=false,north=true,south=true,waterlogged=false,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/tri_way",
-      "y": -90
-    },
-    "east=true,north=true,south=true,waterlogged=false,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/four_way"
-    },
-    "east=false,north=false,south=false,waterlogged=true,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/end",
-      "y": 180
-    },
-    "east=true,north=false,south=false,waterlogged=true,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/straight"
-    },
-    "east=false,north=true,south=false,waterlogged=true,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/corner",
-      "y": -90
-    },
-    "east=true,north=true,south=false,waterlogged=true,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/tri_way"
-    },
-    "east=false,north=false,south=true,waterlogged=true,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/corner",
-      "y": 180
-    },
-    "east=true,north=false,south=true,waterlogged=true,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/tri_way",
-      "y": 180
-    },
-    "east=false,north=true,south=true,waterlogged=true,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/tri_way",
-      "y": -90
-    },
-    "east=true,north=true,south=true,waterlogged=true,west=true": {
-      "model": "alloyed:block/steel_mesh_fence/four_way"
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "alloyed:block/steel_mesh_fence_side",
+        "y": 270
+      }
     }
-  }
+  ]
 }

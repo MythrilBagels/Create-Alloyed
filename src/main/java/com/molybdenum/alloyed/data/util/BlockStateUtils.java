@@ -154,7 +154,7 @@ public class BlockStateUtils {
                     ctx.getName() + "_post", prov.mcLoc("block/fence_post")
             ).texture("texture", post);
             BlockModelBuilder side = prov.models().withExistingParent(
-                            ctx.getName() + "_side", new ResourceLocation("createdeco", "block/chainlink_fence_side")
+                            ctx.getName() + "_side", prov.modLoc("block/chainlink_fence_side")
                     ).texture("particle", mesh)
                     .texture("0", mesh);
 
