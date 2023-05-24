@@ -1,0 +1,8 @@
+{
+  "parent": "createdeco:block/catwalk_stairs",
+  "textures": {
+    "2": "alloyed:block/steel_catwalk_rail",
+    "3": "alloyed:block/steel_catwalk_stairs",
+    "particle": "alloyed:block/steel_catwalk_rail"
+  }
+}
