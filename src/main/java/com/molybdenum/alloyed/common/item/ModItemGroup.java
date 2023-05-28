@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class ModItemGroup {
 
-    public static final CreativeModeTab MAIN_GROUP = new CreativeModeTab("main_group")
+    public static final CreativeModeTab MAIN_GROUP = new CreativeModeTab(Alloyed.MOD_ID + ".main_group")
     {
         @Override
         public ItemStack makeIcon()

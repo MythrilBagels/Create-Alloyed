@@ -55,5 +55,5 @@
   "item.alloyed.steel_sheet": "Steel Sheet",
   "item.alloyed.steel_shovel": "Steel Shovel",
   "item.alloyed.steel_sword": "Steel Sword",
-  "itemGroup.main_group": "Create: Alloyed"
+  "itemGroup.alloyed.main_group": "Create: Alloyed"
 }
