@@ -11,6 +11,7 @@ import com.molybdenum.alloyed.data.util.*;
 import com.simibubi.create.*;
 import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
 import com.simibubi.create.content.decoration.MetalLadderBlock;
+import com.simibubi.create.content.decoration.MetalScaffoldingBlock;
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.content.decoration.encasing.EncasedCTBehaviour;
 import com.simibubi.create.content.fluids.PipeAttachmentModel;
@@ -52,6 +53,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.Objects;
 
+import static com.simibubi.create.Create.REGISTRATE;
 import static com.simibubi.create.foundation.data.BlockStateGen.axisBlock;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 
@@ -161,6 +163,15 @@ public class ModBlocks {
             .build()
             .transform(axeOrPickaxe())
             .register();
+
+
+    public static final BlockEntry<MetalScaffoldingBlock> STEEL_SCAFFOLD =
+            REGISTRATE.block("steel_scaffolding", MetalScaffoldingBlock::new)
+                    .transform(BuilderTransformers.scaffold("steel",
+                            () -> DataIngredient.tag(AllTags.forgeItemTag("ingots/steel")), MaterialColor.COLOR_GRAY,
+                            ModSpriteShifts.STEEL_SCAFFOLD, ModSpriteShifts.STEEL_SCAFFOLD_INSIDE, ModSpriteShifts.STEEL_CASING))
+                    .properties(ModBlocks::steelProperties)
+                    .register();
 
 
     public static final BlockEntry<SteelDoorBlock> STEEL_DOOR =
