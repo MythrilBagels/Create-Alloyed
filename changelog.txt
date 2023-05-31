@@ -1,8 +1,8 @@
-v1.4e
-Changed:
-- The Bronze Bell ponder to include info on tuning
-- The Bronze Bell's volume
-- Various textures
+v1.5
 Added:
-- Bronze and Steel nuggets
+- Steel Catwalk Stairs
+- Steel Casing
+Fixed:
+- Broken Steel Mesh Fences
+- Misc Bugs
 #

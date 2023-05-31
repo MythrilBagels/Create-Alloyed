@@ -5,7 +5,7 @@ import com.molybdenum.alloyed.common.registry.ModTags;
 import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.AllRecipeTypes;
-import com.simibubi.create.content.contraptions.processing.HeatCondition;
+import com.simibubi.create.content.processing.recipe.HeatCondition;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;

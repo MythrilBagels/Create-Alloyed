@@ -7,7 +7,6 @@ import com.molybdenum.alloyed.common.item.ModItemTiers;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
 import com.molybdenum.alloyed.data.recipes.MixingRecipes;
 import com.molybdenum.alloyed.data.recipes.PressingRecipes;
-import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
@@ -184,11 +183,6 @@ public class ModItems {
     // End Item Entries
 
     public static void register() {
-        Alloyed.REGISTRATE.addToSection(BRONZE_INGOT, AllSections.MATERIALS);
-        Alloyed.REGISTRATE.addToSection(BRONZE_SHEET, AllSections.MATERIALS);
-        Alloyed.REGISTRATE.addToSection(STEEL_INGOT, AllSections.MATERIALS);
-        Alloyed.REGISTRATE.addToSection(STEEL_SHEET, AllSections.MATERIALS);
-
         Alloyed.LOGGER.debug("Registering ModItems!");
     }
 

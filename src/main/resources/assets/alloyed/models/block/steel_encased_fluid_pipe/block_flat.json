@@ -1,0 +1,7 @@
+{
+	"parent": "create:block/encased_fluid_pipe/block_flat",
+	"textures": {
+		"0": "alloyed:block/steel_casing",
+		"particle": "alloyed:block/steel_casing"
+	}
+}

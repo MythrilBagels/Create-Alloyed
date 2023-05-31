@@ -165,7 +165,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.60'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.4'
 
     // --- DEBUG PURPOSES ---
     // compile against the JEI API but do not include it at runtime
@@ -175,7 +175,8 @@ dependencies {
 
     //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
     implementation fg.deobf("curse.maven:farmersdelight-398521:4525645") // Farmers Delight 1.04
-    implementation fg.deobf("curse.maven:createdeco-509285:4519293") // Create Deco
+    implementation fg.deobf("curse.maven:nethersdelight-496394:3756127") // Nethers Delight
+    implementation fg.deobf("curse.maven:createdeco-509285:4554163") // Create Deco
     implementation fg.deobf("curse.maven:ctm-267602:3933537") // CTM
     // ----------------------
 
@@ -255,20 +256,19 @@ String getChangelogText() {
         if (it.size() > 1) {
             def temp = it
             if (lineCount == 0) {
-                temp = "## Create: Alloyed ${mod_version} <br/> \n"
+                temp = "## Create: Alloyed ${mod_version}\n"
             } else if (it.matches("Fixed:|Changed:|Added:|Removed:")) {
-                temp = temp.replaceAll("Fixed:|Changed:|Added:|Removed:", "### \$0 <br/> \n") // Fixed: -> ### Fixed: , etc
+                temp = temp.replaceAll("Fixed:|Changed:|Added:|Removed:", "### \$0 \n") // Fixed: -> ### Fixed: , etc
             } else if (it.startsWith('-')) {
                 temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "<a href=\"https://github.com/\$1/issues/\$2\">\$0</a>")
                 temp = temp.replaceAll("#([0-9]+)\\b(?!<\\/a>)", "<a href=\"https://github.com/$github_project/issues/\$1\">\$0</a>")
-                temp = temp + " <br/> \n"
             } else {
-                temp = "#### $temp <br/> \n"
+                temp = "#### $temp \n"
             }
             str += temp
             lineCount++
         } else {
-            str += "#### If you find an issue with the mod, please submit it&nbsp;<a href=\"https://github.com/${github_project}/issues\" rel=\"nofollow\">here</a>."
+            str += "#### If you find an issue with the mod, please submit it on the issue tracker."
             done = true
         }
 

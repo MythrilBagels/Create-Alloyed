@@ -2,9 +2,7 @@ package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.client.registry.ModSoundEvents;
 import com.molybdenum.alloyed.common.registry.*;
-import com.simibubi.create.CreateClient;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

@@ -1,0 +1,10 @@
+{
+  "parent": "create:block/encased_large_cogwheel/block",
+  "textures": {
+    "casing": "alloyed:block/steel_casing",
+    "particle": "alloyed:block/steel_casing",
+    "4": "alloyed:block/steel_gearbox",
+    "1": "alloyed:block/steel_encased_cogwheel_inside",
+    "side": "alloyed:block/steel_encased_cogwheel_side_connected"
+  }
+}

@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.common.content;
+package com.molybdenum.alloyed.common.content.blocks;
 
 import net.minecraft.world.level.block.DoorBlock;
 

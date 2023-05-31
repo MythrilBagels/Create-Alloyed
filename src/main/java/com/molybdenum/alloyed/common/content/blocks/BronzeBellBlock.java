@@ -1,4 +1,4 @@
-package com.molybdenum.alloyed.common.content;
+package com.molybdenum.alloyed.common.content.blocks;
 
 import com.molybdenum.alloyed.client.registry.ModSoundEvents;
 import com.simibubi.create.AllItems;
