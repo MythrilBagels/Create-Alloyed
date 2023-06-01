@@ -262,6 +262,7 @@ String getChangelogText() {
             } else if (it.startsWith('-')) {
                 temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "<a href=\"https://github.com/\$1/issues/\$2\">\$0</a>")
                 temp = temp.replaceAll("#([0-9]+)\\b(?!<\\/a>)", "<a href=\"https://github.com/$github_project/issues/\$1\">\$0</a>")
+                temp += "\n"
             } else {
                 temp = "#### $temp \n"
             }
