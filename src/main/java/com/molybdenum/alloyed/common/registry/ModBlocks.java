@@ -10,8 +10,8 @@ import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
 import com.simibubi.create.AllInteractionBehaviours;
 import com.simibubi.create.AllTags;
-import com.simibubi.create.content.contraptions.components.structureMovement.interaction.DoorMovingInteraction;
-import com.simibubi.create.content.curiosities.deco.MetalLadderBlock;
+import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
+import com.simibubi.create.content.decoration.MetalLadderBlock;
 import com.simibubi.create.foundation.block.CopperBlockSet;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -32,6 +32,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -43,7 +44,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.Objects;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "removal"})
 public class ModBlocks {
 
     private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
@@ -225,7 +226,7 @@ public class ModBlocks {
     public static final BlockEntry<MetalLadderBlock> STEEL_LADDER = REGISTRATE
             .block("steel_ladder", MetalLadderBlock::new)
             .transform(BuilderTransformers.ladder("steel",
-                    () -> DataIngredient.tag(ModTags.Items.STEEL_SHEET)))
+                    () -> DataIngredient.tag(ModTags.Items.STEEL_SHEET), MaterialColor.COLOR_GRAY))
             .blockstate((ctx, prov) -> prov.horizontalBlock(ctx.get(), prov.models()
                     .getExistingFile(prov.modLoc("block/steel_ladder"))))
             .lang("Steel Ladder")
@@ -237,7 +238,7 @@ public class ModBlocks {
     }
 
     public static BlockBehaviour.@NotNull Properties steelProperties(BlockBehaviour.Properties properties) {
-        return properties.sound(SoundType.NETHERITE_BLOCK).strength(5, 14);
+        return properties.sound(SoundType.NETHERITE_BLOCK).strength(5, 14).color(MaterialColor.COLOR_GRAY);
     }
 
     public static void fixBronzeBlocks() {

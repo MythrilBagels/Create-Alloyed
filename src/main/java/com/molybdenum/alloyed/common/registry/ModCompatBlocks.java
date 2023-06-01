@@ -25,6 +25,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
+@SuppressWarnings("removal")
 public class ModCompatBlocks {
     private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE
             .creativeModeTab(() -> ModItemGroup.MAIN_GROUP);

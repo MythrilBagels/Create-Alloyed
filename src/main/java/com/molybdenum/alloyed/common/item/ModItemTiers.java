@@ -4,12 +4,13 @@ import com.google.common.base.Suppliers;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.function.Supplier;
 
 public enum ModItemTiers implements Tier {
-    STEEL(2, 1000, 7.0F, 3.0F, 11, () -> {
-        return Ingredient.of(ModItems.STEEL_INGOT.get());
-    });
+    STEEL(2, 1000, 7.0F, 3.0F, 11,
+            () -> Ingredient.of(ModItems.STEEL_INGOT.get()));
 
     // Base code for item tier
 
@@ -55,7 +56,7 @@ public enum ModItemTiers implements Tier {
     }
 
     @Override
-    public Ingredient getRepairIngredient() {
+    public @NotNull Ingredient getRepairIngredient() {
         return repairIngredient.get();
     }
 }
