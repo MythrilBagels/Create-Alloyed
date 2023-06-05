@@ -46,6 +46,7 @@ public class ModItems {
     );
 
     // Nuggets
+
     public static final ItemEntry<Item> BRONZE_NUGGET = taggedIngredient(
             "bronze_nugget",
             Crafting.decompactingRecipe(ModTags.Items.BRONZE_INGOT),

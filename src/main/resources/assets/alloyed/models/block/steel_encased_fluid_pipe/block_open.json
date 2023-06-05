@@ -1,0 +1,7 @@
+{
+	"parent": "create:block/encased_fluid_pipe/block_open",
+	"textures": {
+		"0": "alloyed:block/steel_encased_fluid_pipe",
+		"particle": "alloyed:block/steel_encased_fluid_pipe"
+	}
+}

@@ -8,8 +8,6 @@ import com.simibubi.create.foundation.ponder.PonderRegistrationHelper;
 import com.simibubi.create.foundation.ponder.PonderRegistry;
 import com.simibubi.create.infrastructure.ponder.AllPonderTags;
 
-import static com.molybdenum.alloyed.Alloyed.REGISTRATE;
-
 public class ModPonders {
     private static final PonderRegistrationHelper HELPER = new PonderRegistrationHelper(Alloyed.MOD_ID);
 
@@ -24,6 +22,6 @@ public class ModPonders {
     }
 
     public static void registerLang() {
-        PonderLocalization.provideRegistrateLang(REGISTRATE);
+        PonderLocalization.provideRegistrateLang(Alloyed.REGISTRATE);
     }
 }

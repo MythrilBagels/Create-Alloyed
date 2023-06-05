@@ -10,6 +10,7 @@ import com.molybdenum.alloyed.common.compat.hidden.HiddenSlabBlock;
 import com.molybdenum.alloyed.common.item.ModItemGroup;
 import com.molybdenum.alloyed.data.util.BlockStateUtils;
 import com.molybdenum.alloyed.data.util.ModelUtils;
+import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -24,6 +25,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraftforge.client.model.generators.BlockModelBuilder;
 
 @SuppressWarnings("removal")
 public class ModCompatBlocks {
@@ -53,6 +55,24 @@ public class ModCompatBlocks {
             .build()
             .addLayer(() -> RenderType::cutoutMipped)
             .onRegister(CreateRegistrate.connectedTextures(SteelCatwalkCTBehaviour::new))
+            .register();
+
+    public static final BlockEntry<Block> STEEL_CATWALK_STAIRS = REGISTRATE
+            .block("steel_catwalk_stairs", properties -> Alloyed.isCreateDecoLoaded ?
+                    CreateDecoCompat.newCatwalkStairBlock(properties) : new HiddenBlock(properties))
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .properties(properties -> properties
+                    .strength(5, 3)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .sound(SoundType.NETHERITE_BLOCK)
+            )
+            .addLayer(()-> RenderType::cutoutMipped)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
+            .blockstate((ctx,prov)->
+                    prov.horizontalBlock(ctx.get(), prov.models().withExistingParent(ctx.getName(), prov.modLoc("block/catwalk_stairs"))))
+            .simpleItem()
             .register();
 
     public static final BlockEntry<SlabBlock> STEEL_SHEET_VERTICAL_SLAB = REGISTRATE

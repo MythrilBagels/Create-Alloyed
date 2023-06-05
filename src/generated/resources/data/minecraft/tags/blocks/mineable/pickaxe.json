@@ -10,6 +10,11 @@
     "alloyed:waxed_oxidized_bronze_block",
     "alloyed:bronze_bell",
     "alloyed:steel_block",
+    "alloyed:steel_casing",
+    "alloyed:steel_encased_shaft",
+    "alloyed:steel_encased_cogwheel",
+    "alloyed:steel_encased_large_cogwheel",
+    "alloyed:steel_scaffolding",
     "alloyed:steel_door",
     "alloyed:locked_steel_door",
     "alloyed:steel_sheet_metal",
@@ -19,6 +24,7 @@
     "alloyed:steel_trapdoor",
     "alloyed:steel_ladder",
     "alloyed:steel_catwalk",
+    "alloyed:steel_catwalk_stairs",
     "alloyed:steel_sheet_vertical_slab",
     "alloyed:steel_mesh_fence"
   ]

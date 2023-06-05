@@ -1,20 +1,29 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.common.content.BronzeBellBlock;
-import com.molybdenum.alloyed.common.content.SteelDoorBlock;
+import com.molybdenum.alloyed.common.content.blocks.BronzeBellBlock;
+import com.molybdenum.alloyed.common.content.blocks.SteelDoorBlock;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetMetalCTBehaviour;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetSlabCTBehaviour;
 import com.molybdenum.alloyed.common.item.ModItemGroup;
 import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
-import com.simibubi.create.AllInteractionBehaviours;
-import com.simibubi.create.AllTags;
+import com.simibubi.create.*;
 import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
 import com.simibubi.create.content.decoration.MetalLadderBlock;
+import com.simibubi.create.content.decoration.MetalScaffoldingBlock;
+import com.simibubi.create.content.decoration.encasing.CasingBlock;
+import com.simibubi.create.content.decoration.encasing.EncasedCTBehaviour;
+import com.simibubi.create.content.fluids.PipeAttachmentModel;
+import com.simibubi.create.content.fluids.pipes.EncasedPipeBlock;
+import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogCTBehaviour;
+import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
+import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedShaftBlock;
 import com.simibubi.create.foundation.block.CopperBlockSet;
+import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.foundation.utility.Couple;
 import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.DataIngredient;
@@ -44,7 +53,11 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.Objects;
 
-@SuppressWarnings({"unused", "removal"})
+import static com.simibubi.create.Create.REGISTRATE;
+import static com.simibubi.create.foundation.data.BlockStateGen.axisBlock;
+import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
+
+@SuppressWarnings("unused")
 public class ModBlocks {
 
     private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
@@ -101,6 +114,66 @@ public class ModBlocks {
             .lang("Block of Steel")
             .register();
 
+    public static final BlockEntry<CasingBlock> STEEL_CASING = REGISTRATE.block("steel_casing", CasingBlock::new)
+            .transform(BuilderTransformers.casing(() -> ModSpriteShifts.STEEL_CASING))
+            .properties(ModBlocks::steelProperties)
+            .register();
+
+    public static final BlockEntry<EncasedShaftBlock> STEEL_ENCASED_SHAFT = REGISTRATE
+            .block("steel_encased_shaft", p -> new EncasedShaftBlock(p, ModBlocks.STEEL_CASING::get))
+            .properties(ModBlocks::steelProperties)
+            .transform(BuilderTransformers.encasedShaft("steel", () -> ModSpriteShifts.STEEL_CASING))
+            .transform(axeOrPickaxe())
+            .register();
+
+    public static final BlockEntry<EncasedCogwheelBlock> STEEL_ENCASED_COGWHEEL = REGISTRATE
+            .block("steel_encased_cogwheel", p -> new EncasedCogwheelBlock(p, false, ModBlocks.STEEL_CASING::get))
+            .properties(ModBlocks::steelProperties)
+            .transform(BuilderTransformers.encasedCogwheel("steel", () -> ModSpriteShifts.STEEL_CASING))
+            .blockstate((c, p) -> axisBlock(c, p, blockState -> {
+                String suffix = (blockState.getValue(EncasedCogwheelBlock.TOP_SHAFT) ? "_top" : "")
+                        + (blockState.getValue(EncasedCogwheelBlock.BOTTOM_SHAFT) ? "_bottom" : "");
+                return p.models().getExistingFile(p.modLoc("block/steel_encased_cogwheel/block" + suffix));
+            }, false))
+            .item()
+            .model((c, p) -> {
+                p.getExistingFile(p.modLoc(c.getName()));
+            })
+            .build()
+            .onRegister(CreateRegistrate.connectedTextures(() -> new EncasedCogCTBehaviour(ModSpriteShifts.STEEL_CASING,
+                    Couple.create(ModSpriteShifts.STEEL_ENCASED_COGWHEEL_SIDE,
+                            ModSpriteShifts.STEEL_ENCASED_COGWHEEL_OTHERSIDE))))
+            .transform(axeOrPickaxe())
+            .register();
+
+
+    public static final BlockEntry<EncasedCogwheelBlock> STEEL_ENCASED_LARGE_COGWHEEL = REGISTRATE
+            .block("steel_encased_large_cogwheel", p -> new EncasedCogwheelBlock(p, true, ModBlocks.STEEL_CASING::get))
+            .properties(ModBlocks::steelProperties)
+            .transform(BuilderTransformers.encasedLargeCogwheel("steel", () -> ModSpriteShifts.STEEL_CASING))
+            .blockstate((c, p) -> axisBlock(c, p, blockState -> {
+                String suffix = (blockState.getValue(EncasedCogwheelBlock.TOP_SHAFT) ? "_top" : "")
+                        + (blockState.getValue(EncasedCogwheelBlock.BOTTOM_SHAFT) ? "_bottom" : "");
+                return p.models().getExistingFile(p.modLoc("block/steel_encased_large_cogwheel/block" + suffix));
+            }, false))
+            .item()
+            .model((c, p) -> {
+                p.getExistingFile(p.modLoc(c.getName()));
+            })
+            .build()
+            .transform(axeOrPickaxe())
+            .register();
+
+
+    public static final BlockEntry<MetalScaffoldingBlock> STEEL_SCAFFOLD =
+            REGISTRATE.block("steel_scaffolding", MetalScaffoldingBlock::new)
+                    .transform(BuilderTransformers.scaffold("steel",
+                            () -> DataIngredient.tag(AllTags.forgeItemTag("ingots/steel")), MaterialColor.COLOR_GRAY,
+                            ModSpriteShifts.STEEL_SCAFFOLD, ModSpriteShifts.STEEL_SCAFFOLD_INSIDE, ModSpriteShifts.STEEL_CASING))
+                    .properties(ModBlocks::steelProperties)
+                    .register();
+
+
     public static final BlockEntry<SteelDoorBlock> STEEL_DOOR =
             steelDoorBlock(false, null)
                     .onRegister(
@@ -137,7 +210,7 @@ public class ModBlocks {
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Crafting
                         .stairs(STEEL_SHEET_METAL.get()));
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Stonecutting.
-                        customDefaultLang(STEEL_SHEET_METAL.get(), 1, "steel_sheet_metal"));
+                        customDefaultLang(STEEL_SHEET_METAL.get(), 1));
             })
             .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
             .register();
@@ -155,7 +228,7 @@ public class ModBlocks {
                     prov.modLoc("block/steel_sheet_metal")))
             .recipe((ctx, prov) -> {
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Stonecutting.
-                        customDefaultLang(STEEL_SHEET_METAL.get(), 2, "steel_sheet_metal"));
+                        customDefaultLang(STEEL_SHEET_METAL.get(), 2));
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Crafting.
                         slab(STEEL_SHEET_METAL.get()));
             })

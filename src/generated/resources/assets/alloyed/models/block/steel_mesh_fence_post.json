@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "alloyed:block/steel_sheet_metal"
+  }
+}

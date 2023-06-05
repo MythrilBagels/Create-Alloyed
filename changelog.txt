@@ -1,6 +1,11 @@
-v1.4d
+v1.5
+Added:
+- Steel Catwalk Stairs
+- Steel Casing
+- Steel Scaffolding
 Changed:
-- How the Bronze Bell works
+- Texture of Steel Bars
 Fixed:
-- Mod not working on Create 0.5.0e
+- Broken Steel Mesh Fences
+- Misc Bugs
 #

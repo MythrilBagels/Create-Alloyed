@@ -134,54 +134,70 @@ public class BlockStateUtils {
         }
 
         public static <T extends Block> void steelMeshFenceBlockstate(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov) {
-            prov.getVariantBuilder(ctx.get()).forAllStates(state -> {
-                String baseDirectory = "block/steel_mesh_fence/";
-                boolean north, south, east, west;
+            ResourceLocation post = prov.modLoc("block/steel_sheet_metal");
+            ResourceLocation mesh = prov.modLoc("block/steel_chain_link");
 
-                north = state.getValue(BlockStateProperties.NORTH);
-                south = state.getValue(BlockStateProperties.SOUTH);
-                east  = state.getValue(BlockStateProperties.EAST);
-                west  = state.getValue(BlockStateProperties.WEST);
+            char[][] states = {
+                    // N    S      E      W
+                    {'f', 'f', 'f', 'f'}, // solo
+                    {'t', 'x', 't', 'x'},   // NE corner / tri / cross
+                    {'t', 'x', 'x', 't'},   // NW corner / tri / cross
+                    {'x', 't', 't', 'x'},   // SE corner / tri / cross
+                    {'x', 't', 'x', 't'},   // SW corner / tri / cross
+                    {'t', 'f', 'f', 'f'},  // N end
+                    {'f', 't', 'f', 'f'},  // S end
+                    {'f', 'f', 't', 'f'},  // E end
+                    {'f', 'f', 'f', 't'}   // W end
+            };
 
-                int sides = (north ? 1 : 0)
-                        + (south ? 1 : 0)
-                        + (east  ? 1 : 0)
-                        + (west  ? 1 : 0);
+            BlockModelBuilder center = prov.models().withExistingParent(
+                    ctx.getName() + "_post", prov.mcLoc("block/fence_post")
+            ).texture("texture", post);
+            BlockModelBuilder side = prov.models().withExistingParent(
+                            ctx.getName() + "_side", prov.modLoc("block/chainlink_fence_side")
+                    ).texture("particle", mesh)
+                    .texture("0", mesh);
 
-                String suffix;
-                int rotationY = -1;
-
-                switch (sides) {
-                    case 4 -> suffix = "four_way";
-                    case 3 -> {
-                        suffix = "tri_way";
-                        rotationY = north ? (south ? (east ? 90 : -90) : 0) : 180;
-                    }
-                    case 2 -> {
-                        if ((north && south) || (east && west)) {
-                            suffix = "straight";
-                            rotationY = east ? 0 : 90;
-                        } else {
-                            suffix = "corner";
-                            rotationY = north ? (east ? 0 : -90) : (east ? 90 : 180);
-                        }
-                    }
-                    case 1 -> {
-                        suffix = "end";
-                        rotationY = north ? -90 : (south ? 90 : (east ? 0 : 180));
-                    }
-                    // fall through
-                    case 0 -> suffix = "post";
-                    default -> suffix = "post";
+            MultiPartBlockStateBuilder builder = prov.getMultipartBuilder(ctx.get());
+            for (char[] state : states) {
+                MultiPartBlockStateBuilder.PartBuilder part = builder.part().modelFile(center).addModel();
+                if (state[0] == 't') {
+                    part.condition(BlockStateProperties.NORTH, true);
                 }
-
-                ConfiguredModel.Builder<?> builder = ConfiguredModel.builder().modelFile(
-                        prov.models().getExistingFile(Alloyed.asResource(baseDirectory + suffix)));
-
-                if (rotationY != -1) builder = builder.rotationY(rotationY);
-
-                return builder.build();
-            });
+                else if (state[0] == 'f') {
+                    part.condition(BlockStateProperties.NORTH, false);
+                } // else 'x' don't care
+                if (state[1] == 't') {
+                    part.condition(BlockStateProperties.SOUTH, true);
+                }
+                else if (state[1] == 'f') {
+                    part.condition(BlockStateProperties.SOUTH, false);
+                } // else 'x' don't care
+                if (state[2] == 't') {
+                    part.condition(BlockStateProperties.EAST, true);
+                }
+                else if (state[2] == 'f') {
+                    part.condition(BlockStateProperties.EAST, false);
+                } // else 'x' don't care
+                if (state[3] == 't') {
+                    part.condition(BlockStateProperties.WEST, true);
+                }
+                else if (state[3] == 'f') {
+                    part.condition(BlockStateProperties.WEST, false);
+                } // else 'x' don't care
+                part.end();
+            }
+            builder.part().modelFile(side).addModel()
+                    .condition(BlockStateProperties.EAST, true).end();
+            builder.part().modelFile(side)
+                    .rotationY(90).addModel()
+                    .condition(BlockStateProperties.SOUTH, true).end();
+            builder.part().modelFile(side)
+                    .rotationY(180).addModel()
+                    .condition(BlockStateProperties.WEST, true).end();
+            builder.part().modelFile(side)
+                    .rotationY(270).addModel()
+                    .condition(BlockStateProperties.NORTH, true).end();
         }
     }
 

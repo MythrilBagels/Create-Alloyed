@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[41,)"
+loaderVersion="[40,)"
 license="MIT"
 issueTrackerURL="https://github.com/MythrilBagels/Create-Alloyed/issues"
 [[mods]]
 modId="alloyed"
-version="1.19.2"
+version="1.18.2"
 displayName="Create: Alloyed"
 #updateJSONURL="http://myurl.me/"
 displayURL="https://github.com/MythrilBagels/Create-Alloyed"
@@ -18,30 +18,30 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
 [[dependencies.alloyed]]
     modId="forge"
     mandatory=true
-    versionRange="[41,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]
     modId="create"
     mandatory=true
-    versionRange="[0.5.0.e,)"
+    versionRange="[mc1.18.2_v0.5.1b,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]
     modId="flywheel"
     mandatory=true
-    versionRange="[0.6.6,)"
+    versionRange="[0.6.8,)"
     ordering="AFTER"
     side="CLIENT"
 [[dependencies.alloyed]]
     modId="farmersdelight"
     mandatory=false
-    versionRange="[1.19-1.2,)"
+    versionRange="[1.18.2-1.0.4,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2]"
+    versionRange="[1.18.2]"
     ordering="NONE"
     side="BOTH"

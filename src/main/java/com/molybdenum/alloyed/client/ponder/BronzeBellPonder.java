@@ -155,8 +155,7 @@ public class BronzeBellPonder {
         scene.idle(10);
         scene.world.moveDeployer(deployer, 1, 25);
         scene.idle(25);
-        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP),
-                EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, new Vec3(0.5, 0, 0)) , 1, 1);
+        scene.effects.emitParticles(util.vector.blockSurface(bell, Direction.UP), EmitParticlesInstruction.Emitter.simple(ParticleTypes.NOTE, new Vec3(0.5, 0, 0)), 1, 1);
         scene.world.moveDeployer(deployer, -1, 25);
 
         scene.idle(60); // End

@@ -1,15 +1,13 @@
 package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.client.registry.ModSoundEvents;
-import com.molybdenum.alloyed.common.registry.ModBlocks;
-import com.molybdenum.alloyed.common.registry.ModCompatBlocks;
-import com.molybdenum.alloyed.common.registry.ModCompatItems;
-import com.molybdenum.alloyed.common.registry.ModItems;
+import com.molybdenum.alloyed.common.registry.*;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -42,9 +40,13 @@ public class Alloyed {
         ModCompatItems.register();
         ModCompatBlocks.register();
         ModSoundEvents.register(eventBus);
+
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT,
+                () -> () -> AlloyedClient.onClientInit(eventBus));
     }
 
     public static ResourceLocation asResource(String path) {
         return new ResourceLocation(MOD_ID, path);
     }
+
 }
