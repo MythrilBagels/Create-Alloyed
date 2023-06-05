@@ -1,7 +1,6 @@
 package com.molybdenum.alloyed.data.providers;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.data.recipes.ItemApplicationRecipes;
 import com.molybdenum.alloyed.data.recipes.MixingRecipes;
 import com.molybdenum.alloyed.data.recipes.PressingRecipes;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipe;
@@ -9,13 +8,12 @@ import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
+import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
-import net.minecraft.data.HashCache;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
@@ -28,11 +26,10 @@ public abstract class ModProcessingRecipes extends CreateRecipeProvider {
     public static void registerAllProcessingProviders(DataGenerator generator) {
         PROVIDERS.add(new PressingRecipes(generator));
         PROVIDERS.add(new MixingRecipes(generator));
-        PROVIDERS.add(new ItemApplicationRecipes(generator));
 
-        generator.addProvider(new DataProvider() {
+        generator.addProvider(true,new DataProvider() {
             @Override
-            public void run(@NotNull HashCache pCache) throws IOException {
+            public void run(@NotNull CachedOutput pCache) {
                 PROVIDERS.forEach(generator -> {
                     try {
                         generator.run(pCache);

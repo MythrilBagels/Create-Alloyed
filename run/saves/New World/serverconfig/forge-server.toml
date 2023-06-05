@@ -11,10 +11,10 @@
 	#Chance that a zombie (or subclass) is a baby. Allows changing the zombie spawning mechanic.
 	#Range: 0.0 ~ 1.0
 	zombieBabyChance = 0.05
-	#Vanilla will treat crafting recipes using empty tags as air, and allow you to craft with nothing in that slot. This changes empty tags to use BARRIER as the item. To prevent crafting with air.
-	treatEmptyTagsAsAir = false
 	#Fix advancement loading to use a proper topological sort. This may have visibility side-effects and can thus be turned off if needed for data-pack compatibility.
 	fixAdvancementLoading = true
-	#No comment
+	#The permission handler used by the server. Defaults to forge:default_handler if no such handler with that name is registered.
 	permissionHandler = "forge:default_handler"
+	#Set this to true to remove any Entity (Note: Does not include BlockEntities) that throws an error in its tick method instead of closing the server and reporting a crash log. BE WARNED THIS COULD SCREW UP EVERYTHING USE SPARINGLY WE ARE NOT RESPONSIBLE FOR DAMAGES.
+	removeErroringEntities = false
 

@@ -5,14 +5,11 @@
   "refmap": "alloyed.refmap.json",
   "mixins": [
     "CogwheelBlockMixin",
-    "FishingHookMixin",
     "ShaftBlockMixin"
   ],
   "minVersion": "0.8",
   "injectors": {
     "defaultRequire": 1
   },
-  "client": [
-    "FishingHookRendererMixin"
-  ]
+  "client": []
 }

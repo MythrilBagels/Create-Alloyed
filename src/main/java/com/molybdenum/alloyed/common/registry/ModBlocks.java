@@ -1,26 +1,23 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.common.content.blocks.BronzeBellBlock;
-import com.molybdenum.alloyed.common.content.blocks.SteelDoorBlock;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetMetalCTBehaviour;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetSlabCTBehaviour;
+import com.molybdenum.alloyed.common.content.blocks.BronzeBellBlock;
+import com.molybdenum.alloyed.common.content.blocks.SteelDoorBlock;
 import com.molybdenum.alloyed.common.item.ModItemGroup;
 import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
-import com.simibubi.create.*;
+import com.simibubi.create.AllInteractionBehaviours;
+import com.simibubi.create.AllTags;
 import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
 import com.simibubi.create.content.decoration.MetalLadderBlock;
 import com.simibubi.create.content.decoration.MetalScaffoldingBlock;
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
-import com.simibubi.create.content.decoration.encasing.EncasedCTBehaviour;
-import com.simibubi.create.content.fluids.PipeAttachmentModel;
-import com.simibubi.create.content.fluids.pipes.EncasedPipeBlock;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogCTBehaviour;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedShaftBlock;
 import com.simibubi.create.foundation.block.CopperBlockSet;
-import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.utility.Couple;
@@ -53,7 +50,6 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.Objects;
 
-import static com.simibubi.create.Create.REGISTRATE;
 import static com.simibubi.create.foundation.data.BlockStateGen.axisBlock;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 
@@ -210,7 +206,7 @@ public class ModBlocks {
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Crafting
                         .stairs(STEEL_SHEET_METAL.get()));
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Stonecutting.
-                        customDefaultLang(STEEL_SHEET_METAL.get(), 1));
+                        customDefaultLang(STEEL_SHEET_METAL.get(), 1, "steel_sheet_metal"));
             })
             .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
             .register();
@@ -228,7 +224,7 @@ public class ModBlocks {
                     prov.modLoc("block/steel_sheet_metal")))
             .recipe((ctx, prov) -> {
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Stonecutting.
-                        customDefaultLang(STEEL_SHEET_METAL.get(), 2));
+                        customDefaultLang(STEEL_SHEET_METAL.get(), 2, "steel_sheet_metal"));
                 RecipeUtils.toFunction(ctx, prov, RecipeUtils.Crafting.
                         slab(STEEL_SHEET_METAL.get()));
             })
