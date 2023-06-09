@@ -14,8 +14,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.data.IModelData;
-import net.minecraftforge.client.model.data.ModelDataMap;
+import net.minecraftforge.client.model.data.ModelData;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -36,16 +35,16 @@ public class BeltBlockEntityMixin extends KineticBlockEntity implements BeltBloc
     }
 
     @Inject(
-            method = "getModelData()Lnet/minecraftforge/client/model/data/IModelData;",
+            method = "getModelData()Lnet/minecraftforge/client/model/data/ModelData;",
             at = @At("TAIL"),
             remap = false,
             cancellable = true
     )
-    private void setModelDetails(CallbackInfoReturnable<IModelData> cir) {
-        cir.setReturnValue(new ModelDataMap.Builder()
-                .withInitial(BeltModel.CASING_PROPERTY, casing)
-                .withInitial(BeltModelExtension.ALLOYED_CASING_PROPERTY, alloyedCasing)
-                .withInitial(BeltModel.COVER_PROPERTY, covered)
+    private void setModelDetails(CallbackInfoReturnable<ModelData> cir) {
+        cir.setReturnValue(ModelData.builder()
+                .with(BeltModel.CASING_PROPERTY, casing)
+                .with(BeltModelExtension.ALLOYED_CASING_PROPERTY, alloyedCasing)
+                .with(BeltModel.COVER_PROPERTY, covered)
                 .build());
     }
 

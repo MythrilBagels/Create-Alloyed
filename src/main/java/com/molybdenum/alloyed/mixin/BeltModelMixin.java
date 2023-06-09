@@ -14,8 +14,8 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.data.IModelData;
-import net.minecraftforge.client.model.data.ModelProperty;
+
+import net.minecraftforge.client.model.data.ModelData;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -29,14 +29,14 @@ import java.util.Random;
 public class BeltModelMixin implements BeltModelExtension {
 
     @Inject(
-            method = "getQuads(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Ljava/util/Random;Lnet/minecraftforge/client/model/data/IModelData;)Ljava/util/List;",
+            method = "getQuads(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Ljava/util/Random;Lnet/minecraftforge/client/model/data/ModelData;)Ljava/util/List;",
             at = @At(value = "RETURN", ordinal = 1),
             locals = LocalCapture.CAPTURE_FAILHARD,
             cancellable = true,
             remap = false
     )
-    private void handleAlloyedCasingRendering(BlockState state, Direction side, Random rand, IModelData extraData, CallbackInfoReturnable<List<BakedQuad>> cir, List<BakedQuad> quads, boolean cover, BeltBlockEntity.CasingType type, boolean brassCasing) {
-        BeltBlockEntityExtension.AlloyedCasingType alloyedType = extraData.getData(ALLOYED_CASING_PROPERTY);
+    private void handleAlloyedCasingRendering(BlockState state, Direction side, Random rand, ModelData extraData, CallbackInfoReturnable<List<BakedQuad>> cir, List<BakedQuad> quads, boolean cover, BeltBlockEntity.CasingType type, boolean brassCasing) {
+        BeltBlockEntityExtension.AlloyedCasingType alloyedType = extraData.get(ALLOYED_CASING_PROPERTY);
         if (alloyedType == BeltBlockEntityExtension.AlloyedCasingType.NONE) return;
 
         List<BakedQuad> newQuads = new ArrayList<>(quads);
@@ -72,14 +72,14 @@ public class BeltModelMixin implements BeltModelExtension {
     }
 
     @Inject(
-            method = "getParticleIcon(Lnet/minecraftforge/client/model/data/IModelData;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;",
+            method = "getParticleIcon(Lnet/minecraftforge/client/model/data/ModelData;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;",
             at = @At("HEAD"),
             cancellable = true,
             remap = false
     )
-    private void returnAlloyedSpritesIfNeeded(IModelData data, CallbackInfoReturnable<TextureAtlasSprite> cir) {
-        if (!data.hasProperty(ALLOYED_CASING_PROPERTY)) return;
-        if (data.getData(ALLOYED_CASING_PROPERTY) == BeltBlockEntityExtension.AlloyedCasingType.STEEL) {
+    private void returnAlloyedSpritesIfNeeded(ModelData data, CallbackInfoReturnable<TextureAtlasSprite> cir) {
+        if (!data.has(ALLOYED_CASING_PROPERTY)) return;
+        if (data.get(ALLOYED_CASING_PROPERTY) == BeltBlockEntityExtension.AlloyedCasingType.STEEL) {
             cir.setReturnValue(ModSpriteShifts.STEEL_CASING.getOriginal());
             cir.cancel();
         }
