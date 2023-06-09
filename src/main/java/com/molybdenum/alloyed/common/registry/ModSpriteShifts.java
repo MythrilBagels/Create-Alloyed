@@ -1,9 +1,12 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.simibubi.create.Create;
 import com.simibubi.create.foundation.block.connected.AllCTTypes;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import com.simibubi.create.foundation.block.connected.CTSpriteShifter;
+import com.simibubi.create.foundation.block.render.SpriteShiftEntry;
+import com.simibubi.create.foundation.block.render.SpriteShifter;
 
 import static com.simibubi.create.foundation.block.connected.AllCTTypes.*;
 
@@ -18,6 +21,9 @@ public class ModSpriteShifts {
 
     public static final CTSpriteShiftEntry STEEL_SCAFFOLD = ct(HORIZONTAL, "scaffold/steel_scaffold"),
             STEEL_SCAFFOLD_INSIDE = ct(HORIZONTAL, "scaffold/steel_scaffold_inside");
+
+    public static final SpriteShiftEntry STEEL_BELT_CASING = SpriteShifter.get
+            (Create.asResource("block/belt/brass_belt_casing"), Alloyed.asResource("block/steel_belt_casing"));
 
     private static CTSpriteShiftEntry ct(AllCTTypes type, String name) {
         return CTSpriteShifter.getCT(type,
