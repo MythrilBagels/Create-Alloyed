@@ -63,7 +63,6 @@ public class BeltBlockEntityMixin extends KineticBlockEntity implements BeltBloc
                     value = "INVOKE_ASSIGN",
                     target = "Lnet/minecraft/nbt/CompoundTag;getBoolean(Ljava/lang/String;)Z",
                     ordinal = 1),
-            remap = false,
             locals = LocalCapture.CAPTURE_FAILHARD
     )
     private void readAlloyedCasingNBT(CompoundTag compound, boolean clientPacket, CallbackInfo ci, int prevBeltLength, BeltBlockEntity.CasingType casingBefore, boolean coverBefore) {
