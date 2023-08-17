@@ -30,8 +30,8 @@ public class BronzeBellBlock extends Block {
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     public static final IntegerProperty NOTE = BlockStateProperties.NOTE;
 
-    public BronzeBellBlock(Properties p_49795_) {
-        super(p_49795_);
+    public BronzeBellBlock(Properties properties) {
+        super(properties);
         registerDefaultState(defaultBlockState()
                 .setValue(POWERED, false)
                 .setValue(NOTE, 0));
