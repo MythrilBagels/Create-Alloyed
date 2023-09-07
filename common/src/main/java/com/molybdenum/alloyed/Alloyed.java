@@ -1,12 +1,6 @@
 package com.molybdenum.alloyed;
 
-import com.mojang.brigadier.CommandDispatcher;
-import com.molybdenum.alloyed.base.data.CRTagGen;
-import com.molybdenum.alloyed.base.data.lang.CRLangPartials;
-import com.molybdenum.alloyed.base.data.recipe.RailwaysSequencedAssemblyRecipeGen;
-import com.molybdenum.alloyed.base.data.recipe.RailwaysStandardRecipeGen;
 import com.molybdenum.alloyed.client.registry.ModPonders;
-import com.molybdenum.alloyed.client.registry.ModSoundEvents;
 import com.molybdenum.alloyed.common.compat.farmersdelight.FarmersDelightCompat;
 import com.molybdenum.alloyed.common.item.ModItemGroup;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
@@ -15,21 +9,12 @@ import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
 import com.molybdenum.alloyed.util.Utils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.foundation.data.LangMerger;
-import com.simibubi.create.foundation.ponder.PonderLocalization;
-import com.tterrag.registrate.providers.ProviderType;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.config.ModConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import vectorwing.farmersdelight.common.registry.ModAdvancements;
-
-import java.util.function.BiConsumer;
 
 public class Alloyed {
 
