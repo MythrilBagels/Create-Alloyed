@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "alloyed:block/steel_sheet_metal",
-    "side": "alloyed:block/steel_sheet_metal",
-    "top": "alloyed:block/steel_sheet_metal"
-  }
-}

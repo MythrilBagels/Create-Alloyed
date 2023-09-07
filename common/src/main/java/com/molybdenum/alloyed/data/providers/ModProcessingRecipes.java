@@ -24,7 +24,7 @@ public abstract class ModProcessingRecipes extends CreateRecipeProvider {
 
     protected static final List<ModProcessingRecipes> PROVIDERS = new ArrayList<>();
 
-    public static void registerAllProcessingProviders(DataGenerator generator) {
+    public static void registerAllProcessingProviders(FabricDataGenerator generator) {
         PROVIDERS.add(new PressingRecipes(generator));
         PROVIDERS.add(new MixingRecipes(generator));
 

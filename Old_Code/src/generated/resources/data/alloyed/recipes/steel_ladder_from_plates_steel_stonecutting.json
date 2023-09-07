@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "tag": "forge:plates/steel"
-  },
-  "result": "alloyed:steel_ladder"
-}

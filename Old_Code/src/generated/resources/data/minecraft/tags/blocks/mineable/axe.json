@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "alloyed:steel_casing",
-    "alloyed:steel_encased_shaft",
-    "alloyed:steel_encased_cogwheel",
-    "alloyed:steel_encased_large_cogwheel"
-  ]
-}
