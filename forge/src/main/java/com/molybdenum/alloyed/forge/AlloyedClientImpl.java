@@ -1,9 +1,6 @@
 package com.molybdenum.alloyed.forge;
 
-import com.molybdenum.alloyed.Railways;
-import com.molybdenum.alloyed.RailwaysClient;
-import com.molybdenum.alloyed.registry.CRExtraDisplayTags;
-import com.molybdenum.alloyed.registry.CRParticleTypes;
+import com.molybdenum.alloyed.AlloyedClient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 

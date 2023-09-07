@@ -1,23 +1,23 @@
 package com.molybdenum.alloyed.data.recipes;
 
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.molybdenum.alloyed.common.registry.ModCompatItems;
 import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import com.simibubi.create.foundation.data.recipe.MechanicalCraftingRecipeBuilder;
-import net.minecraft.data.DataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
-import static com.molybdenum.alloyed.data.util.RecipeUtils.*;
+import static com.molybdenum.alloyed.data.util.RecipeUtils.Lang;
+import static com.molybdenum.alloyed.data.util.RecipeUtils.MechanicalCrafting;
 
 public class MechanicalCraftingRecipes extends CreateRecipeProvider {
 
@@ -71,11 +71,11 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
             .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
     );
 
-    public MechanicalCraftingRecipes(DataGenerator generator) {
+    public MechanicalCraftingRecipes(FabricDataGenerator generator) {
         super(generator);
     }
 
-    public static void register(DataGenerator generator) {
+    public static void register(FabricDataGenerator generator) {
         generator.addProvider(true, new MechanicalCraftingRecipes(generator));
     }
 
@@ -110,9 +110,9 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
                 MechanicalCraftingRecipeBuilder b =
                         builder.apply( MechanicalCraftingRecipeBuilder.shapedRecipe(result.get(), amount));
 
-                ResourceLocation resultLocation = ForgeRegistries.ITEMS.getKey(result.get().asItem());
+                ResourceLocation resultLocation = Registry.ITEM.getKey(result.get().asItem());
                 b.build(consumer, Alloyed.asResource("mechanical_crafting/" +
-                        (resultLocation == null ? "unregistered_sadface" : resultLocation.getPath()) + suffix));
+                        resultLocation.getPath() + suffix));
             });
         }
     }

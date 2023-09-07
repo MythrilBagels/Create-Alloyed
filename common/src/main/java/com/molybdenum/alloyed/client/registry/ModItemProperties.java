@@ -2,6 +2,7 @@ package com.molybdenum.alloyed.client.registry;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.registry.ModItems;
+import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.renderer.item.ItemPropertyFunction;
 import net.minecraft.resources.ResourceLocation;
@@ -11,7 +12,7 @@ import net.minecraft.world.item.FishingRodItem;
 @SuppressWarnings("deprecation")
 public class ModItemProperties {
     // Properties
-    private static final ItemPropertyFunction FISHING_ROD_CAST = (stack, level, entity, i) -> {
+    private static final ClampedItemPropertyFunction FISHING_ROD_CAST = (stack, level, entity, i) -> {
         if (entity == null) {
             return 0.0F;
         } else {

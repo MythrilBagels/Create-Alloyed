@@ -22,6 +22,6 @@ public class ModPonders {
     }
 
     public static void registerLang() {
-        PonderLocalization.provideRegistrateLang(Alloyed.REGISTRATE);
+        PonderLocalization.provideRegistrateLang(Alloyed.registrate());
     }
 }

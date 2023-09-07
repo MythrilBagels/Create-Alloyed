@@ -4,6 +4,7 @@ import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
 import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.simibubi.create.AllRecipeTypes;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.data.DataGenerator;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,7 +20,7 @@ public class PressingRecipes extends ModProcessingRecipes {
             .output(ModItems.STEEL_SHEET.get())
     );
 
-    public PressingRecipes(DataGenerator generator) {
+    public PressingRecipes(FabricDataGenerator generator) {
         super(generator);
     }
 

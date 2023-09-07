@@ -6,6 +6,7 @@ import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -30,7 +31,7 @@ public class ItemApplicationRecipes extends ModProcessingRecipes {
                 .output(output.get()));
     }
 
-    public ItemApplicationRecipes(DataGenerator generator) {
+    public ItemApplicationRecipes(FabricDataGenerator generator) {
         super(generator);
     }
 

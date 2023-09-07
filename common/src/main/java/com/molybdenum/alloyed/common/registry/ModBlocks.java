@@ -56,7 +56,7 @@ import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 @SuppressWarnings("unused")
 public class ModBlocks {
 
-    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
+    private static final CreateRegistrate REGISTRATE = Alloyed.registrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
     // BRONZE
 
@@ -193,7 +193,7 @@ public class ModBlocks {
 
     public static final BlockEntry<StairBlock> STEEL_SHEET_STAIRS = REGISTRATE
             .block("steel_sheet_stairs", properties ->
-                    new StairBlock(Blocks.BRICK_STAIRS::defaultBlockState, properties))
+                    new StairBlock(Blocks.BRICK_STAIRS.defaultBlockState(), properties))
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(ModBlocks::steelProperties)
             .item().tag(ItemTags.STAIRS).build()

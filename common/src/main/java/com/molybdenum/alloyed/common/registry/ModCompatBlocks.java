@@ -29,7 +29,7 @@ import net.minecraftforge.client.model.generators.BlockModelBuilder;
 
 @SuppressWarnings("removal")
 public class ModCompatBlocks {
-    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE
+    private static final CreateRegistrate REGISTRATE = Alloyed.registrate()
             .creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
     // Create: Deco

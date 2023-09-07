@@ -6,6 +6,7 @@ import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -45,7 +46,7 @@ public class MixingRecipes extends ModProcessingRecipes {
             .duration(200)
     );
 
-    public MixingRecipes(DataGenerator generator) {
+    public MixingRecipes(FabricDataGenerator generator) {
         super(generator);
     }
 

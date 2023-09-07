@@ -1,6 +1,8 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
+import net.minecraft.core.Registry;
+import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -40,15 +42,15 @@ public class ModTags {
         public static final TagKey<Item> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
 
         private static TagKey<Item> createTag(String name) {
-            return ItemTags.create(Alloyed.asResource(name));
+            return TagKey.create(Registry.ITEM_REGISTRY, Alloyed.asResource(name));
         }
 
         private static TagKey<Item> createForgeTag(String name) {
-            return ItemTags.create(new ResourceLocation("forge", name));
+            return TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation("forge", name));
         }
 
         private static TagKey<Item> createSpecialTag(String modId, String path) {
-            return ItemTags.create(new ResourceLocation(modId, path));
+            return TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(modId, path));
         }
     }
 
@@ -62,11 +64,11 @@ public class ModTags {
         public static final TagKey<Block> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
 
         private static TagKey<Block> createTag(String name) {
-            return BlockTags.create(Alloyed.asResource(name));
+            return TagKey.create(Registry.BLOCK_REGISTRY, Alloyed.asResource(name));
         }
 
         private static TagKey<Block> createForgeTag(String name) {
-            return BlockTags.create(new ResourceLocation("forge", name));
+            return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("forge", name));
         }
     }
 
@@ -82,8 +84,7 @@ public class ModTags {
 
 
         private static TagKey<Item> createForgeTag(String name) {
-            return ItemTags.create(new ResourceLocation("forge", name));
+            return TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation("forge", name));
         }
     }
-
 }

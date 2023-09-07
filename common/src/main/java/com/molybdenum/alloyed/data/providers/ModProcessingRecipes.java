@@ -8,6 +8,7 @@ import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
@@ -46,7 +47,7 @@ public abstract class ModProcessingRecipes extends CreateRecipeProvider {
         });
     }
 
-    public ModProcessingRecipes(DataGenerator generator) {
+    public ModProcessingRecipes(FabricDataGenerator generator) {
         super(generator);
     }
 

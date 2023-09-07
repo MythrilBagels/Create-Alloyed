@@ -27,6 +27,10 @@ dependencies {
     // All dependencies except Flywheel and Registrate are NOT safe to use!
     // Flywheel and Registrate must also be used carefully due to differences.
     modCompileOnly("com.simibubi.create:create-fabric-${minecraft_version}:${create_fabric_version}")
+
+    modCompileOnly("maven.modrinth:farmers-delight:${farmers_delight_version}") // Farmers Delight 1.2.1
+    modCompileOnly("curse.maven:createdeco-509285:4554164") // Create Deco
+    modCompileOnly("curse.maven:ctm-267602:4393695") // CTM
 }
 
 publishing {

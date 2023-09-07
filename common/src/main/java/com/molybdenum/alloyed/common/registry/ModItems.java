@@ -21,7 +21,7 @@ import static com.molybdenum.alloyed.data.util.RecipeUtils.Crafting;
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Smithing;
 
 public class ModItems {
-    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
+    private static final CreateRegistrate REGISTRATE = Alloyed.registrate().creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
 
     // Ingots
     /**

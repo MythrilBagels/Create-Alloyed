@@ -1,27 +1,22 @@
 package com.molybdenum.alloyed.mixin;
 
 import com.molybdenum.alloyed.common.content.extensions.BeltBlockEntityExtension;
-import com.molybdenum.alloyed.common.content.extensions.BeltModelExtension;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
-import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.content.kinetics.belt.BeltBlock;
 import com.simibubi.create.content.kinetics.belt.BeltBlockEntity;
-import com.simibubi.create.content.kinetics.belt.BeltModel;
 import com.simibubi.create.foundation.utility.NBTHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.data.ModelData;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(BeltBlockEntity.class)
@@ -34,19 +29,19 @@ public class BeltBlockEntityMixin extends KineticBlockEntity implements BeltBloc
         super(typeIn, pos, state);
     }
 
-    @Inject(
-            method = "getModelData()Lnet/minecraftforge/client/model/data/ModelData;",
-            at = @At("TAIL"),
-            remap = false,
-            cancellable = true
-    )
-    private void setModelDetails(CallbackInfoReturnable<ModelData> cir) {
-        cir.setReturnValue(ModelData.builder()
-                .with(BeltModel.CASING_PROPERTY, casing)
-                .with(BeltModelExtension.ALLOYED_CASING_PROPERTY, alloyedCasing)
-                .with(BeltModel.COVER_PROPERTY, covered)
-                .build());
-    }
+//    @Inject(
+//            method = "getModelData()Lnet/minecraftforge/client/model/data/ModelData;",
+//            at = @At("TAIL"),
+//            remap = false,
+//            cancellable = true
+//    )
+//    private void setModelDetails(CallbackInfoReturnable<ModelData> cir) {
+//        cir.setReturnValue(ModelData.builder()
+//                .with(BeltModel.CASING_PROPERTY, casing)
+//                .with(BeltModelExtension.ALLOYED_CASING_PROPERTY, alloyedCasing)
+//                .with(BeltModel.COVER_PROPERTY, covered)
+//                .build());
+//    }
 
     @Inject(
             method = "write(Lnet/minecraft/nbt/CompoundTag;Z)V",

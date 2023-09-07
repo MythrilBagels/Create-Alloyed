@@ -1,5 +1,6 @@
 package com.molybdenum.alloyed.fabric;
 
+import com.molybdenum.alloyed.Alloyed;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;

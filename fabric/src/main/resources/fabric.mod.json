@@ -17,7 +17,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.examplemod.fabric.ExampleModFabric"
+      "com.molybdenum.alloyed.fabric.AlloyedImpl"
+    ],
+    "client": [
+      "com.molybdenum.alloyed.fabric.AlloyedClientImpl"
+    ],
+    "fabric-datagen": [
+      "com.molybdenum.alloyed.fabric.AlloyedDataFabric"
     ]
   },
   "mixins": [

@@ -1,5 +1,6 @@
 package com.molybdenum.alloyed;
 
+import com.molybdenum.alloyed.client.registry.ModSoundEvents;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.molybdenum.alloyed.common.registry.ModCompatBlocks;
 import com.molybdenum.alloyed.common.registry.ModCompatItems;
@@ -11,5 +12,6 @@ public class ModSetup {
         ModBlocks.register();
         ModCompatItems.register();
         ModCompatBlocks.register();
+        ModSoundEvents.register();
     }
 }

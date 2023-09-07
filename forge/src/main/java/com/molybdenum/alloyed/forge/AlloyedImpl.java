@@ -53,21 +53,4 @@ public class AlloyedImpl {
 	public static void finalizeRegistrate() {
 		Alloyed.registrate().registerEventListeners(bus);
 	}
-
-	private static final Set<BiConsumer<CommandDispatcher<CommandSourceStack>, Boolean>> commandConsumers = new HashSet<>();
-
-	public static void registerCommands(BiConsumer<CommandDispatcher<CommandSourceStack>, Boolean> consumer) {
-		commandConsumers.add(consumer);
-	}
-
-	@SubscribeEvent
-	public static void onCommandRegistration(RegisterCommandsEvent event) {
-		CommandSelection selection = event.getCommandSelection();
-		boolean dedicated = selection == CommandSelection.ALL || selection == CommandSelection.DEDICATED;
-		commandConsumers.forEach(consumer -> consumer.accept(event.getDispatcher(), dedicated));
-	}
-
-	public static void registerConfig(ModConfig.Type type, ForgeConfigSpec spec) {
-		ModLoadingContext.get().registerConfig(type, spec);
-	}
 }
