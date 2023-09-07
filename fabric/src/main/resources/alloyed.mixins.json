@@ -4,6 +4,7 @@
   "package": "com.molybdenum.alloyed.fabric.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "BeltModelMixin"
   ],
   "mixins": [
   ],
