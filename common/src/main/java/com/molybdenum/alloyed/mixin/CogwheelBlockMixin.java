@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(CogWheelBlock.class)
-public abstract class CogwheelBlockMixin {
+public class CogwheelBlockMixin {
     @Shadow(remap = false)
     boolean isLarge;
 

@@ -60,13 +60,13 @@ public class ModBlocks {
 
     // BRONZE
 
-    public static final CopperBlockSet BRONZE_BLOCKS = new CopperBlockSet( // Ignore that it says COPPER block set. The code works for any oxidizing metal.
-            REGISTRATE,
-            "bronze_block",
-            "bronze_block",
-            new CopperBlockSet.Variant<?>[] { CopperBlockSet.BlockVariant.INSTANCE },
-            "bronze/"
-    );
+//    public static final CopperBlockSet BRONZE_BLOCKS = new CopperBlockSet( // Ignore that it says COPPER block set. The code works for any oxidizing metal.
+//            REGISTRATE,
+//            "bronze_block",
+//            "bronze_block",
+//            new CopperBlockSet.Variant<?>[] { CopperBlockSet.BlockVariant.INSTANCE },
+//            "bronze/"
+//    );
 
     public static final BlockEntry<BronzeBellBlock> BRONZE_BELL = REGISTRATE
             .block("bronze_bell", BronzeBellBlock::new)

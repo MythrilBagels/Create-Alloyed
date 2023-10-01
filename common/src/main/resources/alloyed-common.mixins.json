@@ -2,11 +2,9 @@
   "required": true,
   "package": "com.molybdenum.alloyed.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "alloyed.refmap.json",
   "mixins": [
     "BeltBlockEntityMixin",
     "BeltBlockMixin",
-    "BeltModelMixin",
     "CogwheelBlockMixin",
     "ShaftBlockMixin"
   ],
