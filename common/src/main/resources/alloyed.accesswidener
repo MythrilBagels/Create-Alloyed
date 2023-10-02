@@ -1,0 +1,4 @@
+accessWidener   v2  named
+accessible method net/minecraft/world/level/block/DoorBlock getCloseSound ()I
+accessible method net/minecraft/world/level/block/DoorBlock getOpenSound ()I
+accessible method net/minecraft/world/item/HoeItem <init> (Lnet/minecraft/world/item/Tier;IFLnet/minecraft/world/item/Item$Properties;)V

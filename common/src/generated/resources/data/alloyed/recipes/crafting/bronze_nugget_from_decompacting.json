@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/bronze"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "alloyed:bronze_nugget"
+  }
+}

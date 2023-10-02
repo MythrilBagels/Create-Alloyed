@@ -1,301 +1,69 @@
-buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net' }
-        maven { url = 'https://maven.parchmentmc.org' }
-        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
-        mavenCentral()
-
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: "${forgegradle_version}", changing: false
-        classpath group: 'org.spongepowered', name: 'mixingradle', version: "${mixin_version}"
-        classpath "org.parchmentmc:librarian:1.+"
-    }
-}
-
 plugins {
-    id 'com.matthewprenger.cursegradle' version "${cursegradle_version}"
+    id "architectury-plugin" version "3.4-SNAPSHOT"
+    id "dev.architectury.loom" version "1.1.+" apply false
+    id "io.github.juuxel.loom-vineflower" version "1.+" apply false // Vineflower, a better decompiler
 }
 
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'org.parchmentmc.librarian.forgegradle'
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
-apply plugin: 'org.spongepowered.mixin'
+architectury {
+    minecraft = rootProject.minecraft_version
+}
 
-version = "${mc_version}-${mod_version}"
-group = 'com.molybdenum.alloyed' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'alloyed'
+subprojects {
+    apply plugin: "dev.architectury.loom"
+    apply plugin: "io.github.juuxel.loom-vineflower"
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17) // Mojang ships Java 8 to end users, so your mod should target Java 8.
-
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
-minecraft {
-    // The mappings can be changed at any time, and must be in the following format.
-    // Channel:   Version:
-    // snapshot   YYYYMMDD   Snapshot are built nightly.
-    // stable     #          Stables are built at the discretion of the MCP team.
-    // official   MCVersion  Official field/method names from Mojang mapping files
-    //
-    // You must be aware of the Mojang license when using the 'official' mappings.
-    // See more information here: https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
-    //
-    // Use non-default mappings at your own risk. they may not always work.
-    // Simply re-run your setup task after changing the mappings to update your workspace.
-    //mappings channel: 'official', version: '1.16.5'
-    mappings channel: 'parchment', version: '2022.08.10-1.19.2'
-    // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
-    
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
-
-    // Default run configurations.
-    // These can be tweaked, removed, or duplicated as needed.
-    runs {
-        client {
-            workingDirectory project.file('run')
-            arg "-mixin.config=alloyed.mixins.json"
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-
-            // Recommended logging data for a userdev environment
-            // The markers can be changed as needed.
-            // "SCAN": For mods scan.
-            // "REGISTRIES": For firing of registry events.
-            // "REGISTRYDUMP": For getting the contents of all registries.
-            property 'forge.logging.markers', 'REGISTRIES'
-
-            // Recommended logging level for the console
-            // You can set various levels here.
-            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                alloyed {
-                    source sourceSets.main
-                }
-            }
-        }
-
-        server {
-            workingDirectory project.file('server')
-            arg "-mixin.config=alloyed.mixins.json"
-
-            // Recommended logging data for a userdev environment
-            // The markers can be changed as needed.
-            // "SCAN": For mods scan.
-            // "REGISTRIES": For firing of registry events.
-            // "REGISTRYDUMP": For getting the contents of all registries.
-            property 'forge.logging.markers', 'REGISTRIES'
-
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-
-            // Recommended logging level for the console
-            // You can set various levels here.
-            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                alloyed {
-                    source sourceSets.main
-                }
-            }
-        }
-
-        data {
-            workingDirectory project.file('run')
-
-            // Recommended logging data for a userdev environment
-            // The markers can be changed as needed.
-            // "SCAN": For mods scan.
-            // "REGISTRIES": For firing of registry events.
-            // "REGISTRYDUMP": For getting the contents of all registries.
-            property 'forge.logging.markers', 'REGISTRIES'
-
-            // Recommended logging level for the console
-            // You can set various levels here.
-            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
-            property 'forge.logging.console.level', 'debug'
-
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-
-            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'alloyed', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-
-            mods {
-                alloyed {
-                    source sourceSets.main
-                }
-            }
-        }
+    loom {
+        silentMojangMappingsLicense()
     }
-}
 
-repositories {
-    maven {
-        name "Cursemaven"
-        url "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-    maven {
-        // location of the maven that hosts JEI files
-        name "Progwml6 maven"
-        url "https://dvs1.progwml6.com/files/maven/"
-    }
-    /*maven {
-        // location of a maven mirror for JEI files, as a fallback
-        name "ModMaven"
-        url "https://modmaven.k-4u.nl"
-    }*/
-    maven { // Registrate
-        name "tterrag maven"
-        url "https://maven.tterrag.com/"
-    }
-    mavenLocal()
-    mavenCentral()
-}
-
-dependencies {
-    implementation 'org.jetbrains:annotations:22.0.0'
-
-    // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
-    // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
-    // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.19.2-43.2.3'
-
-    // --- DEBUG PURPOSES ---
-    compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
-    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
-
-    //implementation fg.deobf("curse.maven:steampowered-534610:3536735") //steampowered
-    implementation fg.deobf("curse.maven:farmersdelight-398521:4525646") // Farmers Delight 1.2.1
-    implementation fg.deobf("curse.maven:createdeco-509285:4554164") // Create Deco
-    implementation fg.deobf("curse.maven:ctm-267602:4393695") // CTM
-    // ----------------------
-
-    implementation fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }
-    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${flywheel_minecraft_version}:${flywheel_version}")
-    implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
-
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor' // mixin
-}
-
-// Include resources generated by data generators.
-sourceSets.main.resources {
-    srcDir 'src/generated/resources'
-}
-
-mixin {
-    add sourceSets.main, "alloyed.refmap.json"
-}
-//
-//afterEvaluate {
-//    tasks.configureReobfTaskForReobfJar.mustRunAfter(tasks.compileJava)
-//    //tasks.configureReobfTaskForReobfJarJar.mustRunAfter(tasks.compileJava)
-//}
-
-// Example for how to get properties into the manifest for reading by the runtime..
-jar {
-    manifest {
-        attributes([
-            "Specification-Title": "alloyed",
-            "Specification-Vendor": "molybdenum",
-            "Specification-Version": "1", // We are version 1 of ourselves
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"molybdenum",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-            "MixinConfigs": "alloyed.mixins.json"
-        ])
-    }
-}
-
-//task jarJarRelease {
-//    doLast {
-//        tasks.jarJar {
-//            classifier = ''
-//        }
-//    }
-//    finalizedBy tasks.jarJar
-//}
-
-//jar.finalizedBy('reobfJar')
-//tasks.jarJar.finalizedBy('reobfJarJar')
-
-
-publishing {
-    tasks.publish.dependsOn 'build'
-    publications {
-        mavenJava(MavenPublication) {
-            artifact jar
-        }
-    }
     repositories {
-        maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
-        }
-    }
-}
-
-String getChangelogText() {
-    def changelogFile = file('changelog.txt')
-    String str = ''
-    int lineCount = 0
-    boolean done = false
-    changelogFile.eachLine {
-        if (done || it == null) {
-            return
-        }
-        if (it.size() > 1) {
-            def temp = it
-            if (lineCount == 0) {
-                temp = "## Create: Alloyed ${mod_version} <br/> \n"
-            } else if (it.matches("Fixed:|Changed:|Added:|Removed:")) {
-                temp = temp.replaceAll("Fixed:|Changed:|Added:|Removed:", "### \$0 <br/> \n") // Fixed: -> ### Fixed: , etc
-            } else if (it.startsWith('-')) {
-                temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "<a href=\"https://github.com/\$1/issues/\$2\">\$0</a>")
-                temp = temp.replaceAll("#([0-9]+)\\b(?!<\\/a>)", "<a href=\"https://github.com/$github_project/issues/\$1\">\$0</a>")
-                temp = temp + " <br/> \n"
-            } else {
-                temp = "#### $temp <br/> \n"
+        mavenCentral()
+        maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
+        maven { url = "https://maven.blamejared.com/" } // JEI
+        maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
+        maven { url = "https://maven.quiltmc.org/repository/release" } // Quilt Mappings
+        maven { // Flywheel
+            url = "https://maven.tterrag.com/"
+            content {
+                // need to be specific here due to version overlaps
+                includeGroup("com.jozufozu.flywheel")
             }
-            str += temp
-            lineCount++
-        } else {
-            str += "#### If you find an issue with the mod, please submit it&nbsp;<a href=\"https://github.com/${github_project}/issues\" rel=\"nofollow\">here</a>."
-            done = true
         }
-
-
     }
-    return str
+
+    dependencies {
+        minecraft "com.mojang:minecraft:${minecraft_version}"
+        // layered mappings - Mojmap names, parchment and QM docs and parameters
+        mappings(loom.layered {
+            it.mappings("org.quiltmc:quilt-mappings:${minecraft_version}+build.${qm_version}:intermediary-v2")
+            it.parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
+            it.officialMojangMappings { nameSyntheticMembers = false }
+        })
+
+        // see each subproject for dependencies.
+    }
 }
 
-// Uncomment to debug changelog.
-new File("changelog.md").write getChangelogText()
-//curseforge {
-//    project {
-//        def envAPIKey = System.getenv("CURSEFORGE_API_TOKEN")
-//        apiKey = envAPIKey == null ? '*NO API KEY FOUND*' : envAPIKey
-//
-//        id = '564792'
-//        changelog = getChangelogText()
-//        changelogType = 'markdown'
-//        releaseType = 'release'
-//        addGameVersion '1.18.2'
-//
-//        mainArtifact (shadowJar) {
-//            displayName = "Create: Alloyed ${mod_version} for Minecraft ${mc_version}"
-//        }
-//        relations {
-//            requiredDependency 'create'
-//            requiredDependency 'flywheel'
-//
-//            optionalDependency 'farmers-delight'
-//        }
-//    }
-//}
+allprojects {
+    apply plugin: "java"
+    apply plugin: "architectury-plugin"
+    apply plugin: "maven-publish"
+
+    archivesBaseName = rootProject.archives_base_name
+    group = rootProject.maven_group
+
+    // Formats the mod version to include the loader, Minecraft version, and build number (if present)
+    // example: 1.0.0+fabric-1.18.2-100
+    String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
+    version = "${mod_version}+${project.name}-${minecraft_version}" + (buildNumber != null ? "-${buildNumber}" : "")
+
+    repositories {}
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+
+    java {
+        withSourcesJar()
+    }
+}
