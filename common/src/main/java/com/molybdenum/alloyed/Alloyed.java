@@ -7,6 +7,7 @@ import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.molybdenum.alloyed.data.providers.ModAdvancementProvider;
 import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
+import com.molybdenum.alloyed.data.registry.ModAdvancements;
 import com.molybdenum.alloyed.util.Utils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import dev.architectury.injectables.annotations.ExpectPlatform;
@@ -14,7 +15,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import vectorwing.farmersdelight.common.registry.ModAdvancements;
 
 public class Alloyed {
 
@@ -59,8 +59,7 @@ public class Alloyed {
         ModProcessingRecipes.registerAllProcessingProviders(gen);
 
         // Register advancements
-        //fixme
-        //ModAdvancements.register();
+        ModAdvancements.register();
         ModAdvancementProvider.register(gen);
 
         Alloyed.LOGGER.debug("Finished gathering data for Alloyed");
