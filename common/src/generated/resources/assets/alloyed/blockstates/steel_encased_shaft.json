@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "alloyed:block/encased_shaft/block_steel",
+      "uvlock": true,
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "alloyed:block/encased_shaft/block_steel",
+      "uvlock": true
+    },
+    "axis=z": {
+      "model": "alloyed:block/encased_shaft/block_steel",
+      "uvlock": true,
+      "x": 90,
+      "y": 180
+    }
+  }
+}

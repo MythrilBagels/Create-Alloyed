@@ -74,6 +74,10 @@ dependencies {
 //    modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}")
 //    modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${rei_version}")
 //    modCompileOnly("dev.emi:emi:${emi_version}")
+
+    modImplementation("maven.modrinth:farmers-delight:${farmers_delight_version}") // Farmers Delight 1.2.1
+    modImplementation("curse.maven:createdeco-509285:4554164") // Create Deco
+    modImplementation("curse.maven:ctm-267602:4393695") // CTM
 }
 
 configurations.configureEach {

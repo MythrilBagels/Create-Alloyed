@@ -57,23 +57,24 @@ public class ModCompatBlocks {
             .onRegister(CreateRegistrate.connectedTextures(SteelCatwalkCTBehaviour::new))
             .register();
 
-    public static final BlockEntry<Block> STEEL_CATWALK_STAIRS = REGISTRATE
-            .block("steel_catwalk_stairs", properties -> Alloyed.isCreateDecoLoaded ?
-                    CreateDecoCompat.newCatwalkStairBlock(properties) : new HiddenBlock(properties))
-            .initialProperties(() -> Blocks.IRON_BLOCK)
-            .properties(properties -> properties
-                    .strength(5, 3)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()
-                    .sound(SoundType.NETHERITE_BLOCK)
-            )
-            .addLayer(()-> RenderType::cutoutMipped)
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
-            .blockstate((ctx,prov)->
-                    prov.horizontalBlock(ctx.get(), prov.models().withExistingParent(ctx.getName(), prov.modLoc("block/catwalk_stairs"))))
-            .simpleItem()
-            .register();
+    //fixme
+//    public static final BlockEntry<Block> STEEL_CATWALK_STAIRS = REGISTRATE
+//            .block("steel_catwalk_stairs", properties -> Alloyed.isCreateDecoLoaded ?
+//                    CreateDecoCompat.newCatwalkStairBlock(properties) : new HiddenBlock(properties))
+//            .initialProperties(() -> Blocks.IRON_BLOCK)
+//            .properties(properties -> properties
+//                    .strength(5, 3)
+//                    .requiresCorrectToolForDrops()
+//                    .noOcclusion()
+//                    .sound(SoundType.NETHERITE_BLOCK)
+//            )
+//            .addLayer(()-> RenderType::cutoutMipped)
+//            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+//            .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
+//            .blockstate((ctx,prov)->
+//                    prov.horizontalBlock(ctx.get(), prov.models().withExistingParent(ctx.getName(), prov.modLoc("block/catwalk_stairs"))))
+//            .simpleItem()
+//            .register();
 
     public static final BlockEntry<SlabBlock> STEEL_SHEET_VERTICAL_SLAB = REGISTRATE
             .block("steel_sheet_vertical_slab", Alloyed.isCreateDecoLoaded ?

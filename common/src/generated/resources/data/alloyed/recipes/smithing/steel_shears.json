@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "tag": "forge:ingots/steel"
+  },
+  "base": {
+    "item": "minecraft:shears"
+  },
+  "result": {
+    "item": "alloyed:steel_shears"
+  }
+}

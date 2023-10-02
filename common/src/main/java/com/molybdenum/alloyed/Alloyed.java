@@ -48,7 +48,8 @@ public class Alloyed {
         Alloyed.LOGGER.debug("Gathering data for Alloyed ...");
 
         // Correct bronze blocks
-        ModBlocks.fixBronzeBlocks();
+        //fixme
+        //ModBlocks.fixBronzeBlocks();
         // Register ponders and generate ponder lang
         ModPonders.register();
         ModPonders.registerLang();
@@ -58,7 +59,8 @@ public class Alloyed {
         ModProcessingRecipes.registerAllProcessingProviders(gen);
 
         // Register advancements
-        ModAdvancements.register();
+        //fixme
+        //ModAdvancements.register();
         ModAdvancementProvider.register(gen);
 
         Alloyed.LOGGER.debug("Finished gathering data for Alloyed");

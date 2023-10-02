@@ -60,6 +60,7 @@ public class ModBlocks {
 
     // BRONZE
 
+    //fixme
 //    public static final CopperBlockSet BRONZE_BLOCKS = new CopperBlockSet( // Ignore that it says COPPER block set. The code works for any oxidizing metal.
 //            REGISTRATE,
 //            "bronze_block",
