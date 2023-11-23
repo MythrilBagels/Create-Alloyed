@@ -7,6 +7,7 @@ import com.tterrag.registrate.providers.RegistrateLangProvider;
 import com.tterrag.registrate.providers.RegistrateProvider;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -28,7 +29,7 @@ public class PostRegistrationHelper {
         BlockEntry<Block> blockEntry = (BlockEntry<Block>) REGISTRATE.get(name, ForgeRegistries.BLOCKS.getRegistryKey());
 
         REGISTRATE.setDataGenerator(name, ForgeRegistries.BLOCKS.getRegistryKey(), ProviderType.RECIPE, prov -> {
-            ShapedRecipeBuilder.shaped(blockEntry.get(), 1)
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, blockEntry.get(), 1)
                     .pattern("###")
                     .pattern("###")
                     .pattern("###")

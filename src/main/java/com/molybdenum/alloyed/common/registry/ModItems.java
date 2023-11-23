@@ -2,7 +2,7 @@ package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.item.ModArmourMaterials;
-import com.molybdenum.alloyed.common.item.ModItemGroup;
+import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.common.item.ModItemTiers;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
 import com.molybdenum.alloyed.data.recipes.MixingRecipes;
@@ -14,14 +14,13 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Crafting;
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Smithing;
 
 public class ModItems {
-    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB);
 
     // Ingots
     /**
@@ -149,7 +148,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipes#STEEL_HELMET
      */
     public static final ItemEntry<ArmorItem> STEEL_HELMET = REGISTRATE
-            .item("steel_helmet", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.HEAD, properties))
+            .item("steel_helmet", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.HELMET, properties))
             .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_HELMET))
             .register();
 
@@ -158,7 +157,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipes#STEEL_CHESTPLATE
      */
     public static final ItemEntry<ArmorItem> STEEL_CHESTPLATE = REGISTRATE
-            .item("steel_chestplate", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.CHEST, properties))
+            .item("steel_chestplate", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.CHESTPLATE, properties))
             .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_CHESTPLATE))
             .register();
 
@@ -167,7 +166,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipes#STEEL_LEGGINGS
      */
     public static final ItemEntry<ArmorItem> STEEL_LEGGINGS = REGISTRATE
-            .item("steel_leggings", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.LEGS, properties))
+            .item("steel_leggings", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.LEGGINGS, properties))
             .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_LEGGINGS))
             .register();
 
@@ -176,7 +175,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipes#STEEL_BOOTS
      */
     public static final ItemEntry<ArmorItem> STEEL_BOOTS = REGISTRATE
-            .item("steel_boots", properties -> new ArmorItem(ModArmourMaterials.STEEL, EquipmentSlot.FEET, properties))
+            .item("steel_boots", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.BOOTS, properties))
             .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_BOOTS))
             .register();
 

@@ -17,7 +17,7 @@ public class ModSoundEvents {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Alloyed.MOD_ID);
 
     public static final RegistryObject<SoundEvent> BRONZE_BELL = SOUND_EVENTS.register("bronze_bell",
-            () -> new SoundEvent(Alloyed.asResource("bronze_bell")));
+            () -> SoundEvent.createVariableRangeEvent(Alloyed.asResource("bronze_bell")));
 
     public static void register(IEventBus eventBus) {
         Alloyed.LOGGER.debug("Registering ModSounds!");

@@ -8,6 +8,7 @@ import com.molybdenum.alloyed.common.registry.ModTags;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import com.simibubi.create.foundation.data.recipe.MechanicalCraftingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -71,12 +72,12 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
             .key('#', Ingredient.of(ModTags.Items.STEEL_INGOT))
     );
 
-    public MechanicalCraftingRecipes(DataGenerator generator) {
-        super(generator);
+    public MechanicalCraftingRecipes(PackOutput output) {
+        super(output);
     }
 
     public static void register(DataGenerator generator) {
-        generator.addProvider(true, new MechanicalCraftingRecipes(generator));
+        generator.addProvider(true, new MechanicalCraftingRecipes(generator.getPackOutput()));
     }
 
     GeneratedRecipeBuilder create(Supplier<ItemLike> result) {
@@ -115,12 +116,5 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
                         (resultLocation == null ? "unregistered_sadface" : resultLocation.getPath()) + suffix));
             });
         }
-    }
-
-
-
-    @Override
-    public String getName() {
-        return "Create: Alloyed's Mechanical Crafting Recipes";
     }
 }

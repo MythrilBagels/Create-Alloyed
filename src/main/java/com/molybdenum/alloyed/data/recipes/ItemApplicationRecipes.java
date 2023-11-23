@@ -7,6 +7,7 @@ import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -30,17 +31,12 @@ public class ItemApplicationRecipes extends ModProcessingRecipes {
                 .output(output.get()));
     }
 
-    public ItemApplicationRecipes(DataGenerator generator) {
-        super(generator);
+    public ItemApplicationRecipes(PackOutput output) {
+        super(output);
     }
 
     @Override
     protected IRecipeTypeInfo getRecipeType() {
         return AllRecipeTypes.ITEM_APPLICATION;
-    }
-
-    @Override
-    public @NotNull String getName() {
-        return "Create: Alloyed's Item Application Recipes";
     }
 }

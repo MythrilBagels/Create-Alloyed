@@ -11,11 +11,13 @@ import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
@@ -23,20 +25,16 @@ public abstract class ModProcessingRecipes extends CreateRecipeProvider {
 
     protected static final List<ModProcessingRecipes> PROVIDERS = new ArrayList<>();
 
-    public static void registerAllProcessingProviders(DataGenerator generator) {
-        PROVIDERS.add(new PressingRecipes(generator));
-        PROVIDERS.add(new MixingRecipes(generator));
+    public static void registerAllProcessingProviders(DataGenerator generator, PackOutput output) {
+        PROVIDERS.add(new PressingRecipes(output));
+        PROVIDERS.add(new MixingRecipes(output));
 
-        generator.addProvider(true,new DataProvider() {
+        generator.addProvider(true, new DataProvider() {
             @Override
-            public void run(@NotNull CachedOutput pCache) {
-                PROVIDERS.forEach(generator -> {
-                    try {
-                        generator.run(pCache);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                });
+            public @NotNull CompletableFuture<?> run(@NotNull CachedOutput dc) {
+                return CompletableFuture.allOf(PROVIDERS.stream()
+                        .map(gen -> gen.run(dc))
+                        .toArray(CompletableFuture[]::new));
             }
 
             @Override
@@ -46,8 +44,8 @@ public abstract class ModProcessingRecipes extends CreateRecipeProvider {
         });
     }
 
-    public ModProcessingRecipes(DataGenerator generator) {
-        super(generator);
+    public ModProcessingRecipes(PackOutput output) {
+        super(output);
     }
 
 

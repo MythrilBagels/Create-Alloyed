@@ -2,6 +2,7 @@ package com.molybdenum.alloyed.data;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.client.registry.ModPonders;
+import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.molybdenum.alloyed.data.providers.ModAdvancementProvider;
 import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
@@ -26,6 +27,8 @@ public class DataEventsHandler {
         // Register ponders and generate ponder lang
         ModPonders.register();
         ModPonders.registerLang();
+        // Register Creative Tab lang
+        ModCreativeModeTab.registerLang();
 
         if (event.includeServer()) {
             // Register processing recipes

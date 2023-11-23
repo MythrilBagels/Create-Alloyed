@@ -35,6 +35,7 @@ public class Alloyed {
         isFarmersDelightLoaded = ModList.get().isLoaded("farmersdelight");
         isCreateDecoLoaded = ModList.get().isLoaded("createdeco");
 
+        ModBlockSetTypes.register();
         ModItems.register();
         ModBlocks.register();
         ModCompatItems.register();

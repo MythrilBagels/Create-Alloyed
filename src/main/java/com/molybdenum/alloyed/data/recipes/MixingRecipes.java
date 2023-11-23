@@ -7,6 +7,7 @@ import com.simibubi.create.AllItems;
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import org.jetbrains.annotations.NotNull;
@@ -45,17 +46,12 @@ public class MixingRecipes extends ModProcessingRecipes {
             .duration(200)
     );
 
-    public MixingRecipes(DataGenerator generator) {
-        super(generator);
+    public MixingRecipes(PackOutput output) {
+        super(output);
     }
 
     @Override
     protected AllRecipeTypes getRecipeType() {
         return AllRecipeTypes.MIXING;
-    }
-
-    @Override
-    public @NotNull String getName() {
-        return "Create: Alloyed's Mixing Recipes";
     }
 }

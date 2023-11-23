@@ -5,11 +5,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.data.advancements.DisplayInfoBuilder;
+import com.simibubi.create.foundation.advancement.CreateAdvancement;
 import net.minecraft.advancements.Advancement;
-import net.minecraft.data.CachedOutput;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DataProvider;
-import net.minecraft.data.HashCache;
+import net.minecraft.data.*;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
@@ -18,57 +16,50 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class ModAdvancementProvider implements DataProvider {
-    private final DataGenerator generator;
-    private static final List<NamedAdvancementBuilder> advancements = new ArrayList<>();
+    private final PackOutput output;
+    private static final List<Advancement> advancements = new ArrayList<>();
     private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().create();
 
-    public ModAdvancementProvider(DataGenerator generator) {
-        this.generator = generator;
+    public ModAdvancementProvider(PackOutput output) {
+        this.output = output;
     }
 
-    public static void addAdvancement(NamedAdvancementBuilder advancementBuilder) {
+    public static void addAdvancement(Advancement advancementBuilder) {
         advancements.add(advancementBuilder);
     }
 
-    public static List<NamedAdvancementBuilder> getAdvancements() {
+    public static List<Advancement> getAdvancements() {
         return advancements;
     }
 
     public static void register(DataGenerator generator) {
-        generator.addProvider(true, new ModAdvancementProvider(generator));
+        generator.addProvider(true, new ModAdvancementProvider(generator.getPackOutput()));
     }
 
-    /**
-     * Performs this provider's action.
-     *
-     * @param pCache The directory cache
-     */
     @Override
-    public void run(@NotNull CachedOutput pCache) {
-        Path path = this.generator.getOutputFolder();
+    public CompletableFuture<?> run (CachedOutput pOutput) {
+        PackOutput.PathProvider pathProvider = output.createPathProvider(PackOutput.Target.DATA_PACK, "advancements");
+        List<CompletableFuture<?>> futures = new ArrayList<>();
+
         Set<ResourceLocation> set = Sets.newHashSet();
+        Consumer<Advancement> consumer = (advancement) -> {
+            ResourceLocation id = advancement.getId();
+            if (!set.add(id))
+                throw new IllegalStateException("Duplicate advancement " + id);
+            Path path = pathProvider.json(id);
+            futures.add(DataProvider.saveStable(pOutput, advancement.deconstruct()
+                    .serializeToJson(), path));
+        };
 
-        for (NamedAdvancementBuilder advancement: advancements) {
-            if (!set.add(advancement.id)) {
-                throw new IllegalStateException("Duplicate advancement " + advancement.id);
-            } else {
-                Path path1 = createPath(path, advancement);
+        for (Advancement advancement : advancements)
+            consumer.accept(advancement);
 
-                try {
-                    DataProvider.saveStable(pCache, advancement.builder.serializeToJson(), path1);
-                } catch (IOException ioexception) {
-                    Alloyed.LOGGER.error("Couldn't save advancement {}", path1, ioexception);
-                }
-
-            }
-        }
-    }
-
-    private static Path createPath(Path pPath, NamedAdvancementBuilder pAdvancement) {
-        return pPath.resolve("data/" + pAdvancement.id.getNamespace() + "/advancements/" + pAdvancement.id.getPath() + ".json");
+        return CompletableFuture.allOf(futures.toArray(CompletableFuture[]::new));
     }
 
     /**
@@ -77,32 +68,5 @@ public class ModAdvancementProvider implements DataProvider {
     @Override
     public @NotNull String getName() {
         return "Create: Alloyed's Advancements";
-    }
-
-    public static class NamedAdvancementBuilder {
-        public String name;
-        public ResourceLocation id;
-        public Advancement.Builder builder;
-
-        public NamedAdvancementBuilder(ResourceLocation id, Advancement.Builder builder, String name) {
-            this.id = id;
-            this.name = name;
-            this.builder = builder;
-        }
-
-        public NamedAdvancementBuilder(ResourceLocation id, Advancement.Builder builder) {
-            this(id, builder, id.getPath());
-        }
-
-        public NamedAdvancementBuilder displayInfo(Function<DisplayInfoBuilder, DisplayInfoBuilder> info) {
-            DisplayInfoBuilder displayInfoBuilder = DisplayInfoBuilder.create(name, this);
-            builder = builder.display(info.apply(displayInfoBuilder).build());
-            return this;
-        }
-
-        public NamedAdvancementBuilder save() {
-            ModAdvancementProvider.addAdvancement(this);
-            return this;
-        }
     }
 }

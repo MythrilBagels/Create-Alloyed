@@ -5,6 +5,7 @@ import com.molybdenum.alloyed.common.registry.ModTags;
 import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.simibubi.create.AllRecipeTypes;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import org.jetbrains.annotations.NotNull;
 
 public class PressingRecipes extends ModProcessingRecipes {
@@ -19,17 +20,12 @@ public class PressingRecipes extends ModProcessingRecipes {
             .output(ModItems.STEEL_SHEET.get())
     );
 
-    public PressingRecipes(DataGenerator generator) {
-        super(generator);
+    public PressingRecipes(PackOutput output) {
+        super(output);
     }
 
     @Override
     protected AllRecipeTypes getRecipeType() {
         return AllRecipeTypes.PRESSING;
-    }
-
-    @Override
-    public @NotNull String getName() {
-        return "Create: Alloyed's Pressing Recipes";
     }
 }

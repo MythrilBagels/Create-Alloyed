@@ -5,7 +5,7 @@ import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetMetal
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetSlabCTBehaviour;
 import com.molybdenum.alloyed.common.content.blocks.BronzeBellBlock;
 import com.molybdenum.alloyed.common.content.blocks.SteelDoorBlock;
-import com.molybdenum.alloyed.common.item.ModItemGroup;
+import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
 import com.simibubi.create.AllInteractionBehaviours;
@@ -27,6 +27,7 @@ import com.tterrag.registrate.util.DataIngredient;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.BlockTags;
@@ -37,8 +38,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -53,10 +53,10 @@ import java.util.Objects;
 import static com.simibubi.create.foundation.data.BlockStateGen.axisBlock;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "removal"})
 public class ModBlocks {
 
-    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB);
 
     // BRONZE
 
@@ -82,7 +82,7 @@ public class ModBlocks {
                     ModTags.Items.BRONZE_INSTRUMENTS
             ))
             .recipe((ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get(), 1)
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ctx.get(), 1)
                         .pattern("#")
                         .pattern("-")
                         .define('#', ModTags.Items.BRONZE_BLOCK)
@@ -164,7 +164,7 @@ public class ModBlocks {
     public static final BlockEntry<MetalScaffoldingBlock> STEEL_SCAFFOLD =
             REGISTRATE.block("steel_scaffolding", MetalScaffoldingBlock::new)
                     .transform(BuilderTransformers.scaffold("steel",
-                            () -> DataIngredient.tag(AllTags.forgeItemTag("ingots/steel")), MaterialColor.COLOR_GRAY,
+                            () -> DataIngredient.tag(AllTags.forgeItemTag("ingots/steel")), MapColor.COLOR_GRAY,
                             ModSpriteShifts.STEEL_SCAFFOLD, ModSpriteShifts.STEEL_SCAFFOLD_INSIDE, ModSpriteShifts.STEEL_CASING))
                     .properties(ModBlocks::steelProperties)
                     .register();
@@ -259,7 +259,7 @@ public class ModBlocks {
             .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
-            .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(ctx.get(), 16)
+            .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ctx.get(), 16)
                     .pattern("###")
                     .pattern("###")
                     .define('#', ModTags.Items.STEEL_INGOT)
@@ -268,7 +268,7 @@ public class ModBlocks {
             .register();
 
     public static final BlockEntry<TrapDoorBlock> STEEL_TRAPDOOR = REGISTRATE
-            .block("steel_trapdoor", TrapDoorBlock::new)
+            .block("steel_trapdoor", properties -> new TrapDoorBlock(properties, ModBlockSetTypes.STEEL))
             .initialProperties(() -> Blocks.IRON_TRAPDOOR)
             .properties(ModBlocks::steelProperties)
             .blockstate((ctx, prov) ->
@@ -284,7 +284,7 @@ public class ModBlocks {
             .build()
             .addLayer(() -> RenderType::cutoutMipped)
             .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
-            .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(ctx.get())
+            .recipe((ctx, prov) -> ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ctx.get())
                     .pattern("##")
                     .pattern("##")
                     .define('#', ModTags.Items.STEEL_INGOT)
@@ -295,10 +295,23 @@ public class ModBlocks {
     public static final BlockEntry<MetalLadderBlock> STEEL_LADDER = REGISTRATE
             .block("steel_ladder", MetalLadderBlock::new)
             .transform(BuilderTransformers.ladder("steel",
-                    () -> DataIngredient.tag(ModTags.Items.STEEL_SHEET), MaterialColor.COLOR_GRAY))
+                    () -> DataIngredient.tag(ModTags.Items.STEEL_SHEET), MapColor.COLOR_GRAY))
             .blockstate((ctx, prov) -> prov.horizontalBlock(ctx.get(), prov.models()
                     .getExistingFile(prov.modLoc("block/steel_ladder"))))
             .lang("Steel Ladder")
+            .register();
+
+    public static final BlockEntry<FenceBlock> STEEL_MESH_FENCE = REGISTRATE
+            .block("steel_mesh_fence", FenceBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .properties(properties -> properties.sound(SoundType.CHAIN))
+            .tag(BlockTags.FENCES)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .item()
+            .model((ctx,prov) -> ModelUtils.customModel(ctx, prov, "block/steel_chain_link"))
+            .build()
+            .blockstate(BlockStateUtils.Unique::steelMeshFenceBlockstate)
+            .addLayer(() -> RenderType::cutoutMipped)
             .register();
 
 
@@ -307,7 +320,7 @@ public class ModBlocks {
     }
 
     public static BlockBehaviour.@NotNull Properties steelProperties(BlockBehaviour.Properties properties) {
-        return properties.sound(SoundType.NETHERITE_BLOCK).strength(5, 14).color(MaterialColor.COLOR_GRAY);
+        return properties.sound(SoundType.NETHERITE_BLOCK).strength(5, 14).mapColor(MapColor.COLOR_GRAY);
     }
 
     public static void fixBronzeBlocks() {
@@ -321,8 +334,7 @@ public class ModBlocks {
         String name = (locked ? "locked_" : "") + "steel_door";
 
         return REGISTRATE
-                .block(name, SteelDoorBlock::new)
-                .initialProperties(locked ? Material.METAL : Material.NETHER_WOOD)
+                .block(name, properties -> new SteelDoorBlock(properties, locked))
                 .properties(properties -> properties
                         .noOcclusion()
                         .sound(SoundType.METAL)
@@ -336,7 +348,7 @@ public class ModBlocks {
                 .item().model(ModelUtils::customTexture).build()
                 .recipe((ctx, prov) -> {
                     if (!locked) {
-                        ShapedRecipeBuilder.shaped(ctx.get())
+                        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ctx.get())
                                 .pattern("##")
                                 .pattern("##")
                                 .pattern("##")
@@ -346,7 +358,7 @@ public class ModBlocks {
                     } else {
                         DoorBlock door = Objects.requireNonNull(normalDoor).get();
                         // Using same locked door recipe as Create: Deco
-                        ShapelessRecipeBuilder.shapeless(ctx.get())
+                        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ctx.get())
                                 .requires(Items.REDSTONE_TORCH)
                                 .requires(door)
                                 .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(door))

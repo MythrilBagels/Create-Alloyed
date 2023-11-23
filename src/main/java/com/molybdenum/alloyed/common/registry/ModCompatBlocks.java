@@ -4,18 +4,16 @@ import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.compat.createdeco.CreateDecoCompat;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelCatwalkCTBehaviour;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetVertCTBehaviour;
-import com.molybdenum.alloyed.common.compat.hidden.HiddenBlock;
-import com.molybdenum.alloyed.common.compat.hidden.HiddenBlockItem;
-import com.molybdenum.alloyed.common.compat.hidden.HiddenSlabBlock;
-import com.molybdenum.alloyed.common.item.ModItemGroup;
+import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.data.util.BlockStateUtils;
-import com.molybdenum.alloyed.data.util.ModelUtils;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.SlabType;
@@ -25,17 +23,18 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
+
+import java.util.List;
 
 @SuppressWarnings("removal")
 public class ModCompatBlocks {
     private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE
-            .creativeModeTab(() -> ModItemGroup.MAIN_GROUP);
+            .setCreativeTab(ModCreativeModeTab.MAIN_TAB);
 
     // Create: Deco
     public static final BlockEntry<Block> STEEL_CATWALK = REGISTRATE
             .block("steel_catwalk", properties -> Alloyed.isCreateDecoLoaded ?
-                    CreateDecoCompat.newCatwalkBlock(properties) : new HiddenBlock(properties))
+                    CreateDecoCompat.newCatwalkBlock(properties) : new Block(properties))
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(properties -> properties
                     .strength(5, 3)
@@ -47,7 +46,7 @@ public class ModCompatBlocks {
             .blockstate(BlockStateUtils.Unique::steelCatwalkBlockstate)
             .item((block, properties) -> Alloyed.isCreateDecoLoaded ?
                     CreateDecoCompat.newCatwalkBlockItem(block, properties) :
-                    new HiddenBlockItem(block, properties))
+                    new BlockItem(block, properties))
             .model((ctx,prov)->
                     prov.withExistingParent(ctx.getName(), prov.mcLoc("block/template_trapdoor_bottom"))
                     .texture("texture", prov.modLoc("block/steel_catwalk"))
@@ -58,8 +57,8 @@ public class ModCompatBlocks {
             .register();
 
     public static final BlockEntry<Block> STEEL_CATWALK_STAIRS = REGISTRATE
-            .block("steel_catwalk_stairs", properties -> Alloyed.isCreateDecoLoaded ?
-                    CreateDecoCompat.newCatwalkStairBlock(properties) : new HiddenBlock(properties))
+            .block("steel_catwalk_stairs", Alloyed.isCreateDecoLoaded ?
+                    CreateDecoCompat::newCatwalkStairBlock : Block::new)
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(properties -> properties
                     .strength(5, 3)
@@ -77,7 +76,7 @@ public class ModCompatBlocks {
 
     public static final BlockEntry<SlabBlock> STEEL_SHEET_VERTICAL_SLAB = REGISTRATE
             .block("steel_sheet_vertical_slab", Alloyed.isCreateDecoLoaded ?
-                    CreateDecoCompat::newVerticalSlabBlock : HiddenSlabBlock::new)
+                    CreateDecoCompat::newVerticalSlabBlock : SlabBlock::new)
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(ModBlocks::steelProperties)
             .simpleItem()
@@ -100,22 +99,13 @@ public class ModCompatBlocks {
             .onRegister(CreateRegistrate.connectedTextures(SteelSheetVertCTBehaviour::new))
             .register();
 
-    public static final BlockEntry<Block> STEEL_MESH_FENCE = REGISTRATE
-            .block("steel_mesh_fence", Alloyed.isCreateDecoLoaded ?
-                    FenceBlock::new : HiddenBlock::new)
-            .initialProperties(() -> Blocks.IRON_BLOCK)
-            .properties(properties -> properties.sound(SoundType.CHAIN))
-            .tag(BlockTags.FENCES)
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .item()
-            .model((ctx,prov) -> ModelUtils.customModel(ctx, prov, "block/steel_chain_link"))
-            .build()
-            .blockstate(BlockStateUtils.Unique::steelMeshFenceBlockstate)
-            .addLayer(() -> RenderType::cutoutMipped)
-            .register();
+
 
     public static void register() {
         Alloyed.LOGGER.debug("Registering ModCompatBlocks!");
     }
 
+    public static List<ItemProviderEntry<?>> getDecoBlocks() {
+        return List.of(STEEL_CATWALK, STEEL_CATWALK_STAIRS, STEEL_SHEET_VERTICAL_SLAB);
+    }
 }
