@@ -159,6 +159,11 @@ repositories {
     maven { // Registrate
         name "tterrag maven"
         url "https://maven.tterrag.com/"
+        content {
+            includeGroup("com.jozufozu.flywheel")
+            includeGroup("com.tterrag.registrate")
+            includeGroup("com.simibubi.create")
+        }
     }
     mavenLocal()
     mavenCentral()
@@ -170,7 +175,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.20.1-47.2.6'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.2.18'
 
     // --- DEBUG PURPOSES ---
     // compile against the JEI API but do not include it at runtime
@@ -180,7 +185,7 @@ dependencies {
     runtimeOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}"))
 
     implementation fg.deobf("curse.maven:farmersdelight-398521:4679319") // Farmers Delight 1.2.1
-    //implementation fg.deobf("curse.maven:createdeco-509285:4554164") // Create Deco TODO: EDIT WHEN CREATE DECO COMES OUT ON 1.20.1
+    implementation fg.deobf("curse.maven:createdeco-509285:4931859") // Create Deco
     // ----------------------
 
     implementation fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }

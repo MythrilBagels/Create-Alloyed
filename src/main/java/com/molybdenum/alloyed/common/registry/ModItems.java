@@ -1,20 +1,25 @@
 package com.molybdenum.alloyed.common.registry;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.common.content.items.SteelUpgradeSmithingTemplateItem;
 import com.molybdenum.alloyed.common.item.ModArmourMaterials;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.common.item.ModItemTiers;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
 import com.molybdenum.alloyed.data.recipes.MixingRecipes;
 import com.molybdenum.alloyed.data.recipes.PressingRecipes;
+import com.molybdenum.alloyed.data.util.RecipeUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
 
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Crafting;
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Smithing;
@@ -70,6 +75,20 @@ public class ModItems {
      * @see PressingRecipes#STEEL_SHEET
      */
     public static final ItemEntry<Item> STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
+
+    public static final ItemEntry<SteelUpgradeSmithingTemplateItem> STEEL_SMITHING_UPGRADE_TEMPLATE = REGISTRATE
+            .item($ -> new SteelUpgradeSmithingTemplateItem())
+            .recipe((ctx, prov) -> {
+                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ctx.get())
+                        .pattern("###")
+                        .pattern("#O#")
+                        .pattern("###")
+                        .define('#', ModTags.Items.STEEL_INGOT)
+                        .define('O', Blocks.COBBLED_DEEPSLATE)
+                        .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
+                        .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
+            })
+            .register();
 
     // Steel toolset.
     /**

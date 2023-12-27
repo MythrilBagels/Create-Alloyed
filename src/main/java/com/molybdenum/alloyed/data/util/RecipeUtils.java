@@ -1,22 +1,23 @@
 package com.molybdenum.alloyed.data.util;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
 import com.simibubi.create.foundation.data.recipe.MechanicalCraftingRecipeBuilder;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
-import net.minecraft.data.recipes.UpgradeRecipeBuilder;
+import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 
-import java.util.Objects;
 import java.util.function.UnaryOperator;
 
 public class RecipeUtils {
@@ -25,7 +26,7 @@ public class RecipeUtils {
 
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> stairs(ItemLike item) {
             return (ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get(), 4)
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ctx.get(), 4)
                         .pattern("#  ")
                         .pattern("## ")
                         .pattern("###")
@@ -37,7 +38,7 @@ public class RecipeUtils {
 
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> slab(ItemLike item) {
             return (ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get(), 6)
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ctx.get(), 6)
                         .pattern("###")
                         .define('#', item)
                         .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(item))
@@ -47,7 +48,7 @@ public class RecipeUtils {
 
         public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> decompactingRecipe(TagKey<Item> blockTag) {
             return (ctx, prov) -> {
-                ShapelessRecipeBuilder.shapeless(ctx.get(), 9)
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ctx.get(), 9)
                         .requires(blockTag)
                         .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(blockTag))
                         .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_decompacting"));
@@ -56,7 +57,7 @@ public class RecipeUtils {
 
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> compactingRecipe(TagKey<Item> metalTag) {
             return (ctx, prov) -> {
-                ShapedRecipeBuilder.shaped(ctx.get(), 1)
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ctx.get(), 1)
                         .pattern("###")
                         .pattern("###")
                         .pattern("###")
@@ -68,12 +69,12 @@ public class RecipeUtils {
 
         public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> compactingDecompactingRecipe(TagKey<Item> blockTag, TagKey<Item> nuggetTag) {
             return (ctx, prov) -> {
-                ShapelessRecipeBuilder.shapeless(ctx.get(), 9)
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ctx.get(), 9)
                         .requires(blockTag)
                         .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(blockTag))
                         .save(prov, Alloyed.asResource("crafting/" + ctx.getName() + "_from_decompacting"));
 
-                ShapedRecipeBuilder.shaped(ctx.get(), 1)
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ctx.get(), 1)
                         .pattern("###")
                         .pattern("###")
                         .pattern("###")
@@ -101,8 +102,8 @@ public class RecipeUtils {
 
         public static <T extends Item> NonNullBiConsumer<DataGenContext<Item, T>, RegistrateRecipeProvider> steelItemRecipe(ItemLike ironEquivalent) {
             return (ctx, prov) -> {
-                UpgradeRecipeBuilder
-                        .smithing(Ingredient.of(ironEquivalent), Ingredient.of(ModTags.Items.STEEL_INGOT), ctx.get())
+                SmithingTransformRecipeBuilder
+                        .smithing(Ingredient.of(ModItems.BRONZE_INGOT), Ingredient.of(ironEquivalent), Ingredient.of(ModTags.Items.STEEL_INGOT), RecipeCategory.TOOLS, ctx.get())
                         .unlocks("has_ingredient", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
                         .save(prov, Alloyed.asResource("smithing/" + ctx.getName()));
             };
@@ -115,7 +116,7 @@ public class RecipeUtils {
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> customDefaultLang(TagKey<Item> source, int count, String sourceName) {
             return (ctx, prov) -> {
                 SingleItemRecipeBuilder
-                        .stonecutting(Ingredient.of(source), ctx.get(), count)
+                        .stonecutting(Ingredient.of(source),RecipeCategory.BUILDING_BLOCKS,  ctx.get(), count)
                         .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(source))
                         .save(prov, Alloyed.asResource("stonecutting/" + ctx.getName() + "_from_" + sourceName));
             };
@@ -124,7 +125,7 @@ public class RecipeUtils {
         public static <T extends Block> NonNullBiConsumer<DataGenContext<Block, T>, RegistrateRecipeProvider> customDefaultLang(ItemLike source, int count, String sourceName) {
             return (ctx, prov) -> {
                 SingleItemRecipeBuilder
-                        .stonecutting(Ingredient.of(source), ctx.get(), count)
+                        .stonecutting(Ingredient.of(source), RecipeCategory.BUILDING_BLOCKS, ctx.get(), count)
                         .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(source))
                         .save(prov, Alloyed.asResource("stonecutting/" + ctx.getName() + "_from_" + sourceName));
             };

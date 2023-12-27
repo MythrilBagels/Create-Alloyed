@@ -16,10 +16,6 @@ public class CreateDecoCompat {
         return new SteelCatwalkStairBlock(properties);
     }
 
-    public static @NotNull SlabBlock newVerticalSlabBlock(BlockBehaviour.Properties properties) {
-        return new SteelVerticalSlabBlock(properties);
-    }
-
     public static BlockItem newCatwalkBlockItem(Block block, Item.Properties properties) {
         return new SteelCatwalkBlockItem((SteelCatwalkBlock) block ,properties);
     }

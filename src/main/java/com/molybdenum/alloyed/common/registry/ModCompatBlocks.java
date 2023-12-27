@@ -74,38 +74,12 @@ public class ModCompatBlocks {
             .simpleItem()
             .register();
 
-    public static final BlockEntry<SlabBlock> STEEL_SHEET_VERTICAL_SLAB = REGISTRATE
-            .block("steel_sheet_vertical_slab", Alloyed.isCreateDecoLoaded ?
-                    CreateDecoCompat::newVerticalSlabBlock : SlabBlock::new)
-            .initialProperties(() -> Blocks.IRON_BLOCK)
-            .properties(ModBlocks::steelProperties)
-            .simpleItem()
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .blockstate(BlockStateUtils.Unique::steelVerticalSlabBlockstate)
-            .loot((lootTable, block) -> {
-                LootTable.Builder builder = LootTable.lootTable();
-                LootPool.Builder lootPool = LootPool.lootPool();
-
-                lootPool.setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(block)
-                                .apply(SetItemCountFunction
-                                        .setCount(ConstantValue.exactly(2))
-                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                                .setProperties(StatePropertiesPredicate.Builder.properties()
-                                                        .hasProperty(BlockStateProperties.SLAB_TYPE, SlabType.DOUBLE)))));
-
-                lootTable.add(block, builder.withPool(lootPool));
-            })
-            .onRegister(CreateRegistrate.connectedTextures(SteelSheetVertCTBehaviour::new))
-            .register();
-
-
 
     public static void register() {
         Alloyed.LOGGER.debug("Registering ModCompatBlocks!");
     }
 
     public static List<ItemProviderEntry<?>> getDecoBlocks() {
-        return List.of(STEEL_CATWALK, STEEL_CATWALK_STAIRS, STEEL_SHEET_VERTICAL_SLAB);
+        return List.of(STEEL_CATWALK, STEEL_CATWALK_STAIRS);
     }
 }

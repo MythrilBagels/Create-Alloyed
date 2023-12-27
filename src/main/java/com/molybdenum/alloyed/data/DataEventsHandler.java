@@ -2,6 +2,7 @@ package com.molybdenum.alloyed.data;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.client.registry.ModPonders;
+import com.molybdenum.alloyed.common.content.items.SteelUpgradeSmithingTemplateItem;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.molybdenum.alloyed.data.providers.ModAdvancementProvider;
@@ -29,11 +30,13 @@ public class DataEventsHandler {
         ModPonders.registerLang();
         // Register Creative Tab lang
         ModCreativeModeTab.registerLang();
+        // Register Steel Upgrade Template lang
+        SteelUpgradeSmithingTemplateItem.registerLang();
 
         if (event.includeServer()) {
             // Register processing recipes
             MechanicalCraftingRecipes.register(generator);
-            ModProcessingRecipes.registerAllProcessingProviders(generator);
+            ModProcessingRecipes.registerAllProcessingProviders(generator, generator.getPackOutput());
 
             // Register advancements
             ModAdvancements.register();
