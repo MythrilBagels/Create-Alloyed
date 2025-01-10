@@ -29,7 +29,7 @@ import java.util.List;
 public class BeltModelMixin implements BeltModelExtension {
 
     @Inject(
-            method = "Lcom/simibubi/create/content/kinetics/belt/BeltModel;getQuads(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Lnet/minecraft/util/RandomSource;Lnet/minecraftforge/client/model/data/ModelData;Lnet/minecraft/client/renderer/RenderType;)Ljava/util/List;",
+            method = "getQuads(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Lnet/minecraft/util/RandomSource;Lnet/minecraftforge/client/model/data/ModelData;Lnet/minecraft/client/renderer/RenderType;)Ljava/util/List;",
             at = @At(value = "RETURN", ordinal = 1),
             locals = LocalCapture.CAPTURE_FAILHARD,
             cancellable = true,

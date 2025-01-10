@@ -32,7 +32,7 @@ public class ModCreativeModeTab {
 
     public static final RegistryObject<CreativeModeTab> MAIN_TAB = REGISTER.register("main_tab",
             () -> CreativeModeTab.builder()
-                    .title(Components.translatable("itemGroup.alloyed.main_tab"))
+                    .title(Components.translatable("itemGroup.alloyed.main_group"))
                     .icon(ModItems.STEEL_INGOT::asStack)
                     .displayItems(new DisplayItemsGenerator())
                     .build());

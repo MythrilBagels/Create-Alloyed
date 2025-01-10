@@ -60,5 +60,8 @@
   "item.alloyed.steel_sheet": "Steel Sheet",
   "item.alloyed.steel_shovel": "Steel Shovel",
   "item.alloyed.steel_sword": "Steel Sword",
+  "upgrade.alloyed.netherite_upgrade": "Steel Upgrade",
+  "item.alloyed.netherite_upgrade": "Steel Upgrade",
+
   "itemGroup.alloyed.main_group": "Create: Alloyed"
 }

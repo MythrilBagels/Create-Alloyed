@@ -1,10 +1,13 @@
 {
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
   "addition": {
     "tag": "forge:ingots/steel"
   },
   "base": {
     "item": "minecraft:chainmail_leggings"
+  },
+  "template": {
+    "item": "alloyed:steel_smithing_upgrade_template"
   },
   "result": {
     "item": "alloyed:steel_leggings"
