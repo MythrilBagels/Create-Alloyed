@@ -10,8 +10,20 @@ base {
     archivesName = project.archives_name
 }
 
+def generatedResources = file("src/generated/resources")
+
 loom {
     silentMojangMappingsLicense()
+    forge {
+        mixinConfig 'alloyed.mixins.json'
+    }
+    runs {
+        data {
+            data()
+            programArgs "--all", "--mod", "alloyed"
+            programArgs "--output", generatedResources.absolutePath
+        }
+    }
 }
 
 repositories {
@@ -62,6 +74,12 @@ processResources {
 
     filesMatching('META-INF/mods.toml') {
         expand version: project.version
+    }
+}
+
+sourceSets {
+    main {
+        resources.srcDir generatedResources
     }
 }
 
