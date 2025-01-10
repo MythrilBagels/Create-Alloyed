@@ -27,8 +27,8 @@ public class Alloyed {
 
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID);
 
-    public Alloyed() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public Alloyed(FMLJavaModLoadingContext context) {
+        IEventBus eventBus = context.getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
         REGISTRATE.registerEventListeners(eventBus);
 
@@ -36,8 +36,8 @@ public class Alloyed {
         isCreateDecoLoaded = ModList.get().isLoaded("createdeco");
 
         ModBlockSetTypes.register();
-        ModItems.register();
         ModBlocks.register();
+        ModItems.register();
         ModCompatItems.register();
         ModCompatBlocks.register();
         ModSoundEvents.register(eventBus);
