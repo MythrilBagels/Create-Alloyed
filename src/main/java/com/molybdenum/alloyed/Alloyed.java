@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.client.registry.ModSoundEvents;
+import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.common.registry.*;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.resources.ResourceLocation;
@@ -38,6 +39,7 @@ public class Alloyed {
         ModBlockSetTypes.register();
         ModBlocks.register();
         ModItems.register();
+        ModCreativeModeTab.register(eventBus);
         ModCompatItems.register();
         ModCompatBlocks.register();
         ModSoundEvents.register(eventBus);
