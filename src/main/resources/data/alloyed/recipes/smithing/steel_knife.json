@@ -9,6 +9,9 @@
   "result": {
     "item": "alloyed:steel_knife"
   },
+  "template": {
+    "item": "alloyed:steel_upgrade_smithing_template"
+  },
   "conditions": [ {
     "type": "forge:mod_loaded",
     "modid": "farmersdelight"
