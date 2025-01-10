@@ -77,7 +77,7 @@ public class ModItems {
     public static final ItemEntry<Item> STEEL_SHEET = taggedIngredient("steel_sheet", ModTags.Items.STEEL_SHEET);
 
     public static final ItemEntry<SteelUpgradeSmithingTemplateItem> STEEL_SMITHING_UPGRADE_TEMPLATE = REGISTRATE
-            .item("steel_smithing_upgrade_template", $ -> new SteelUpgradeSmithingTemplateItem())
+            .item("steel_upgrade_smithing_template", $ -> new SteelUpgradeSmithingTemplateItem())
             .recipe((ctx, prov) -> {
                 ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ctx.get())
                         .pattern("###")
