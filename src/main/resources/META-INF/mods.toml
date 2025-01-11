@@ -4,7 +4,7 @@ license="MIT"
 issueTrackerURL="https://github.com/MythrilBagels/Create-Alloyed/issues"
 [[mods]]
 modId="alloyed"
-version="1.20.1"
+version = "${version}"
 displayName="Create: Alloyed"
 #updateJSONURL="http://myurl.me/"
 displayURL="https://github.com/MythrilBagels/Create-Alloyed"
