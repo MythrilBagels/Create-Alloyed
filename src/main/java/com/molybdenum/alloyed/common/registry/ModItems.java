@@ -90,6 +90,11 @@ public class ModItems {
             })
             .register();
 
+    public static final ItemEntry<Item> INCOMPLETE_STEEL_SMITHING_UPGRADE_TEMPLATE = REGISTRATE
+            .item("incomplete_steel_upgrade_smithing_template", $ -> new Item(new Item.Properties()))
+            .register();
+
+
     // Steel toolset.
     /**
      * Mechanical Crafting recipe can be found here:
