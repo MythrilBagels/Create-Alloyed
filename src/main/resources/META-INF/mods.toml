@@ -25,7 +25,7 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
     modId="create"
     mandatory=true
     versionRange="[0.5.1.e,)"
-    ordering="AFTER"
+    ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]
     modId="farmersdelight"
