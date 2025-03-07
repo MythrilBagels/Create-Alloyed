@@ -10,7 +10,7 @@ displayName="Create: Alloyed"
 displayURL="https://github.com/MythrilBagels/Create-Alloyed"
 logoFile="alloyed.png"
 credits="Thanks to the kind folks over on the Create and Create Modders Discord!"
-authors="Fortress Nebula, SpottyTheTurtle, and Bagels"
+authors="Fortress Nebula, SpottyTheTurtle, Bagels, and cassiancc"
 description='''
 A Create addon adding Bronze and Steel, both items used for compatibility and decoration!
 '''
@@ -18,7 +18,7 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
 [[dependencies.alloyed]]
     modId="forge"
     mandatory=true
-    versionRange="[47,)"
+    versionRange="[47.3.10,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]
@@ -30,7 +30,7 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
 [[dependencies.alloyed]]
     modId="farmersdelight"
     mandatory=false
-    versionRange="[1.19-1.2,)"
+    versionRange="[1.20.1-1.2,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]
