@@ -15,12 +15,11 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.function.BiConsumer;
 
 public class ModPonders {
-    private static final PonderLocalization LOCALIZATION = new PonderLocalization();
-    private static final PonderSceneRegistry SCENES = new PonderSceneRegistry(LOCALIZATION);
-    private static final PonderSceneRegistrationHelper<ResourceLocation> HELPER = new DefaultPonderSceneRegistrationHelper(Alloyed.MOD_ID, SCENES);
-    public static void register() {
+
+    public static void register(PonderSceneRegistrationHelper<ResourceLocation> helper) {
         Alloyed.LOGGER.debug("Registering ModPonders!");
-        PonderSceneRegistrationHelper<ItemProviderEntry<?>> PONDER = HELPER.withKeyFunction(RegistryEntry::getId);
+        PonderSceneRegistrationHelper<ItemProviderEntry<?>> PONDER = helper.withKeyFunction(RegistryEntry::getId);
+
 
         PONDER.forComponents(ModBlocks.BRONZE_BELL)
                 .addStoryBoard("bronze_bell/decoration", BronzeBellPonder::decoration, AllCreatePonderTags.DECORATION)
