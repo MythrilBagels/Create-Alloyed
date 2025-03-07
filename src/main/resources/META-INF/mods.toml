@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[41,)"
+loaderVersion="[47,)"
 license="MIT"
 issueTrackerURL="https://github.com/MythrilBagels/Create-Alloyed/issues"
 [[mods]]
@@ -24,7 +24,7 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
 [[dependencies.alloyed]]
     modId="create"
     mandatory=true
-    versionRange="[0.5.1.e,)"
+    versionRange="[6.0.0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]
