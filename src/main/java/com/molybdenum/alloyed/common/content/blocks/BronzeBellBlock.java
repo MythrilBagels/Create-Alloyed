@@ -68,10 +68,9 @@ public class BronzeBellBlock extends Block {
         if (AllItems.WRENCH.isIn(pPlayer.getItemInHand(pHand))) {
             pState = pState.cycle(NOTE);
             pLevel.setBlock(pPos, pState, 3);
-            int i = pState.getValue(NOTE);
-            pLevel.addParticle(ParticleTypes.NOTE, (double)pPos.getX() + (double)0.5F, (double)pPos.getY() + 1.2, (double)pPos.getZ() + (double)0.5F, (double)i / (double)24.0F, 0.0F, 0.0F);
-
         }
+        int i = pState.getValue(NOTE);
+        pLevel.addParticle(ParticleTypes.NOTE, (double)pPos.getX() + (double)0.5F, (double)pPos.getY() + 1.2, (double)pPos.getZ() + (double)0.5F, (double)i / (double)24.0F, 0.0F, 0.0F);
 
         return onHit(pLevel, pHit, pPlayer, true) ?
                 InteractionResult.sidedSuccess(pLevel.isClientSide) :
