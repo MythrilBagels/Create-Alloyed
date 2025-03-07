@@ -6,13 +6,13 @@ import com.molybdenum.alloyed.common.registry.ModItems;
 import com.simibubi.create.AllCreativeModeTabs;
 import com.simibubi.create.Create;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.foundation.utility.Components;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import it.unimi.dsi.fastutil.objects.ReferenceArrayList;
 import it.unimi.dsi.fastutil.objects.ReferenceLinkedOpenHashSet;
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -32,7 +32,7 @@ public class ModCreativeModeTab {
 
     public static final RegistryObject<CreativeModeTab> MAIN_TAB = REGISTER.register("main_tab",
             () -> CreativeModeTab.builder()
-                    .title(Components.translatable("itemGroup.alloyed.main_group"))
+                    .title(Component.translatable("itemGroup.alloyed.main_group"))
                     .icon(ModItems.STEEL_INGOT::asStack)
                     .displayItems(new DisplayItemsGenerator())
                     .build());

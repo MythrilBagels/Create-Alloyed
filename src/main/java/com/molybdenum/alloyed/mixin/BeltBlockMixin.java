@@ -1,9 +1,7 @@
 package com.molybdenum.alloyed.mixin;
 
-import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.content.extensions.BeltBlockEntityExtension;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
-import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.kinetics.belt.BeltBlock;
 import com.simibubi.create.content.kinetics.belt.BeltBlockEntity;
 import com.simibubi.create.foundation.block.IBE;
@@ -40,7 +38,7 @@ public abstract class BeltBlockMixin implements IBE<BeltBlockEntity> {
 
         if (ModBlocks.STEEL_CASING.isIn(heldItem)) {
             withBlockEntityDo(world, pos, be ->
-                    ((BeltBlockEntityExtension) be).setAlloyedCasingType(BeltBlockEntityExtension.AlloyedCasingType.STEEL));
+                    ((BeltBlockEntityExtension) be).create_alloyed$setAlloyedCasingType(BeltBlockEntityExtension.AlloyedCasingType.STEEL));
             updateCoverProperty(world, pos, world.getBlockState(pos));
             cir.setReturnValue(InteractionResult.SUCCESS);
             cir.cancel();
@@ -56,7 +54,7 @@ public abstract class BeltBlockMixin implements IBE<BeltBlockEntity> {
     private void tryUnencaseWithAlloyedCasings(BlockState state, UseOnContext context, CallbackInfoReturnable<InteractionResult> cir, Level world, Player player, BlockPos pos) {
         withBlockEntityDo(world, pos, be -> {
             if (be instanceof BeltBlockEntityExtension bex && bex.getAlloyedCasingType() != BeltBlockEntityExtension.AlloyedCasingType.NONE) {
-                bex.setAlloyedCasingType(BeltBlockEntityExtension.AlloyedCasingType.NONE);
+                bex.create_alloyed$setAlloyedCasingType(BeltBlockEntityExtension.AlloyedCasingType.NONE);
             }
         });
     }

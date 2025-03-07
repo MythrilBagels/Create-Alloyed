@@ -1,14 +1,14 @@
 package com.molybdenum.alloyed.mixin;
 
+import com.llamalad7.mixinextras.sugar.Local;
 import com.molybdenum.alloyed.common.content.extensions.BeltBlockEntityExtension;
 import com.molybdenum.alloyed.common.content.extensions.BeltModelExtension;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
-import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.content.kinetics.belt.BeltBlock;
 import com.simibubi.create.content.kinetics.belt.BeltBlockEntity;
 import com.simibubi.create.content.kinetics.belt.BeltModel;
-import com.simibubi.create.foundation.utility.NBTHelper;
+import net.createmod.catnip.nbt.NBTHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.Block;
@@ -18,17 +18,18 @@ import net.minecraftforge.client.model.data.ModelData;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(BeltBlockEntity.class)
 public class BeltBlockEntityMixin extends KineticBlockEntity implements BeltBlockEntityExtension {
     @Shadow(remap=false) public BeltBlockEntity.CasingType casing;
     @Shadow(remap=false) public boolean covered;
-    AlloyedCasingType alloyedCasing = AlloyedCasingType.NONE;
+    @Unique
+    AlloyedCasingType create_alloyed$alloyedCasing = AlloyedCasingType.NONE;
 
     public BeltBlockEntityMixin(BlockEntityType<?> typeIn, BlockPos pos, BlockState state) {
         super(typeIn, pos, state);
@@ -43,35 +44,24 @@ public class BeltBlockEntityMixin extends KineticBlockEntity implements BeltBloc
     private void setModelDetails(CallbackInfoReturnable<ModelData> cir) {
         cir.setReturnValue(ModelData.builder()
                 .with(BeltModel.CASING_PROPERTY, casing)
-                .with(BeltModelExtension.ALLOYED_CASING_PROPERTY, alloyedCasing)
+                .with(BeltModelExtension.ALLOYED_CASING_PROPERTY, create_alloyed$alloyedCasing)
                 .with(BeltModel.COVER_PROPERTY, covered)
                 .build());
     }
 
-    @Inject(
-            method = "write(Lnet/minecraft/nbt/CompoundTag;Z)V",
-            at = @At(value = "INVOKE", target = "Lcom/simibubi/create/foundation/utility/NBTHelper;writeEnum(Lnet/minecraft/nbt/CompoundTag;Ljava/lang/String;Ljava/lang/Enum;)V", ordinal = 0),
-            remap = false
-    )
+
+    @Inject(method = "write", at = @At(value = "RETURN"), remap = false)
     private void writeAlloyedCasingNBT(CompoundTag compound, boolean clientPacket, CallbackInfo ci) {
-        NBTHelper.writeEnum(compound, "AlloyedCasing", alloyedCasing);
+        NBTHelper.writeEnum(compound, "AlloyedCasing", create_alloyed$alloyedCasing);
     }
 
-    @Inject(
-            method = "read(Lnet/minecraft/nbt/CompoundTag;Z)V",
-            at = @At(
-                    value = "INVOKE_ASSIGN",
-                    target = "Lnet/minecraft/nbt/CompoundTag;getBoolean(Ljava/lang/String;)Z",
-                    ordinal = 1),
-            locals = LocalCapture.CAPTURE_FAILHARD,
-            remap = false
-    )
-    private void readAlloyedCasingNBT(CompoundTag compound, boolean clientPacket, CallbackInfo ci, int prevBeltLength, BeltBlockEntity.CasingType casingBefore, boolean coverBefore) {
-        AlloyedCasingType previous = alloyedCasing;
-        alloyedCasing = NBTHelper.readEnum(compound, "AlloyedCasing", AlloyedCasingType.class);
+    @Inject(method = "read", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/nbt/CompoundTag;getBoolean(Ljava/lang/String;)Z", ordinal = 1))
+    private void readAlloyedCasingNBT(CompoundTag compound, boolean clientPacket, CallbackInfo ci, @Local BeltBlockEntity.CasingType casingBefore, @Local(ordinal = 1) boolean coverBefore) {
+        AlloyedCasingType previous = create_alloyed$alloyedCasing;
+        create_alloyed$alloyedCasing = NBTHelper.readEnum(compound, "AlloyedCasing", AlloyedCasingType.class);
 
         if (!clientPacket) return;
-        if (previous == alloyedCasing) return;
+        if (previous == create_alloyed$alloyedCasing) return;
         if (casingBefore != casing || coverBefore != covered) return; // BE will be updated anyway
 
         if (!isVirtual())
@@ -89,20 +79,20 @@ public class BeltBlockEntityMixin extends KineticBlockEntity implements BeltBloc
             remap = false
     )
     private void clearAlloyedCasing(BeltBlockEntity.CasingType type, CallbackInfo ci) {
-        alloyedCasing = AlloyedCasingType.NONE;
+        create_alloyed$alloyedCasing = AlloyedCasingType.NONE;
     }
 
 
     @Override
-    public void setAlloyedCasingType(AlloyedCasingType type) {
-        if (alloyedCasing == type)
+    public void create_alloyed$setAlloyedCasingType(AlloyedCasingType type) {
+        if (create_alloyed$alloyedCasing == type)
             return;
 
         BlockState blockState = getBlockState();
         boolean shouldBlockHaveCasing = type != AlloyedCasingType.NONE;
 
-        if (level.isClientSide) {
-            alloyedCasing = type;
+        if (getLevel().isClientSide) {
+            create_alloyed$alloyedCasing = type;
             casing = BeltBlockEntity.CasingType.NONE;
 
             level.setBlock(worldPosition, blockState.setValue(BeltBlock.CASING, shouldBlockHaveCasing), 0);
@@ -111,26 +101,26 @@ public class BeltBlockEntityMixin extends KineticBlockEntity implements BeltBloc
             return;
         }
 
-        if (alloyedCasing != AlloyedCasingType.NONE)
+        if (create_alloyed$alloyedCasing != AlloyedCasingType.NONE)
             level.levelEvent(2001, worldPosition,
                     Block.getId(ModBlocks.STEEL_CASING.getDefaultState())); // TODO: if bronze casing is ever added, this must be updated
         if (blockState.getValue(BeltBlock.CASING) != shouldBlockHaveCasing)
             KineticBlockEntity.switchToBlockState(level, worldPosition,
                     blockState.setValue(BeltBlock.CASING, shouldBlockHaveCasing));
 
-        alloyedCasing = type;
+        create_alloyed$alloyedCasing = type;
         casing = BeltBlockEntity.CasingType.NONE;
         setChanged();
         sendData();
     }
 
     @Override
-    public void setAlloyedCasingTypeRaw(AlloyedCasingType value) {
-        alloyedCasing = value;
+    public void create_alloyed$setAlloyedCasingTypeRaw(AlloyedCasingType value) {
+        create_alloyed$alloyedCasing = value;
     }
 
     @Override
     public AlloyedCasingType getAlloyedCasingType() {
-        return alloyedCasing;
+        return create_alloyed$alloyedCasing;
     }
 }

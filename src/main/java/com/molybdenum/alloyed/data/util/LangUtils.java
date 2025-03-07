@@ -1,7 +1,7 @@
 package com.molybdenum.alloyed.data.util;
 
 import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
-import com.simibubi.create.foundation.utility.Iterate;
+import net.createmod.catnip.data.Iterate;
 
 public class LangUtils {
 

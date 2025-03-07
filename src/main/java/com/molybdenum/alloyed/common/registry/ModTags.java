@@ -44,11 +44,11 @@ public class ModTags {
         }
 
         private static TagKey<Item> createForgeTag(String name) {
-            return ItemTags.create(new ResourceLocation("forge", name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", name));
         }
 
         private static TagKey<Item> createSpecialTag(String modId, String path) {
-            return ItemTags.create(new ResourceLocation(modId, path));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(modId, path));
         }
     }
 
@@ -66,7 +66,7 @@ public class ModTags {
         }
 
         private static TagKey<Block> createForgeTag(String name) {
-            return BlockTags.create(new ResourceLocation("forge", name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath("forge", name));
         }
     }
 
@@ -82,7 +82,7 @@ public class ModTags {
 
 
         private static TagKey<Item> createForgeTag(String name) {
-            return ItemTags.create(new ResourceLocation("forge", name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", name));
         }
     }
 

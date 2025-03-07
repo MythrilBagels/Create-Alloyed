@@ -1,7 +1,7 @@
 package com.molybdenum.alloyed.client.registry;
 
-import com.jozufozu.flywheel.core.PartialModel;
 import com.molybdenum.alloyed.Alloyed;
+import dev.engine_room.flywheel.lib.model.baked.PartialModel;
 
 public class ModPartialModels {
 
@@ -10,7 +10,7 @@ public class ModPartialModels {
             STEEL_BELT_COVER_Z = block("belt_cover/steel_belt_cover_z");
 
     private static PartialModel block(String path) {
-        return new PartialModel(Alloyed.asResource("block/" + path));
+        return PartialModel.of(Alloyed.asResource("block/" + path));
     }
     public static void register() {}
 }

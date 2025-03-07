@@ -3,25 +3,34 @@ package com.molybdenum.alloyed.client.registry;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.client.ponder.BronzeBellPonder;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
-import com.simibubi.create.foundation.ponder.PonderLocalization;
-import com.simibubi.create.foundation.ponder.PonderRegistrationHelper;
-import com.simibubi.create.foundation.ponder.PonderRegistry;
-import com.simibubi.create.infrastructure.ponder.AllPonderTags;
+import com.simibubi.create.infrastructure.ponder.AllCreatePonderTags;
+import com.tterrag.registrate.providers.ProviderType;
+import com.tterrag.registrate.util.entry.ItemProviderEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
+import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
+import net.createmod.ponder.foundation.PonderIndex;
+import net.createmod.ponder.foundation.registration.*;
+import net.minecraft.resources.ResourceLocation;
+
+import java.util.function.BiConsumer;
 
 public class ModPonders {
-    private static final PonderRegistrationHelper HELPER = new PonderRegistrationHelper(Alloyed.MOD_ID);
-
+    private static final PonderLocalization LOCALIZATION = new PonderLocalization();
+    private static final PonderSceneRegistry SCENES = new PonderSceneRegistry(LOCALIZATION);
+    private static final PonderSceneRegistrationHelper<ResourceLocation> HELPER = new DefaultPonderSceneRegistrationHelper(Alloyed.MOD_ID, SCENES);
     public static void register() {
         Alloyed.LOGGER.debug("Registering ModPonders!");
-        HELPER.forComponents(ModBlocks.BRONZE_BELL)
-                .addStoryBoard("bronze_bell/decoration", BronzeBellPonder::decoration, AllPonderTags.DECORATION)
-                .addStoryBoard("bronze_bell/instrument", BronzeBellPonder::instrument, AllPonderTags.DECORATION);
+        PonderSceneRegistrationHelper<ItemProviderEntry<?>> PONDER = HELPER.withKeyFunction(RegistryEntry::getId);
 
-        PonderRegistry.TAGS.forTag(AllPonderTags.DECORATION)
-                .add(ModBlocks.BRONZE_BELL);
+        PONDER.forComponents(ModBlocks.BRONZE_BELL)
+                .addStoryBoard("bronze_bell/decoration", BronzeBellPonder::decoration, AllCreatePonderTags.DECORATION)
+                .addStoryBoard("bronze_bell/instrument", BronzeBellPonder::instrument, AllCreatePonderTags.DECORATION);
     }
 
     public static void registerLang() {
-        PonderLocalization.provideRegistrateLang(Alloyed.REGISTRATE);
+        Alloyed.REGISTRATE.addDataGenerator(ProviderType.LANG, provider -> {
+            BiConsumer<String, String> langConsumer = provider::add;
+            PonderIndex.getLangAccess().provideLang(Alloyed.MOD_ID, langConsumer);
+        });
     }
 }
