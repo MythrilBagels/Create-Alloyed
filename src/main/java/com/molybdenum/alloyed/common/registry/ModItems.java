@@ -13,6 +13,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -21,11 +22,17 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Blocks;
 
+import java.util.List;
+
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Crafting;
 import static com.molybdenum.alloyed.data.util.RecipeUtils.Smithing;
 
 public class ModItems {
     private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB);
+
+    public static List<ItemProviderEntry<?>> getHiddenItems() {
+        return List.of(INCOMPLETE_STEEL_SMITHING_UPGRADE_TEMPLATE, ModBlocks.STEEL_ENCASED_COGWHEEL, ModBlocks.STEEL_ENCASED_SHAFT, ModBlocks.STEEL_ENCASED_LARGE_COGWHEEL);
+    }
 
     // Ingots
     /**
@@ -93,7 +100,6 @@ public class ModItems {
     public static final ItemEntry<Item> INCOMPLETE_STEEL_SMITHING_UPGRADE_TEMPLATE = REGISTRATE
             .item("incomplete_steel_upgrade_smithing_template", $ -> new Item(new Item.Properties()))
             .register();
-
 
     // Steel toolset.
     /**
