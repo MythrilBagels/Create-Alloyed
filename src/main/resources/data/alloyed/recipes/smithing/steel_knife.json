@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
   "base": {
     "item": "farmersdelight:iron_knife"
   },
@@ -8,6 +8,9 @@
   },
   "result": {
     "item": "alloyed:steel_knife"
+  },
+  "template": {
+    "item": "alloyed:steel_upgrade_smithing_template"
   },
   "conditions": [ {
     "type": "forge:mod_loaded",

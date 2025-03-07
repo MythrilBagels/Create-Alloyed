@@ -8,7 +8,8 @@ import java.util.function.Supplier;
 
 public enum ModCompat {
     CREATE_DECO(ModCompatBlocks::getDecoBlocks, !Alloyed.isCreateDecoLoaded),
-    FARMERS_DELIGHT(ModCompatItems::getFDItems, !Alloyed.isFarmersDelightLoaded)
+    FARMERS_DELIGHT(ModCompatItems::getFDItems, !Alloyed.isFarmersDelightLoaded),
+    HIDDEN(ModItems::getHiddenItems, true)
     ;
 
     private final Supplier<List<ItemProviderEntry<?>>> entries;

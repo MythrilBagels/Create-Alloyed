@@ -25,7 +25,10 @@
     "alloyed:steel_ladder",
     "alloyed:steel_catwalk",
     "alloyed:steel_catwalk_stairs",
-    "alloyed:steel_sheet_vertical_slab",
+    {
+      "id": "alloyed:steel_sheet_vertical_slab",
+      "required": false
+    },
     "alloyed:steel_mesh_fence"
   ]
 }

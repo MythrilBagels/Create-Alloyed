@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed.data;
 
 import com.molybdenum.alloyed.Alloyed;
+import com.molybdenum.alloyed.client.ponder.AlloyedPonderPlugin;
 import com.molybdenum.alloyed.client.registry.ModPonders;
 import com.molybdenum.alloyed.common.content.items.SteelUpgradeSmithingTemplateItem;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
@@ -9,6 +10,7 @@ import com.molybdenum.alloyed.data.providers.ModAdvancementProvider;
 import com.molybdenum.alloyed.data.providers.ModProcessingRecipes;
 import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
 import com.molybdenum.alloyed.data.registry.ModAdvancements;
+import net.createmod.ponder.foundation.PonderIndex;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -25,8 +27,7 @@ public class DataEventsHandler {
 
         // Correct bronze blocks
         ModBlocks.fixBronzeBlocks();
-        // Register ponders and generate ponder lang
-        ModPonders.register();
+        PonderIndex.addPlugin(new AlloyedPonderPlugin());
         ModPonders.registerLang();
         // Register Creative Tab lang
         ModCreativeModeTab.registerLang();

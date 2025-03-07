@@ -1,10 +1,13 @@
 {
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
   "base": {
     "item": "minecraft:iron_door"
   },
   "addition": {
     "tag": "forge:ingots/steel"
+  },
+  "template": {
+    "item": "alloyed:steel_upgrade_smithing_template"
   },
   "result": {
     "item": "alloyed:steel_door"

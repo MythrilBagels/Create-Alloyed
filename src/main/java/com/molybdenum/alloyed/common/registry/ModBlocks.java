@@ -5,6 +5,7 @@ import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetMetal
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetSlabCTBehaviour;
 import com.molybdenum.alloyed.common.content.blocks.BronzeBellBlock;
 import com.molybdenum.alloyed.common.content.blocks.SteelDoorBlock;
+import com.molybdenum.alloyed.common.content.blocks.SteelShaftBlock;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
@@ -20,11 +21,12 @@ import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedShaftBlo
 import com.simibubi.create.foundation.block.CopperBlockSet;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.foundation.utility.Couple;
+import com.simibubi.create.infrastructure.ponder.AllCreatePonderTags;
 import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.DataIngredient;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.createmod.catnip.data.Couple;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -50,6 +52,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.Objects;
 
+import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
 import static com.simibubi.create.foundation.data.BlockStateGen.axisBlock;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 
@@ -115,17 +118,17 @@ public class ModBlocks {
             .properties(ModBlocks::steelProperties)
             .register();
 
-    public static final BlockEntry<EncasedShaftBlock> STEEL_ENCASED_SHAFT = REGISTRATE
-            .block("steel_encased_shaft", p -> new EncasedShaftBlock(p, ModBlocks.STEEL_CASING::get))
+    public static final BlockEntry<SteelShaftBlock> STEEL_ENCASED_SHAFT = REGISTRATE
+            .block("steel_encased_shaft", p -> new SteelShaftBlock(p, ModBlocks.STEEL_CASING::get))
             .properties(ModBlocks::steelProperties)
-            .transform(BuilderTransformers.encasedShaft("steel", () -> ModSpriteShifts.STEEL_CASING))
+            .transform(ModTransformers.encasedShaft("steel", () -> ModSpriteShifts.STEEL_CASING))
             .transform(axeOrPickaxe())
             .register();
 
     public static final BlockEntry<EncasedCogwheelBlock> STEEL_ENCASED_COGWHEEL = REGISTRATE
             .block("steel_encased_cogwheel", p -> new EncasedCogwheelBlock(p, false, ModBlocks.STEEL_CASING::get))
             .properties(ModBlocks::steelProperties)
-            .transform(BuilderTransformers.encasedCogwheel("steel", () -> ModSpriteShifts.STEEL_CASING))
+            .transform(ModTransformers.encasedCogwheel("steel", () -> ModSpriteShifts.STEEL_CASING))
             .blockstate((c, p) -> axisBlock(c, p, blockState -> {
                 String suffix = (blockState.getValue(EncasedCogwheelBlock.TOP_SHAFT) ? "_top" : "")
                         + (blockState.getValue(EncasedCogwheelBlock.BOTTOM_SHAFT) ? "_bottom" : "");
@@ -146,7 +149,7 @@ public class ModBlocks {
     public static final BlockEntry<EncasedCogwheelBlock> STEEL_ENCASED_LARGE_COGWHEEL = REGISTRATE
             .block("steel_encased_large_cogwheel", p -> new EncasedCogwheelBlock(p, true, ModBlocks.STEEL_CASING::get))
             .properties(ModBlocks::steelProperties)
-            .transform(BuilderTransformers.encasedLargeCogwheel("steel", () -> ModSpriteShifts.STEEL_CASING))
+            .transform(ModTransformers.encasedLargeCogwheel("steel", () -> ModSpriteShifts.STEEL_CASING))
             .blockstate((c, p) -> axisBlock(c, p, blockState -> {
                 String suffix = (blockState.getValue(EncasedCogwheelBlock.TOP_SHAFT) ? "_top" : "")
                         + (blockState.getValue(EncasedCogwheelBlock.BOTTOM_SHAFT) ? "_bottom" : "");
@@ -163,7 +166,7 @@ public class ModBlocks {
 
     public static final BlockEntry<MetalScaffoldingBlock> STEEL_SCAFFOLD =
             REGISTRATE.block("steel_scaffolding", MetalScaffoldingBlock::new)
-                    .transform(BuilderTransformers.scaffold("steel",
+                    .transform(ModTransformers.scaffold("steel",
                             () -> DataIngredient.tag(AllTags.forgeItemTag("ingots/steel")), MapColor.COLOR_GRAY,
                             ModSpriteShifts.STEEL_SCAFFOLD, ModSpriteShifts.STEEL_SCAFFOLD_INSIDE, ModSpriteShifts.STEEL_CASING))
                     .properties(ModBlocks::steelProperties)
@@ -172,8 +175,7 @@ public class ModBlocks {
 
     public static final BlockEntry<SteelDoorBlock> STEEL_DOOR =
             steelDoorBlock(false, null)
-                    .onRegister(
-                            AllInteractionBehaviours.interactionBehaviour(new DoorMovingInteraction()))
+                    .onRegister(interactionBehaviour(new DoorMovingInteraction()))
                     .register();
 
     public static final BlockEntry<SteelDoorBlock> LOCKED_STEEL_DOOR =

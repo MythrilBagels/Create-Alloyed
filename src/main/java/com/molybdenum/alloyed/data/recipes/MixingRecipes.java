@@ -43,7 +43,6 @@ public class MixingRecipes extends ModProcessingRecipes {
             .require(Ingredient.of(Items.COAL, Items.CHARCOAL))
             .output(ModItems.STEEL_INGOT.get(), 3)
             .requiresHeat(HeatCondition.HEATED)
-            .duration(200)
     );
 
     public MixingRecipes(PackOutput output) {
