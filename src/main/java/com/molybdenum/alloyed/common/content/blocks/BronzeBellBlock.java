@@ -31,8 +31,8 @@ public class BronzeBellBlock extends Block {
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     public static final IntegerProperty NOTE = BlockStateProperties.NOTE;
 
-    public BronzeBellBlock(Properties p_49795_) {
-        super(p_49795_);
+    public BronzeBellBlock(Properties properties) {
+        super(properties);
         registerDefaultState(defaultBlockState()
                 .setValue(POWERED, false)
                 .setValue(NOTE, 0));
@@ -69,9 +69,10 @@ public class BronzeBellBlock extends Block {
             pState = pState.cycle(NOTE);
             pLevel.setBlock(pPos, pState, 3);
         }
-        int i = pState.getValue(NOTE);
-        pLevel.addParticle(ParticleTypes.NOTE, (double)pPos.getX() + (double)0.5F, (double)pPos.getY() + 1.2, (double)pPos.getZ() + (double)0.5F, (double)i / (double)24.0F, 0.0F, 0.0F);
-
+        if (isProperHit(pHit.getDirection())) {
+            int i = pState.getValue(NOTE);
+            pLevel.addParticle(ParticleTypes.NOTE, (double)pPos.getX() + (double)0.5F, (double)pPos.getY() + 1.2, (double)pPos.getZ() + (double)0.5F, (double)i / (double)24.0F, 0.0F, 0.0F);
+        }
         return onHit(pLevel, pHit, pPlayer, true) ?
                 InteractionResult.sidedSuccess(pLevel.isClientSide) :
                 InteractionResult.PASS;
