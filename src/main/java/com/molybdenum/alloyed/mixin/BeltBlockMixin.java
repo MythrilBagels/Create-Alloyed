@@ -1,5 +1,6 @@
 package com.molybdenum.alloyed.mixin;
 
+import com.llamalad7.mixinextras.sugar.Local;
 import com.molybdenum.alloyed.common.content.extensions.BeltBlockEntityExtension;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
 import com.simibubi.create.content.kinetics.belt.BeltBlock;
@@ -8,6 +9,7 @@ import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
@@ -29,18 +31,18 @@ public abstract class BeltBlockMixin implements IBE<BeltBlockEntity> {
     public abstract void updateCoverProperty(LevelAccessor world, BlockPos pos, BlockState state);
 
     @Inject(
-            method = "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;",
+            method = "useItemOn",
             at = @At("TAIL"),
             cancellable = true
     )
-    private void tryEncaseWithAlloyedCasings(BlockState state, Level world, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
+    private void tryEncaseWithAlloyedCasings(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hitResult, CallbackInfoReturnable<ItemInteractionResult> cir) {
         ItemStack heldItem = player.getItemInHand(handIn);
 
         if (ModBlocks.STEEL_CASING.isIn(heldItem)) {
             withBlockEntityDo(world, pos, be ->
                     ((BeltBlockEntityExtension) be).create_alloyed$setAlloyedCasingType(BeltBlockEntityExtension.AlloyedCasingType.STEEL));
             updateCoverProperty(world, pos, world.getBlockState(pos));
-            cir.setReturnValue(InteractionResult.SUCCESS);
+            cir.setReturnValue(ItemInteractionResult.SUCCESS);
             cir.cancel();
         }
     }
@@ -48,10 +50,9 @@ public abstract class BeltBlockMixin implements IBE<BeltBlockEntity> {
     @Inject(
             method = "onWrenched(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;",
             at = @At(value = "RETURN", ordinal = 1),
-            locals = LocalCapture.CAPTURE_FAILHARD,
             remap = false
     )
-    private void tryUnencaseWithAlloyedCasings(BlockState state, UseOnContext context, CallbackInfoReturnable<InteractionResult> cir, Level world, Player player, BlockPos pos) {
+    private void tryUnencaseWithAlloyedCasings(BlockState state, UseOnContext context, CallbackInfoReturnable<InteractionResult> cir, @Local Level world, @Local BlockPos pos) {
         withBlockEntityDo(world, pos, be -> {
             if (be instanceof BeltBlockEntityExtension bex && bex.getAlloyedCasingType() != BeltBlockEntityExtension.AlloyedCasingType.NONE) {
                 bex.create_alloyed$setAlloyedCasingType(BeltBlockEntityExtension.AlloyedCasingType.NONE);

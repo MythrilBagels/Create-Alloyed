@@ -3,10 +3,10 @@
   "acceptMirrored": true,
   "key": {
     "#": {
-      "tag": "forge:ingots/steel"
+      "tag": "c:ingots/steel"
     },
     "/": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:rods/wooden"
     }
   },
   "pattern": [

@@ -14,33 +14,24 @@ def generatedResources = file("src/generated/resources")
 
 loom {
     silentMojangMappingsLicense()
-    forge {
-        mixinConfig 'alloyed.mixins.json'
-    }
-    runs {
-        data {
-            data()
-            programArgs "--all", "--mod", "alloyed"
-            programArgs "--output", generatedResources.absolutePath
-        }
-    }
-    runs.configureEach {
-        programArg("-mixin.config=create.mixins.json")
-    }
 }
 
 repositories {
+    // Add NeoForged repository.
+    maven {
+        name = 'NeoForged'
+        url = 'https://maven.neoforged.net/releases'
+    }
+
     // Add repositories to retrieve artifacts from in here.
     // You should only use this when depending on other mods because
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
-     maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
-
-    // mavens used on both forge and fabric
     maven { url = "https://maven.blamejared.com/" } // JEI
-    maven { url = "https://maven.tterrag.com/" } // Registrate on forge
+    maven { url = "https://mvn.devos.one/snapshots" } // Registrate
     maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
     exclusiveContent {
         forRepository {
             maven {
@@ -57,30 +48,27 @@ repositories {
 dependencies {
     minecraft "net.minecraft:minecraft:$project.minecraft_version"
     mappings loom.officialMojangMappings()
-    forge "net.minecraftforge:forge:$project.forge_version"
-    
+    neoForge "net.neoforged:neoforge:$project.neoforge_version"
+
     // Create and its dependencies
     modImplementation("com.simibubi.create:create-$minecraft_version:$create_version:slim") { transitive = false }
     modImplementation("com.tterrag.registrate:Registrate:$registrate_version")
-    modImplementation("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}")
-    modCompileOnly("dev.engine-room.flywheel:flywheel-forge-api-${minecraft_version}:${flywheel_version}")
-    modRuntimeOnly("dev.engine-room.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}")
-    modImplementation "maven.modrinth:farmers-delight:1.20.1-1.2.7"
+    modImplementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
+    modCompileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
+    modRuntimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
+
+    modCompileOnly "maven.modrinth:farmers-delight:1.21.1-1.2.7"
     modCompileOnly "maven.modrinth:create-deco:2.0.2-1.20.1-forge"
 
     // Development QOL
-    modLocalRuntime("mezz.jei:jei-$minecraft_version-forge:$jei_version") { transitive = false }
+    modLocalRuntime("mezz.jei:jei-$minecraft_version-neoforge:$jei_version") { transitive = false }
 
-    // if you would like to add integration with JEI, uncomment this line.
-//    modCompileOnly("mezz.jei:jei-$minecraft_version:$jei_version:api")
-    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
-    implementation("io.github.llamalad7:mixinextras-forge:0.4.1")
 }
 
 processResources {
     inputs.property 'version', project.version
 
-    filesMatching('META-INF/mods.toml') {
+    filesMatching('META-INF/neoforge.mods.toml') {
         expand version: project.version
     }
 }
@@ -97,12 +85,12 @@ java {
     // If you remove this line, sources will not be generated.
     withSourcesJar()
 
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 17
+    it.options.release = 21
 }
 
 // Configure Maven publishing.

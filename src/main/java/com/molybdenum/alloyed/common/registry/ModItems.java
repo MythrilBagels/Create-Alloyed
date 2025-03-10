@@ -5,10 +5,6 @@ import com.molybdenum.alloyed.common.content.items.SteelUpgradeSmithingTemplateI
 import com.molybdenum.alloyed.common.item.ModArmourMaterials;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.common.item.ModItemTiers;
-import com.molybdenum.alloyed.data.recipes.MechanicalCraftingRecipes;
-import com.molybdenum.alloyed.data.recipes.MixingRecipes;
-import com.molybdenum.alloyed.data.recipes.PressingRecipes;
-import com.molybdenum.alloyed.data.util.RecipeUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
@@ -30,7 +26,7 @@ import static com.molybdenum.alloyed.data.util.RecipeUtils.Smithing;
 public class ModItems {
     private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB);
 
-    public static List<ItemProviderEntry<?>> getHiddenItems() {
+    public static List<ItemProviderEntry<?, ?>> getHiddenItems() {
         return List.of(INCOMPLETE_STEEL_SMITHING_UPGRADE_TEMPLATE, ModBlocks.STEEL_ENCASED_COGWHEEL, ModBlocks.STEEL_ENCASED_SHAFT, ModBlocks.STEEL_ENCASED_LARGE_COGWHEEL);
     }
 
@@ -107,8 +103,8 @@ public class ModItems {
      * @see MechanicalCraftingRecipes#STEEL_SWORD
      */
     public static final ItemEntry<SwordItem> STEEL_SWORD = handheldItem(
-            "steel_sword", 
-            properties -> new SwordItem(ModItemTiers.STEEL, 3, -2.4F, properties),
+            "steel_sword",
+            properties -> new SwordItem(ModItemTiers.STEEL, properties.attributes(SwordItem.createAttributes(ModItemTiers.STEEL, 3, -2.4F))),
             Smithing.steelItemRecipe(Items.IRON_SWORD)
     );
 
@@ -118,7 +114,7 @@ public class ModItems {
      */
     public static final ItemEntry<PickaxeItem> STEEL_PICKAXE = handheldItem(
             "steel_pickaxe", 
-            properties -> new PickaxeItem(ModItemTiers.STEEL, 1, -2.8F,properties),
+            properties -> new PickaxeItem(ModItemTiers.STEEL, properties.attributes(PickaxeItem.createAttributes(ModItemTiers.STEEL, 1, -2.8F))),
             Smithing.steelItemRecipe(Items.IRON_PICKAXE)
     );
 
@@ -128,7 +124,7 @@ public class ModItems {
      */
     public static final ItemEntry<AxeItem> STEEL_AXE = handheldItem(
             "steel_axe", 
-            properties -> new AxeItem(ModItemTiers.STEEL, 5.0F, -3.0F,properties),
+            properties -> new AxeItem(ModItemTiers.STEEL, properties.attributes(AxeItem.createAttributes(ModItemTiers.STEEL, 5.0F, -3.0F))),
             Smithing.steelItemRecipe(Items.IRON_AXE)
     );
 
@@ -138,7 +134,7 @@ public class ModItems {
      */
     public static final ItemEntry<ShovelItem> STEEL_SHOVEL = handheldItem(
             "steel_shovel", 
-            properties -> new ShovelItem(ModItemTiers.STEEL, 1.5F, -3.0F, properties),
+            properties -> new ShovelItem(ModItemTiers.STEEL, properties.attributes(ShovelItem.createAttributes(ModItemTiers.STEEL, 1.5F, -3.0F))),
             Smithing.steelItemRecipe(Items.IRON_SHOVEL)
     );
 
@@ -148,7 +144,7 @@ public class ModItems {
      */
     public static final ItemEntry<HoeItem> STEEL_HOE = handheldItem(
             "steel_hoe", 
-            properties -> new HoeItem(ModItemTiers.STEEL, -3, 0.0F, properties),
+            properties -> new HoeItem(ModItemTiers.STEEL, properties.attributes(HoeItem.createAttributes(ModItemTiers.STEEL, -3, 0.0F))),
             Smithing.steelItemRecipe(Items.IRON_HOE)
     );
 

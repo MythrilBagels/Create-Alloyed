@@ -46,7 +46,7 @@
           "item": "alloyed:incomplete_steel_upgrade_smithing_template"
         },
         {
-          "tag": "forge:plates/bronze"
+          "tag": "c:plates/bronze"
         }
       ],
       "results": [

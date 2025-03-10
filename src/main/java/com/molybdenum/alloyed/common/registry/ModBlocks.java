@@ -9,7 +9,6 @@ import com.molybdenum.alloyed.common.content.blocks.SteelShaftBlock;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
 import com.molybdenum.alloyed.data.util.*;
-import com.simibubi.create.AllInteractionBehaviours;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
 import com.simibubi.create.content.decoration.MetalLadderBlock;
@@ -17,11 +16,9 @@ import com.simibubi.create.content.decoration.MetalScaffoldingBlock;
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogCTBehaviour;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
-import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedShaftBlock;
 import com.simibubi.create.foundation.block.CopperBlockSet;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.infrastructure.ponder.AllCreatePonderTags;
 import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.DataIngredient;
@@ -167,7 +164,7 @@ public class ModBlocks {
     public static final BlockEntry<MetalScaffoldingBlock> STEEL_SCAFFOLD =
             REGISTRATE.block("steel_scaffolding", MetalScaffoldingBlock::new)
                     .transform(ModTransformers.scaffold("steel",
-                            () -> DataIngredient.tag(AllTags.forgeItemTag("ingots/steel")), MapColor.COLOR_GRAY,
+                            () -> DataIngredient.tag(AllTags.commonItemTag("ingots/steel")), MapColor.COLOR_GRAY,
                             ModSpriteShifts.STEEL_SCAFFOLD, ModSpriteShifts.STEEL_SCAFFOLD_INSIDE, ModSpriteShifts.STEEL_CASING))
                     .properties(ModBlocks::steelProperties)
                     .register();
@@ -195,7 +192,7 @@ public class ModBlocks {
 
     public static final BlockEntry<StairBlock> STEEL_SHEET_STAIRS = REGISTRATE
             .block("steel_sheet_stairs", properties ->
-                    new StairBlock(Blocks.BRICK_STAIRS::defaultBlockState, properties))
+                    new StairBlock(Blocks.BRICK_STAIRS.defaultBlockState(), properties))
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(ModBlocks::steelProperties)
             .item().tag(ItemTags.STAIRS).build()
@@ -270,7 +267,7 @@ public class ModBlocks {
             .register();
 
     public static final BlockEntry<TrapDoorBlock> STEEL_TRAPDOOR = REGISTRATE
-            .block("steel_trapdoor", properties -> new TrapDoorBlock(properties, ModBlockSetTypes.STEEL))
+            .block("steel_trapdoor", properties -> new TrapDoorBlock(ModBlockSetTypes.STEEL, properties))
             .initialProperties(() -> Blocks.IRON_TRAPDOOR)
             .properties(ModBlocks::steelProperties)
             .blockstate((ctx, prov) ->

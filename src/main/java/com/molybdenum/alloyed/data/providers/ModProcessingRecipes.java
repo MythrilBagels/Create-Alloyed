@@ -45,7 +45,8 @@ public abstract class ModProcessingRecipes extends CreateRecipeProvider {
     }
 
     public ModProcessingRecipes(PackOutput output) {
-        super(output);
+        //TODO fix datagen
+        super(output, null);
     }
 
 

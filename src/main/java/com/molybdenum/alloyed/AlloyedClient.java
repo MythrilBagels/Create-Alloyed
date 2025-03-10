@@ -5,8 +5,8 @@ import com.molybdenum.alloyed.client.registry.ModItemProperties;
 import com.molybdenum.alloyed.client.registry.ModPartialModels;
 import com.molybdenum.alloyed.client.registry.ModPonders;
 import net.createmod.ponder.foundation.PonderIndex;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
 public class AlloyedClient {
     public static void onClientInit(IEventBus modEventBus) {

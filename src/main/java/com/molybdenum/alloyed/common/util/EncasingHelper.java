@@ -5,6 +5,7 @@ import com.simibubi.create.content.decoration.encasing.EncasedBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -23,16 +24,16 @@ public class EncasingHelper {
         //return ModBlocks.STEEL_ENCASED_FLUID_PIPE; //TODO: eventually get this working
     }
 
-    public static InteractionResult tryEncaseWithSteel(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
-                                                 BlockHitResult ray) {
+    public static ItemInteractionResult tryEncaseWithSteel(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
+                                                           BlockHitResult ray) {
         if (!ModBlocks.STEEL_CASING.isIn(heldItem))
-            return InteractionResult.PASS;
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 
         if (level.isClientSide)
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
 
         getSteelEncasedVariant(type).get().handleEncasing(state, level, pos, heldItem, player, hand, ray);
-        return InteractionResult.SUCCESS;
+        return ItemInteractionResult.SUCCESS;
     }
 
     public enum EncaseType {

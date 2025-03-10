@@ -8,6 +8,7 @@ import com.molybdenum.alloyed.data.providers.ModAdvancementProvider;
 import com.simibubi.create.Create;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
 
 import java.util.function.Function;
 
@@ -16,7 +17,7 @@ import static com.molybdenum.alloyed.data.advancements.DisplayInfoBuilder.create
 @SuppressWarnings("unused")
 public class ModAdvancements {
 
-    public static final Advancement BRONZE_INGOT = advancement("bronze_ingot", advancement -> advancement
+    public static final AdvancementHolder BRONZE_INGOT = advancement("bronze_ingot", advancement -> advancement
             .parent(Create.asResource("burner"))
             .addCriterion("has_bronze_ingot", RegistrateRecipeProvider.has(ModTags.Items.BRONZE_INGOT))
             .display(create("bronze_ingot")
@@ -26,7 +27,7 @@ public class ModAdvancements {
                     .build())
     );
 
-    public static final Advancement STEEL_INGOT = advancement("steel_ingot", advancement -> advancement
+    public static final AdvancementHolder STEEL_INGOT = advancement("steel_ingot", advancement -> advancement
             .parent(Create.asResource("burner"))
             .addCriterion("has_steel_ingot", RegistrateRecipeProvider.has(ModTags.Items.STEEL_INGOT))
             .display(create("steel_ingot")
@@ -36,7 +37,7 @@ public class ModAdvancements {
                     .build())
     );
 
-    public static final Advancement BRONZE_INSTRUMENTS = advancement("bronze_instruments", advancement -> advancement
+    public static final AdvancementHolder BRONZE_INSTRUMENTS = advancement("bronze_instruments", advancement -> advancement
             .parent(Alloyed.asResource("bronze_ingot"))
             .addCriterion("has_bronze_instrument", RegistrateRecipeProvider.has(ModTags.Items.BRONZE_INSTRUMENTS))
             .display(create("bronze_instruments")
@@ -53,8 +54,8 @@ public class ModAdvancements {
     }
 
     // Utilities
-    private static Advancement advancement(String name, Function<Advancement.Builder, Advancement.Builder> builderFunc) {
-        Advancement output = builderFunc
+    private static AdvancementHolder advancement(String name, Function<Advancement.Builder, Advancement.Builder> builderFunc) {
+        AdvancementHolder output = builderFunc
                 .apply(Advancement.Builder.advancement())
                 .build(Alloyed.asResource(name));
         ModAdvancementProvider.addAdvancement(output);

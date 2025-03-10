@@ -7,13 +7,14 @@ import com.molybdenum.alloyed.common.registry.ModItems;
 import com.molybdenum.alloyed.common.registry.ModTags;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import com.simibubi.create.foundation.data.recipe.MechanicalCraftingRecipeBuilder;
+import net.createmod.catnip.registry.RegisteredObjectsHelper;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
@@ -73,7 +74,8 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
     );
 
     public MechanicalCraftingRecipes(PackOutput output) {
-        super(output);
+        //TODO fix datagen
+        super(output, null);
     }
 
     public static void register(DataGenerator generator) {
@@ -111,7 +113,7 @@ public class MechanicalCraftingRecipes extends CreateRecipeProvider {
                 MechanicalCraftingRecipeBuilder b =
                         builder.apply( MechanicalCraftingRecipeBuilder.shapedRecipe(result.get(), amount));
 
-                ResourceLocation resultLocation = ForgeRegistries.ITEMS.getKey(result.get().asItem());
+                ResourceLocation resultLocation = BuiltInRegistries.ITEM.getKey(result.get().asItem());
                 b.build(consumer, Alloyed.asResource("mechanical_crafting/" +
                         (resultLocation == null ? "unregistered_sadface" : resultLocation.getPath()) + suffix));
             });

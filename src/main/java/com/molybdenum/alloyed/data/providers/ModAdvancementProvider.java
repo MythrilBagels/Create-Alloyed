@@ -7,6 +7,7 @@ import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.data.advancements.DisplayInfoBuilder;
 import com.simibubi.create.foundation.advancement.CreateAdvancement;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.data.*;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
@@ -22,18 +23,18 @@ import java.util.function.Function;
 
 public class ModAdvancementProvider implements DataProvider {
     private final PackOutput output;
-    private static final List<Advancement> advancements = new ArrayList<>();
+    private static final List<AdvancementHolder> advancements = new ArrayList<>();
     private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().create();
 
     public ModAdvancementProvider(PackOutput output) {
         this.output = output;
     }
 
-    public static void addAdvancement(Advancement advancementBuilder) {
+    public static void addAdvancement(AdvancementHolder advancementBuilder) {
         advancements.add(advancementBuilder);
     }
 
-    public static List<Advancement> getAdvancements() {
+    public static List<AdvancementHolder> getAdvancements() {
         return advancements;
     }
 
@@ -47,16 +48,17 @@ public class ModAdvancementProvider implements DataProvider {
         List<CompletableFuture<?>> futures = new ArrayList<>();
 
         Set<ResourceLocation> set = Sets.newHashSet();
-        Consumer<Advancement> consumer = (advancement) -> {
-            ResourceLocation id = advancement.getId();
+        Consumer<AdvancementHolder> consumer = (advancement) -> {
+            ResourceLocation id = advancement.id();
             if (!set.add(id))
                 throw new IllegalStateException("Duplicate advancement " + id);
             Path path = pathProvider.json(id);
-            futures.add(DataProvider.saveStable(pOutput, advancement.deconstruct()
-                    .serializeToJson(), path));
+            //TODO fix advancement datagen
+//            futures.add(DataProvider.saveStable(pOutput, advancement.value().deconstruct()
+//                    .serializeToJson(), path));
         };
 
-        for (Advancement advancement : advancements)
+        for (AdvancementHolder advancement : advancements)
             consumer.accept(advancement);
 
         return CompletableFuture.allOf(futures.toArray(CompletableFuture[]::new));

@@ -4,7 +4,7 @@
     "item": "minecraft:iron_bars"
   },
   "addition": {
-    "tag": "forge:ingots/steel"
+    "tag": "c:ingots/steel"
   },
   "template": {
     "item": "alloyed:steel_upgrade_smithing_template"

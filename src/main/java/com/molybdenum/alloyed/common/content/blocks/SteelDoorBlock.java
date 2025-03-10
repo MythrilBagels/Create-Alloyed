@@ -5,6 +5,6 @@ import net.minecraft.world.level.block.DoorBlock;
 
 public class SteelDoorBlock extends DoorBlock {
     public SteelDoorBlock(Properties pProperties, boolean locked) {
-        super(pProperties, locked ? ModBlockSetTypes.STEEL : ModBlockSetTypes.FLIMSY_STEEL);
+        super(locked ? ModBlockSetTypes.STEEL : ModBlockSetTypes.FLIMSY_STEEL, pProperties);
     }
 }

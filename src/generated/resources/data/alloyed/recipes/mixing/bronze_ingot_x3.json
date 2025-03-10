@@ -12,7 +12,7 @@
       "item": "minecraft:copper_ingot"
     },
     {
-      "tag": "forge:ingots/zinc"
+      "tag": "c:ingots/zinc"
     },
     {
       "item": "create:cinder_flour"

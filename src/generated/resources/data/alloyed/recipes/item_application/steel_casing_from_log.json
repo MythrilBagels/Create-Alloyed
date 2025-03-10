@@ -2,10 +2,10 @@
   "type": "create:item_application",
   "ingredients": [
     {
-      "tag": "forge:stripped_logs"
+      "tag": "c:stripped_logs"
     },
     {
-      "tag": "forge:ingots/steel"
+      "tag": "c:ingots/steel"
     }
   ],
   "results": [

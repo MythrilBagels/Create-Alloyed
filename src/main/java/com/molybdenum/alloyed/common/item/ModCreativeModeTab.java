@@ -15,22 +15,22 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Predicate;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModCreativeModeTab {
     private static final DeferredRegister<CreativeModeTab> REGISTER =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Alloyed.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> MAIN_TAB = REGISTER.register("main_tab",
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = REGISTER.register("main_tab",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.alloyed.main_group"))
                     .icon(ModItems.STEEL_INGOT::asStack)
@@ -52,9 +52,9 @@ public class ModCreativeModeTab {
             Set<Item> hiddenItems = new ReferenceOpenHashSet<>();
 
             for (ModCompat mod : ModCompat.values()) {
-                List<ItemProviderEntry<?>> entries = mod.getEntries();
+                List<ItemProviderEntry<?, ?>> entries = mod.getEntries();
 
-                for (ItemProviderEntry<?> entry : entries) {
+                for (ItemProviderEntry<?, ?> entry : entries) {
                     if (mod.shouldHide()) hiddenItems.add(entry.asItem());
                 }
             }
@@ -76,7 +76,7 @@ public class ModCreativeModeTab {
 
         private List<Item> getBlocksUnless(Predicate<Item> shouldHidePredicate) {
             List<Item> items = new ReferenceArrayList<>();
-            for (RegistryEntry<Block> entry : Alloyed.REGISTRATE.getAll(Registries.BLOCK)) {
+            for (RegistryEntry<Block, Block> entry : Alloyed.REGISTRATE.getAll(Registries.BLOCK)) {
                 Item item = entry.get()
                         .asItem();
                 if (item == Items.AIR)
@@ -90,7 +90,7 @@ public class ModCreativeModeTab {
 
         private List<Item> getItemsUnless(Predicate<Item> shouldHidePredicate) {
             List<Item> items = new ReferenceArrayList<>();
-            for (RegistryEntry<Item> entry : Alloyed.REGISTRATE.getAll(Registries.ITEM)) {
+            for (RegistryEntry<Item, Item> entry : Alloyed.REGISTRATE.getAll(Registries.ITEM)) {
                 Item item = entry.get();
                 if (item instanceof BlockItem)
                     continue;

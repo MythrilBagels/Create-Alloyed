@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "tag": "forge:ingots/steel"
+    "tag": "c:ingots/steel"
   },
   "base": {
     "item": "minecraft:shears"

@@ -4,12 +4,14 @@ import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.data.providers.ModAdvancementProvider;
 import com.tterrag.registrate.providers.ProviderType;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.DisplayInfo;
-import net.minecraft.advancements.FrameType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
+
+import java.util.Optional;
 
 public class DisplayInfoBuilder {
     private final String name;
@@ -17,7 +19,7 @@ public class DisplayInfoBuilder {
     private final Component description;
     private ItemStack icon = ItemStack.EMPTY;
     private ResourceLocation background = null;
-    private FrameType frame = FrameType.TASK;
+    private AdvancementType frame = AdvancementType.TASK;
     private boolean showToast = true;
     private boolean announceChat = true;
     private boolean hidden = false;
@@ -72,7 +74,7 @@ public class DisplayInfoBuilder {
         return this;
     }
 
-    public DisplayInfoBuilder frame(FrameType frame) {
+    public DisplayInfoBuilder frame(AdvancementType frame) {
         this.frame = frame;
         return this;
     }
@@ -87,7 +89,7 @@ public class DisplayInfoBuilder {
                 icon,
                 title,
                 description,
-                background,
+                Optional.ofNullable(background),
                 frame,
                 showToast,
                 announceChat,

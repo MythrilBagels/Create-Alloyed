@@ -2,8 +2,10 @@ package com.molybdenum.alloyed.common.item;
 
 import com.google.common.base.Suppliers;
 import com.molybdenum.alloyed.common.registry.ModItems;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
@@ -46,8 +48,8 @@ public enum ModItemTiers implements Tier {
     }
 
     @Override
-    public int getLevel() {
-        return level;
+    public TagKey<Block> getIncorrectBlocksForDrops() {
+        return null;
     }
 
     @Override

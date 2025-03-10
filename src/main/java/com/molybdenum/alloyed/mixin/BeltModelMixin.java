@@ -1,5 +1,6 @@
 package com.molybdenum.alloyed.mixin;
 
+import com.llamalad7.mixinextras.sugar.Local;
 import com.molybdenum.alloyed.client.registry.ModPartialModels;
 import com.molybdenum.alloyed.common.content.extensions.BeltBlockEntityExtension;
 import com.molybdenum.alloyed.common.content.extensions.BeltModelExtension;
@@ -15,7 +16,7 @@ import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.data.ModelData;
+import net.neoforged.neoforge.client.model.data.ModelData;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -29,13 +30,12 @@ import java.util.List;
 public class BeltModelMixin implements BeltModelExtension {
 
     @Inject(
-            method = "getQuads(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Lnet/minecraft/util/RandomSource;Lnet/minecraftforge/client/model/data/ModelData;Lnet/minecraft/client/renderer/RenderType;)Ljava/util/List;",
+            method = "getQuads",
             at = @At(value = "RETURN", ordinal = 1),
-            locals = LocalCapture.CAPTURE_FAILHARD,
             cancellable = true,
             remap = false
     )
-    private void handleAlloyedCasingRendering(BlockState state, Direction side, RandomSource rand, ModelData extraData, RenderType renderType, CallbackInfoReturnable<List<BakedQuad>> cir, List quads, boolean cover, BeltBlockEntity.CasingType type, boolean brassCasing) {
+    private void handleAlloyedCasingRendering(BlockState state, Direction side, RandomSource rand, ModelData extraData, RenderType renderType, CallbackInfoReturnable<List<BakedQuad>> cir, @Local List quads, @Local(ordinal = 0) boolean cover) {
         BeltBlockEntityExtension.AlloyedCasingType alloyedType = extraData.get(ALLOYED_CASING_PROPERTY);
         if (alloyedType == BeltBlockEntityExtension.AlloyedCasingType.NONE) return;
 
@@ -72,7 +72,7 @@ public class BeltModelMixin implements BeltModelExtension {
     }
 
     @Inject(
-            method = "getParticleIcon(Lnet/minecraftforge/client/model/data/ModelData;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;",
+            method = "getParticleIcon",
             at = @At("HEAD"),
             cancellable = true,
             remap = false

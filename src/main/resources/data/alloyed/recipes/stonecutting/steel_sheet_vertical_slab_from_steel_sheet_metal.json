@@ -6,7 +6,7 @@
   "result": "alloyed:steel_sheet_vertical_slab",
   "count": 2,
   "conditions": [ {
-    "type": "forge:mod_loaded",
+    "type": "neoforge:mod_loaded",
     "modid": "createdeco"
   } ]
 }

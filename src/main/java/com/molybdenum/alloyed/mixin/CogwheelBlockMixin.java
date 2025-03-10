@@ -5,6 +5,7 @@ import com.simibubi.create.content.kinetics.simpleRelays.CogWheelBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -22,16 +23,16 @@ public abstract class CogwheelBlockMixin {
     boolean isLarge;
 
     @Inject(
-            method = "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;getItemInHand(Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/item/ItemStack;"),
+            method = "useItemOn",
+            at = @At(value = "INVOKE", target = "Lcom/simibubi/create/content/kinetics/simpleRelays/CogWheelBlock;tryEncase(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/ItemInteractionResult;"),
             cancellable = true
 
     )
-    private void tryEncaseWithAlloyedCasings(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult ray, CallbackInfoReturnable<InteractionResult> cir) {
+    private void tryEncaseWithAlloyedCasings(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult, CallbackInfoReturnable<ItemInteractionResult> cir) {
         ItemStack heldItem = player.getItemInHand(hand);
-        InteractionResult result = EncasingHelper
+        ItemInteractionResult result = EncasingHelper
                 .tryEncaseWithSteel(EncasingHelper.EncaseType.fromCogSize(isLarge),
-                        state, world, pos, heldItem, player, hand, ray);
+                        state, level, pos, heldItem, player, hand, hitResult);
 
         if (result.consumesAction()) {
             cir.setReturnValue(result);

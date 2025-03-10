@@ -7,28 +7,28 @@ import com.tterrag.registrate.providers.RegistrateLangProvider;
 import com.tterrag.registrate.providers.RegistrateProvider;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class PostRegistrationHelper {
     private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE;
 
     // Lang
     public static void addBlockLang(String name, String lang) {
-        BlockEntry<Block> blockEntry = (BlockEntry<Block>) REGISTRATE.get(name, ForgeRegistries.BLOCKS.getRegistryKey());
-        REGISTRATE.setDataGenerator(name, ForgeRegistries.BLOCKS.getRegistryKey(), ProviderType.LANG,
+        BlockEntry<Block> blockEntry = (BlockEntry<Block>) REGISTRATE.get(name, Registries.BLOCK);
+        REGISTRATE.setDataGenerator(name, Registries.BLOCK, ProviderType.LANG,
                 registrateLangProvider -> registrateLangProvider.add(blockEntry.get(), lang));
     }
 
     // Recipes
     public static <T extends Block, P extends RegistrateProvider> void addMetalBlockRecipe(String name, TagKey<Item> metalItem, String ingotName, String path) {
-        BlockEntry<Block> blockEntry = (BlockEntry<Block>) REGISTRATE.get(name, ForgeRegistries.BLOCKS.getRegistryKey());
+        BlockEntry<Block> blockEntry = (BlockEntry<Block>) REGISTRATE.get(name, Registries.BLOCK);
 
-        REGISTRATE.setDataGenerator(name, ForgeRegistries.BLOCKS.getRegistryKey(), ProviderType.RECIPE, prov -> {
+        REGISTRATE.setDataGenerator(name, Registries.BLOCK, ProviderType.RECIPE, prov -> {
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, blockEntry.get(), 1)
                     .pattern("###")
                     .pattern("###")

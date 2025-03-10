@@ -7,7 +7,7 @@
   ],
   "key": {
     "-": {
-      "tag": "forge:plates/steel"
+      "tag": "c:plates/steel"
     },
     "#": {
       "item": "alloyed:steel_bars"
@@ -18,7 +18,7 @@
     "count": 3
   },
   "conditions": [ {
-  "type": "forge:mod_loaded",
+  "type": "neoforge:mod_loaded",
   "modid": "createdeco"
   } ]
 }

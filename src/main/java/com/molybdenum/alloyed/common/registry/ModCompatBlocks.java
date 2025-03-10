@@ -3,26 +3,16 @@ package com.molybdenum.alloyed.common.registry;
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.compat.createdeco.CreateDecoCompat;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelCatwalkCTBehaviour;
-import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetVertCTBehaviour;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.data.util.BlockStateUtils;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
-import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraft.world.level.storage.loot.LootPool;
-import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import java.util.List;
 
@@ -79,7 +69,7 @@ public class ModCompatBlocks {
         Alloyed.LOGGER.debug("Registering ModCompatBlocks!");
     }
 
-    public static List<ItemProviderEntry<?>> getDecoBlocks() {
+    public static List<ItemProviderEntry<?, ?>> getDecoBlocks() {
         return List.of(STEEL_CATWALK, STEEL_CATWALK_STAIRS);
     }
 }

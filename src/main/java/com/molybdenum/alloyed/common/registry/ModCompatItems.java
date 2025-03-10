@@ -21,7 +21,7 @@ public class ModCompatItems {
         Alloyed.LOGGER.debug("Registering ModCompatItems!");
     }
 
-    public static List<ItemProviderEntry<?>> getFDItems() {
+    public static List<ItemProviderEntry<?, ?>> getFDItems() {
         return List.of(STEEL_KNIFE);
     }
 }

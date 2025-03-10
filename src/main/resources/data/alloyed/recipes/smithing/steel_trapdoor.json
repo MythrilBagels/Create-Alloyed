@@ -4,7 +4,7 @@
     "item": "minecraft:iron_trapdoor"
   },
   "addition": {
-    "tag": "forge:ingots/steel"
+    "tag": "c:ingots/steel"
   },
   "template": {
     "item": "alloyed:steel_upgrade_smithing_template"
