@@ -1,6 +1,6 @@
 {
   "type": "create:mechanical_crafting",
-  "acceptMirrored": true,
+  "accept_mirrored": true,
   "conditions": [
     {
       "type": "neoforge:mod_loaded",
@@ -20,6 +20,6 @@
     "/ "
   ],
   "result": {
-    "item": "alloyed:steel_knife"
+    "id": "alloyed:steel_knife"
   }
 }

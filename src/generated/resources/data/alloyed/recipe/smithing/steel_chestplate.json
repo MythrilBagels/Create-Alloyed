@@ -10,6 +10,7 @@
     "item": "alloyed:steel_upgrade_smithing_template"
   },
   "result": {
-    "item": "alloyed:steel_chestplate"
+    "count": 1,
+    "id": "alloyed:steel_chestplate"
   }
 }

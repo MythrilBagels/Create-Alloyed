@@ -1,6 +1,6 @@
 {
   "type": "create:mechanical_crafting",
-  "acceptMirrored": true,
+  "accept_mirrored": true,
   "key": {
     "#": {
       "tag": "c:ingots/steel"
@@ -12,6 +12,6 @@
     "# #"
   ],
   "result": {
-    "item": "alloyed:steel_leggings"
+    "id": "alloyed:steel_leggings"
   }
 }

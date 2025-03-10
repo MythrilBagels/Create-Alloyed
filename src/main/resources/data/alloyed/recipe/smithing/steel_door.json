@@ -10,6 +10,6 @@
     "item": "alloyed:steel_upgrade_smithing_template"
   },
   "result": {
-    "item": "alloyed:steel_door"
+    "id": "alloyed:steel_door"
   }
 }

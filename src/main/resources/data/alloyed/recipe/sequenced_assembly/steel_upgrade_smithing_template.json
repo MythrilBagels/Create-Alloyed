@@ -7,19 +7,19 @@
   "results": [
     {
       "chance": 120.0,
-      "item": "alloyed:steel_upgrade_smithing_template"
+      "id": "alloyed:steel_upgrade_smithing_template"
     },
     {
       "chance": 16.0,
-      "item": "create:bronze_sheet"
+      "id": "create:bronze_sheet"
     },
     {
       "chance": 6.0,
-      "item": "minecraft:cobbled_deepslate"
+      "id": "minecraft:cobbled_deepslate"
     },
     {
       "chance": 6.0,
-      "item": "alloyed:steel_sheet"
+      "id": "alloyed:steel_sheet"
     }
   ],
   "sequence": [
@@ -35,7 +35,7 @@
       ],
       "results": [
         {
-          "item": "alloyed:incomplete_steel_upgrade_smithing_template"
+          "id": "alloyed:incomplete_steel_upgrade_smithing_template"
         }
       ]
     },
@@ -51,7 +51,7 @@
       ],
       "results": [
         {
-          "item": "alloyed:incomplete_steel_upgrade_smithing_template"
+          "id": "alloyed:incomplete_steel_upgrade_smithing_template"
         }
       ]
     },
@@ -64,12 +64,12 @@
       ],
       "results": [
         {
-          "item": "alloyed:incomplete_steel_upgrade_smithing_template"
+          "id": "alloyed:incomplete_steel_upgrade_smithing_template"
         }
       ]
     }
   ],
-  "transitionalItem": {
-    "item": "alloyed:incomplete_steel_upgrade_smithing_template"
+  "transitional_item": {
+    "id": "alloyed:incomplete_steel_upgrade_smithing_template"
   }
 }
