@@ -67,8 +67,10 @@ public class BeltBlockEntityMixin extends KineticBlockEntity implements BeltBloc
 
         if (!isVirtual())
             requestModelDataUpdate();
-        if (hasLevel())
+        if (hasLevel()) {
+            assert level != null;
             level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 16);
+        }
     }
 
     @Inject(

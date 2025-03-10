@@ -4,7 +4,6 @@ import com.molybdenum.alloyed.common.util.EncasingHelper;
 import com.simibubi.create.content.kinetics.simpleRelays.ShaftBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -21,7 +20,7 @@ public abstract class ShaftBlockMixin {
 
     @Inject(
             method = "useItemOn",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getItem()Lnet/minecraft/world/item/Item;"),
+            at = @At(value = "INVOKE", target = "Lnet/createmod/catnip/placement/IPlacementHelper;matchesItem(Lnet/minecraft/world/item/ItemStack;)Z"),
             cancellable = true
 
     )
