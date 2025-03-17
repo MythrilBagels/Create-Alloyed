@@ -18,7 +18,7 @@ A Create addon adding Bronze and Steel, both items used for compatibility and de
 [[dependencies.alloyed]]
     modId="forge"
     mandatory=true
-    versionRange="[47.3.10,)"
+    versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.alloyed]]

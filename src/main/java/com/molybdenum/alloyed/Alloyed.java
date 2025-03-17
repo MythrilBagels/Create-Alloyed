@@ -30,7 +30,8 @@ public class Alloyed {
 
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID);
 
-    public Alloyed(FMLJavaModLoadingContext context) {
+    public Alloyed() {
+        var context = FMLJavaModLoadingContext.get();
         IEventBus eventBus = context.getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
         REGISTRATE.registerEventListeners(eventBus);
@@ -51,7 +52,7 @@ public class Alloyed {
     }
 
     public static ResourceLocation asResource(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+        return new ResourceLocation(MOD_ID, path);
     }
 
 }
