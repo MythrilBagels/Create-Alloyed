@@ -19,7 +19,8 @@ build
 
 # other
 eclipse
-run/
-.idea/
-.gradle/
-build/
+run
+runs
+run-data
+
+repo

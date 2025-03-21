@@ -5,7 +5,7 @@ license="MIT"
 
 [[mods]]
 modId = "alloyed"
-version = "${version}"
+version = "2.0.0"
 displayName = "Create: Alloyed"
 logoFile="alloyed.png"
 credits="Thanks to the kind folks over on the Create and Create Modders Discord!"
