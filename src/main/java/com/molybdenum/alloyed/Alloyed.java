@@ -1,6 +1,7 @@
 package com.molybdenum.alloyed;
 
 import com.molybdenum.alloyed.client.registry.ModSoundEvents;
+import com.molybdenum.alloyed.common.item.ModArmourMaterials;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.molybdenum.alloyed.common.registry.*;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -34,6 +35,7 @@ public class Alloyed {
         isFarmersDelightLoaded = ModList.get().isLoaded("farmersdelight");
         isCreateDecoLoaded = ModList.get().isLoaded("createdeco");
 
+        ModArmourMaterials.register(eventBus);
         ModBlockSetTypes.register();
         ModBlocks.register();
         ModItems.register();
