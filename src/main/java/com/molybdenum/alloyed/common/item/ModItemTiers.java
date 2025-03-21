@@ -2,6 +2,8 @@ package com.molybdenum.alloyed.common.item;
 
 import com.google.common.base.Suppliers;
 import com.molybdenum.alloyed.common.registry.ModItems;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -49,7 +51,7 @@ public enum ModItemTiers implements Tier {
 
     @Override
     public TagKey<Block> getIncorrectBlocksForDrops() {
-        return null;
+        return BlockTags.INCORRECT_FOR_IRON_TOOL;
     }
 
     @Override
