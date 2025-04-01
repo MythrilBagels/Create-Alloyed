@@ -10,6 +10,7 @@ import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
+import net.minecraft.world.item.CreativeModeTab;
 
 import java.util.List;
 
@@ -17,8 +18,7 @@ import static com.github.talrey.createdeco.BlockRegistry.*;
 
 @SuppressWarnings("removal")
 public class ModCompatBlocks {
-    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE
-            .setCreativeTab(ModCreativeModeTab.MAIN_TAB);
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE;
     private static final String metal = "steel";
 
 
@@ -50,6 +50,7 @@ public class ModCompatBlocks {
         CATWALK_RAILINGS.put(metal, STEEL_CATWALK_RAILING);
         CATWALK_STAIRS.put(metal, STEEL_CATWALK_STAIRS);
         Alloyed.LOGGER.debug("Registering ModCompatBlocks!");
+        REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB);
     }
 
     public static List<ItemProviderEntry<?>> getDecoBlocks() {
