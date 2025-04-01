@@ -44,7 +44,8 @@ public class Alloyed {
         ModItems.register();
         ModCreativeModeTab.register(eventBus);
         ModCompatItems.register();
-        ModCompatBlocks.register();
+        if (isCreateDecoLoaded)
+            ModCompatBlocks.register();
         ModSoundEvents.register(eventBus);
 
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT,

@@ -4,6 +4,6 @@ import com.github.talrey.createdeco.blocks.CatwalkStairBlock;
 
 public class SteelCatwalkStairBlock extends CatwalkStairBlock {
     public SteelCatwalkStairBlock(Properties props) {
-        super(props, "metal");
+        super(props, "steel");
     }
 }
