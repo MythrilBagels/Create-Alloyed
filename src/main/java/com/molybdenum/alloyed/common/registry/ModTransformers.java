@@ -86,14 +86,14 @@ public class ModTransformers {
                             .texture("casing", Create.asResource("block/" + casing + "_casing"))
                             .texture("particle", Create.asResource("block/" + casing + "_casing"))
                             .texture("4", Create.asResource("block/" + gearbox))
-                            .texture("1", new ResourceLocation("block/stripped_" + wood + "_log_top"))
+                            .texture("1", ResourceLocation.withDefaultNamespace("block/stripped_" + wood + "_log_top"))
                             .texture("side", Create.asResource("block/" + casing + encasedSuffix));
                 }, false))
                 .item()
                 .model((c, p) -> p.withExistingParent(c.getName(), p.modLoc("block/" + blockFolder + "/item"))
                         .texture("casing", Create.asResource("block/" + casing + "_casing"))
                         .texture("particle", Create.asResource("block/" + casing + "_casing"))
-                        .texture("1", new ResourceLocation("block/stripped_" + wood + "_log_top"))
+                        .texture("1", ResourceLocation.withDefaultNamespace("block/stripped_" + wood + "_log_top"))
                         .texture("side", Create.asResource("block/" + casing + encasedSuffix)))
                 .build();
     }

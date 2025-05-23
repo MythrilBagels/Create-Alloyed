@@ -5,9 +5,9 @@ license="MIT"
 
 [[mods]]
 modId = "alloyed"
-version = "2.0.0"
+version = "${mod_version}"
 displayName = "Create: Alloyed"
-logoFile="alloyed.png"
+logoFile= "alloyed.png"
 credits="Thanks to the kind folks over on the Create and Create Modders Discord!"
 authors="Fortress Nebula, SpottyTheTurtle, Bagels, and cassiancc"
 description='''

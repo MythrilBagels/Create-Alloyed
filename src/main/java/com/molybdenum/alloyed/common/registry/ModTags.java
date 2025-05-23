@@ -48,7 +48,7 @@ public class ModTags {
         }
 
         private static TagKey<Item> createSpecialTag(String modId, String path) {
-            return ItemTags.create(new ResourceLocation(modId, path));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(modId, path));
         }
     }
 
