@@ -1,11 +1,12 @@
 package com.molybdenum.alloyed.common.registry;
 
+import com.github.talrey.createdeco.api.Catwalks;
+import com.github.talrey.createdeco.blocks.CatwalkBlock;
+import com.github.talrey.createdeco.blocks.CatwalkRailingBlock;
+import com.github.talrey.createdeco.blocks.CatwalkStairBlock;
 import com.molybdenum.alloyed.Alloyed;
-import com.molybdenum.alloyed.common.compat.createdeco.CreateDecoCompat;
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelCatwalkCTBehaviour;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
-import com.molybdenum.alloyed.data.util.BlockStateUtils;
-import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
@@ -16,60 +17,46 @@ import net.minecraft.world.level.block.*;
 
 import java.util.List;
 
+import static com.github.talrey.createdeco.BlockRegistry.*;
+
 @SuppressWarnings("removal")
 public class ModCompatBlocks {
-    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE
-            .setCreativeTab(ModCreativeModeTab.MAIN_TAB);
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE;
+    private static final String metal = "steel";
+
 
     // Create: Deco
-    public static final BlockEntry<Block> STEEL_CATWALK = REGISTRATE
-            .block("steel_catwalk", properties -> Alloyed.isCreateDecoLoaded ?
-                    CreateDecoCompat.newCatwalkBlock(properties) : new Block(properties))
-            .initialProperties(() -> Blocks.IRON_BLOCK)
-            .properties(properties -> properties
-                    .strength(5, 3)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()
-                    .sound(SoundType.NETHERITE_BLOCK)
-            )
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .blockstate(BlockStateUtils.Unique::steelCatwalkBlockstate)
-            .item((block, properties) -> Alloyed.isCreateDecoLoaded ?
-                    CreateDecoCompat.newCatwalkBlockItem(block, properties) :
-                    new BlockItem(block, properties))
-            .model((ctx,prov)->
-                    prov.withExistingParent(ctx.getName(), prov.mcLoc("block/template_trapdoor_bottom"))
-                    .texture("texture", prov.modLoc("block/steel_catwalk"))
-            )
-            .build()
-            .addLayer(() -> RenderType::cutoutMipped)
-            .onRegister(CreateRegistrate.connectedTextures(SteelCatwalkCTBehaviour::new))
-            .register();
+    public static final BlockEntry<CatwalkBlock> STEEL_CATWALK = Catwalks.build(
+                    REGISTRATE, metal)
+            .recipe( (ctx, prov)-> {
+                Catwalks.recipeCatwalk(metal, ModBlocks.STEEL_BARS, ctx, prov);
+                Catwalks.recipeStonecutting(ModItems.STEEL_INGOT::asItem, ctx, prov, 4);
+            }).onRegister(CreateRegistrate.connectedTextures(SteelCatwalkCTBehaviour::new)).register();
 
-    public static final BlockEntry<Block> STEEL_CATWALK_STAIRS = REGISTRATE
-            .block("steel_catwalk_stairs", Alloyed.isCreateDecoLoaded ?
-                    CreateDecoCompat::newCatwalkStairBlock : Block::new)
-            .initialProperties(() -> Blocks.IRON_BLOCK)
-            .properties(properties -> properties
-                    .strength(5, 3)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()
-                    .sound(SoundType.NETHERITE_BLOCK)
-            )
-            .addLayer(()-> RenderType::cutoutMipped)
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
-            .blockstate((ctx,prov)->
-                    prov.horizontalBlock(ctx.get(), prov.models().withExistingParent(ctx.getName(), prov.modLoc("block/catwalk_stairs"))))
-            .simpleItem()
-            .register();
+    public static final BlockEntry<CatwalkStairBlock> STEEL_CATWALK_STAIRS = Catwalks.buildStair(
+                    REGISTRATE, metal)
+            .recipe( (ctx, prov)-> {
+                Catwalks.recipeStairs(metal, ModBlocks.STEEL_BARS, ctx, prov);
+                Catwalks.recipeStonecutting(ModItems.STEEL_INGOT::asItem, ctx, prov, 2);
+            }).register();
+
+    public static final BlockEntry<CatwalkRailingBlock> STEEL_CATWALK_RAILING = Catwalks.buildRailing(
+                    REGISTRATE, metal)
+            .recipe( (ctx, prov)-> {
+                Catwalks.recipeRailing(metal, ModBlocks.STEEL_BARS, ctx, prov);
+                Catwalks.recipeStonecutting(ModItems.STEEL_INGOT::asItem, ctx, prov, 8);
+            }).register();
 
 
     public static void register() {
+        CATWALKS.put(metal, STEEL_CATWALK);
+        CATWALK_RAILINGS.put(metal, STEEL_CATWALK_RAILING);
+        CATWALK_STAIRS.put(metal, STEEL_CATWALK_STAIRS);
         Alloyed.LOGGER.debug("Registering ModCompatBlocks!");
+        REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB);
     }
 
-    public static List<ItemProviderEntry<?, ?>> getDecoBlocks() {
-        return List.of(STEEL_CATWALK, STEEL_CATWALK_STAIRS);
+    public static List<ItemProviderEntry<?>> getDecoBlocks() {
+        return List.of(STEEL_CATWALK, STEEL_CATWALK_STAIRS, STEEL_CATWALK_RAILING);
     }
 }

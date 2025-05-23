@@ -29,7 +29,6 @@ public class Alloyed {
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID);
 
     public Alloyed(IEventBus eventBus, ModContainer container) {
-//        NeoForge.EVENT_BUS.register(this);
         REGISTRATE.registerEventListeners(eventBus);
 
         isFarmersDelightLoaded = ModList.get().isLoaded("farmersdelight");
@@ -41,7 +40,8 @@ public class Alloyed {
         ModItems.register();
         ModCreativeModeTab.register(eventBus);
         ModCompatItems.register();
-        ModCompatBlocks.register();
+        if (isCreateDecoLoaded)
+            ModCompatBlocks.register();
         ModSoundEvents.register(eventBus);
 
         if (FMLEnvironment.dist.isClient())
@@ -49,7 +49,7 @@ public class Alloyed {
     }
 
     public static ResourceLocation asResource(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+        return new ResourceLocation(MOD_ID, path);
     }
 
 }

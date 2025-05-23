@@ -16,6 +16,10 @@ public class CreateDecoCompat {
         return new SteelCatwalkStairBlock(properties);
     }
 
+    public static Block newCatwalkRailingBlock(BlockBehaviour.Properties properties) {
+        return new SteelCatwalkRailingBlock(properties);
+    }
+
     public static BlockItem newCatwalkBlockItem(Block block, Item.Properties properties) {
         return new SteelCatwalkBlockItem((SteelCatwalkBlock) block ,properties);
     }

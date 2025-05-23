@@ -26,6 +26,6 @@ public class ModItemProperties {
 
     public static void register() {
         Alloyed.LOGGER.debug("Registering ModItemProperties!");
-        ItemProperties.register(ModItems.STEEL_FISHING_ROD.get(), ResourceLocation.parse("cast"), FISHING_ROD_CAST);
+        ItemProperties.register(ModItems.STEEL_FISHING_ROD.get(), new ResourceLocation("cast"), FISHING_ROD_CAST);
     }
 }

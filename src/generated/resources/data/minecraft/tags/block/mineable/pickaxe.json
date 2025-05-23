@@ -23,8 +23,18 @@
     "alloyed:steel_bars",
     "alloyed:steel_trapdoor",
     "alloyed:steel_ladder",
-    "alloyed:steel_catwalk",
-    "alloyed:steel_catwalk_stairs",
+    {
+      "id": "alloyed:steel_catwalk",
+      "required": false
+    },
+    {
+      "id": "alloyed:steel_catwalk_stairs",
+      "required": false
+    },
+    {
+      "id": "alloyed:steel_catwalk_railing",
+      "required": false
+    },
     {
       "id": "alloyed:steel_sheet_vertical_slab",
       "required": false
