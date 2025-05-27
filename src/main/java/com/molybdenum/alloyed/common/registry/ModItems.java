@@ -175,7 +175,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipes#STEEL_HELMET
      */
     public static final ItemEntry<ArmorItem> STEEL_HELMET = REGISTRATE
-            .item("steel_helmet", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.HELMET, properties))
+            .item("steel_helmet", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.HELMET, properties.durability(330)))
             .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_HELMET))
             .register();
 
@@ -184,7 +184,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipes#STEEL_CHESTPLATE
      */
     public static final ItemEntry<ArmorItem> STEEL_CHESTPLATE = REGISTRATE
-            .item("steel_chestplate", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.CHESTPLATE, properties))
+            .item("steel_chestplate", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.CHESTPLATE, properties.durability(480)))
             .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_CHESTPLATE))
             .register();
 
@@ -193,7 +193,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipes#STEEL_LEGGINGS
      */
     public static final ItemEntry<ArmorItem> STEEL_LEGGINGS = REGISTRATE
-            .item("steel_leggings", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.LEGGINGS, properties))
+            .item("steel_leggings", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.LEGGINGS, properties.durability(450)))
             .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_LEGGINGS))
             .register();
 
@@ -202,7 +202,7 @@ public class ModItems {
      * @see MechanicalCraftingRecipes#STEEL_BOOTS
      */
     public static final ItemEntry<ArmorItem> STEEL_BOOTS = REGISTRATE
-            .item("steel_boots", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.BOOTS, properties))
+            .item("steel_boots", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.BOOTS, properties.durability(390)))
             .recipe(Smithing.steelItemRecipe(Items.CHAINMAIL_BOOTS))
             .register();
 

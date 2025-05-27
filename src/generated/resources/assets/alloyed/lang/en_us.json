@@ -64,6 +64,7 @@
   "upgrade.alloyed.netherite_upgrade": "Steel Upgrade",
   "item.alloyed.incomplete_steel_upgrade_smithing_template": "Incomplete Steel Upgrade",
   "item.alloyed.netherite_upgrade": "Steel Upgrade",
+  "item.alloyed.steel_upgrade_smithing_template": "Smithing Template",
   "item.alloyed.smithing_template.steel_upgrade.applies_to": "Chainmail Armor",
   "item.alloyed.smithing_template.steel_upgrade.ingredients": "Steel Ingot",
   "itemGroup.alloyed.main_group": "Create: Alloyed"
