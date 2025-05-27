@@ -1,7 +1,7 @@
 {
   "type": "create:mechanical_crafting",
   "accept_mirrored": true,
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "farmersdelight"

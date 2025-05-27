@@ -38,7 +38,7 @@ dependencies {
 }
 
 base {
-    archivesName = mod_id
+    archivesName = "create_alloyed"
 }
 
 // Mojang ships Java 21 to end users starting in 1.20.5, so mods should target Java 21.
@@ -191,6 +191,7 @@ neoForge.ideSyncTask generateModMetadata
 publishing {
     publications {
         register('mavenJava', MavenPublication) {
+            artifactId = base.archivesName.get()
             from components.java
         }
     }
