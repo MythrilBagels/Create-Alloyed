@@ -7,8 +7,6 @@ import com.molybdenum.alloyed.common.content.blocks.BronzeBellBlock;
 import com.molybdenum.alloyed.common.content.blocks.SteelDoorBlock;
 import com.molybdenum.alloyed.common.content.blocks.SteelShaftBlock;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
-import com.molybdenum.alloyed.data.registrate.PostRegistrationHelper;
-import com.molybdenum.alloyed.data.util.*;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
 import com.simibubi.create.content.decoration.MetalLadderBlock;
@@ -76,13 +74,8 @@ public class ModBlocks {
             .properties(properties -> properties
                     .noOcclusion()
                     .sound(SoundType.ANVIL))
-            .blockstate(BlockStateUtils::existingModel)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
-            .transform(DataUtils.tagBlockAndItem(
-                    ModTags.Blocks.BRONZE_INSTRUMENTS,
-                    ModTags.Items.BRONZE_INSTRUMENTS
-            ))
             .recipe((ctx, prov) -> {
                 ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ctx.get(), 1)
                         .pattern("#")
@@ -102,13 +95,8 @@ public class ModBlocks {
             .block("steel_block", Block::new)
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(ModBlocks::steelProperties)
-            .transform(DataUtils.tagBlockAndItem(
-                    ModTags.Blocks.STEEL_BLOCK,
-                    ModTags.Items.STEEL_BLOCK
-            ))
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
-            .recipe(RecipeUtils.Crafting.compactingRecipe(ModTags.Items.STEEL_INGOT))
             .lang("Block of Steel")
             .register();
 
@@ -185,8 +173,6 @@ public class ModBlocks {
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(ModBlocks::steelProperties)
             .simpleItem()
-            .recipe(RecipeUtils.Stonecutting
-                    .customDefaultLang(ModTags.Items.STEEL_BLOCK, 4, "steel_block"))
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
             .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
@@ -203,12 +189,6 @@ public class ModBlocks {
             .tag(BlockTags.NEEDS_STONE_TOOL)
             .blockstate((ctx, prov) -> prov.stairsBlock(ctx.get(),
                     prov.modLoc("block/steel_sheet_metal")))
-            .recipe((ctx, prov) -> {
-                RecipeUtils.toFunction(ctx, prov, RecipeUtils.Crafting
-                        .stairs(STEEL_SHEET_METAL.get()));
-                RecipeUtils.toFunction(ctx, prov, RecipeUtils.Stonecutting.
-                        customDefaultLang(STEEL_SHEET_METAL.get(), 1, "steel_sheet_metal"));
-            })
             .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
             .register();
 
@@ -223,12 +203,6 @@ public class ModBlocks {
             .blockstate((ctx, prov) -> prov.slabBlock(ctx.get(),
                     prov.modLoc("block/steel_sheet_metal"),
                     prov.modLoc("block/steel_sheet_metal")))
-            .recipe((ctx, prov) -> {
-                RecipeUtils.toFunction(ctx, prov, RecipeUtils.Stonecutting.
-                        customDefaultLang(STEEL_SHEET_METAL.get(), 2, "steel_sheet_metal"));
-                RecipeUtils.toFunction(ctx, prov, RecipeUtils.Crafting.
-                        slab(STEEL_SHEET_METAL.get()));
-            })
             .loot((table, block) -> {
                 LootTable.Builder builder = LootTable.lootTable();
                 LootPool.Builder lootPool = LootPool.lootPool();
@@ -251,10 +225,8 @@ public class ModBlocks {
             .block("steel_bars", IronBarsBlock::new)
             .initialProperties(() -> Blocks.IRON_BARS)
             .properties(ModBlocks::steelProperties)
-            .blockstate(BlockStateUtils.Unique::steelBarsBlockstate)
             .tag(BlockTags.WALLS)
             .item()
-            .model((ctx, prov) -> ModelUtils.customModel(ctx, prov, "block/steel_bars/block"))
             .tag(ItemTags.WALLS).build()
             .addLayer(() -> RenderType::cutoutMipped)
             .tag(AllTags.AllBlockTags.FAN_TRANSPARENT.tag)
@@ -309,9 +281,7 @@ public class ModBlocks {
             .tag(BlockTags.FENCES)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .item()
-            .model((ctx,prov) -> ModelUtils.customModel(ctx, prov, "block/steel_chain_link"))
             .build()
-            .blockstate(BlockStateUtils.Unique::steelMeshFenceBlockstate)
             .addLayer(() -> RenderType::cutoutMipped)
             .register();
 
@@ -325,8 +295,6 @@ public class ModBlocks {
     }
 
     public static void fixBronzeBlocks() {
-        LangUtils.correctOxidizingMetalLang("bronze_block", "Bronze");
-        PostRegistrationHelper.addMetalBlockRecipe("bronze_block", ModTags.Items.BRONZE_INGOT, "bronze_ingot", "bronze/");
     }
 
     private static BlockBuilder<SteelDoorBlock, CreateRegistrate> steelDoorBlock(boolean locked,
@@ -346,7 +314,6 @@ public class ModBlocks {
                         prov.modLoc("block/" + name + "/top"))
                 )
                 .tag(BlockTags.NEEDS_STONE_TOOL, BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.DOORS)
-                .item().model(ModelUtils::customTexture).build()
                 .recipe((ctx, prov) -> {
                     if (!locked) {
                         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ctx.get())
