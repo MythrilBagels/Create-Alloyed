@@ -365,7 +365,7 @@ public class ModBlocks {
         String name = (locked ? "locked_" : "") + "steel_door";
 
         return REGISTRATE
-                .block(name, properties -> new SteelDoorBlock(properties, locked))
+                .block(name, properties -> new SteelDoorBlock(properties, locked)).item().build()
                 .properties(properties -> properties
                         .noOcclusion()
                         .sound(SoundType.METAL)
