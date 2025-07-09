@@ -3,6 +3,7 @@ package com.molybdenum.alloyed.mixin;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.molybdenum.alloyed.common.content.extensions.BeltBlockEntityExtension;
 import com.molybdenum.alloyed.common.registry.ModBlocks;
+import com.molybdenum.alloyed.common.registry.ModTags;
 import com.simibubi.create.content.kinetics.belt.BeltBlock;
 import com.simibubi.create.content.kinetics.belt.BeltBlockEntity;
 import com.simibubi.create.foundation.block.IBE;
@@ -38,9 +39,15 @@ public abstract class BeltBlockMixin implements IBE<BeltBlockEntity> {
     private void tryEncaseWithAlloyedCasings(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hitResult, CallbackInfoReturnable<ItemInteractionResult> cir) {
         ItemStack heldItem = player.getItemInHand(handIn);
 
-        if (ModBlocks.STEEL_CASING.isIn(heldItem)) {
-            withBlockEntityDo(world, pos, be ->
-                    ((BeltBlockEntityExtension) be).create_alloyed$setAlloyedCasingType(BeltBlockEntityExtension.AlloyedCasingType.STEEL));
+        if (heldItem.is(ModTags.Items.CASING)) {
+            if (ModBlocks.STEEL_CASING.isIn(heldItem)) {
+                withBlockEntityDo(world, pos, be ->
+                        ((BeltBlockEntityExtension) be).create_alloyed$setAlloyedCasingType(BeltBlockEntityExtension.AlloyedCasingType.STEEL));
+            }
+            else if (ModBlocks.BRONZE_CASING.isIn(heldItem)) {
+                withBlockEntityDo(world, pos, be ->
+                        ((BeltBlockEntityExtension) be).create_alloyed$setAlloyedCasingType(BeltBlockEntityExtension.AlloyedCasingType.BRONZE));
+            }
             updateCoverProperty(world, pos, world.getBlockState(pos));
             cir.setReturnValue(ItemInteractionResult.SUCCESS);
             cir.cancel();

@@ -5,7 +5,7 @@ import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetMetal
 import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetSlabCTBehaviour;
 import com.molybdenum.alloyed.common.content.blocks.BronzeBellBlock;
 import com.molybdenum.alloyed.common.content.blocks.SteelDoorBlock;
-import com.molybdenum.alloyed.common.content.blocks.SteelShaftBlock;
+import com.molybdenum.alloyed.common.content.blocks.AlloyedShaftBlock;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
@@ -68,6 +68,56 @@ public class ModBlocks {
             "bronze/"
     );
 
+    public static final BlockEntry<CasingBlock> BRONZE_CASING = REGISTRATE.block("bronze_casing", CasingBlock::new)
+            .transform(BuilderTransformers.casing(() -> ModSpriteShifts.BRONZE_CASING))
+            .properties(ModBlocks::bronzeProperties)
+            .register();
+
+    public static final BlockEntry<AlloyedShaftBlock> BRONZE_ENCASED_SHAFT = REGISTRATE
+            .block("bronze_encased_shaft", p -> new AlloyedShaftBlock(p, ModBlocks.BRONZE_CASING::get))
+            .properties(ModBlocks::bronzeProperties)
+            .transform(ModTransformers.encasedShaft("bronze", () -> ModSpriteShifts.BRONZE_CASING))
+            .transform(axeOrPickaxe())
+            .register();
+
+    public static final BlockEntry<EncasedCogwheelBlock> BRONZE_ENCASED_COGWHEEL = REGISTRATE
+            .block("bronze_encased_cogwheel", p -> new EncasedCogwheelBlock(p, false, ModBlocks.BRONZE_CASING::get))
+            .properties(ModBlocks::bronzeProperties)
+            .transform(ModTransformers.encasedCogwheel("bronze", () -> ModSpriteShifts.BRONZE_CASING))
+            .blockstate((c, p) -> axisBlock(c, p, blockState -> {
+                String suffix = (blockState.getValue(EncasedCogwheelBlock.TOP_SHAFT) ? "_top" : "")
+                        + (blockState.getValue(EncasedCogwheelBlock.BOTTOM_SHAFT) ? "_bottom" : "");
+                return p.models().getExistingFile(p.modLoc("block/bronze_encased_cogwheel/block" + suffix));
+            }, false))
+            .item()
+            .model((c, p) -> {
+                p.getExistingFile(p.modLoc(c.getName()));
+            })
+            .build()
+            .onRegister(CreateRegistrate.connectedTextures(() -> new EncasedCogCTBehaviour(ModSpriteShifts.BRONZE_CASING,
+                    Couple.create(ModSpriteShifts.BRONZE_ENCASED_COGWHEEL_SIDE,
+                            ModSpriteShifts.BRONZE_ENCASED_COGWHEEL_OTHERSIDE))))
+            .transform(axeOrPickaxe())
+            .register();
+
+
+    public static final BlockEntry<EncasedCogwheelBlock> BRONZE_ENCASED_LARGE_COGWHEEL = REGISTRATE
+            .block("bronze_encased_large_cogwheel", p -> new EncasedCogwheelBlock(p, true, ModBlocks.BRONZE_CASING::get))
+            .properties(ModBlocks::bronzeProperties)
+            .transform(ModTransformers.encasedLargeCogwheel("bronze", () -> ModSpriteShifts.BRONZE_CASING))
+            .blockstate((c, p) -> axisBlock(c, p, blockState -> {
+                String suffix = (blockState.getValue(EncasedCogwheelBlock.TOP_SHAFT) ? "_top" : "")
+                        + (blockState.getValue(EncasedCogwheelBlock.BOTTOM_SHAFT) ? "_bottom" : "");
+                return p.models().getExistingFile(p.modLoc("block/bronze_encased_large_cogwheel/block" + suffix));
+            }, false))
+            .item()
+            .model((c, p) -> {
+                p.getExistingFile(p.modLoc(c.getName()));
+            })
+            .build()
+            .transform(axeOrPickaxe())
+            .register();
+
     public static final BlockEntry<BronzeBellBlock> BRONZE_BELL = REGISTRATE
             .block("bronze_bell", BronzeBellBlock::new)
             .initialProperties(() -> Blocks.IRON_BLOCK)
@@ -105,8 +155,8 @@ public class ModBlocks {
             .properties(ModBlocks::steelProperties)
             .register();
 
-    public static final BlockEntry<SteelShaftBlock> STEEL_ENCASED_SHAFT = REGISTRATE
-            .block("steel_encased_shaft", p -> new SteelShaftBlock(p, ModBlocks.STEEL_CASING::get))
+    public static final BlockEntry<AlloyedShaftBlock> STEEL_ENCASED_SHAFT = REGISTRATE
+            .block("steel_encased_shaft", p -> new AlloyedShaftBlock(p, ModBlocks.STEEL_CASING::get))
             .properties(ModBlocks::steelProperties)
             .transform(ModTransformers.encasedShaft("steel", () -> ModSpriteShifts.STEEL_CASING))
             .transform(axeOrPickaxe())
@@ -292,6 +342,10 @@ public class ModBlocks {
 
     public static BlockBehaviour.@NotNull Properties steelProperties(BlockBehaviour.Properties properties) {
         return properties.sound(SoundType.NETHERITE_BLOCK).strength(5, 14).mapColor(MapColor.COLOR_GRAY);
+    }
+
+    public static BlockBehaviour.@NotNull Properties bronzeProperties(BlockBehaviour.Properties properties) {
+        return properties.sound(SoundType.COPPER).strength(3, 6).mapColor(MapColor.COLOR_ORANGE);
     }
 
     public static void fixBronzeBlocks() {

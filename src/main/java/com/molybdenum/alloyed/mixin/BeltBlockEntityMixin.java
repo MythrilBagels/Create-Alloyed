@@ -104,9 +104,12 @@ public class BeltBlockEntityMixin extends KineticBlockEntity implements BeltBloc
             return;
         }
 
-        if (create_alloyed$alloyedCasing != AlloyedCasingType.NONE)
+        if (create_alloyed$alloyedCasing == AlloyedCasingType.STEEL)
             level.levelEvent(2001, worldPosition,
-                    Block.getId(ModBlocks.STEEL_CASING.getDefaultState())); // TODO: if bronze casing is ever added, this must be updated
+                    Block.getId(ModBlocks.STEEL_CASING.getDefaultState()));
+        else if (create_alloyed$alloyedCasing == AlloyedCasingType.BRONZE)
+            level.levelEvent(2001, worldPosition,
+                    Block.getId(ModBlocks.BRONZE_CASING.getDefaultState()));
         if (blockState.getValue(BeltBlock.CASING) != shouldBlockHaveCasing)
             KineticBlockEntity.switchToBlockState(level, worldPosition,
                     blockState.setValue(BeltBlock.CASING, shouldBlockHaveCasing));

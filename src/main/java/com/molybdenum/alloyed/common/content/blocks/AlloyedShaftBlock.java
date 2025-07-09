@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 
 import java.util.function.Supplier;
 
-public class SteelShaftBlock extends EncasedShaftBlock {
-    public SteelShaftBlock(Properties properties, Supplier<Block> casing) {
+public class AlloyedShaftBlock extends EncasedShaftBlock {
+    public AlloyedShaftBlock(Properties properties, Supplier<Block> casing) {
         super(properties, casing);
     }
 

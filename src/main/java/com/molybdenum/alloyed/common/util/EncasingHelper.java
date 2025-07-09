@@ -24,15 +24,40 @@ public class EncasingHelper {
         //return ModBlocks.STEEL_ENCASED_FLUID_PIPE; //TODO: eventually get this working
     }
 
+    protected static Supplier<? extends EncasedBlock> getBronzeEncasedVariant(EncaseType type) {
+        if (type == EncaseType.SHAFT) return ModBlocks.BRONZE_ENCASED_SHAFT;
+        if (type == EncaseType.SMALL_COG) return ModBlocks.BRONZE_ENCASED_COGWHEEL;
+        if (type == EncaseType.LARGE_COG) return ModBlocks.BRONZE_ENCASED_LARGE_COGWHEEL;
+        throw new IllegalStateException("How did we get here?");
+        //return ModBlocks.STEEL_ENCASED_FLUID_PIPE; //TODO: eventually get this working
+    }
+
+    public static ItemInteractionResult tryEncase(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
+                                                           BlockHitResult ray) {
+        if (ModBlocks.STEEL_CASING.isIn(heldItem))
+            return tryEncaseWithSteel(type, state, level, pos,  heldItem, player, hand, ray);
+        if (ModBlocks.BRONZE_CASING.isIn(heldItem))
+            return tryEncaseWithBronze(type, state, level, pos,  heldItem, player, hand, ray);
+        else {
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        }
+    }
+
     public static ItemInteractionResult tryEncaseWithSteel(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
                                                            BlockHitResult ray) {
-        if (!ModBlocks.STEEL_CASING.isIn(heldItem))
-            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
-
         if (level.isClientSide)
             return ItemInteractionResult.SUCCESS;
 
         getSteelEncasedVariant(type).get().handleEncasing(state, level, pos, heldItem, player, hand, ray);
+        return ItemInteractionResult.SUCCESS;
+    }
+
+    public static ItemInteractionResult tryEncaseWithBronze(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
+                                                           BlockHitResult ray) {
+        if (level.isClientSide)
+            return ItemInteractionResult.SUCCESS;
+
+        getBronzeEncasedVariant(type).get().handleEncasing(state, level, pos, heldItem, player, hand, ray);
         return ItemInteractionResult.SUCCESS;
     }
 

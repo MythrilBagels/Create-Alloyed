@@ -39,20 +39,28 @@ public class BeltModelMixin implements BeltModelExtension {
         BeltBlockEntityExtension.AlloyedCasingType alloyedType = extraData.get(ALLOYED_CASING_PROPERTY);
         if (alloyedType == BeltBlockEntityExtension.AlloyedCasingType.NONE) return;
 
-        List<BakedQuad> newQuads = new ArrayList<>(quads);
+        ArrayList<BakedQuad> newQuads = new ArrayList<>(quads);
+        var belt_cover_x = ModPartialModels.STEEL_BELT_COVER_X;
+        var belt_cover_z = ModPartialModels.STEEL_BELT_COVER_Z;
+        var belt_casing = ModSpriteShifts.STEEL_BELT_CASING;
+        if (alloyedType == BeltBlockEntityExtension.AlloyedCasingType.BRONZE) {
+            belt_cover_x = ModPartialModels.BRONZE_BELT_COVER_X;
+            belt_cover_z = ModPartialModels.BRONZE_BELT_COVER_Z;
+            belt_casing = ModSpriteShifts.BRONZE_BELT_CASING;
+        }
 
         if (cover) {
             boolean alongX = state.getValue(BeltBlock.HORIZONTAL_FACING)
                     .getAxis() == Direction.Axis.X;
             BakedModel coverModel =
-                    (alongX ? ModPartialModels.STEEL_BELT_COVER_X : ModPartialModels.STEEL_BELT_COVER_Z).get();
+                    (alongX ? belt_cover_x : belt_cover_z).get();
             newQuads.addAll(coverModel.getQuads(state, side, rand));
         }
 
         for (int i = 0; i < newQuads.size(); i++) {
             BakedQuad quad = newQuads.get(i);
             TextureAtlasSprite original = quad.getSprite();
-            if (original != ModSpriteShifts.STEEL_BELT_CASING.getOriginal())
+            if (original != belt_casing.getOriginal())
                 continue;
 
             BakedQuad newQuad = BakedQuadHelper.clone(quad);
@@ -61,8 +69,8 @@ public class BeltModelMixin implements BeltModelExtension {
             for (int vertex = 0; vertex < 4; vertex++) {
                 float u = BakedQuadHelper.getU(vertexData, vertex);
                 float v = BakedQuadHelper.getV(vertexData, vertex);
-                BakedQuadHelper.setU(vertexData, vertex, ModSpriteShifts.STEEL_BELT_CASING.getTargetU(u));
-                BakedQuadHelper.setV(vertexData, vertex, ModSpriteShifts.STEEL_BELT_CASING.getTargetV(v));
+                BakedQuadHelper.setU(vertexData, vertex, belt_casing.getTargetU(u));
+                BakedQuadHelper.setV(vertexData, vertex, belt_casing.getTargetV(v));
             }
 
             newQuads.set(i, newQuad);
@@ -81,6 +89,10 @@ public class BeltModelMixin implements BeltModelExtension {
         if (!data.has(ALLOYED_CASING_PROPERTY)) return;
         if (data.get(ALLOYED_CASING_PROPERTY) == BeltBlockEntityExtension.AlloyedCasingType.STEEL) {
             cir.setReturnValue(ModSpriteShifts.STEEL_CASING.getOriginal());
+            cir.cancel();
+        }
+        if (data.get(ALLOYED_CASING_PROPERTY) == BeltBlockEntityExtension.AlloyedCasingType.BRONZE) {
+            cir.setReturnValue(ModSpriteShifts.BRONZE_CASING.getOriginal());
             cir.cancel();
         }
     }

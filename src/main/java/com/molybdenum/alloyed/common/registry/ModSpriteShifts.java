@@ -25,6 +25,14 @@ public class ModSpriteShifts {
     public static final SpriteShiftEntry STEEL_BELT_CASING = SpriteShifter.get
             (Create.asResource("block/belt/brass_belt_casing"), Alloyed.asResource("block/steel_belt_casing"));
 
+    public static final CTSpriteShiftEntry BRONZE_CASING = ct(OMNIDIRECTIONAL, "bronze_casing"),
+            BRONZE_ENCASED_COGWHEEL_SIDE = ct(VERTICAL, "bronze_encased_cogwheel_side"),
+            BRONZE_ENCASED_COGWHEEL_OTHERSIDE = ct(HORIZONTAL, "bronze_encased_cogwheel_side");
+
+    public static final SpriteShiftEntry BRONZE_BELT_CASING = SpriteShifter.get
+            (Create.asResource("block/belt/brass_belt_casing"), Alloyed.asResource("block/bronze_belt_casing"));
+
+
     private static CTSpriteShiftEntry ct(AllCTTypes type, String name) {
         return CTSpriteShifter.getCT(type,
                 Alloyed.asResource("block/" + name),

@@ -39,6 +39,9 @@ public class ModTags {
         // All bronze instruments
         public static final TagKey<Item> BRONZE_INSTRUMENTS = createTag("bronze_instruments");
 
+        // Alloyed's casing
+        public static final TagKey<Item> CASING = createTag("casing");
+
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(Alloyed.asResource(name));
         }

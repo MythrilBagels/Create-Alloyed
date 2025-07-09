@@ -7,7 +7,9 @@ public class ModPartialModels {
 
     public static final PartialModel
             STEEL_BELT_COVER_X = block("belt_cover/steel_belt_cover_x"),
-            STEEL_BELT_COVER_Z = block("belt_cover/steel_belt_cover_z");
+            STEEL_BELT_COVER_Z = block("belt_cover/steel_belt_cover_z"),
+            BRONZE_BELT_COVER_X = block("belt_cover/steel_belt_cover_x"),
+            BRONZE_BELT_COVER_Z = block("belt_cover/steel_belt_cover_z");
 
     private static PartialModel block(String path) {
         return PartialModel.of(Alloyed.asResource("block/" + path));

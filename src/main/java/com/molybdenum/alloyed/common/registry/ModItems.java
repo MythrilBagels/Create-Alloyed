@@ -22,10 +22,18 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.List;
 
 public class ModItems {
-    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB).defaultCreativeTab((ResourceKey<CreativeModeTab>) null);;
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB).defaultCreativeTab((ResourceKey<CreativeModeTab>) null);
 
     public static List<ItemProviderEntry<?, ?>> getHiddenItems() {
-        return List.of(INCOMPLETE_STEEL_SMITHING_UPGRADE_TEMPLATE, ModBlocks.STEEL_ENCASED_COGWHEEL, ModBlocks.STEEL_ENCASED_SHAFT, ModBlocks.STEEL_ENCASED_LARGE_COGWHEEL);
+        return List.of(
+                INCOMPLETE_STEEL_SMITHING_UPGRADE_TEMPLATE,
+                ModBlocks.STEEL_ENCASED_COGWHEEL,
+                ModBlocks.STEEL_ENCASED_SHAFT,
+                ModBlocks.STEEL_ENCASED_LARGE_COGWHEEL,
+                ModBlocks.BRONZE_ENCASED_COGWHEEL,
+                ModBlocks.BRONZE_ENCASED_SHAFT,
+                ModBlocks.BRONZE_ENCASED_LARGE_COGWHEEL
+        );
     }
 
     // Ingots

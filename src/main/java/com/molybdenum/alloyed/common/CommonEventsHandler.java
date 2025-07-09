@@ -23,8 +23,8 @@ public class CommonEventsHandler {
 
     @SubscribeEvent
     public static void addBlocks(final BlockEntityTypeAddBlocksEvent event) {
-        event.modify(AllBlockEntityTypes.ENCASED_COGWHEEL.getKey(), ModBlocks.STEEL_ENCASED_COGWHEEL.get());
-        event.modify(AllBlockEntityTypes.ENCASED_LARGE_COGWHEEL.getKey(), ModBlocks.STEEL_ENCASED_LARGE_COGWHEEL.get());
-        event.modify(AllBlockEntityTypes.ENCASED_SHAFT.getKey(), ModBlocks.STEEL_ENCASED_SHAFT.get());
+        event.modify(AllBlockEntityTypes.ENCASED_COGWHEEL.getKey(), ModBlocks.STEEL_ENCASED_COGWHEEL.get(), ModBlocks.BRONZE_ENCASED_COGWHEEL.get());
+        event.modify(AllBlockEntityTypes.ENCASED_LARGE_COGWHEEL.getKey(), ModBlocks.STEEL_ENCASED_LARGE_COGWHEEL.get(),  ModBlocks.BRONZE_ENCASED_LARGE_COGWHEEL.get());
+        event.modify(AllBlockEntityTypes.ENCASED_SHAFT.getKey(), ModBlocks.STEEL_ENCASED_SHAFT.get(), ModBlocks.BRONZE_ENCASED_SHAFT.get());
     }
 }

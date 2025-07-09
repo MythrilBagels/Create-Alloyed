@@ -31,7 +31,7 @@ public abstract class CogwheelBlockMixin {
     private void tryEncaseWithAlloyedCasings(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult, CallbackInfoReturnable<ItemInteractionResult> cir) {
         ItemStack heldItem = player.getItemInHand(hand);
         ItemInteractionResult result = EncasingHelper
-                .tryEncaseWithSteel(EncasingHelper.EncaseType.fromCogSize(isLarge),
+                .tryEncase(EncasingHelper.EncaseType.fromCogSize(isLarge),
                         state, level, pos, heldItem, player, hand, hitResult);
 
         if (result.consumesAction()) {
