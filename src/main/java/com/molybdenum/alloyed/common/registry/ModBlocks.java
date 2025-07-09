@@ -12,9 +12,11 @@ import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
 import com.simibubi.create.content.decoration.MetalLadderBlock;
 import com.simibubi.create.content.decoration.MetalScaffoldingBlock;
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
+import com.simibubi.create.content.decoration.palettes.ConnectedPillarBlock;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogCTBehaviour;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
 import com.simibubi.create.foundation.block.CopperBlockSet;
+import com.simibubi.create.foundation.block.connected.RotatedPillarCTBehaviour;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.builders.BlockBuilder;
@@ -67,6 +69,11 @@ public class ModBlocks {
             new CopperBlockSet.Variant<?>[] { CopperBlockSet.BlockVariant.INSTANCE },
             "bronze/"
     );
+
+    public static final BlockEntry<ConnectedPillarBlock> BRONZE_PILLAR = REGISTRATE.block("bronze_pillar", ConnectedPillarBlock::new)
+            .properties(ModBlocks::bronzeProperties).item().build()
+            .onRegister(CreateRegistrate.connectedTextures(() -> new RotatedPillarCTBehaviour(ModSpriteShifts.BRONZE_PILLAR, ModSpriteShifts.BRONZE_CAP)))
+            .register();
 
     public static final BlockEntry<CasingBlock> BRONZE_CASING = REGISTRATE.block("bronze_casing", CasingBlock::new)
             .transform(BuilderTransformers.casing(() -> ModSpriteShifts.BRONZE_CASING))
@@ -134,7 +141,7 @@ public class ModBlocks {
                         .define('-', ModTags.Items.BRONZE_SHEET)
                         .unlockedBy("has_bronze_ingot", RegistrateRecipeProvider.has(ModTags.Items.BRONZE_INGOT))
                         .save(prov, Alloyed.asResource("crafting/" + ctx.getName()));
-            })
+            }).item().build()
             .register();
 
 

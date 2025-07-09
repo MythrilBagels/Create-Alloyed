@@ -32,6 +32,9 @@ public class ModSpriteShifts {
     public static final SpriteShiftEntry BRONZE_BELT_CASING = SpriteShifter.get
             (Create.asResource("block/belt/brass_belt_casing"), Alloyed.asResource("block/bronze_belt_casing"));
 
+    public static final CTSpriteShiftEntry BRONZE_PILLAR = ct(RECTANGLE, "bronze_pillar"),
+            BRONZE_CAP = ct(OMNIDIRECTIONAL, "bronze_cap");
+
 
     private static CTSpriteShiftEntry ct(AllCTTypes type, String name) {
         return CTSpriteShifter.getCT(type,
