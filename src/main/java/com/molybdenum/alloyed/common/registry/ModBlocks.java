@@ -70,6 +70,59 @@ public class ModBlocks {
             "bronze/"
     );
 
+    public static final BlockEntry<Block> CUT_BRONZE = REGISTRATE
+            .block("cut_bronze",Block::new)
+            .initialProperties(() -> Blocks.CUT_COPPER)
+            .properties(ModBlocks::steelProperties)
+            .simpleItem()
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
+            .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
+            .register();
+
+    public static final BlockEntry<StairBlock> CUT_BRONZE_STAIRS = REGISTRATE
+            .block("cut_bronze_stairs", properties ->
+                    new StairBlock(Blocks.BRICK_STAIRS.defaultBlockState(), properties))
+            .initialProperties(() -> Blocks.CUT_COPPER)
+            .properties(ModBlocks::steelProperties)
+            .item().tag(ItemTags.STAIRS).build()
+            .tag(BlockTags.STAIRS)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
+            .blockstate((ctx, prov) -> prov.stairsBlock(ctx.get(),
+                    prov.modLoc("block/cut_bronze_metal")))
+            .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
+            .register();
+
+    public static final BlockEntry<SlabBlock> CUT_BRONZE_SLAB = REGISTRATE
+            .block("cut_bronze_slab", SlabBlock::new)
+            .initialProperties(() -> Blocks.CUT_COPPER)
+            .properties(ModBlocks::steelProperties)
+            .item().tag(ItemTags.SLABS).build()
+            .tag(BlockTags.SLABS)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_STONE_TOOL)
+            .blockstate((ctx, prov) -> prov.slabBlock(ctx.get(),
+                    prov.modLoc("block/cut_bronze_metal"),
+                    prov.modLoc("block/cut_bronze_metal")))
+            .loot((table, block) -> {
+                LootTable.Builder builder = LootTable.lootTable();
+                LootPool.Builder lootPool = LootPool.lootPool();
+
+                lootPool.setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(block)
+                                .apply(SetItemCountFunction
+                                        .setCount(ConstantValue.exactly(2))
+                                        .when(LootItemBlockStatePropertyCondition
+                                                .hasBlockStateProperties(block)
+                                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                        .hasProperty(BlockStateProperties.SLAB_TYPE, SlabType.DOUBLE)))));
+
+                table.add(block, builder.withPool(lootPool));
+            })
+            .onRegister(CreateRegistrate.connectedTextures(SteelSheetSlabCTBehaviour::new))
+            .register();
+
     public static final BlockEntry<ConnectedPillarBlock> BRONZE_PILLAR = REGISTRATE.block("bronze_pillar", ConnectedPillarBlock::new)
             .properties(ModBlocks::bronzeProperties).item().build()
             .onRegister(CreateRegistrate.connectedTextures(() -> new RotatedPillarCTBehaviour(ModSpriteShifts.BRONZE_PILLAR, ModSpriteShifts.BRONZE_CAP)))

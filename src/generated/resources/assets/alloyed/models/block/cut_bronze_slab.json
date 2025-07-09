@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "alloyed:block/cut_bronze",
+    "side": "alloyed:block/cut_bronze",
+    "top": "alloyed:block/cut_bronze_top"
+  }
+}
