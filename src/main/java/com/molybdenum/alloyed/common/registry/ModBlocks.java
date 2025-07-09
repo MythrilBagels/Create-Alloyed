@@ -148,6 +148,7 @@ public class ModBlocks {
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .tag(BlockTags.NEEDS_STONE_TOOL)
             .lang("Block of Steel")
+            .item().build()
             .register();
 
     public static final BlockEntry<CasingBlock> STEEL_CASING = REGISTRATE.block("steel_casing", CasingBlock::new)
