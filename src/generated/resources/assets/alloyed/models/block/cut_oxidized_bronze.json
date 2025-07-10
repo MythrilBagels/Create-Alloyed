@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "alloyed:block/cut_oxidized_bronze_top",
+    "side": "alloyed:block/cut_oxidized_bronze"
+  }
+}

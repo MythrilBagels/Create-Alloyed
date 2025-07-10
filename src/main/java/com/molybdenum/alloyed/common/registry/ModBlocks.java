@@ -46,9 +46,11 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.neoforged.neoforge.registries.datamaps.builtin.Oxidizable;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.Objects;
 
 import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
@@ -70,58 +72,10 @@ public class ModBlocks {
             "bronze/"
     );
 
-    public static final BlockEntry<Block> CUT_BRONZE = REGISTRATE
-            .block("cut_bronze",Block::new)
-            .initialProperties(() -> Blocks.CUT_COPPER)
-            .properties(ModBlocks::steelProperties)
-            .simpleItem()
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .tag(BlockTags.NEEDS_STONE_TOOL)
-            .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
-            .register();
-
-    public static final BlockEntry<StairBlock> CUT_BRONZE_STAIRS = REGISTRATE
-            .block("cut_bronze_stairs", properties ->
-                    new StairBlock(Blocks.BRICK_STAIRS.defaultBlockState(), properties))
-            .initialProperties(() -> Blocks.CUT_COPPER)
-            .properties(ModBlocks::steelProperties)
-            .item().tag(ItemTags.STAIRS).build()
-            .tag(BlockTags.STAIRS)
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .tag(BlockTags.NEEDS_STONE_TOOL)
-            .blockstate((ctx, prov) -> prov.stairsBlock(ctx.get(),
-                    prov.modLoc("block/cut_bronze_metal")))
-            .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
-            .register();
-
-    public static final BlockEntry<SlabBlock> CUT_BRONZE_SLAB = REGISTRATE
-            .block("cut_bronze_slab", SlabBlock::new)
-            .initialProperties(() -> Blocks.CUT_COPPER)
-            .properties(ModBlocks::steelProperties)
-            .item().tag(ItemTags.SLABS).build()
-            .tag(BlockTags.SLABS)
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .tag(BlockTags.NEEDS_STONE_TOOL)
-            .blockstate((ctx, prov) -> prov.slabBlock(ctx.get(),
-                    prov.modLoc("block/cut_bronze_metal"),
-                    prov.modLoc("block/cut_bronze_metal")))
-            .loot((table, block) -> {
-                LootTable.Builder builder = LootTable.lootTable();
-                LootPool.Builder lootPool = LootPool.lootPool();
-
-                lootPool.setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(block)
-                                .apply(SetItemCountFunction
-                                        .setCount(ConstantValue.exactly(2))
-                                        .when(LootItemBlockStatePropertyCondition
-                                                .hasBlockStateProperties(block)
-                                                .setProperties(StatePropertiesPredicate.Builder.properties()
-                                                        .hasProperty(BlockStateProperties.SLAB_TYPE, SlabType.DOUBLE)))));
-
-                table.add(block, builder.withPool(lootPool));
-            })
-            .onRegister(CreateRegistrate.connectedTextures(SteelSheetSlabCTBehaviour::new))
-            .register();
+    public static final List<BlockEntry<? extends Block>> CUT_BRONZE = registerCutBronzeSet("cut_bronze", WeatheringCopper.WeatherState.UNAFFECTED);
+    public static final List<BlockEntry<? extends Block>> CUT_EXPOSED_BRONZE = registerCutBronzeSet("cut_exposed_bronze", WeatheringCopper.WeatherState.EXPOSED);
+    public static final List<BlockEntry<? extends Block>> CUT_WEATHERED_BRONZE = registerCutBronzeSet("cut_weathered_bronze", WeatheringCopper.WeatherState.WEATHERED);
+    public static final List<BlockEntry<? extends Block>> CUT_OXIDIZED_BRONZE = registerCutBronzeSet("cut_oxidized_bronze", WeatheringCopper.WeatherState.OXIDIZED);
 
     public static final BlockEntry<ConnectedPillarBlock> BRONZE_PILLAR = REGISTRATE.block("bronze_pillar", ConnectedPillarBlock::new)
             .properties(ModBlocks::bronzeProperties).item().build()
@@ -130,7 +84,7 @@ public class ModBlocks {
 
     public static final BlockEntry<CasingBlock> BRONZE_CASING = REGISTRATE.block("bronze_casing", CasingBlock::new)
             .transform(BuilderTransformers.casing(() -> ModSpriteShifts.BRONZE_CASING))
-            .properties(ModBlocks::bronzeProperties)
+            .properties(ModBlocks::bronzeProperties).item().build()
             .register();
 
     public static final BlockEntry<AlloyedShaftBlock> BRONZE_ENCASED_SHAFT = REGISTRATE
@@ -232,11 +186,6 @@ public class ModBlocks {
                         + (blockState.getValue(EncasedCogwheelBlock.BOTTOM_SHAFT) ? "_bottom" : "");
                 return p.models().getExistingFile(p.modLoc("block/steel_encased_cogwheel/block" + suffix));
             }, false))
-            .item()
-            .model((c, p) -> {
-                p.getExistingFile(p.modLoc(c.getName()));
-            })
-            .build()
             .onRegister(CreateRegistrate.connectedTextures(() -> new EncasedCogCTBehaviour(ModSpriteShifts.STEEL_CASING,
                     Couple.create(ModSpriteShifts.STEEL_ENCASED_COGWHEEL_SIDE,
                             ModSpriteShifts.STEEL_ENCASED_COGWHEEL_OTHERSIDE))))
@@ -253,11 +202,6 @@ public class ModBlocks {
                         + (blockState.getValue(EncasedCogwheelBlock.BOTTOM_SHAFT) ? "_bottom" : "");
                 return p.models().getExistingFile(p.modLoc("block/steel_encased_large_cogwheel/block" + suffix));
             }, false))
-            .item()
-            .model((c, p) -> {
-                p.getExistingFile(p.modLoc(c.getName()));
-            })
-            .build()
             .transform(axeOrPickaxe())
             .register();
 
@@ -410,6 +354,108 @@ public class ModBlocks {
     }
 
     public static void fixBronzeBlocks() {
+    }
+
+
+    private static List<BlockEntry<? extends Block>> registerCutBronzeSet(String id, WeatheringCopper.WeatherState state) {
+        var block = registerCutBronze(id, state);
+        var stairs = registerCutBronzeStairs(id, state);
+        var slab = registerCutBronzeSlab(id, state);
+        var waxedBlock = REGISTRATE
+                .block("waxed_"+id,(Block::new))
+                .initialProperties(() -> Blocks.CUT_COPPER)
+                .properties(ModBlocks::steelProperties)
+                .simpleItem()
+                .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .tag(BlockTags.NEEDS_STONE_TOOL)
+                .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
+                .register();
+        var waxedStairs = REGISTRATE
+                .block("waxed_"+id+"_stairs", properties ->
+                        new WeatheringCopperStairBlock(state, Blocks.BRICK_STAIRS.defaultBlockState(), properties))
+                .initialProperties(() -> Blocks.CUT_COPPER)
+                .properties(ModBlocks::steelProperties)
+                .item().tag(ItemTags.STAIRS).build()
+                .tag(BlockTags.STAIRS)
+                .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .tag(BlockTags.NEEDS_STONE_TOOL)
+                .blockstate((ctx, prov) -> prov.stairsBlock(ctx.get(),
+                        prov.modLoc("block/cut_bronze")))
+                .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
+                .register();
+        var waxedSlab = REGISTRATE
+                .block("waxed_"+id+"_slab", SlabBlock::new)
+                .initialProperties(() -> Blocks.CUT_COPPER)
+                .properties(ModBlocks::steelProperties)
+                .item().tag(ItemTags.SLABS).build()
+                .tag(BlockTags.SLABS)
+                .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .tag(BlockTags.NEEDS_STONE_TOOL)
+                .blockstate((ctx, prov) -> prov.slabBlock(ctx.get(),
+                        prov.modLoc("block/cut_bronze"),
+                        prov.modLoc("block/cut_bronze")))
+                .onRegister(CreateRegistrate.connectedTextures(SteelSheetSlabCTBehaviour::new))
+                .register();
+        return List.of(block, stairs, slab, waxedBlock, waxedStairs, waxedSlab);
+    }
+
+    private static BlockEntry<? extends Block> registerCutBronze(String id, WeatheringCopper.WeatherState state) {
+        return REGISTRATE
+                .block(id,(properties -> new WeatheringCopperFullBlock(state, properties)))
+                .initialProperties(() -> Blocks.CUT_COPPER)
+                .properties(ModBlocks::steelProperties)
+                .simpleItem()
+                .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .tag(BlockTags.NEEDS_STONE_TOOL)
+                .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
+                .register();
+    }
+
+    private static BlockEntry<? extends SlabBlock> registerCutBronzeSlab(String id, WeatheringCopper.WeatherState state) {
+        return REGISTRATE
+                .block(id+"_slab", (p)-> new WeatheringCopperSlabBlock(state, p))
+                .initialProperties(() -> Blocks.CUT_COPPER)
+                .properties(ModBlocks::steelProperties)
+                .item().tag(ItemTags.SLABS).build()
+                .tag(BlockTags.SLABS)
+                .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .tag(BlockTags.NEEDS_STONE_TOOL)
+                .blockstate((ctx, prov) -> prov.slabBlock(ctx.get(),
+                        prov.modLoc("block/cut_bronze"),
+                        prov.modLoc("block/cut_bronze")))
+                .loot((table, block) -> {
+                    LootTable.Builder builder = LootTable.lootTable();
+                    LootPool.Builder lootPool = LootPool.lootPool();
+
+                    lootPool.setRolls(ConstantValue.exactly(1))
+                            .add(LootItem.lootTableItem(block)
+                                    .apply(SetItemCountFunction
+                                            .setCount(ConstantValue.exactly(2))
+                                            .when(LootItemBlockStatePropertyCondition
+                                                    .hasBlockStateProperties(block)
+                                                    .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                            .hasProperty(BlockStateProperties.SLAB_TYPE, SlabType.DOUBLE)))));
+
+                    table.add(block, builder.withPool(lootPool));
+                })
+                .onRegister(CreateRegistrate.connectedTextures(SteelSheetSlabCTBehaviour::new))
+                .register();
+    }
+
+    private static BlockEntry<WeatheringCopperStairBlock> registerCutBronzeStairs(String id, WeatheringCopper.WeatherState state) {
+        return REGISTRATE
+                .block(id+"_stairs", properties ->
+                        new WeatheringCopperStairBlock(state, Blocks.BRICK_STAIRS.defaultBlockState(), properties))
+                .initialProperties(() -> Blocks.CUT_COPPER)
+                .properties(ModBlocks::steelProperties)
+                .item().tag(ItemTags.STAIRS).build()
+                .tag(BlockTags.STAIRS)
+                .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .tag(BlockTags.NEEDS_STONE_TOOL)
+                .blockstate((ctx, prov) -> prov.stairsBlock(ctx.get(),
+                        prov.modLoc("block/cut_bronze")))
+                .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
+                .register();
     }
 
     private static BlockBuilder<SteelDoorBlock, CreateRegistrate> steelDoorBlock(boolean locked,
