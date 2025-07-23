@@ -18,7 +18,7 @@ public class ModPonders {
 
     public static void register(PonderSceneRegistrationHelper<ResourceLocation> helper) {
         Alloyed.LOGGER.debug("Registering ModPonders!");
-        PonderSceneRegistrationHelper<ItemProviderEntry<?, ?>> PONDER = helper.withKeyFunction(RegistryEntry::getId);
+        PonderSceneRegistrationHelper<ItemProviderEntry<?>> PONDER = helper.withKeyFunction(RegistryEntry::getId);
 
 
         PONDER.forComponents(ModBlocks.BRONZE_BELL)

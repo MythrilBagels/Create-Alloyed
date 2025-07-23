@@ -11,16 +11,16 @@ public enum ModCompat {
     HIDDEN(ModItems::getHiddenItems, true)
     ;
 
-    private final Supplier<List<ItemProviderEntry<?, ?>>> entries;
+    private final Supplier<List<ItemProviderEntry<?>>> entries;
     private final boolean shouldHide;
 
-    ModCompat(Supplier<List<ItemProviderEntry<?, ?>>> entries, boolean shouldHide) {
+    ModCompat(Supplier<List<ItemProviderEntry<?>>> entries, boolean shouldHide) {
         this.entries = entries;
         this.shouldHide = shouldHide;
     }
 
 
-    public List<ItemProviderEntry<?, ?>> getEntries () {
+    public List<ItemProviderEntry<?>> getEntries () {
         return entries.get();
     }
 

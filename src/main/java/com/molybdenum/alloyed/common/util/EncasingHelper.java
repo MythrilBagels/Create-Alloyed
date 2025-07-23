@@ -5,7 +5,6 @@ import com.simibubi.create.content.decoration.encasing.EncasedBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -32,33 +31,33 @@ public class EncasingHelper {
         //return ModBlocks.STEEL_ENCASED_FLUID_PIPE; //TODO: eventually get this working
     }
 
-    public static ItemInteractionResult tryEncase(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
+    public static InteractionResult tryEncase(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
                                                            BlockHitResult ray) {
         if (ModBlocks.STEEL_CASING.isIn(heldItem))
             return tryEncaseWithSteel(type, state, level, pos,  heldItem, player, hand, ray);
         if (ModBlocks.BRONZE_CASING.isIn(heldItem))
             return tryEncaseWithBronze(type, state, level, pos,  heldItem, player, hand, ray);
         else {
-            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+            return InteractionResult.PASS;
         }
     }
 
-    public static ItemInteractionResult tryEncaseWithSteel(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
+    public static InteractionResult tryEncaseWithSteel(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
                                                            BlockHitResult ray) {
         if (level.isClientSide)
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
 
         getSteelEncasedVariant(type).get().handleEncasing(state, level, pos, heldItem, player, hand, ray);
-        return ItemInteractionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 
-    public static ItemInteractionResult tryEncaseWithBronze(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
+    public static InteractionResult tryEncaseWithBronze(EncaseType type, BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand,
                                                            BlockHitResult ray) {
         if (level.isClientSide)
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
 
         getBronzeEncasedVariant(type).get().handleEncasing(state, level, pos, heldItem, player, hand, ray);
-        return ItemInteractionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 
     public enum EncaseType {

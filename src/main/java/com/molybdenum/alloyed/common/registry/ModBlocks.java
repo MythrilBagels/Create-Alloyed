@@ -48,7 +48,6 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.neoforged.neoforge.registries.datamaps.builtin.Oxidizable;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
@@ -211,7 +210,7 @@ public class ModBlocks {
     public static final BlockEntry<MetalScaffoldingBlock> STEEL_SCAFFOLD =
             REGISTRATE.block("steel_scaffolding", MetalScaffoldingBlock::new)
                     .transform(ModTransformers.scaffold("steel",
-                            () -> DataIngredient.tag(AllTags.commonItemTag("ingots/steel")), MapColor.COLOR_GRAY,
+                            () -> DataIngredient.tag(AllTags.forgeItemTag("ingots/steel")), MapColor.COLOR_GRAY,
                             ModSpriteShifts.STEEL_SCAFFOLD, ModSpriteShifts.STEEL_SCAFFOLD_INSIDE, ModSpriteShifts.STEEL_CASING))
                     .properties(ModBlocks::steelProperties)
                     .register();
@@ -298,7 +297,7 @@ public class ModBlocks {
             .register();
 
     public static final BlockEntry<TrapDoorBlock> STEEL_TRAPDOOR = REGISTRATE
-            .block("steel_trapdoor", properties -> new TrapDoorBlock(ModBlockSetTypes.STEEL, properties))
+            .block("steel_trapdoor", properties -> new TrapDoorBlock(properties, ModBlockSetTypes.STEEL))
             .initialProperties(() -> Blocks.IRON_TRAPDOOR)
             .properties(ModBlocks::steelProperties)
             .blockstate((ctx, prov) ->

@@ -8,9 +8,6 @@ public class ModBlockSetTypes {
     public static final BlockSetType STEEL = BlockSetType.register(
             new BlockSetType("steel",
                     false,
-                    false,
-                    false,
-                    BlockSetType.PressurePlateSensitivity.MOBS,
                     SoundType.METAL,
                     SoundEvents.IRON_DOOR_CLOSE,
                     SoundEvents.IRON_DOOR_OPEN,
@@ -23,9 +20,6 @@ public class ModBlockSetTypes {
     public static final BlockSetType FLIMSY_STEEL = BlockSetType.register(
             new BlockSetType("flimsy_steel",
                     true,
-                    true,
-                    true,
-                    BlockSetType.PressurePlateSensitivity.MOBS,
                     SoundType.METAL,
                     SoundEvents.IRON_DOOR_CLOSE,
                     SoundEvents.IRON_DOOR_OPEN,

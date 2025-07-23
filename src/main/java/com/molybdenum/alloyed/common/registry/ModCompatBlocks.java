@@ -56,7 +56,7 @@ public class ModCompatBlocks {
         REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB);
     }
 
-    public static List<ItemProviderEntry<?, ?>> getDecoBlocks() {
+    public static List<ItemProviderEntry<?>> getDecoBlocks() {
         return List.of(STEEL_CATWALK, STEEL_CATWALK_STAIRS, STEEL_CATWALK_RAILING);
     }
 }

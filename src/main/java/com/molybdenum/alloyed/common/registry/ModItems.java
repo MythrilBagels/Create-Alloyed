@@ -22,19 +22,12 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.List;
 
 public class ModItems {
-    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB).defaultCreativeTab((ResourceKey<CreativeModeTab>) null);
+    private static final CreateRegistrate REGISTRATE = Alloyed.REGISTRATE.setCreativeTab(ModCreativeModeTab.MAIN_TAB);
 
-    public static List<ItemProviderEntry<?, ?>> getHiddenItems() {
-        return List.of(
-                INCOMPLETE_STEEL_SMITHING_UPGRADE_TEMPLATE,
-                ModBlocks.STEEL_ENCASED_COGWHEEL,
-                ModBlocks.STEEL_ENCASED_SHAFT,
-                ModBlocks.STEEL_ENCASED_LARGE_COGWHEEL,
-                ModBlocks.BRONZE_ENCASED_COGWHEEL,
-                ModBlocks.BRONZE_ENCASED_SHAFT,
-                ModBlocks.BRONZE_ENCASED_LARGE_COGWHEEL
-        );
+    public static List<ItemProviderEntry<?>> getHiddenItems() {
+        return List.of(INCOMPLETE_STEEL_SMITHING_UPGRADE_TEMPLATE, ModBlocks.STEEL_ENCASED_COGWHEEL, ModBlocks.STEEL_ENCASED_SHAFT, ModBlocks.STEEL_ENCASED_LARGE_COGWHEEL);
     }
+
 
     // Ingots
 
@@ -88,30 +81,30 @@ public class ModItems {
 
     public static final ItemEntry<SwordItem> STEEL_SWORD = handheldItem(
             "steel_sword",
-            properties -> new SwordItem(ModItemTiers.STEEL, properties.attributes(SwordItem.createAttributes(ModItemTiers.STEEL, 3, -2.4F)))
+            properties -> new SwordItem(ModItemTiers.STEEL, 3, -2.4F, properties)
     );
 
 
     public static final ItemEntry<PickaxeItem> STEEL_PICKAXE = handheldItem(
-            "steel_pickaxe", 
-            properties -> new PickaxeItem(ModItemTiers.STEEL, properties.attributes(PickaxeItem.createAttributes(ModItemTiers.STEEL, 1, -2.8F)))
+            "steel_pickaxe",
+            properties -> new PickaxeItem(ModItemTiers.STEEL, 1, -2.8F,properties)
     );
 
     public static final ItemEntry<AxeItem> STEEL_AXE = handheldItem(
-            "steel_axe", 
-            properties -> new AxeItem(ModItemTiers.STEEL, properties.attributes(AxeItem.createAttributes(ModItemTiers.STEEL, 5.0F, -3.0F)))
+            "steel_axe",
+            properties -> new AxeItem(ModItemTiers.STEEL, 5.0F, -3.0F,properties)
     );
 
 
     public static final ItemEntry<ShovelItem> STEEL_SHOVEL = handheldItem(
-            "steel_shovel", 
-            properties -> new ShovelItem(ModItemTiers.STEEL, properties.attributes(ShovelItem.createAttributes(ModItemTiers.STEEL, 1.5F, -3.0F)))
+            "steel_shovel",
+            properties -> new ShovelItem(ModItemTiers.STEEL, 1.5F, -3.0F, properties)
     );
 
 
     public static final ItemEntry<HoeItem> STEEL_HOE = handheldItem(
-            "steel_hoe", 
-            properties -> new HoeItem(ModItemTiers.STEEL, properties.attributes(HoeItem.createAttributes(ModItemTiers.STEEL, -3, 0.0F)))
+            "steel_hoe",
+            properties -> new HoeItem(ModItemTiers.STEEL, -3, 0.0F, properties)
     );
 
 
@@ -143,8 +136,8 @@ public class ModItems {
             .item("steel_boots", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.BOOTS, properties.durability(390)))
             .register();
 
-    public static final ItemEntry<AnimalArmorItem> STEEL_HORSE_ARMOR = REGISTRATE
-            .item("steel_horse_armor", properties -> new AnimalArmorItem(ModArmourMaterials.STEEL, AnimalArmorItem.BodyType.EQUESTRIAN, false, properties.stacksTo(1)))
+    public static final ItemEntry<HorseArmorItem> STEEL_HORSE_ARMOR = REGISTRATE
+            .item("steel_horse_armor", properties -> new HorseArmorItem(5, Alloyed.asResource("steel"), properties.stacksTo(1)))
             .register();
 
     // End Item Entries
