@@ -2,10 +2,10 @@
   "type": "create:item_application",
   "ingredients": [
     {
-      "tag": "c:stripped_woods"
+      "tag": "forge:stripped_wood"
     },
     {
-      "tag": "c:ingots/bronze"
+      "tag": "forge:ingots/bronze"
     }
   ],
   "results": [

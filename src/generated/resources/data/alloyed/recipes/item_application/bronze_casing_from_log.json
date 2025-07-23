@@ -2,10 +2,10 @@
   "type": "create:item_application",
   "ingredients": [
     {
-      "tag": "c:stripped_logs"
+      "tag": "forge:stripped_logs"
     },
     {
-      "tag": "c:ingots/bronze"
+      "tag": "forge:ingots/bronze"
     }
   ],
   "results": [
