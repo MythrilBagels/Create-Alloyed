@@ -143,6 +143,10 @@ public class ModItems {
             .item("steel_boots", properties -> new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.BOOTS, properties.durability(390)))
             .register();
 
+    public static final ItemEntry<AnimalArmorItem> STEEL_HORSE_ARMOR = REGISTRATE
+            .item("steel_horse_armor", properties -> new AnimalArmorItem(ModArmourMaterials.STEEL, AnimalArmorItem.BodyType.EQUESTRIAN, false, properties.stacksTo(1)))
+            .register();
+
     // End Item Entries
 
     public static void register() {
