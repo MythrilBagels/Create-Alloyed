@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "forge:ingots/steel"
+  },
+  "base": {
+    "item": "minecraft:fishing_rod"
+  },
+  "template": {
+    "item": "alloyed:steel_upgrade_smithing_template"
+  },
+  "result": {
+    "item": "alloyed:steel_fishing_rod"
+  }
+}

@@ -1,1 +1,0 @@
-{"type":"minecraft:crafting_shaped","category":"misc","key":{"#":{"item":"alloyed:bronze_ingot"},"C":{"item":"minecraft:cobbled_deepslate"},"S":{"item":"alloyed:steel_upgrade_smithing_template"}},"pattern":["#S#","#C#","###"],"result":{"id":"alloyed:steel_upgrade_smithing_template","item":"alloyed:steel_upgrade_smithing_template","count":2}}

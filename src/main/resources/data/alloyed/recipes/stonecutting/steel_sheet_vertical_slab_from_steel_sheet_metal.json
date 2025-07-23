@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "alloyed:steel_sheet_metal"
+  },
+  "result": "alloyed:steel_sheet_vertical_slab",
+  "count": 2,
+  "conditions": [ {
+    "type": "forge:mod_loaded",
+    "modid": "createdeco"
+  } ]
+}

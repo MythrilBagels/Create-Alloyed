@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone_torch"
+    },
+    {
+      "item": "alloyed:steel_door"
+    }
+  ],
+  "result": {
+    "item": "alloyed:locked_steel_door"
+  }
+}

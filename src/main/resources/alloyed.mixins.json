@@ -6,6 +6,7 @@
 	"BeltBlockEntityMixin",
 	"BeltBlockMixin",
 	"BeltModelMixin",
+	"BlockEntityTypeMixin",
 	"CogwheelBlockMixin",
 	"ShaftBlockMixin"
   ],

@@ -2,10 +2,6 @@ package com.molybdenum.alloyed.common;
 
 import com.molybdenum.alloyed.Alloyed;
 import com.molybdenum.alloyed.common.compat.farmersdelight.FarmersDelightCompat;
-import com.molybdenum.alloyed.common.registry.ModBlocks;
-import com.simibubi.create.AllBlockEntityTypes;
-import com.simibubi.create.content.kinetics.simpleRelays.SimpleKineticBlockEntity;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;

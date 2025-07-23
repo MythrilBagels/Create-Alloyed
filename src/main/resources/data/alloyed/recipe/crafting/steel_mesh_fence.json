@@ -1,1 +1,0 @@
-{"type":"minecraft:crafting_shaped","pattern":["-s-","-s-"],"key":{"-":{"tag":"c:plates/steel"},"s":{"item":"minecraft:string"}},"result":{"id":"alloyed:steel_mesh_fence","item":"alloyed:steel_mesh_fence","count":1},"conditions":[{"type":"neoforge:mod_loaded","modid":"createdeco"}]}

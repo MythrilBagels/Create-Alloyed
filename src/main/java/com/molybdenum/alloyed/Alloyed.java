@@ -7,6 +7,7 @@ import com.molybdenum.alloyed.common.util.CCStress;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -35,6 +36,7 @@ public class Alloyed {
         IEventBus eventBus = context.getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
         REGISTRATE.registerEventListeners(eventBus);
+        ForgeMod.enableMilkFluid();
 
         isFarmersDelightLoaded = ModList.get().isLoaded("farmersdelight");
         isCreateDecoLoaded = ModList.get().isLoaded("createdeco");

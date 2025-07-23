@@ -25,7 +25,7 @@ side="BOTH"
 modId="create"
 mandatory=true
 versionRange="[6.0.0,)"
-ordering="NONE"
+ordering="AFTER"
 side="BOTH"
 [[dependencies.alloyed]]
 modId="farmersdelight"
