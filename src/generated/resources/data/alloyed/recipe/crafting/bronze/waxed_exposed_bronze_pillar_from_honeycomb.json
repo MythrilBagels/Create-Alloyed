@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alloyed:exposed_bronze_pillar"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": {
+    "id": "alloyed:waxed_exposed_bronze_pillar",
+    "count": 1
+  }
+}

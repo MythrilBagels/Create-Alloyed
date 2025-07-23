@@ -35,6 +35,15 @@ public class ModSpriteShifts {
     public static final CTSpriteShiftEntry BRONZE_PILLAR = ct(RECTANGLE, "bronze_pillar"),
             BRONZE_CAP = ct(OMNIDIRECTIONAL, "bronze_cap");
 
+    public static final CTSpriteShiftEntry EXPOSED_BRONZE_PILLAR = ct(RECTANGLE, "exposed_bronze_pillar"),
+            EXPOSED_BRONZE_CAP = ct(OMNIDIRECTIONAL, "exposed_bronze_cap");
+
+    public static final CTSpriteShiftEntry WEATHERED_BRONZE_PILLAR = ct(RECTANGLE, "weathered_bronze_pillar"),
+            WEATHERED_BRONZE_CAP = ct(OMNIDIRECTIONAL, "weathered_bronze_cap");
+
+    public static final CTSpriteShiftEntry OXIDIZED_BRONZE_PILLAR = ct(RECTANGLE, "oxidized_bronze_pillar"),
+            OXIDIZED_BRONZE_CAP = ct(OMNIDIRECTIONAL, "oxidized_bronze_cap");
+
 
     private static CTSpriteShiftEntry ct(AllCTTypes type, String name) {
         return CTSpriteShifter.getCT(type,

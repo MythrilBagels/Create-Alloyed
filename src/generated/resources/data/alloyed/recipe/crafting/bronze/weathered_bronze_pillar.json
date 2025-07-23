@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "alloyed:cut_weathered_bronze"
+    }
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "alloyed:weathered_bronze_pillar",
+    "count": 2
+  }
+}

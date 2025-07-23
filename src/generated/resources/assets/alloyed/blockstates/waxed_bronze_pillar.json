@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "alloyed:block/bronze_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "alloyed:block/bronze_pillar"
+    },
+    "axis=z": {
+      "model": "alloyed:block/bronze_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

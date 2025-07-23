@@ -6,6 +6,7 @@ import com.molybdenum.alloyed.common.compat.createdeco.connected.SteelSheetSlabC
 import com.molybdenum.alloyed.common.content.blocks.BronzeBellBlock;
 import com.molybdenum.alloyed.common.content.blocks.SteelDoorBlock;
 import com.molybdenum.alloyed.common.content.blocks.AlloyedShaftBlock;
+import com.molybdenum.alloyed.common.content.blocks.WeatheringBronzePillarBlock;
 import com.molybdenum.alloyed.common.item.ModCreativeModeTab;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
@@ -16,6 +17,7 @@ import com.simibubi.create.content.decoration.palettes.ConnectedPillarBlock;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogCTBehaviour;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
 import com.simibubi.create.foundation.block.CopperBlockSet;
+import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import com.simibubi.create.foundation.block.connected.RotatedPillarCTBehaviour;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -77,10 +79,10 @@ public class ModBlocks {
     public static final List<BlockEntry<? extends Block>> CUT_WEATHERED_BRONZE = registerCutBronzeSet("cut_weathered_bronze", WeatheringCopper.WeatherState.WEATHERED);
     public static final List<BlockEntry<? extends Block>> CUT_OXIDIZED_BRONZE = registerCutBronzeSet("cut_oxidized_bronze", WeatheringCopper.WeatherState.OXIDIZED);
 
-    public static final BlockEntry<ConnectedPillarBlock> BRONZE_PILLAR = REGISTRATE.block("bronze_pillar", ConnectedPillarBlock::new)
-            .properties(ModBlocks::bronzeProperties).item().build()
-            .onRegister(CreateRegistrate.connectedTextures(() -> new RotatedPillarCTBehaviour(ModSpriteShifts.BRONZE_PILLAR, ModSpriteShifts.BRONZE_CAP)))
-            .register();
+    public static final List<BlockEntry<? extends Block>> BRONZE_PILLAR = registerBronzePillarSet("bronze_pillar", WeatheringCopper.WeatherState.UNAFFECTED, ModSpriteShifts.BRONZE_PILLAR, ModSpriteShifts.BRONZE_CAP);
+    public static final List<BlockEntry<? extends Block>> EXPOSED_BRONZE_PILLAR = registerBronzePillarSet("exposed_bronze_pillar", WeatheringCopper.WeatherState.EXPOSED, ModSpriteShifts.EXPOSED_BRONZE_PILLAR, ModSpriteShifts.EXPOSED_BRONZE_CAP);
+    public static final List<BlockEntry<? extends Block>> WEATHERED_BRONZE_PILLAR = registerBronzePillarSet("weathered_bronze_pillar", WeatheringCopper.WeatherState.WEATHERED, ModSpriteShifts.WEATHERED_BRONZE_PILLAR, ModSpriteShifts.WEATHERED_BRONZE_CAP);
+    public static final List<BlockEntry<? extends Block>> OXIDIZED_BRONZE_PILLAR = registerBronzePillarSet("oxidized_bronze_pillar", WeatheringCopper.WeatherState.OXIDIZED, ModSpriteShifts.OXIDIZED_BRONZE_PILLAR, ModSpriteShifts.OXIDIZED_BRONZE_CAP);
 
     public static final BlockEntry<CasingBlock> BRONZE_CASING = REGISTRATE.block("bronze_casing", CasingBlock::new)
             .transform(BuilderTransformers.casing(() -> ModSpriteShifts.BRONZE_CASING))
@@ -354,6 +356,18 @@ public class ModBlocks {
     }
 
     public static void fixBronzeBlocks() {
+    }
+
+    private static List<BlockEntry<? extends Block>> registerBronzePillarSet(String id, WeatheringCopper.WeatherState state, CTSpriteShiftEntry pillar, CTSpriteShiftEntry cap) {
+        var block = REGISTRATE.block(id, (properties)-> new WeatheringBronzePillarBlock(state, properties))
+                .properties(ModBlocks::bronzeProperties).item().build()
+                .onRegister(CreateRegistrate.connectedTextures(() -> new RotatedPillarCTBehaviour(pillar, cap)))
+                .register();
+        var waxedBlock = REGISTRATE.block("waxed_"+id, ConnectedPillarBlock::new)
+                .properties(ModBlocks::bronzeProperties).item().build()
+                .onRegister(CreateRegistrate.connectedTextures(() -> new RotatedPillarCTBehaviour(pillar, cap)))
+                .register();
+        return List.of(block, waxedBlock);
     }
 
 

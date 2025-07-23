@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "alloyed:cut_oxidized_bronze"
+    }
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "alloyed:oxidized_bronze_pillar",
+    "count": 2
+  }
+}
