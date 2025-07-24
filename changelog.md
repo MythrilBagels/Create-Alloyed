@@ -10,10 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - New decorative blocks - Bronze Column and Cut Bronze. Cut Bronze also comes in stair and slab variants. Textures by asof.
 - Bronze casing, which can be used to encase Cogwheels, Belts, and Shafts. Textures by asof.
+- Steel Horse Armour, smithed from Iron Horse Armour. Texture by raspmary.
 
 ### Fixed
 
 - Missing Steel Block, Steel Door, and Bronze Bell blocks after a Registrate update.
+- Backported changes since 2.0.2 to 1.20.1, including fix for Create 6.0.6 compatibility.
 
 ## [2.0.5] - 06-26-2025
 

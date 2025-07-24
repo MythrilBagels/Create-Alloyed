@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "minecraft:iron_horse_armor"
+  },
+  "addition": {
+    "tag": "c:ingots/steel"
+  },
+  "result": {
+    "count": 1,
+    "id": "alloyed:steel_horse_armor"
+  },
+  "template": {
+    "item": "alloyed:steel_upgrade_smithing_template"
+  }
+}
