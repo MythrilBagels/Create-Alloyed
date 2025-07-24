@@ -22,7 +22,7 @@ public class ModArmourMaterials {
 
     public static final Holder<ArmorMaterial> STEEL = register(
             "steel",
-            new int[] { 3, 5, 7, 3, 5},
+            new int[] { 3, 5, 7, 3, 7},
             10,
             SoundEvents.ARMOR_EQUIP_CHAIN,
             1.0F,
