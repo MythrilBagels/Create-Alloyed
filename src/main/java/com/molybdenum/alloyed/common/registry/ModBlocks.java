@@ -17,6 +17,7 @@ import com.simibubi.create.content.decoration.palettes.ConnectedPillarBlock;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogCTBehaviour;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
 import com.simibubi.create.foundation.block.CopperBlockSet;
+import com.simibubi.create.foundation.block.CopperRegistries;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import com.simibubi.create.foundation.block.connected.RotatedPillarCTBehaviour;
 import com.simibubi.create.foundation.data.BuilderTransformers;
@@ -53,6 +54,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Supplier;
 
 import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
 import static com.simibubi.create.foundation.data.BlockStateGen.axisBlock;
@@ -358,23 +360,24 @@ public class ModBlocks {
     }
 
     private static List<BlockEntry<? extends Block>> registerBronzePillarSet(String id, WeatheringCopper.WeatherState state, CTSpriteShiftEntry pillar, CTSpriteShiftEntry cap) {
-        var block = REGISTRATE.block(id, (properties)-> new WeatheringBronzePillarBlock(state, properties))
+        BlockEntry<? extends Block> block = REGISTRATE.block(id, (properties)-> new WeatheringBronzePillarBlock(state, properties))
                 .properties(ModBlocks::bronzeProperties).item().build()
                 .onRegister(CreateRegistrate.connectedTextures(() -> new RotatedPillarCTBehaviour(pillar, cap)))
                 .register();
-        var waxedBlock = REGISTRATE.block("waxed_"+id, ConnectedPillarBlock::new)
+        BlockEntry<? extends Block> waxedBlock = REGISTRATE.block("waxed_"+id, ConnectedPillarBlock::new)
                 .properties(ModBlocks::bronzeProperties).item().build()
                 .onRegister(CreateRegistrate.connectedTextures(() -> new RotatedPillarCTBehaviour(pillar, cap)))
                 .register();
+        CopperRegistries.addWaxable((Supplier<Block>) block, (Supplier<Block>) waxedBlock);
         return List.of(block, waxedBlock);
     }
 
 
     private static List<BlockEntry<? extends Block>> registerCutBronzeSet(String id, WeatheringCopper.WeatherState state) {
-        var block = registerCutBronze(id, state);
-        var stairs = registerCutBronzeStairs(id, state);
-        var slab = registerCutBronzeSlab(id, state);
-        var waxedBlock = REGISTRATE
+        BlockEntry<? extends Block> block = registerCutBronze(id, state);
+        BlockEntry<? extends Block> stairs = registerCutBronzeStairs(id, state);
+        BlockEntry<? extends Block> slab = registerCutBronzeSlab(id, state);
+        BlockEntry<? extends Block> waxedBlock = REGISTRATE
                 .block("waxed_"+id,(Block::new))
                 .initialProperties(() -> Blocks.CUT_COPPER)
                 .properties(ModBlocks::steelProperties)
@@ -383,7 +386,7 @@ public class ModBlocks {
                 .tag(BlockTags.NEEDS_STONE_TOOL)
                 .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
                 .register();
-        var waxedStairs = REGISTRATE
+        BlockEntry<? extends Block> waxedStairs = REGISTRATE
                 .block("waxed_"+id+"_stairs", properties ->
                         new WeatheringCopperStairBlock(state, Blocks.BRICK_STAIRS.defaultBlockState(), properties))
                 .initialProperties(() -> Blocks.CUT_COPPER)
@@ -396,7 +399,7 @@ public class ModBlocks {
                         prov.modLoc("block/cut_bronze")))
                 .onRegister(CreateRegistrate.connectedTextures(SteelSheetMetalCTBehaviour::new))
                 .register();
-        var waxedSlab = REGISTRATE
+        BlockEntry<? extends Block> waxedSlab = REGISTRATE
                 .block("waxed_"+id+"_slab", SlabBlock::new)
                 .initialProperties(() -> Blocks.CUT_COPPER)
                 .properties(ModBlocks::steelProperties)
@@ -409,6 +412,9 @@ public class ModBlocks {
                         prov.modLoc("block/cut_bronze")))
                 .onRegister(CreateRegistrate.connectedTextures(SteelSheetSlabCTBehaviour::new))
                 .register();
+        CopperRegistries.addWaxable((Supplier<Block>) block, (Supplier<Block>) waxedBlock);
+        CopperRegistries.addWaxable((Supplier<Block>) slab, (Supplier<Block>) waxedSlab);
+        CopperRegistries.addWaxable((Supplier<Block>) stairs, (Supplier<Block>) waxedStairs);
         return List.of(block, stairs, slab, waxedBlock, waxedStairs, waxedSlab);
     }
 
