@@ -137,7 +137,7 @@ public class ModItems {
             .register();
 
     public static final ItemEntry<HorseArmorItem> STEEL_HORSE_ARMOR = REGISTRATE
-            .item("steel_horse_armor", properties -> new HorseArmorItem(5, Alloyed.asResource("steel"), properties.stacksTo(1)))
+            .item("steel_horse_armor", properties -> new HorseArmorItem(7, Alloyed.asResource("steel"), properties.stacksTo(1)))
             .register();
 
     // End Item Entries
