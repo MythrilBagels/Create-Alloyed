@@ -39,3 +39,9 @@ mandatory=true
 versionRange="[1.20.1]"
 ordering="NONE"
 side="BOTH"
+[[dependencies.alloyed]]
+modId="createdeco"
+mandatory=false
+versionRange="[2.0.3-1.20.1,)"
+ordering="BEFORE"
+side="BOTH"
